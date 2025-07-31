@@ -60,7 +60,7 @@ class NormalizedDocument:
 class NormalizationStats:
     """정규화 통계 데이터 클래스"""
     total_documents: int = 0
-    normalized_documents: int = 0
+    processed_documents: int = 0
     failed_documents: int = 0
     total_words: int = 0
     total_chars: int = 0
@@ -71,6 +71,8 @@ class NormalizationStats:
     normalized_titles: int = 0
     normalized_tags_count: int = 0
     processing_time: float = 0.0
+    peak_memory_usage: float = 0.0
+    cpu_usage: float = 0.0
 
 class DataNormalizer:
     """데이터 정규화 클래스 - 병렬 처리 최적화"""
@@ -537,12 +539,12 @@ class DataNormalizer:
         
         self.tag_vocabulary = all_tags
     
-    def normalize_dataset_parallel(self, input_file: Path, output_dir: Path = None) -> List[NormalizedDocument]:
-        """병렬 데이터셋 정규화 - 성능 최적화"""
+    def normalize_dataset(self, input_file: Path, output_dir: Path = None) -> List[NormalizedDocument]:
+        """데이터셋 정규화 - 병렬 처리 최적화"""
         if output_dir is None:
             output_dir = OUTPUT_DIR / 'normalized_data'
         
-        logger.info(f"병렬 데이터셋 정규화 시작: {input_file}")
+        logger.info(f"데이터셋 정규화 시작: {input_file}")
         
         start_time = time.time()
         
@@ -586,7 +588,7 @@ class DataNormalizer:
         self.stats.processing_time = time.time() - start_time
         self.stats.peak_memory_usage = self.peak_memory
         
-        logger.info(f"병렬 데이터셋 정규화 완료: {len(normalized_docs)}개 문서 처리")
+        logger.info(f"데이터셋 정규화 완료: {len(normalized_docs)}개 문서 처리")
         logger.info(f"처리 시간: {self.stats.processing_time:.2f}초")
         logger.info(f"평균 처리 속도: {len(normalized_docs)/self.stats.processing_time:.2f} 문서/초")
         
@@ -613,8 +615,9 @@ class DataNormalizer:
                 
                 # 통계 업데이트
                 self.stats.processed_documents += 1
-                self.stats.total_words += normalized_doc.word_count
-                self.stats.total_chars += normalized_doc.char_count
+                if normalized_doc:
+                    self.stats.total_words += normalized_doc.word_count
+                    self.stats.total_chars += normalized_doc.char_count
                 
                 # 메모리 정리
                 del doc_data, normalized_doc

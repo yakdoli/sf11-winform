@@ -6,6 +6,8 @@ import json
 import logging
 import hashlib
 import re
+import time
+import multiprocessing as mp
 from pathlib import Path
 from typing import Dict, List, Set, Optional, Any, Tuple, Union
 from dataclasses import dataclass, asdict
@@ -13,7 +15,10 @@ from datetime import datetime
 from collections import defaultdict, Counter
 import math
 import difflib
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
+import traceback
+import psutil
+import gc
 
 from config import (
     OUTPUT_DIR, DEDUPLICATION_CONFIG, PROCESSING_OPTIONS
@@ -59,6 +64,8 @@ class DeduplicationStats:
     total_similarity_score: float = 0.0
     average_similarity: float = 0.0
     processing_time: float = 0.0
+    peak_memory_usage: float = 0.0
+    cpu_usage: float = 0.0
 
 class ContentComparator:
     """내용 비교 클래스"""
@@ -335,14 +342,294 @@ class Deduplicator:
         self.duplicate_groups: List[DuplicateGroup] = []
         self.duplicate_results: List[DuplicateResult] = []
         
+        # 병렬 처리 설정
+        self.max_workers = min(mp.cpu_count(), 8)  # 최대 8개 워커
+        self.chunk_size = 100  # 문서 청크 크기
+        
+        # 성능 모니터링
+        self.process = psutil.Process()
+        self.start_memory = self.process.memory_info().rss / 1024 / 1024  # MB
+        self.peak_memory = self.start_memory
+        
+        # 해시 기반 최적화
+        self.content_hash_cache: Dict[str, List[str]] = {}
+        self.code_hash_cache: Dict[str, List[str]] = {}
+        self.filename_hash_cache: Dict[str, List[str]] = {}
+        
+        # 작업 큐 관리
+        self.task_queue = []
+        self.completed_tasks = set()
+        
     def find_duplicates(self, documents: List[Dict[str, Any]]) -> List[DuplicateGroup]:
-        """중복 문서 찾기"""
+        """중복 문서 찾기 - 병렬 처리 최적화"""
         logger.info(f"중복 검사 시작: {len(documents)}개 문서")
         
         start_time = datetime.now()
         self.stats.total_documents = len(documents)
         
-        # 중복 그룹 저장
+        # 해시 기반 사전 필터링
+        filtered_documents = self._pre_filter_documents(documents)
+        
+        # 동적 작업 분할
+        optimal_chunk_size = self._calculate_optimal_chunk_size(len(filtered_documents))
+        doc_chunks = self._create_document_chunks(filtered_documents, optimal_chunk_size)
+        
+        duplicate_groups = []
+        
+        # 프로세스 풀을 이용한 병렬 처리
+        with ProcessPoolExecutor(max_workers=self.max_workers) as executor:
+            # 청크별로 작업 제출
+            future_to_chunk = {
+                executor.submit(self.process_document_chunk, chunk): chunk
+                for chunk in doc_chunks
+            }
+            
+            # 결과 수집
+            for future in as_completed(future_to_chunk):
+                try:
+                    chunk_results = future.result()
+                    if chunk_results:
+                        duplicate_groups.extend(chunk_results)
+                except Exception as e:
+                    logger.error(f"문서 청크 처리 오류: {str(e)}")
+                    logger.error(traceback.format_exc())
+        
+        # 중복 그룹 후처리
+        duplicate_groups = self._post_process_duplicate_groups(duplicate_groups)
+        
+        self.duplicate_groups = duplicate_groups
+        self.stats.duplicate_groups = len(duplicate_groups)
+        self.stats.processing_time = (datetime.now() - start_time).total_seconds()
+        
+        # 메모리 사용량 업데이트
+        self.stats.peak_memory_usage = self.peak_memory
+        
+        logger.info(f"중복 검사 완료: {len(duplicate_groups)}개 중복 그룹 발견")
+        logger.info(f"처리 시간: {self.stats.processing_time:.2f}초")
+        logger.info(f"평균 처리 속도: {len(documents)/self.stats.processing_time:.2f} 문서/초")
+        
+        return duplicate_groups
+    
+    def _pre_filter_documents(self, documents: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """해시 기반 문서 사전 필터링"""
+        filtered_docs = []
+        seen_hashes = set()
+        
+        for doc in documents:
+            # 콘텐츠 해시 생성
+            content_hash = self._generate_content_hash(doc)
+            
+            # 해시 기준 중복 제거
+            if content_hash not in seen_hashes:
+                seen_hashes.add(content_hash)
+                filtered_docs.append(doc)
+            else:
+                self.stats.exact_duplicates += 1
+        
+        logger.info(f"사전 필터링 완료: {len(documents)} -> {len(filtered_docs)} 문서")
+        return filtered_docs
+    
+    def _generate_content_hash(self, doc: Dict[str, Any]) -> str:
+        """문서 콘텐츠 해시 생성"""
+        content = doc.get('normalized_content', '') + doc.get('normalized_filename', '')
+        return hashlib.md5(content.encode('utf-8')).hexdigest()
+    
+    def process_document_chunk(self, doc_chunk: List[Dict[str, Any]]) -> List[DuplicateGroup]:
+        """문서 청크 처리 - 병렬용"""
+        duplicate_groups = []
+        processed_pairs = set()
+        
+        # 청크 내 문서 간 비교
+        for i, doc1 in enumerate(doc_chunk):
+            for j, doc2 in enumerate(doc_chunk[i+1:], i+1):
+                # 중복 쌍 생성
+                pair_key = tuple(sorted([doc1.get('id', ''), doc2.get('id', '')]))
+                if pair_key in processed_pairs:
+                    continue
+                
+                processed_pairs.add(pair_key)
+                
+                # 중복 유형별 비교
+                duplicate_info = self._compare_documents_parallel(doc1, doc2)
+                
+                if duplicate_info['is_duplicate']:
+                    # 중복 그룹에 추가
+                    self._add_to_duplicate_group(duplicate_groups, doc1, doc2, duplicate_info)
+        
+        return duplicate_groups
+    
+    def _compare_documents_parallel(self, doc1: Dict[str, Any], doc2: Dict[str, Any]) -> Dict[str, Any]:
+        """병렬 문서 비교"""
+        result = {
+            'is_duplicate': False,
+            'similarity_score': 0.0,
+            'duplicate_type': '',
+            'confidence': 0.0
+        }
+        
+        max_similarity = 0.0
+        best_type = ''
+        
+        # 1. 내용 비교 (병렬)
+        content1 = doc1.get('normalized_content', '')
+        content2 = doc2.get('normalized_content', '')
+        
+        if content1 and content2:
+            content_similarity = self.content_comparator.calculate_similarity(content1, content2)
+            
+            # 완전 중복 확인
+            if self.content_comparator.is_exact_duplicate(content1, content2):
+                result.update({
+                    'is_duplicate': True,
+                    'similarity_score': 1.0,
+                    'duplicate_type': 'content',
+                    'confidence': 1.0
+                })
+                return result
+            
+            if content_similarity > max_similarity:
+                max_similarity = content_similarity
+                best_type = 'content'
+        
+        # 2. 코드 스니펫 비교 (병렬)
+        code_snippets1 = doc1.get('normalized_code_snippets', [])
+        code_snippets2 = doc2.get('normalized_code_snippets', [])
+        
+        if code_snippets1 and code_snippets2:
+            code_similarity = self._compare_code_snippets_parallel(code_snippets1, code_snippets2)
+            
+            if code_similarity > max_similarity:
+                max_similarity = code_similarity
+                best_type = 'code'
+        
+        # 3. 파일명 비교 (병렬)
+        filename1 = doc1.get('normalized_filename', '')
+        filename2 = doc2.get('normalized_filename', '')
+        
+        if filename1 and filename2:
+            filename_similarity = self.filename_comparator.calculate_filename_similarity(filename1, filename2)
+            
+            if filename_similarity > max_similarity:
+                max_similarity = filename_similarity
+                best_type = 'filename'
+        
+        # 4. 메타데이터 비교 (병렬)
+        metadata1 = doc1.get('metadata', {})
+        metadata2 = doc2.get('metadata', {})
+        
+        if metadata1 and metadata2:
+            metadata_similarity = self.metadata_comparator.calculate_metadata_similarity(metadata1, metadata2)
+            
+            if metadata_similarity > max_similarity:
+                max_similarity = metadata_similarity
+                best_type = 'metadata'
+        
+        # 임계값 확인
+        if max_similarity >= DEDUPLICATION_CONFIG['similarity_threshold']:
+            result.update({
+                'is_duplicate': True,
+                'similarity_score': max_similarity,
+                'duplicate_type': best_type,
+                'confidence': max_similarity
+            })
+        
+        return result
+    
+    def _compare_code_snippets_parallel(self, snippets1: List[Dict[str, Any]], snippets2: List[Dict[str, Any]]) -> float:
+        """병렬 코드 스니펫 비교"""
+        if not snippets1 or not snippets2:
+            return 0.0
+        
+        max_similarity = 0.0
+        
+        # 코드 스니펫 해시 기반 필터링
+        snippet_hashes1 = {self._generate_code_hash(snippet) for snippet in snippets1}
+        snippet_hashes2 = {self._generate_code_hash(snippet) for snippet in snippets2}
+        
+        # 해시 일치 확인
+        common_hashes = snippet_hashes1 & snippet_hashes2
+        if common_hashes:
+            return 1.0  # 완전 중복
+        
+        # 유사도 비교 (제한된 수로)
+        max_comparisons = min(10, len(snippets1) * len(snippets2))  # 최대 10개 비교
+        comparison_count = 0
+        
+        for snippet1 in snippets1:
+            for snippet2 in snippets2:
+                if comparison_count >= max_comparisons:
+                    break
+                
+                code1 = snippet1.get('normalized_code', '')
+                code2 = snippet2.get('normalized_code', '')
+                
+                if code1 and code2:
+                    similarity = self.code_comparator.calculate_code_similarity(code1, code2)
+                    
+                    if similarity > max_similarity:
+                        max_similarity = similarity
+                
+                comparison_count += 1
+            
+            if comparison_count >= max_comparisons:
+                break
+        
+        return max_similarity
+    
+    def _generate_code_hash(self, snippet: Dict[str, Any]) -> str:
+        """코드 스니펫 해시 생성"""
+        code = snippet.get('normalized_code', '')
+        return hashlib.md5(code.encode('utf-8')).hexdigest()
+    
+    def _calculate_optimal_chunk_size(self, total_docs: int) -> int:
+        """최적 청크 크기 계산 - CPU 코어 수 기반"""
+        cpu_count = mp.cpu_count()
+        
+        if total_docs <= cpu_count:
+            return 1
+        
+        # 문서 수와 CPU 코어 수에 따른 동적 청크 크기
+        base_chunk = max(1, total_docs // (cpu_count * 2))
+        
+        # 메모리 제한 고려
+        available_memory = psutil.virtual_memory().available / (1024 * 1024)  # MB
+        memory_factor = min(1.0, available_memory / 2048)  # 2GB 이상이면 정상
+        
+        return max(1, int(base_chunk * memory_factor))
+    
+    def _create_document_chunks(self, docs_data: List[Dict[str, Any]], chunk_size: int) -> List[List[Dict[str, Any]]]:
+        """문서 청크 생성 - 크기 기반 최적화"""
+        # 문서 크기 정보 수집 (추정)
+        doc_sizes = []
+        for doc_data in docs_data:
+            # 문서 크기 추정 (content 길이 기반)
+            content_size = len(doc_data.get('normalized_content', ''))
+            doc_sizes.append((doc_data, content_size))
+        
+        # 크기 기준 정렬
+        doc_sizes.sort(key=lambda x: x[1], reverse=True)
+        
+        # 동적 청크 생성
+        chunks = []
+        current_chunk = []
+        current_size = 0
+        
+        for doc_data, size in doc_sizes:
+            # 현재 청크에 추가
+            current_chunk.append(doc_data)
+            current_size += size
+            
+            # 청크 크기 또는 크기 제한 도달 시 분할
+            if len(current_chunk) >= chunk_size or current_size >= 100 * 1024:  # 100KB
+                chunks.append(current_chunk)
+                current_chunk = []
+                current_size = 0
+        
+        # 남은 문서 추가
+        if current_chunk:
+            chunks.append(current_chunk)
+        
+        return chunks
         duplicate_groups = []
         processed_pairs = set()
         
