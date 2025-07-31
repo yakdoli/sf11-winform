@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating Ribbon using MS Expression Blend</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="325a5284-abdd-4286-9ab7-3d34a6b6e5ff" />
+<meta name="Title" content="Creating Ribbon using MS Expression Blend" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5>Creating Ribbon using MS Expression Blend</h5>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">To create a Ribbon using MS Expression Blend:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Type the name of 
+the Ribbon Control in the Asset library search box.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_418.jpg" alt="" /><span style="COLOR: black"></span></p>
+<p class="MsoCaption">Figure 503: Ribbon Control in MS Blend Assets Library</p>
+<p style="tab-stops: 25.2pt" class="NumberedList"><span style="COLOR: black">2.   </span>Drag the Ribbon control to the art 
+board<span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black">.</span></p>
+<p style="LINE-HEIGHT: 14.25pt; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_419.jpg" alt="" /><span style="COLOR: black"></span></p>
+<p class="MsoCaption">Figure 504: Ribbon Control after drag and drop into Blend 
+Designer</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 487.95pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="651">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">UserControl</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">      
+      xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">      
+      xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">      
+      xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Ribbon.Silverlight"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">      
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="SilverlightApplication4.MainPage"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">      
+      Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="640"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="480"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">  </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="LayoutRoot"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="White"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">     
+        </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Margin</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0,0,43,0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> d</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">LayoutOverrides</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Width"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="My 
+      Application"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">             
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 14.25pt; MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Insert the 
+Application Image.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Select the Ribbon 
+Control and navigate to the Application Menu (Ribbon Properties-&gt;Application 
+Menu) in the property grid and set the Icon property.</p>
+<p style="LINE-HEIGHT: 14.25pt" class="MsoNormal"> </p>
+<p class="Figure"><span style="Z-INDEX: 251783168; POSITION: absolute; MARGIN-TOP: 23px; WIDTH: 47px; HEIGHT: 47px; MARGIN-LEFT: 199px; LEFT: 0px"><img src="../ImagesExt/image261_420.png" width="47" height="47" alt="" /></span><img border="0" src="../ImagesExt/image261_421.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 505: ApplicationMenu in Blend Ribbon Properties 
+Pane</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_422.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 506: ApplicationButtonImage in Blend Ribbon 
+Properties Pane<span style="COLOR: black"></span></p>
+<p class="BodyText1">The image will display on the Application menu button as 
+shown in the following screenshot:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_423.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 507: Ribbon Control with Application Icon added</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ApplicationButtonImage 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Images/OfficeUI/app.png"/&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Add Quick Access 
+Toolbar to the Control.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Select the Ribbon 
+Control and navigate to the QuickAccessToolbar in Ribbon Properties.</p>
+<p style="LINE-HEIGHT: 14.25pt" class="MsoNormal"> </p>
+<p class="Figure"><span style="Z-INDEX: 251784192; POSITION: absolute; MARGIN-TOP: 49px; WIDTH: 184px; HEIGHT: 21px; MARGIN-LEFT: 208px; LEFT: 0px"><img src="../ImagesExt/image261_424.png" width="184" height="21" alt="" /></span><img border="0" src="../ImagesExt/image261_425.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 508: QuickAccesstoolbar in Blend Ribbon Properties 
+Pane</p>
+<p class="BodyText1">Items can be added through the Items Property as shown in the 
+following screenshot:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_426.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 509: Items Pane</p>
+<p class="BodyText1">The result will be:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_427.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 510: Ribbon Control with QAT Items</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">QuickAccessToolBar</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">RibbonButton</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SmallIcon</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">="Save.png"</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SizeMode</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"> 
+      ="Small"/&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">RibbonSplitButton</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SmallIcon</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">="Undo16.png"</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SizeMode</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"> 
+      ="Small"/&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">RibbonButton</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SmallIcon</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">="Redo16.png"</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      SizeMode</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"> 
+      ="Small"/&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 9.5pt">QuickAccessToolBar</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   Add the Ribbon 
+tab to the Ribbon Control.</p>
+<p style="LINE-HEIGHT: 14.25pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_428.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 511: Ribbon’s Items Pane to add Items</p>
+<p class="BodyText1">The result will be:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_429.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 512: Ribbon with Ribbon Tabs</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Margin</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0,0,43,0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="My 
+      Application"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.QuickAccessToolBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">QuickAccessToolBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Save.png"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonSplitButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Undo16.png"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Redo16.png"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">QuickAccessToolBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.QuickAccessToolBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      ApplicationButtonImage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="app.png"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ApplicationMenu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Caption</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Home"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Caption</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Insert"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">8.   Add Ribbon Bar to 
+the Ribbon control:</p>
+<p style="LINE-HEIGHT: 14.25pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_430.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 513: Ribbon Tab Items Pane</p>
+<p class="BodyText1">The result will be as shown in the figure below:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_431.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 514: Ribbon Bar added</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Caption</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Home"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Clipboard"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">9.   Add Items to the 
+Ribbon bar:</p>
+<p style="LINE-HEIGHT: 14.25pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_432.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 515: Ribbon Bar’s Items Pane</p>
+<p class="BodyText1">The result is shown below:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_433.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 516: Ribbon Bar with Items</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Home"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Caption</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Clipboard"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonSplitButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> IsMultiLine</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Paste"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> LargeIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Paste32.png"/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p><span id="related-topics"></span></div></body></html>

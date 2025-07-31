@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Through GridBuilder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="067fb0ab-29e2-416f-8ac5-2ca6fa6c4bc1" />
+<meta name="Title" content="Through GridBuilder" />
+<meta name="Microsoft.Help.TocParent" content="650825c2-4329-49d4-a118-c7fa97679190" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Through GridBuilder</h4>
+<p class="MsoNormal">To add a filter to the application using GridBuilder:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><span class="UGHyperlink">Getting Started&gt;Adding a 
+Model to the Application</span></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><span class="UGHyperlink">How to&gt;Strongly Typed 
+View</span></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the view you 
+can use the <b>Model</b> property in <b>Datasource()</b> to bind the data 
+source.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br /><b>       .Datasource(Model)</b><br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .EnablePaging()<br />       .EnableSorting()<br />       .EnableFiltering()<br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      <br />       .Column( columns =&gt; {<br />           columns.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);<br />           columns.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);<br />           columns.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);         <br />           columns.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);<br />           columns.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>);<br />           })<br />       <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [</span></b><b><span style="FONT-FAMILY: 'Courier New'">cshtml</span></b><b><span style="FONT-FAMILY: 'Courier New'">]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">@{</span><span style="COLOR: blue"> 
+      </span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br /><b>       .Datasource(Model)</b><br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .EnablePaging()<br />       .EnableSorting()<br />       .EnableFiltering()<br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      <br />       .Column( columns =&gt; {<br />           columns.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);<br />           columns.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);<br />           columns.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);         <br />           columns.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);<br />           columns.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>);<br />           }).Render();<br />       <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   To enable the 
+filtering feature for your grid, you should use the <b>EnableFiltering()</b> 
+method.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br /><b>       .</b>Datasource(Model)<br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .EnablePaging()<br />       .EnableSorting()<br /><b>       .EnableFiltering()</b><br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      <br />       .Column( columns =&gt; {<br />           columns.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);<br />           columns.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);<br />           columns.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);                  
+        columns.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);<br />           columns.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>);<br />           })<br />       <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [cshtml]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">@{</span><span style="COLOR: blue"> 
+      </span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br /><b>       .</b>Datasource(Model)<br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .EnablePaging()<br />       .EnableSorting()<br /><b>       .EnableFiltering()</b><br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      <br />       .Column( columns =&gt; {<br />           columns.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);<br />           columns.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);<br />           columns.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);                  
+        columns.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);<br />           columns.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>);<br />           }).Render();<br />       <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Set its data 
+source and render the view.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: Consolas">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">&lt;summary&gt;</span><span style="FONT-FAMILY: 'Courier New'"><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> Used for rendering the grid initially.</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;/summary&gt;</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;returns&gt;</span><span style="COLOR: green">View page; it displays the grid.</span><span style="COLOR: gray">&lt;/returns&gt;</span><br />        <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()<br />        {<br />            <span style="COLOR: blue">var</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders;<br />            <span style="COLOR: blue">return</span> View(data);<br />        }</span></p></td></tr></tbody></table>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   In order to work 
+with filter actions, create a <b>Post</b> method for <b>Index</b> actions and 
+bind the data source to the grid as shown in the following code.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: Consolas">      </span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;summary&gt;</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> Paging/sorting/filtering requests are mapped to this method. This method invokes the HtmlActionResult</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> from the grid. The 
+      required response is generated.</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;/summary&gt;</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;param name="args"&gt;</span><span style="COLOR: green">Contains paging properties.</span><span style="COLOR: gray">&lt;/param&gt;</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;returns&gt;</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> HtmlActionResult returns 
+      the data displayed on the grid.</span><br />        <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;/returns&gt;</span><br />        [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]<br />        <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PagingParams</span> args)<br />        {<br />            <span style="COLOR: #2b91af">IEnumerable</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders;<br />            <span style="COLOR: blue">return</span> data.GridActions&lt;<span style="COLOR: #2b91af">Order</span>&gt;();<br />        }</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   Run the 
+application. The grid will appear as shown in the following screenshot.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_123.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 121: Grid with Filter Option</p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=d9865862-6f90-437b-b11a-29bcfb234e25"><img border="0" alt="" align="absMiddle" src="button.gif" />Filter 
+Customization</a></p></span></div></body></html>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Importing</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="b5cb56e1-3531-4fc6-9e67-bb6132c84821" />
+<meta name="Title" content="Importing" />
+<meta name="Microsoft.Help.TocParent" content="783848c5-c845-48e8-9ec9-09165c6bd500" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/pdf.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Importing</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The integrated HTML to PDF Converter is implemented by using 
+the <b>HtmlConverter</b> class. It basically includes the functionality of the 
+HTML to PDF Converter product, and additionally offers the possibility to 
+specify the position and the size of the PDF content.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code example illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 48pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; HEIGHT: 48pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Convert web page into 
+      image.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">HtmlConverter html = <span style="COLOR: blue">new</span> HtmlConverter();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">Image</span><span style="FONT-FAMILY: 'Courier New'"> img= html.ConvertToImage(<span style="COLOR: maroon">"www.syncfusion.com"</span>, ImageType.Metafile, 
+      1024)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Draw the image into 
+      the PDF document as metafile</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Create metafile 
+      image</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfMetafile</span><span style="FONT-FAMILY: 'Courier New'"> metafile = (<span style="COLOR: teal">PdfMetafile</span>)<span style="COLOR: teal">PdfImage</span>.FromImage(img);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Specify the quality of 
+      the metafile</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">metafile.Quality = 100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Set the layout 
+      format</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfMetafileLayoutFormat</span><span style="FONT-FAMILY: 'Courier New'"> format = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfMetafileLayoutFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Break = <span style="COLOR: teal">PdfLayoutBreakType</span>.FitPage;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Layout = <span style="COLOR: teal">PdfLayoutType</span>.Paginate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Prevent text getting 
+      break at the page breaks</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.SplitTextLines = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Draw the converted 
+      image to PDF</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">metafile.Draw(page, <span style="COLOR: blue">new</span> <span style="COLOR: teal">RectangleF</span>(0, 0, img.Width, img.Height), 
+      format);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Draw the image into 
+      the PDF document as bitmap</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfImage</span><span style="FONT-FAMILY: 'Courier New'"> image = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfBitmap</span>(img);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfLayoutFormat</span><span style="FONT-FAMILY: 'Courier New'"> format = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfLayoutFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Break = <span style="COLOR: teal">PdfLayoutBreakType</span>.FitPage;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Layout = <span style="COLOR: teal">PdfLayoutType</span>.Paginate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">image.Draw(page, <span style="COLOR: blue">new</span> <span style="COLOR: teal">RectangleF</span>(0, 0, pageSize.Width, 
+      pageSize.Height), format);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 48pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; HEIGHT: 48pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Convert web page into 
+      image.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> html <span style="COLOR: blue">As</span> HtmlConverter = <span style="COLOR: blue">New</span> HtmlConverter()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> img <span style="COLOR: blue">As</span> Image = html.ConvertToImage(<span style="COLOR: maroon">"www.syncfusion.com"</span>, ImageType.Metafile, 
+      1024)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Draw the image into the 
+      PDF document as metafile</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Create metafile 
+      image</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> metafile <span style="COLOR: blue">As</span> PdfMetafile = <span style="COLOR: blue">CType</span>(PdfImage.FromImage(img), 
+      PdfMetafile)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specify the quality of 
+      the metafile</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">metafile.Quality = 100</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set the layout 
+      format</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> format <span style="COLOR: blue">As</span> PdfMetafileLayoutFormat = <span style="COLOR: blue">New</span> PdfMetafileLayoutFormat()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Break = 
+      PdfLayoutBreakType.FitPage</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Layout = 
+      PdfLayoutType.Paginate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Prevent text getting 
+      break at the page breaks</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.SplitTextLines = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Draw the converted 
+      image to PDF</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">metafile.Draw(page, <span style="COLOR: blue">New</span> RectangleF(0, 0, img.Width, img.Height), 
+      format)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Draw the image into the 
+      PDF document as bitmap</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> image <span style="COLOR: blue">As</span> PdfImage = <span style="COLOR: blue">New</span> PdfBitmap(img)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> format <span style="COLOR: blue">As</span> PdfLayoutFormat = <span style="COLOR: blue">New</span> PdfLayoutFormat()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Break = 
+      PdfLayoutBreakType.FitPage</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Layout = 
+      PdfLayoutType.Paginate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">image.Draw(page, <span style="COLOR: blue">New</span> RectangleF(0, 0, pageSize.Width, 
+      pageSize.Height), format)</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p><span id="related-topics"></span></div></body></html>

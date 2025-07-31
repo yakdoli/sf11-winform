@@ -1,0 +1,57 @@
+---
+title: addingdrillpositiontoanapplication1.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\addingdrillpositiontoanapplication1.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+### Adding Drill Position to an Application {#adding-drill-position-to-an-application style="tab-stops: 0pt"}
+
+ 
+
+Adding Drill position feature to the application is described in the following code snippet:
+
+ 
+
++--------------------------------------------------------------------------------------------------------------------------------+
+| **[\[CS\]]**                                                                               |
+|                                                                                                                                |
+| []                                                                                         |
+|                                                                                                                                |
+| [dataManager.CurrentReport.DrillType = [DrillType].DrillPosition;] |
+|                                                                                                                                |
+| []                                                                                         |
++--------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++-------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB\]]**                                                                              |
+|                                                                                                                               |
+| []                                                                                        |
+|                                                                                                                               |
+| [dataManager.CurrentReport.DrillType = [DrillType].DrillPosition] |
+|                                                                                                                               |
+| []                                                                                        |
++-------------------------------------------------------------------------------------------------------------------------------+
+
+[[]]{.UGHyperlink} 
+
+[]{#related-topics}
+

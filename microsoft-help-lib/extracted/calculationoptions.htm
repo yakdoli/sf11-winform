@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Calculation Options</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="dd31d1a2-66b5-486e-ae89-bf48493f30ab" />
+<meta name="Title" content="Calculation Options" />
+<meta name="Microsoft.Help.TocParent" content="e67ac17b-d63f-468e-9cb1-abde5fd3939c" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Calculation Options</h4>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Segoe UI','sans-serif'; COLOR: black"></span></b> </p>
+<p class="BodyText1">Excel has a range of options allowing you to control the way 
+it calculates. To do this, open <b>Tools </b>menu, select <b>Options</b>, and 
+click <b>Calculation</b> tab in the Options dialog box. By default, when one 
+value is changed, the other cell that depends on this, immediately gets changed. 
+This behavior can be changed by using the following Modes of Calculations.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Automatic</p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Automatic 
+except for Tables</p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Manual</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_127.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 120: Options Dialog Box- Calculation<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Automatic Calculation</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">In the Automatic Calculation mode, Excel automatically 
+recalculates all open workbooks at each and every change and whenever you open a 
+workbook.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Usually when you open a workbook in Automatic mode, and 
+recalculation is done, you will not be able to see the recalculation, because 
+the changes will not be reflected until the workbook is saved. An exception is 
+when you open a workbook in Excel 2000 that was saved by using Excel 97, or open 
+a workbook by using Excel 2002/2003 saved by using Excel 2000. This is because 
+Excel's calculation engines are different, and also because a Full calculation 
+is done.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Manual Calculation</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">In the Manual Calculation mode, Excel will only recalculate 
+all open workbooks, when you request it by pressing F9 or CTRL-ALT-F9, or when 
+you Save a workbook. For workbooks taking more than a fraction of a second to 
+recalculate, it is usually better to set the Calculation to "Manual".</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel tells you when the workbook needs recalculation, by 
+showing Calculate in the status bar.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Automatic Except Tables</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel's Data Tables feature is designed to perform multiple 
+calculations of the workbook, each driven by different values in the table. So 
+using "Automatic except Tables" will stop Excel from automatically triggering 
+multiple calculations at each calculation, but will still calculate all 
+dependent formulae, except tables.</p>
+<p class="BodyText1">   </p>
+<p class="BodyText1">XlsIO provides support for all the above modes of 
+calculation. Following code example illustrates how to set the calculation 
+mode.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">IWorkbook</span><span style="FONT-FAMILY: 'Courier New'"> workbook = 
+      application.Workbooks.Create();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.CalculationMode 
+      = <span style="COLOR: teal">ExcelCalculationMode</span>.Manual;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim workbook as <span style="COLOR: teal">IWorkbook</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook = 
+      application.Workbooks.Create()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.CalculationMode 
+      = <span style="COLOR: teal">ExcelCalculationMode</span>.Manual</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">There are other options that Excel provides to customize the 
+calculation further.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Recalculate Before Save</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">In Manual mode, this option controls whether Excel will 
+recalculate the workbook as part of the Save process. The default value is set 
+to <b>True</b>. You can control this through XlsIO by using the<b> 
+RecalcOnSave</b> property of <b>ICalculationOptions</b> interface.</p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyTextHeading">Iteration</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">If you have intentional circular references in your workbook, 
+these settings allow you to control the maximum number of times the workbook 
+will be recalculated (iterations), and the convergence criteria (maximum change: 
+when to stop). The default value should be set to False, so that Excel does not 
+try to solve accidental circular references. XlsIO allows to control these 
+iterations as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">IWorkbook</span><span style="FONT-FAMILY: 'Courier New'"> workbook = 
+      application.Workbooks.Create();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.IsIterationEnabled 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.MaximumIteration 
+      = 99;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.MaximumChange 
+      = 40;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim workbook as <span style="COLOR: teal">IWorkbook</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook = 
+      application.Workbooks.Create()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.IsIterationEnabled 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.MaximumIteration 
+      = 99;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.CalculationOptions.MaximumChange 
+      = 40;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

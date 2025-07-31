@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>GridControl to Excel Conversion Process</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="d8df15e6-ff63-4eff-b5e2-e072f32f66f8" />
+<meta name="Title" content="GridControl to Excel Conversion Process" />
+<meta name="Microsoft.Help.TocParent" content="405b4398-e5d9-42bf-b88b-1c039ed7f22f" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">GridControl to Excel Conversion Process</h5>
+<p class="BodyText1">The conversion of Grid to Excel is done cell by cell. Each 
+cell is converted with respect to its style, including its format and background 
+color. This is done by using the <b>GridCellToExcel()</b> method of the 
+<b>GridExcelConverterControl</b> class.</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.1 Currency Cell Conversion</h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.1.1      If format 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a Currency cell type by 
+using the CellType property. If it is a Currency Cell type then the CellValue 
+will be converted into Double and saved in Range’s Number property. 
+NumberFormatInformation is extracted from the NumberFormatInfoObject and the 
+number is converted to string by using the extracted format. FormatString is 
+created and saved in Range’s NumberFormat property.</p>
+<p class="BodyText1">The following is a sample code to set the format of the 
+Currency cell:</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridControl1[row,col].Format = <span style="COLOR: #a31515">"C"</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 36pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridControl1(row,col).Format = <span style="COLOR: darkred">"C"</span></span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 36pt" class="MsoNormal"> </p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.1.2      If format not 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a Currency cell type by 
+using the CellType property. If the CellType is not given then it switches to 
+the default CellType and the CellValue is stored in Range’s “Value2” property, 
+where the value2 is converted into the given CellValueType(Except Date Time and 
+Currency). Hence, in this case the CellValue will be converted to General 
+format.</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.2 Number Cell Conversion </h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.2.1      If format 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a Number cell type by using 
+the CellType property. If it is a Number Cell type then the cell value is 
+assigned to Range’s Value2 property. Since the format is specified, the Value2’s 
+value is converted to its respective type and set to Number format.</p>
+<p class="BodyText1">The following is a sample code to set the format of Currency 
+cell:</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridControl1[row,col].Format = <span style="COLOR: #a31515">"N"</span>;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridControl1(row,col).Format = <span style="COLOR: #a31515">"N"</span><b></b></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.2.2      If format not 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a Number cell type by using 
+the CellType property. If it is not a Number Cell type, then the format is 
+skipped for all cell types and finally the CellValue is assigned to Range’s 
+Value2 property. Since the format is not specified, the Value2 value is 
+converted to its respective type and set to General Format.</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.3 Image Cell Conversion </h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.3.1      If CellType 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is an Image cell type by using 
+the CellType property. If it is an Image Cell type then the CellValue is 
+converted to a bitmap and this bitmap is inserted into the sheet specifying the 
+row and column.</p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.3.2      If CellType not 
+specified</p>
+<p class="BodyText1">Not Applicable</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.4 ComboBox and RichText Cell Conversion 
+</h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.4.1      If CellType 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a ComboBox or RichText cell 
+type by using the CellType property. If it is a ComboBox or RichText cell type 
+then the FormattedText is stored in the Range’s Text property.</p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.4.2      If CellType not 
+specified</p>
+<p class="BodyText1">Not Applicable</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.5 ProgressBar Cell Conversion </h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.5.1      If CellType 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a ProgressBar cell type 
+using CellType property. If it is a ProgressBar cell type then the ProgressBar 
+text style is checked whether it should be in percentage style. If the style is 
+in percentage  then the percentage value is calculated and saved to Range’s 
+Number property. The Range’s NumberFormat is saved as “0%”. If there is no style 
+specified, the ProgressValue is directly saved to Range’s Number.</p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.5.2      If CellType not 
+specified</p>
+<p class="BodyText1">Not Applicable</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.6 DateTime Cell Conversion </h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.6.1      If format 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a DateTime cell type using 
+the CellType property. If it is a DateTime cell type, the format is skipped for 
+all cell types and finally the CellValue is assigned to Range’s DateTime 
+property. Since the format is specified, the DateTime value is converted to 
+DateTime type and the format is set to the DateTime format in Range’s 
+Format.</p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.6.2      If format not 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a DateTime cell type using 
+the CellType property. If it is not a DateTime cell type, the format is skipped 
+for all cell types and finally the CellValue is assigned to Range’s DateTime 
+property. Since the format is not specified, the DateTime value is converted to 
+DateTime type and set to General Format.</p>
+<h6 style="tab-stops: 0pt">3.1.6.1.1.7 Formula Cell Conversion </h6>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.7.1      If Format 
+specified</p>
+<p class="BodyText1">The cell is checked whether it is a Formula cell type using 
+the CellType property. If it is a Formula cell type then the GridCell’s Text 
+string is stored to Range’s Formula property. The values in Excel cells can be 
+formatted by specifying the format in Formula cell types.</p>
+<p style="tab-stops: 0pt" class="MsoHeading7">3.1.6.1.1.7.2      If Format not 
+specified</p>
+<p class="BodyText1">If no formula is specified for the cell then the formula is 
+set to Excel sheet’s range Formula property with its default format.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

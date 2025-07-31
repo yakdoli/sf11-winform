@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zooming</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="fab783f5-8136-4dcb-b799-ac7e8deef025" />
+<meta name="Title" content="Zooming" />
+<meta name="Microsoft.Help.TocParent" content="7129b6a6-f152-423f-8812-47c6f2e0dcbe" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Zooming</h5>
+<p class="BodyText1">Chart for WPF lets you zoom into a narrower range within the 
+chart area. This section discusses the below topics.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Zooming Using Mouse</p>
+<p class="BodyText1">You can switch to the zooming mode in the Chart by using the 
+built-in context menu. Users can choose to zoom a specific series, if they do 
+so, the rest of the series will be rendered semi-transparently, based on the 
+<b>InactiveSeriesOpacityOnZoom</b> property (discussed later in this 
+section).</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_241.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 232: Built-In Context Menu to Enable Zooming</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Zoom Using Zooming Toolkit</p>
+<p class="BodyText1">In the Zooming mode, a Zooming toolkit is displayed at the 
+top-left corner of the ChartArea. Using the buttons in the Zooming toolkit, 
+ChartSeries can be zoomed in, out, reset or closed (to exit zoom mode).</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_242.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 233: Zooming Enabled - Zooming Toolkit at the Top - 
+Left Corner</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Display/Hide Buttons in Zooming Toolkit</p>
+<p class="BodyText1">The visibility of the Zooming Toolkit or the individual 
+buttons in the toolkit can be controlled by using the following properties.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoCaption">Table 155: Property 
+Table</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ZoomInButtonVisibility</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">gets or sets zoom in button visibility</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ZoomOutButtonVisibility</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">gets or sets zoom out button visibility</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ZoomCloseButtonVisibility</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">gets or sets zoom close button visibility</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ZoomResetButtonVisibility</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">gets or sets zoom reset button visibility</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ZoomingToolkitVisibility</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">gets or sets zooming toolkit 
+  visibility</p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sfchart:ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">sfchart:ChartZoomingToolkit.ZoomInButtonVisibility</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">"<span style="COLOR: blue">Collapsed</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">sch:ChartZoomingToolkit.ZoomOutButtonVisibility</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">"<span style="COLOR: blue">Hidden</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">sch:ChartZoomingToolkit.ZoomResetButtonVisibility</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Collapsed</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">sch:ChartZoomingToolkit.ZoomingToolkitVisibility</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Visible</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;!</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">—-your</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">code</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">here--</span><span style="FONT-FAMILY: 'Courier New'">!<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sfchart:ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartZoomingToolkit</span><span style="FONT-FAMILY: 'Courier New'">.SetZoomInButtonVisibility(chartArea, 
+      <span style="COLOR: #2b91af">Visibility</span>.Collapsed);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartZoomingToolkit</span><span style="FONT-FAMILY: 'Courier New'">.SetZoomOutButtonVisibility(chartArea, 
+      <span style="COLOR: #2b91af">Visibility</span>.Hidden);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartZoomingToolkit</span><span style="FONT-FAMILY: 'Courier New'">.SetZoomResetButtonVisibility(chartArea, 
+      <span style="COLOR: #2b91af">Visibility</span>.Collapsed);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartZoomingToolkit</span><span style="FONT-FAMILY: 'Courier New'">.SetZoomingToolkitVisibility(chartArea, 
+      <span style="COLOR: #2b91af">Visibility</span>.Visible);</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Zooming by Manual Drag</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can also manually drag-select an area to perform the zoom 
+operation.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_243.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 234: Drag-Select Area to Zoom</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Zooming Through Code</p>
+<p class="BodyText1">Chart can be zoomed programmatically by using Chart Commands, 
+Keyboard Keys and Pre-defined Properties.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Zooming Using Chart Commands</p>
+<p class="BodyText1">Zooming mode can be enabled by calling the appropriate Chart 
+Commands.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To enter Zooming 
+      mode.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.SwitchZooming.Execute(<span style="COLOR: blue">null</span>, chart1.Areas[0]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To perform Zoom 
+      In.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.ZoomIn.Execute(<span style="COLOR: blue">null</span>, Chart1.Areas[0]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To perform Zoom 
+      Out.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.ZoomOut.Execute(<span style="COLOR: blue">null</span>, Chart1.Areas[0]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To Perform Zoom 
+      Reset.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.ZoomReset.Execute(<span style="COLOR: blue">null</span>, Chart1.Areas[0]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To Close the Zooming 
+      Toolkit again, use CancelZooming (exit zooming mode).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.CancelZooming.Execute(<span style="COLOR: blue">null</span>, 
+Chart1.Areas[0]);</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Enabling Zooming Without Using Zooming Toolkit</p>
+<p class="BodyText1">Drag-select an area in the Chart to enable zooming when the 
+zooming toolkit is invisible. The following code snippet illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Enable zoom 
+      mode.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartAreaCommands</span><span style="FONT-FAMILY: 'Courier New'">.SwitchZooming.Execute(<span style="COLOR: blue">null</span>, Chart1.Areas[0]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hide the zooming 
+      toolkit.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartZoomingToolkit</span><span style="FONT-FAMILY: 'Courier New'">.SetZoomingToolkitVisibility(Chart1.Areas[0], 
+      <span style="COLOR: #2b91af">Visibility</span>.Collapsed);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Zoom Using Keyboard Keys</p>
+<p class="BodyText1">You can enable zooming by using the keyboard keys. The 
+following code snippet shows how the ChartArea can be Zoomed by using the</p>
+<p class="BodyText1">ALT+I key combination.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding Key Gesture Alt 
+      + I keys to Zoom In the Chart Area.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">KeyGesture</span><span style="FONT-FAMILY: 'Courier New'"> gesture = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">KeyGesture</span>(<span style="COLOR: #2b91af">Key</span>.I, <span style="COLOR: #2b91af">ModifierKeys</span>.Alt);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">KeyBinding</span><span style="FONT-FAMILY: 'Courier New'"> zoomInGesture = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">KeyBinding</span>(<span style="COLOR: #2b91af">ChartAreaCommands</span>.ZoomIn, gesture) { 
+      CommandTarget = <span style="COLOR: blue">this</span>.Chart1.Areas[0] 
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.InputBindings.Add(zoomInGesture);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Zooming using Pre-defined Properties</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">ZoomFactor</p>
+<p class="BodyText1">The Chart can be zoomed by using the Axis.ZoomFactor 
+property. The ZoomFactor is usually between 0 and 1. When set to 1, the chart 
+will not be zoomed. When set to 0.5, the size of the chart will be doubled. 
+Scrollbars will be automatically displayed to allow any section of the hidden 
+range to be viewed. The default value is 1.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Zoom the Chart with 
+      Zoom factor 0.5.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Chart1.Areas[0].PrimaryAxis.ZoomFactor 
+      = 0.5;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ZoomPosition</p>
+<p class="BodyText1">You can also programmatically specify the scrollbar position 
+of the zoomed-in axes by using the <b>Axis.ZoomPosition</b> property.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code snippet shows how the chart with values 0 
+to 5 will have the scrollbar positioned near point 5, when the ChartAxis is 
+zoomed, with the ZoomFactor set to 0.5.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Zoom the Chart with 
+      Zoom factor 0.5.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Chart1.Areas[0].PrimaryAxis.ZoomFactor 
+      = 0.5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Position the ScrollBar 
+      to point 5.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Chart1.Areas[0].PrimaryAxis.ZoomPosition 
+      = 5;  </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_244.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 235: Zoom Position Set</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Disable Zooming</p>
+<p class="BodyText1">Zooming using mouse can be disabled for a particular axis by 
+using the <b>EnableZooming</b> property. The following code snippet illustrates 
+how zooming is disabled only for the Primary axis of the ChartArea while it is 
+enabled for the other axes.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.PrimaryAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> EnableZooming</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.PrimaryAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Chart1.Areas[0].PrimaryAxis.EnableZooming 
+      = <span style="COLOR: blue">false</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note"><span style="COLOR: blue"><img border="0" src="ImagesExt/image81_1.jpg" alt="" /></span>Note: EnableZooming property is useful to 
+disable zooming using mouse and keyboard keys. But it will not take effect when 
+the ZoomFactor property is set. When ZoomFactor property is set between 0 to 1, 
+and EnableZooming property is set to False, the axis will still be 
+zoomed.       </p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Zooming Specific ChartAxis Associated with a 
+ChartSeries Through Code</p>
+<p class="BodyText1">The Axis associated with a particular ChartSeries can be 
+enabled/disabled through the Zooming functionality. This is achieved by using 
+the series.IsZoomable property. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code illustrates how zooming can be disabled 
+for all the axis in Chart and enabled only for the axis associated with Chart 
+Series2.</p>
+<p class="BodyText1"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 129.75pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 129.75pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsContextMenuEnabled</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ZoomAllAxes</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Data</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1 1 2 2 3 3 4 4 5 5 6 
+      6"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Red" /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Data</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1 60 2 50 3 40 4 30 5 20 
+      6 10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsZoomable</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Blue"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries.YAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Orientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Vertical"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries.YAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series3"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Data</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1 10 2 20 3 30 4 40 5 30 
+      6 20"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Green"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries.YAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Orientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Vertical"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries.YAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> Window1_Loaded(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Chart1.Areas[0].ZoomAllAxes = <span style="COLOR: blue">false</span>;           
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Chart1.Areas[0].Series[1].IsZoomable = 
+      <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}    
+  </span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following screen shot illustrates this.</p>
+<p class="BodyText1"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_245.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 236: Zooming Enabled Programmatically on a Specific 
+ChartAxis associated with Series2</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image81_1.jpg" alt="" />Note: Series.IsZoomable is used to enable/disable 
+the zooming of the Axis associated with it. Hence this property is used only in 
+Multiple Axes Charts. This property takes effect only when zooming is performed 
+through code. (Refer to Zooming using Keyboard Keys in this page for zooming 
+through keyboard keys). When zooming is enabled / disabled through the context 
+menu, this property will not take effect.</p></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Inactive Series Opacity </p>
+<p class="BodyText1">When an individual series in the chart is zoomed, the opacity 
+of the series which have not been zoomed can be controlled, so that the series 
+which is zoomed is clearly visible. This can be done by using the 
+<b>InactiveSeriesOpacityOnZoom</b> property of the ChartSeries.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following lines of code can be used to change the opacity 
+of an inactive series while zooming.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Red"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      InactiveSeriesOpacityOnZoom</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0.65"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Data</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1 1 2 2 3 3 4 4 5 5 6 
+      6"/&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_246.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 237: Volume Series Rendered Semi-Transparently when 
+the MSFT Series is being Zoomed</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #4f81bd; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Fractional Values in Axis while Zooming</p>
+<p class="BodyText1">On zooming the chart, the ChartAxis Labels appear with 
+fractional values. This can be restricted by using the 
+<b>Axis.IsFractionEnabledOnZoom </b>property.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Chart1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="300"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="400"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsContextMenuEnabled</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True" &gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.SecondaryAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsFractionEnabledOnZoom</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False" /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.SecondaryAxis</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Series1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Red"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Data</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1 1 2 2 3 3" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hides fractional 
+      values in Secondary Axis labels.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Chart1.Areas[0].SecondaryAxis.IsFractionEnabledOnZoom 
+      = <span style="COLOR: blue">false</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><img border="0" src="ImagesExt/image81_247.jpg" alt="" /><b><i> </i></b>For more details, refer to 
+the sample in the following location:</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b><i>...\My Documents\Syncfusion\EssentialStudio\&lt;Version 
+Number&gt;\WPF\Chart.WPF\Samples\3.5\WindowsSamples\User Interaction\Zoom And 
+Scrolling Demo</i></b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyTextHeading">Zooming and Panning support for Chart WPF</p>
+<p class="BodyText1">Essential Chart WPF is now enhanced with Zooming and Panning. 
+This feature is used to drag the Zoomed chart area from one point to the 
+other.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Adding Zooming and Panning</p>
+<p class="BodyText1">Add Zooming and Panning to the chart, by using the following 
+code.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="MARGIN-TOP: 5.25pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[Xaml] </span></b></p>
+      <p style="MARGIN-TOP: 5.25pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Chart1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Grid.Row</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Margin</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="10"&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="area"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsContextMenuEnabled</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"/&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"> syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Chart/&gt;</span></p></td></tr></tbody></table>
+<p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="MARGIN-TOP: 5.25pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#] </span></b></p>
+      <p style="MARGIN-TOP: 5.25pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartArea</span><span style="FONT-FAMILY: 'Courier New'"> area = <span style="COLOR: blue">this</span>.Chart1.Areas[0];</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      area.IsContextMenuEnabled = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_248.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 238: Zooming and Panning</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">See Also</p>
+<p class="MsoNormal"><a href="ms-xhelp:///?Id=48ebfdae-67dc-4fce-a339-96b687590276"><span class="UGHyperlink">Highlighting and Selection</span></a><span style="COLOR: #15428b">, </span><a href="ms-xhelp:///?Id=48ebfdae-67dc-4fce-a339-96b687590276"><span class="UGHyperlink">Chart Area ContextMenu</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

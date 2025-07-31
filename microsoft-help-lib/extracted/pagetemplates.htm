@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Page Templates</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="30034916-cbea-406c-b79c-a32ea4c00a3c" />
+<meta name="Title" content="Page Templates" />
+<meta name="Microsoft.Help.TocParent" content="7b280c30-c027-487a-8667-d06eb360eade" />
+<meta name="Microsoft.Help.TocOrder" content="5" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/pdf.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Page Templates </h5>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Page Templates define similar graphics primitives for a range 
+of pages. Each page has two sources of the templates (template on the document 
+holding the section of the page, and template on the section containing the 
+page) that apply sequentially.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Each page template has four properties for Left, Right, Top 
+and Bottom docked templates, and a collection of the additional template 
+elements (stamps). Also, there are eight additional templates that you can add 
+to the odd / even pages (EvenTop, OddTop, etc.). If one of these eight templates 
+is set, it overrides its usual template (OddTop overrides Top, etc.); Otherwise, 
+the usual template is used.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: A PdfPageTemplateElement is added as one 
+template. It can be assigned to Left, Right, Top or Bottom only once.</p></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Using the Page Templates</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">If you want to define some graphics content to all pages of 
+the document, use the <b>Template</b> property of the <b>PdfDocument</b> class. 
+You can define Left, Top, Right, Bottom templates, as well as arbitrary quantity 
+of the other templates (stamps) that can be used for water marking or stamping 
+of the pages.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">If you have decided to use some custom templates for a 
+specified range of the page, use <b>Template</b> property of the 
+<b>PdfSection</b> class containing these pages. It involves the same 
+functionality as in the PdfDocument class. Additionally, you can disable or 
+enable the document templates from the section.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Default Behavior</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Document templates are enabled, by default.</p>
+<p class="BodyText1"> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: Section template, which is printed over the 
+parent template, does not replace document templates. If you want to insert a 
+watermark or stamp on the page, use Stamps property of the PdfDocumentTemplate 
+class.</p></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Behavior</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1"><b>PdfPageTemplateElement</b> class has the functionality of 
+aligning (use <b>Alignment</b> property) and docking (use <b>Dock</b> property) 
+of this class. Docking to the Left, Top, Right, Bottom is implemented similar to 
+Windows Forms Docking functionality (Top and Bottom have priority). Docking 
+stamp elements do not have any priorities and the appearance depends on their 
+order in the collection.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note:<span style="COLOR: black; FONT-SIZE: 8pt"> 
+</span>Alignment has higher priority than Docking in the template element, but 
+Docking resets the Alignment.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Each template element which is docked, sticks to its 
+appropriate side of the page. It stretches itself according to the dimensions of 
+the page and resets the alignment. Avoid printing any content that can be 
+stretched in cases where the pages have different sizes. Also, define the size 
+of the template elements according to its docking style on the page. But, if you 
+want to use some template element as Left, Top, Right or Bottom, but do not want 
+the element to be stretched, you can set the <b>Alignment</b> property, once you 
+assigned the template element (or set Dock property) to any of the mentioned 
+properties. In this case, the template will stick to the appropriate position 
+but will not be stretched.</p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: In this scenario, you can set the Alignment 
+property to the appropriate side only (depending on the Dock style). For 
+example, if you set some template element as Top, the allowed values for 
+Alignment are: TopLeft, TopCenter and TopRight. You cannot set any other value 
+attributing to the possible inconsistency with Docking style.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Z-Order of the Layers</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Each page can contain page templates from the document and 
+from the parent section. Also, it can contain its own layers. The order of the 
+layers is as follows (from back to top):</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Document page 
+templates (Left, Top, Right, Bottom) which have Background property set to 
+<b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Document stamp 
+elements which have Background property set to <b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Section page 
+templates (Left, Top, Right, Bottom) which have Background property set to 
+<b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Section stamp 
+elements which have Background property set to <b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Page layers.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Section page 
+templates (Left, Top, Right, Bottom) which have Foreground property set to 
+<b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   Section stamp 
+elements which have Foreground property set to <b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">8.   Document page 
+templates (Left, Top, Right, Bottom) which have Foreground property set to 
+<b><i>True</i></b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">9.   Document stamp 
+elements which have Foreground property set to <b><i>True</i></b>.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image22_38.png" alt="" /></p>
+<p class="MsoCaption">Figure 27: Layers</p><span id="related-topics"></span></div></body></html>

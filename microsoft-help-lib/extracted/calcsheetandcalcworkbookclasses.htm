@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>CalcSheet and CalcWorkbook Classes</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="27419508-cc91-44ab-aba0-6983409ab015" />
+<meta name="Title" content="CalcSheet and CalcWorkbook Classes" />
+<meta name="Microsoft.Help.TocParent" content="86516665-722b-424a-85bc-940f7bb46741" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/calculate.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=86516665-722b-424a-85bc-940f7bb46741"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=75c7442e-381f-46d4-8138-7ec920d1f1bb"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e">Reporting 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=2ea52c7f-a332-43bd-9ca7-2ea0898ff54e">Essential 
+Calculate</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=91222e44-d3ca-4392-8f0f-41bd2ae3dd3f">Concepts and 
+Features</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=86516665-722b-424a-85bc-940f7bb46741">Working with an 
+Excel Spreadsheet</a></div>
+<h3 style="tab-stops: 0pt">CalcSheet and CalcWorkbook Classes</h3>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">In the Adding Calculation Support section, you would have 
+learnt how to support referencing multiple ICalcData objects in a workbook 
+fashion. The technique used there relies on registering each ICalcData object 
+directly with a single instance of the CalcEngine. Different ICalcData objects 
+are managed by tying together in a Tab Control as the Tab Pages. To support a 
+general workbook structure where there are no support objects like Tab Pages and 
+Tab Controls to provide the links, the Essential Calculate library includes two 
+classes: <b>CalcSheet</b> and <b>CalcWorkbook</b>.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The 
+<b>CalcSheet</b> class is an ICalcData derived object that plays the role of a 
+single worksheet. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>It does have 
+the optional facility to hold row/column type data objects that can be set 
+through indexing an instance of the class. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>This class 
+will allocate storage to hold such data. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The 
+CalcWorkbook<b> </b>class is a collection of CalcSheets. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can use 
+these classes to manage the support for working with Excel spreadsheets.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><img border="0" src="ImagesExt/image18_45.jpg" alt="" /> For more 
+detailed information on these classes, check out the class reference.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

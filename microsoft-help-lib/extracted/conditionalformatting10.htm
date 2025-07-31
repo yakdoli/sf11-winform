@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Conditional Formatting</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="c2892637-e113-4b7d-8a5c-ccf9ff3f2182" />
+<meta name="Title" content="Conditional Formatting" />
+<meta name="Microsoft.Help.TocParent" content="9d7968f1-d52c-4e79-a6ae-fb01305e9f98" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/PivotGrid.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=261a1285-e1fe-46f0-b2a4-ada0667c1823"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=9e70e2c8-bd52-4206-8432-b3e5a1e9434e"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=fdf33dd8-62b2-47b9-ad7b-fc50e590bca5">Business 
+Intelligence Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c006b39c-6aa2-4637-b7de-3e7b6cb3f9f9">Essential BI 
+Silverlight</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Pivot Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=9d7968f1-d52c-4e79-a6ae-fb01305e9f98">Features</a></div>
+<h2 style="tab-stops: 0pt">Conditional Formatting</h2>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Conditional Formatting is the process of applying custom 
+styles to any object based on certain conditions. Conditional Formatting for 
+<b>PivotGrid</b> WPF allows you to format the Grid cells based on conditions. 
+This can be achieved by defining <b>PivotGridDataConditionalFormat</b> for the 
+Grid, which allows you to specify the criteria for filtering cells and styles to 
+be applied for the filtered cells. After the specifications are defined, the 
+specified styles are applied only to cells that satisfy the conditions 
+specified. Conditional Formatting can be specified by using the 
+<b>PivotGridControl.ConditionalFormats</b> property, which is an observable 
+collection of type <b>PivotGridDataConditionalFormat</b>. </p>
+<p class="BodyText1">The criteria for filtering cells are specified by using the 
+<b>PivotGridDataConditionalFormat.Conditions</b> property, which is a collection 
+of <b>PivotGridDataCondition</b> objects. The style for each 
+<b>ConditionalFormat</b> can be specified by using the 
+<b>PivotGridDataConditionalFormat.CellStyle</b> property, which should be of 
+type <b>PivotGridCellStyle</b>.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Adding Conditional Formatting </p>
+<p class="BodyText1">Conditional Formatting can be added both in code-behind and 
+XAML, as shown in the following code snippets. </p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">  </span><span style="FONT-FAMILY: 'Courier New'">&lt;!--Specifying 
+      PivotRows.--&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotRows<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotItem<span style="COLOR: red"> 
+      FieldMappingName</span><span style="COLOR: blue">="Product"</span><span style="COLOR: red"> TotalHeader</span><span style="COLOR: blue">="Total"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotItem<span style="COLOR: red"> 
+      FieldMappingName</span><span style="COLOR: blue">="Date"</span><span style="COLOR: red"> TotalHeader</span><span style="COLOR: blue">="Total"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotRows<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!--Specifying 
+      PivotColumns.--&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotColumns<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotItem<span style="COLOR: red"> 
+      FieldMappingName</span><span style="COLOR: blue">="Country"</span><span style="COLOR: red"> TotalHeader</span><span style="COLOR: blue">="Total"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotItem<span style="COLOR: red"> 
+      FieldMappingName</span><span style="COLOR: blue">="State"</span><span style="COLOR: red"> TotalHeader</span><span style="COLOR: blue">="Total"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotColumns<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!--Specifying 
+      PivotCalculationValues.--&gt;<span style="COLOR: #a31515"> 
+      </span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotCalculations<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotComputationInfo<span style="COLOR: red"> 
+      FieldName</span><span style="COLOR: blue">="Amount"</span><span style="COLOR: red"> Format</span><span style="COLOR: blue">="C"</span><span style="COLOR: red"> 
+      SummaryType</span><span style="COLOR: blue">="DoubleTotalSum"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotComputationInfo<span style="COLOR: red"> 
+      FieldName</span><span style="COLOR: blue">="Quantity"</span><span style="COLOR: red"> Format</span><span style="COLOR: blue">="#,##0"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridControl.PivotCalculations<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'">syncfusion<span style="COLOR: blue">:</span>PivotGrid.ConditionalFormats<span style="COLOR: blue">&gt;</span> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!-- Adding Conditions. 
+      --&gt;<span style="COLOR: #a31515">                       
+      </span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat<span style="COLOR: red"> Name</span><span style="COLOR: blue">="C1"&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">      
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!-- Specifying the 
+      Cell Style. --&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.CellStyle<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridCellStyle<span style="COLOR: red"> 
+      Background</span><span style="COLOR: blue">="Green" </span><span style="COLOR: red">FontFamily</span><span style="COLOR: blue">="Calibri"</span><span style="COLOR: red"> 
+      FontSize</span><span style="COLOR: blue">="12"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.CellStyle<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">      
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!-- Specifying 
+      Conditions. --&gt;<span style="COLOR: #a31515"> </span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.Conditions<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">          
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">PivotGridDataCondition</span><span style="FONT-FAMILY: 'Courier New'"> ConditionType<span style="COLOR: blue">="GreaterThan"</span> Value<span style="COLOR: blue">="5000000"</span> SummaryElement<span style="COLOR: blue">="Amount"</span> PredicateType<span style="COLOR: blue">="And"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.Conditions<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat<span style="COLOR: red"> Name</span><span style="COLOR: blue">="C2"&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">      
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!-- Specifying the 
+      Cell Style --&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.CellStyle<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridCellStyle<span style="COLOR: red"> 
+      Background</span><span style="COLOR: blue">="Red" </span><span style="COLOR: red">FontFamily</span><span style="COLOR: blue">="Calibri"</span><span style="COLOR: red"> 
+      FontSize</span><span style="COLOR: blue">="12"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.CellStyle<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">      
+      </span><span style="FONT-FAMILY: 'Courier New'">&lt;!-- Specifying 
+      Conditions. --&gt;<span style="COLOR: #a31515"> </span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.Conditions<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataCondition<span style="COLOR: red"> ConditionType</span><span style="COLOR: blue">="LessThan"</span><span style="COLOR: red"> 
+      Value</span><span style="COLOR: blue">="100000</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">"</span><span style="FONT-FAMILY: 'Courier New'"> SummaryElement<span style="COLOR: blue">="Amount"</span> PredicateType<span style="COLOR: blue">="And"/&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat.Conditions<span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span>syncfusion<span style="COLOR: blue">:</span>PivotGridDataConditionalFormat<span style="COLOR: blue">&gt;</span>           
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'">syncfusion<span style="COLOR: blue">:</span>PivotGrid.ConditionalFormats<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Specifying the 
+      PivotGridDataConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'">.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">PivotGridDataConditionalFormat 
+      conditionalFormat1 = <span style="COLOR: blue">new</span> 
+      PivotGridDataConditionalFormat();</span></p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding Conditions to 
+      the PivotGridDataConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'">.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat1.Conditions.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PivotGridDataCondition</span>() { </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ConditionType= <span style="COLOR: #2b91af">PivotGridDataConditionType</span>.GreaterThan , 
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      SummaryElement=<span style="COLOR: #a31515">"Amount"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Value=<span style="COLOR: #a31515">"5000000"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      PredicateType = <span style="COLOR: #2b91af">PredicateType</span>.And 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Specifying the Cell 
+      Style.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat1.CellStyle = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PivotGridCellStyle</span>() { Background= <span style="COLOR: #2b91af">Brushes</span>.Green, FontFamily = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Calibri"</span>), FontSize=12 </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Specifying the 
+      PivotGridDataConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">PivotGridDataConditionalFormat 
+      conditionalFormat2 = <span style="COLOR: blue">new</span> 
+      PivotGridDataConditionalFormat();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">// Adding 
+      Conditions to the PivotGridDataConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat2.Conditions.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PivotGridDataCondition</span>() { </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ConditionType= <span style="COLOR: #2b91af">PivotGridDataConditionType</span>.LessThan , 
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      SummaryElement=<span style="COLOR: #a31515">"Amount"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Value=<span style="COLOR: #a31515">"100000"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  
+                PredicateType 
+      = <span style="COLOR: #2b91af">PredicateType</span>.And });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Specifying the Cell 
+      Style.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat2.CellStyle = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PivotGridCellStyle</span>() { Background= <span style="COLOR: #2b91af">Brushes</span>.Red, FontFamily = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Calibri"</span>), FontSize=12 </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding Conditions to 
+      the PivotGrid.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.PivotGrid1.ConditionalFormats.Add(conditionalFormat1);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.PivotGrid1.ConditionalFormats.Add(conditionalFormat2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specifying 
+      PivotGridDataConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> conditionalFormat1 <span style="COLOR: blue">As</span> PivotGridDataConditionalFormat = <span style="COLOR: blue">New</span> PivotGridDataConditionalFormat()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding Conditions to 
+      the PivotGridDataConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat1.Conditions.Add(<span style="COLOR: blue">New</span> PivotGridDataCondition() <span style="COLOR: blue">With</span> {.ConditionType= 
+      PivotGridDataConditionType.GreaterThan, .SummaryElement="Amount", 
+      .Value="5000000", .PredicateType = PredicateType.And})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specifying the Cell 
+      Style to the ConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat1.CellStyle = <span style="COLOR: blue">New</span> PivotGridCellStyle()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> TempFontFamily <span style="COLOR: blue">As</span> FontFamily = <span style="COLOR: blue">New</span> FontFamily("Calibri"), 
+      FontSize=12</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      Brushes.Green, FontFamily = <span style="COLOR: blue">New</span> 
+      FontFamily("Calibri"), FontSize</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      Background= Brushes.Green, FontFamily</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specifying the 
+      PivotGridDataConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'">.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> conditionalFormat2 <span style="COLOR: blue">As</span> PivotGridDataConditionalFormat = <span style="COLOR: blue">New</span> PivotGridDataConditionalFormat()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">' Adding 
+      Conditions to the PivotGridDataConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat2.Conditions.Add(<span style="COLOR: blue">New</span> PivotGridDataCondition() <span style="COLOR: blue">With</span> {.ConditionType= 
+      PivotGridDataConditionType.GreaterThan, .SummaryElement="Amount", 
+      .Value="100000", .PredicateType = PredicateType.And})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specifying the Cell 
+      Style to the ConditionalFormat.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conditionalFormat2.CellStyle = <span style="COLOR: blue">New</span> PivotGridCellStyle()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> TempFontFamily <span style="COLOR: blue">As</span> FontFamily = <span style="COLOR: blue">New</span> FontFamily("Calibri"), 
+      FontSize=12</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      Brushes.Red, FontFamily = <span style="COLOR: blue">New</span> 
+      FontFamily("Calibri"), FontSize</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      Background= Brushes.Red, FontFamily</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding Conditions to 
+      the PivotGrid.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.PivotGrid1.ConditionalFormats.Add(conditionalFormat1)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.PivotGrid1.ConditionalFormats.Add(conditionalFormat2)</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\dwarageshmb\Desktop\Vol 4 Docs\Images\PivotGrid SL\CF.png" src="ImagesExt/image36_11.jpg" /></p>
+<p class="MsoCaption">Figure 11: Conditionally Formatted PivotGrid</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1"><b><i>..\..\ 
+Syncfusion\BI\Silverlight\Syncfusion.PivotGrid.Silverlight.Samples\Syncfusion.PivotGrid.Silverlight.Samples\Samples\CFDemo</i></b></p><span id="related-topics"></span></div></body></html>

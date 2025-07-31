@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to apply text color for a RichText celltype in GridGroupingControl</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="9d1e6187-0633-41db-9c40-eb3c22798822" />
+<meta name="Title" content="How to apply text color for a RichText celltype in GridGroupingControl" />
+<meta name="Microsoft.Help.TocParent" content="0e6619fb-eda2-49fa-b259-dd5c1481815c" />
+<meta name="Microsoft.Help.TocOrder" content="6" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">How to apply text color for a RichText celltype in 
+GridGroupingControl</h4>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">You can use the <i>QueryCellStyleInfo</i> event to provide 
+styles for the cells in the GridGroupingControl. This provides the GridStyleInfo 
+object for a cell on demand. The QueryCellStyleInfo is triggered every time a 
+request is made to access the style information for a cell. You can do any type 
+of cell formatting with this event.</p>
+<p class="BodyText1">You can apply style settings for a given CellType using 
+the TableCellIdentity.TableCellType property on the instances of the 
+GridTableCellStyleInfoEventArgs.</p>
+<p class="BodyText1"> The following code example illustrates how to apply 
+styles to RichText CellType<span style="COLOR: black"> in the grouping 
+grid:</span></p>
+<p class="BodyText1"><span style="COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]<b></b></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hook up the 
+      event.</span><span style="COLOR: black"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.gridGroupingControl1.QueryCellStyleInfo 
+      += </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridTableCellStyleInfoEventHandler</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(gridGroupingControl1_QueryCellStyleInfo);</span></p>
+      <p class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//QueryCellStyleInfo 
+      event: To Format Cell by Cell Basis on demand.</span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      gridGroupingControl1_QueryCellStyleInfo(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Windows.Forms.Grid.Grouping.GridTableCellStyleInfoEventArgs 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Style.ReadOnly = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (e.TableCellIdentity.Column != <span style="COLOR: blue">null</span> &amp;&amp; e.TableCellIdentity.Column.Name 
+      == "Values" &amp;&amp; e.TableCellIdentity.DisplayElement.Kind == 
+      Syncfusion.Grouping.DisplayElementKind.Record)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      e.Style.CellType = GridCellTypeName.RichText;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      e.Style.TextColor = Color.Purple;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      }</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]<b></b></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Hook up the 
+      event.</span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'"> 
+      GridGroupingControl1.QueryCellStyleInfo, <span style="COLOR: blue">AddressOf</span> 
+      gridGroupingControl1_QueryCellStyleInfo</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'QueryCellStyleInfo 
+      event: To Format Cell by Cell Basis on demand.</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Private</span> <span style="COLOR: blue">Sub</span> 
+      gridGroupingControl1_QueryCellStyleInfo(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Grid.Grouping.GridTableCellStyleInfoEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      e.Style.ReadOnly = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">If</span> e.TableCellIdentity.Column <span style="COLOR: blue">IsNot</span> <span style="COLOR: blue">Nothing</span> 
+      <span style="COLOR: blue">AndAlso</span> e.TableCellIdentity.Column.Name = 
+      <span style="COLOR: #a31515">"Values"</span> <span style="COLOR: blue">AndAlso</span> e.TableCellIdentity.DisplayElement.Kind 
+      = Syncfusion.Grouping.DisplayElementKind.Record <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Style.CellType = GridCellTypeName.RichText</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Style.TextColor = Color.Purple</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

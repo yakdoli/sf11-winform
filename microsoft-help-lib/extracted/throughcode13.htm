@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Through Code</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="4e436158-2558-467d-ac23-e2cb2df1a5e6" />
+<meta name="Title" content="Through Code" />
+<meta name="Microsoft.Help.TocParent" content="17f39f9b-5cfd-4b98-82d8-e7cdb1d0907c" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Through Code</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">You can also configure the appearance and build the content 
+of ToolBar programmatically. This tutorial shows how to create a ToolBar 
+entirely with code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image72_360.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="MsoCaption">Figure 257: Toolbar created programmatically</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">To create a ToolBar in ASP.NET code</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">To the application add the required code behind file to 
+create the toolbar programmatically.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 11.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#] 
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> Page_Load(<span style="COLOR: blue">object</span> sender, System.<span style="COLOR: teal">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      BuildToolBar();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> BuildToolBar()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   toolbar2 = 
+      <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.<span style="COLOR: teal">ToolBar</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+       toolbar2.ID = <span style="COLOR: maroon">"ToolBar2"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">                  
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: teal">ToolBarItem</span> TBLeft2 = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ToolBarItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   TBLeft2.ID 
+      = <span style="COLOR: maroon">"TBLeft2"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      TBLeft2.AppearanceMode = <span style="COLOR: teal">AppearanceMode</span>.ImageOnly;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      TBLeft2.ButtonType = <span style="COLOR: teal">ToolBarButtonType</span>.Regular;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: teal">ToolBarItem</span> newitem = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ToolBarItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   newitem.ID 
+      = <span style="COLOR: maroon">"New"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.AppearanceMode = <span style="COLOR: teal">AppearanceMode</span>.ImageAndText;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.ButtonType = <span style="COLOR: teal">ToolBarButtonType</span>.Regular;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.TextPosition = <span style="COLOR: teal">TextPosition</span>.ImageLeftTextRight;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.Text = <span style="COLOR: maroon">"New"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.ImagePath = <span style="COLOR: maroon">"new.gif"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.Look=<span style="COLOR: maroon">"lookcommon"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      newitem.ToolTip = <span style="COLOR: maroon">"New (Alt + N 
+      )"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: teal">ToolBarItem</span> open = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ToolBarItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   open.ID = 
+      <span style="COLOR: maroon">"Open"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      open.AppearanceMode = <span style="COLOR: teal">AppearanceMode</span>.ImageAndText;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      open.ButtonType = <span style="COLOR: teal">ToolBarButtonType</span>.Regular;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   open.Text 
+      = <span style="COLOR: maroon">"Open"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      open.ImagePath = <span style="COLOR: maroon">"open.gif"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      open.TextPosition = <span style="COLOR: teal">TextPosition</span>.ImageLeftTextRight;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   open.Look 
+      = <span style="COLOR: maroon">"lookcommon"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      open.ToolTip = <span style="COLOR: maroon">"Open (Alt + 
+      O)"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: teal">ToolBarItem</span> save = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ToolBarItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   save.ID = 
+      <span style="COLOR: maroon">"Save"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   save.Text 
+      = <span style="COLOR: maroon">"Save"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      save.AppearanceMode = <span style="COLOR: teal">AppearanceMode</span>.ImageAndText;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      save.ButtonType = <span style="COLOR: teal">ToolBarButtonType</span>.Regular;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      save.TextPosition = <span style="COLOR: teal">TextPosition</span>.ImageLeftTextRight;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      save.ImagePath = <span style="COLOR: maroon">"save.gif"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      save.ToolTip = <span style="COLOR: maroon">"Save (Alt + 
+      S)"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: teal">ToolBarItem</span> TBRight2 = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ToolBarItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      TBRight2.ID = <span style="COLOR: maroon">"TBRight2"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      TBRight2.AppearanceMode = <span style="COLOR: teal">AppearanceMode</span>.ImageOnly;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      TBRight2.ButtonType = <span style="COLOR: teal">ToolBarButtonType</span>.Regular;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">                                                                      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      toolbar2.Items.Add(TBLeft2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      toolbar2.Items.Add (newitem);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      toolbar2.Items.Add (open);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      toolbar2.Items.Add (save);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      toolbar2.Items.Add (TBRight2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      PlaceHolder2.Controls.Add (toolbar2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 11.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> Page_Load(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> System.EventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      BuildToolBar()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> BuildToolBar()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.ToolBar()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.ID = <span style="COLOR: maroon">"ToolBar2"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> TBLeft2 <span style="COLOR: blue">As</span> ToolBarItem = <span style="COLOR: blue">New</span> ToolBarItem()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBLeft2.ID = <span style="COLOR: maroon">"TBLeft2"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBLeft2.AppearanceMode = AppearanceMode.ImageOnly</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBLeft2.ButtonType = ToolBarButtonType.Regular</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> newitem <span style="COLOR: blue">As</span> ToolBarItem = <span style="COLOR: blue">New</span> ToolBarItem()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.ID = <span style="COLOR: maroon">"New"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.AppearanceMode = AppearanceMode.ImageAndText</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.ButtonType = ToolBarButtonType.Regular</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.TextPosition = TextPosition.ImageLeftTextRight</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.Text = <span style="COLOR: maroon">"New"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.ImagePath = <span style="COLOR: maroon">"new.gif"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.Look = <span style="COLOR: maroon">"lookcommon"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      newitem.ToolTip = <span style="COLOR: maroon">"New (Alt + N 
+      )"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> open <span style="COLOR: blue">As</span> ToolBarItem = <span style="COLOR: blue">New</span> ToolBarItem()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.ID = <span style="COLOR: maroon">"Open"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.AppearanceMode = AppearanceMode.ImageAndText</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.ButtonType = ToolBarButtonType.Regular</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.Text = <span style="COLOR: maroon">"Open"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.ImagePath = <span style="COLOR: maroon">"open.gif"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.TextPosition = TextPosition.ImageLeftTextRight</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.Look = <span style="COLOR: maroon">"lookcommon"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      open.ToolTip = <span style="COLOR: maroon">"Open (Alt + 
+      O)"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> save <span style="COLOR: blue">As</span> ToolBarItem = <span style="COLOR: blue">New</span> ToolBarItem()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.ID = <span style="COLOR: maroon">"Save"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.Text = <span style="COLOR: maroon">"Save"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.AppearanceMode = AppearanceMode.ImageAndText</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.ButtonType = ToolBarButtonType.Regular</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.TextPosition = TextPosition.ImageLeftTextRight</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.ImagePath = <span style="COLOR: maroon">"save.gif"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      save.ToolTip = <span style="COLOR: maroon">"Save (Alt + 
+      S)"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> TBRight2 <span style="COLOR: blue">As</span> ToolBarItem = <span style="COLOR: blue">New</span> ToolBarItem()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBRight2.ID = <span style="COLOR: maroon">"TBRight2"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBRight2.AppearanceMode = AppearanceMode.ImageOnly</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      TBRight2.ButtonType = ToolBarButtonType.Regular</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.Items.Add(TBLeft2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.Items.Add(newitem)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.Items.Add(open)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.Items.Add(save)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      toolbar2.Items.Add(TBRight2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      PlaceHolder2.Controls.Add(toolbar2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

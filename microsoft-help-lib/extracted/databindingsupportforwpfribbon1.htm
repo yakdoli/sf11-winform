@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Data Binding Support for WPF Ribbon</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="398d664e-82d6-40d4-9174-fbb7a2897bdf" />
+<meta name="Title" content="Data Binding Support for WPF Ribbon" />
+<meta name="Microsoft.Help.TocParent" content="11619f92-881f-4e03-b46a-e30ec14e5546" />
+<meta name="Microsoft.Help.TocOrder" content="17" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Data Binding Support for WPF Ribbon</h4>
+<p class="BodyText1">The ribbon control supports data binding. The data template 
+for the ribbon can be applied by using a property called Content Template in the 
+Ribbon tab.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Two new properties have been added to the Ribbon Tab 
+control.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ContentTemplate</b> – Is used to retrieve or set a data template for 
+Ribbon tab content. It is a dependency property.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ContentTemplateSelector</b> – Is used to retrieve or set a template 
+selector, which allows custom templates to be applied according to logic. It is 
+a dependency property.</p>
+<p class="BodyText1">The code below demonstrates a business object used for 
+item-source binding.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">CustomRibbonTab</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> Header { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem1 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem2 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem3 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem4 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem5 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuItem6 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuHeader1 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> MenuHeader2 { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt; MenuList { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> ToolTip { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> CustomRibbonTab()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      MenuList = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+  }</span></p></td></tr></tbody></table>
+<p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyText1">Adding items to an observable collection is demonstrated in 
+the code below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      Window1_Loaded(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      SampleList = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">CustomRibbonTab</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">CustomRibbonTab</span> tab1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CustomRibbonTab</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Header = <span style="COLOR: #a31515">"Home"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader1 = <span style="COLOR: #a31515">"New"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem1 = <span style="COLOR: #a31515">"New Email"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem2 = <span style="COLOR: #a31515">"New Items"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader2 = <span style="COLOR: #a31515">"Delete"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem3 = <span style="COLOR: #a31515">"Ignore"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem4 = <span style="COLOR: #a31515">"Clean Up"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem5 = <span style="COLOR: #a31515">"Junk"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem6 = <span style="COLOR: #a31515">"Delete"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      ToolTip = <span style="COLOR: #a31515">"Create a New 
+      Item."</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt; list1 = <span style="COLOR: blue">new</span>               
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Email"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Appointment"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Meeting"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Contact"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Task"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      tab1.MenuList = list1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">CustomRibbonTab</span> tab = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CustomRibbonTab</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Header = <span style="COLOR: #a31515">"Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader1 = <span style="COLOR: #a31515">"New"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader2 = <span style="COLOR: #a31515">"Actions"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem1 = <span style="COLOR: #a31515">"New Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem2 = <span style="COLOR: #a31515">"New Folder 
+      Search"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem3 = <span style="COLOR: #a31515">"Rename 
+Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem4 = <span style="COLOR: #a31515">"Copy Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem5 = <span style="COLOR: #a31515">"Clean Up 
+      Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem6 = <span style="COLOR: #a31515">"Delete 
+Folder"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      ToolTip = <span style="COLOR: #a31515">"Create a New Folder in the 
+      Navigation pane."</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt; list = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Clean Up Folder"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Clean Up Sub Folders"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      tab.MenuList = list;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+        SampleList.Add(tab1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      SampleList.Add(tab);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ribbonWindow.DataContext = <span style="COLOR: blue">this</span>;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">      
+</span></p>
+<p class="BodyText1">Binding the items source property is demonstrated in the code 
+below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt">XAML</span></b></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ItemsSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SampleList</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ribbon"&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black; FONT-SIZE: 12pt">C#</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Binding</span><span style="FONT-FAMILY: 'Courier New'"> binding = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Binding</span>(<span style="COLOR: #a31515">"SampleList"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">binding.Source = <span style="COLOR: blue">this</span>;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ribbon.SetBinding(<span style="COLOR: #2b91af">Ribbon</span>.ItemsSourceProperty, 
+      binding);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_779.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 889: Business Object Bind As Item-source</p>
+<p class="BodyTextHeading">Using the Item Template</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1">The item template can be applied to the ribbon as 
+demonstrated in the following code. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TextBlock</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      HorizontalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Center"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      VerticalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Center"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_780.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 890: Item Template Applied to the Ribbon</p>
+<p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span></b> </p>
+<p class="BodyTextHeading">Using Item Container Style</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1">The above image shows ribbon tabs that are bound with an 
+observable collection. The content template for every ribbon tab can be applied 
+as demonstrated in the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemContainerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Caption"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContentTemplate"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">             
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter.Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Orientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Horizontal"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                             
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> VerticalOffset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Description</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TextBlock</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TextWrapping</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Wrap"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">SplitButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ItemsSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuList</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Padding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="3"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem3</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem4</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem6</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter.Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemContainerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_781.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 891: Item Container Style</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyTextHeading">Using Template Selector</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1">Template Selector can be used so that templates can be 
+applied according to logic set by the user. The following code demonstrates 
+this<span style="FONT-FAMILY: 'Calibri','sans-serif'">.</span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonWindow.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sample</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">SampleSelector</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Selector"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Data Template for Home ribbon tab,</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Home"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Orientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Horizontal"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> VerticalOffset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Description</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TextBlock</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TextWrapping</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Wrap"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">SplitButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ItemsSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuList</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Padding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="3"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem3</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem4</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem6</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+</span></p>
+<p class="BodyText1">Data Template for Folder Ribbon Tab,</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Folder"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Orientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Horizontal"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> VerticalOffset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Description</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TextBlock</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TextWrapping</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Wrap"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ScreenTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton.ToolTip</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Large"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Padding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="3"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuHeader2</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ButtonPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonComboBox</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> ItemsSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuList</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="110"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ExtraSmall"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ButtonPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem4</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeForm</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MenuItem6</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonBar</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonWindow.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+<p class="BodyText1">The following code demonstrates the data template selector 
+logic set by the user.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">SampleSelector</span> : <span style="COLOR: #2b91af">DataTemplateSelector</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">override</span> <span style="COLOR: #2b91af">DataTemplate</span> SelectTemplate(<span style="COLOR: blue">object</span> item, <span style="COLOR: #2b91af">DependencyObject</span> container)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">Window</span> window = <span style="COLOR: #2b91af">Application</span>.Current.MainWindow;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (((<span style="COLOR: #2b91af">CustomRibbonTab</span>)item).Header == <span style="COLOR: #a31515">"Home"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> ((<span style="COLOR: #2b91af">DataTemplate</span>)window.Resources[<span style="COLOR: #a31515">"Home"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> ((<span style="COLOR: #2b91af">DataTemplate</span>)window.Resources[<span style="COLOR: #a31515">"Folder"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">           
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemContainerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">RibbonTab</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Caption"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContentTemplateSelector"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">  Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Selector</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sync</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Ribbon.ItemContainerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  <img border="0" src="ImagesExt/image30_782.jpg" alt="" /></span></p>
+<p class="MsoCaption">Figure 892: Data Template Selector Logic Set by the User</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Adding or Removing Tabs</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1">Users can add or remove items to the item-source-bounded 
+Observable collection so that changes are reflected in ribbon tab items. The 
+following code shows how tab items can be added or removed dynamically when 
+Items Source is used.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      Add_Click(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">CustomRibbonTab</span> newTab = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CustomRibbonTab</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Header = <span style="COLOR: #a31515">"New Tab Item"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader1 = <span style="COLOR: #a31515">"Send &amp; 
+      Recieve"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem1 = <span style="COLOR: #a31515">"Send All 
+      Folders"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem2 = <span style="COLOR: #a31515">"Recieve All 
+      Folders"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuHeader2 = <span style="COLOR: #a31515">"Download"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem3 = <span style="COLOR: #a31515">"Show 
+Progress"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem4 = <span style="COLOR: #a31515">"Cancel All"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem5 = <span style="COLOR: #a31515">"Download 
+      Headers"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      MenuItem6 = <span style="COLOR: #a31515">"Mark all"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      ToolTip = <span style="COLOR: #a31515">"Send Items such as Calendars, 
+      Email, appointments, task, etc."</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt; list1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RibbonButton</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Email"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Appointment"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Meeting"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Contact"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      list1.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonButton</span>() { Label = <span style="COLOR: #a31515">"Task"</span> });</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      newTab.MenuList = list1;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="BACKGROUND: yellow">SampleList.Add(newTab);</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Editor.AppendText(<span style="COLOR: #a31515">"New Tab added to the 
+      Ribbon Control\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="BodyTextHeading">Removing a tab Item</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Calibri','sans-serif'"> </span>The following code 
+demonstrates how to remove a tab item.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      Remove_Click_1(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (SampleList.Count != 0)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      SampleList.RemoveAt(SampleList.Count - 1);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Editor.AppendText(<span style="COLOR: #a31515">"Tab Removed from the 
+      Ribbon Control\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_783.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 893: Removing Tab Item</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyTextHeading">Removing all tabs</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="POSITION: relative; FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt; TOP: 4.5pt"></span></b> </p>
+<p class="BodyText1">The following code demonstrates removing all tabs<span style="FONT-FAMILY: 'Calibri','sans-serif'">.</span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      RemoveAll_Click_2(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (SampleList.Count != 0)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      SampleList.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Editor.AppendText(<span style="COLOR: #a31515">"All Tabs Removed from the 
+      Ribbon Control\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    </span></p>
+<p style="MARGIN-BOTTOM: 9.75pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_784.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 894: Removing All Tabs</p><span id="related-topics"></span></div></body></html>

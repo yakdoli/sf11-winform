@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>High Frequency Updates</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="bfc114ce-203a-43c7-96fb-31eafd794247" />
+<meta name="Title" content="High Frequency Updates" />
+<meta name="Microsoft.Help.TocParent" content="5683869c-649c-4c5d-aab8-bfa5510ca33a" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">High Frequency Updates</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">This section discusses an example that lets you make high 
+frequency updates in efficient manner. It shows sort position changes, inserting 
+and removing of records from a timer event. At start up, the grid grouping 
+control is sorted by Column "1" and changes to fields in that column affects the 
+sort position of a record. Also, the background colors of the cells in records 
+are dependant on the value in column "1". This dependency is specified with the 
+ReferencedFields property. The changes are highlighted for a short period of 
+time after a change was detected.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>ReferencedFields Property</b></p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8pt"></span> </p>
+<p class="BodyText1">ReferencedFields property, as the name implies, saves a list 
+of field names referred by a given field. The engine will use these fields in 
+the ListChanged event to determine which cells to update when a change was made 
+in an underlying field.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It is very user interactive options and provides options to 
+test the grid performance by enabling/disabling grouping, sorting, filtering in 
+the midst of heavy updates. It also allows you to change the timer frequency 
+that controls the throughput i.e., the number of updates per unit time. At run 
+time, you can also vary the amount of time the changes are highlighted.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image91_1.jpg" alt="" />Note: For Complete Code for this example, refer 
+the following Browser sample:</p></div>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">&lt;Install 
+Location&gt;\Syncfusion\EssentialStudio\[Version 
+Number]\Windows\Grid.Grouping.Windows\Samples\2.0\Performance\Manual Total 
+Summary Demo</p></div>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: black; FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">Implementation</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">This example demonstrates the frequent updates that occur in 
+random cells across the grid grouping control, while keeping the CPU usage at a 
+minimum level. A timer changes cells in short intervals, inserts and removes 
+rows. When you run the sample you also need to open up the TaskManager in order 
+to notice the CPU usage while the sample runs. You should be able to start up 
+multiple instances without slowing down your machine.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Set up a Grid 
+Grouping control and load it with some random data. Enable the optimizations as 
+required.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridGroupingControl</span><span style="FONT-FAMILY: 'Courier New'"> gridGroupingControl1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridGroupingControl</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.VerticalThumbTrack 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.HorizontalThumbTrack 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableOptions.VerticalPixelScroll 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.DataSource = 
+      GetRandomDataTable();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.ShowGroupDropArea 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Use less memory for 
+      internal binary tree structures.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.CounterLogic = 
+      <span style="COLOR: #2b91af">EngineCounters</span>.YAmount;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.AllowedOptimizations 
+      = <span style="COLOR: #2b91af">EngineOptimizations</span>.DisableCounters 
+      | <span style="COLOR: #2b91af">EngineOptimizations</span>.RecordsAsDisplayElements;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Use faster GDI 
+      drawing.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.UseDefaultsForFasterDrawing 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Skip Currency 
+      Manager.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BindToCurrencyManager 
+      = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Immediate update after 
+      each ListChanged event.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.UpdateDisplayFrequency 
+      = 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Scroll Window will 
+      cause immediate update.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.InsertRemoveBehavior 
+      = <span style="COLOR: #2b91af">GridListChangedInsertRemoveBehavior</span>.ScrollWithImmediateUpdate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.SortPositionChangedBehavior 
+      = <span style="COLOR: #2b91af">GridListChangedInsertRemoveBehavior</span>.ScrollWithImmediateUpdate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      InsertRemoveBehaior/SortPositionChangedBehavior takes effect only when 
+      InvalidateAll is set to false.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.InvalidateAllWhenListChanged 
+      = <span style="COLOR: blue">false</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> gridGroupingControl1 <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      GridGroupingControl()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.VerticalThumbTrack 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.HorizontalThumbTrack 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableOptions.VerticalPixelScroll 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.DataSource = 
+      GetRandomDataTable()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.ShowGroupDropArea 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Use less memory for 
+      internal binary tree structures.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.CounterLogic = 
+      EngineCounters.YAmount</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.AllowedOptimizations 
+      = EngineOptimizations.DisableCounters <span style="COLOR: blue">Or</span> 
+      EngineOptimizations.RecordsAsDisplayElements</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Use faster GDI 
+      drawing.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.UseDefaultsForFasterDrawing 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Skip Currency 
+      Manager.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BindToCurrencyManager 
+      = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Immediate update after 
+      each ListChanged event.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.UpdateDisplayFrequency 
+      = 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Scroll Window will 
+      cause immediate update.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.InsertRemoveBehavior 
+      = GridListChangedInsertRemoveBehavior.ScrollWithImmediateUpdate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.SortPositionChangedBehavior 
+      = GridListChangedInsertRemoveBehavior.ScrollWithImmediateUpdate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      InsertRemoveBehaior/SortPositionChangedBehavior takes effect only when 
+      InvalidateAll is set to false.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.InvalidateAllWhenListChanged 
+      = <span style="COLOR: blue">False</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Set 
+<b>AllowBlink</b> to true for all the columns in order to enable highlighting 
+cells for a short period of time when a change is detected. 
+<b>Engine.AddBaseStylesForBlinking</b> method is used to add base styles for the 
+customization of the appearance of blink cells. Initialize the base styles for 
+various blink states. <b>PrepareViewStyleInfo</b> is handled to set the custom 
+base style for a newly added record. A cell change is highlighted by checking 
+its <b>BlinkState</b>. BlinkState indicates whether the cell's value is 
+increased or reduced or if the record has been recently added. If its state is 
+either <b>Increased</b> or <b>Reduced</b>, its back color and text colors are 
+changed.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Allow Blinking for all 
+      the columns.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Highlight up and down 
+      ticks.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BlinkTime = 
+      700;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 1; i &lt;= 20; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.Columns[i.ToString()].AllowBlink 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Engine.AddBaseStylesForBlinking();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles[<span style="COLOR: #2b91af">GridEngine</span>.BlinkIncreased].StyleInfo.TextColor 
+      = <span style="COLOR: #2b91af">Color</span>.White;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles[<span style="COLOR: #2b91af">GridEngine</span>.BlinkReduced].StyleInfo.TextColor 
+      = <span style="COLOR: #2b91af">Color</span>.White;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Engine.BaseStyles.Add(<span style="COLOR: #a31515">"CustomStyle"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles[<span style="COLOR: #a31515">"CustomStyle"</span>].StyleInfo.TextColor = <span style="COLOR: #2b91af">Color</span>.Black;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles[<span style="COLOR: #a31515">"CustomStyle"</span>].StyleInfo.BackColor = <span style="COLOR: #2b91af">Color</span>.White;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      PrepareViewStyleInfo</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1_TableControlPrepareViewStyleInfo(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">GridTableControlPrepareViewStyleInfoEventArgs</span> 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">GridTableCellStyleInfo</span> style = (<span style="COLOR: #2b91af">GridTableCellStyleInfo</span>)e.Inner.Style;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">BlinkState</span> bs = 
+      gridGroupingControl1.GetBlinkState(style.TableCellIdentity);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (bs != <span style="COLOR: #2b91af">BlinkState</span>.None)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (bs == <span style="COLOR: #2b91af">BlinkState</span>.NewRecord)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Inner.Style.BaseStyle = <span style="COLOR: #a31515">"CustomStyle"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Allow Blinking for all 
+      the columns.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Highlight up and 
+      downticks.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BlinkTime = 
+      700</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 1 <span style="COLOR: blue">To</span> 20</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.Columns(i.ToString()).AllowBlink 
+      = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span><span style="FONT-FAMILY: 'Courier New'"> i</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Engine.AddBaseStylesForBlinking()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles(GridEngine.BlinkIncreased).StyleInfo.TextColor 
+      = Color.White</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles(GridEngine.BlinkReduced).StyleInfo.TextColor 
+      = Color.White</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Engine.BaseStyles.Add(<span style="COLOR: #a31515">"CustomStyle"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles(<span style="COLOR: #a31515">"CustomStyle"</span>).StyleInfo.TextColor = 
+      Color.Black</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles(<span style="COLOR: #a31515">"CustomStyle"</span>).StyleInfo.BackColor = 
+      Color.White</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      PrepareViewStyleInfo</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      gridGroupingControl1_TableControlPrepareViewStyleInfo(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      GridTableControlPrepareViewStyleInfoEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> style <span style="COLOR: blue">As</span> GridTableCellStyleInfo = <span style="COLOR: blue">CType</span>(e.Inner.Style, 
+      GridTableCellStyleInfo)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> bs <span style="COLOR: blue">As</span> 
+      BlinkState = 
+      gridGroupingControl1.GetBlinkState(style.TableCellIdentity)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> bs &lt;&gt; BlinkState.None <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> bs = BlinkState.NewRecord <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Inner.Style.BaseStyle = <span style="COLOR: #a31515">"CustomStyle"</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   A timer event is 
+handled to insert and remove the records. This results in frequent list changes 
+at regular intervals.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">bool</span><span style="FONT-FAMILY: 'Courier New'"> skipTimer = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      timer_Tick(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (skipTimer)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">return</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      timerCount++;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">try</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; m_numUpdatesPerTick; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">//  
+      Application.DoEvents();</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">int</span> recNum = rand.Next(table.Rows.Count - 
+      1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">int</span> rowNum = recNum + 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">int</span> col = rand.Next(16) + 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+              <span style="COLOR: blue">int</span> colNum = col + 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">DataRow</span> drow = 
+      table.Rows[recNum];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (!(drow[col] <span style="COLOR: blue">is</span> <span style="COLOR: #2b91af">DBNull</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      drow[col] = (<span style="COLOR: blue">int</span>) (<span style="COLOR: #2b91af">Convert</span>.ToDouble(drow[col]) * (rand.Next(50) 
+      / 100.0f + 0.8));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: green">// Insert or remove a row.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (insertRemoveCount == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (toggleInsertRemove &gt; 0 &amp;&amp; 
+      (timerCount % insertRemoveModulus) == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      icount = ++icount % (toggleInsertRemove * 2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      shouldInsert = icount &lt; toggleInsertRemove;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (shouldInsert)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> 
+      ri = 0; ri &lt; insertRemoveCount; ri++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">int</span> recNum = 5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">int</span> next = rand.Next(100);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">object</span>[] row = <span style="COLOR: blue">new</span> <span style="COLOR: blue">object</span>[]{<span style="COLOR: #a31515">"H"</span>+ti.ToString(<span style="COLOR: #a31515">"00000"</span>),next+1,next+2,next+3,next+4,next+5,next+6,next+7,next+8,next+9,                      
+      next+10,next+11,next+12,next+13,next+14,next+15,next+16,next+17,next+18,next+19,next+20};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      ti++;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: #2b91af">DataRow</span> drow = 
+      table.NewRow();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      drow.ItemArray = row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      table.Rows.InsertAt(drow, recNum);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> 
+      ri = 0; ri &lt; insertRemoveCount; ri++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+          {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">int</span> recNum = 5; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">int</span> rowNum = recNum + 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                
+      // Underlying data structure (this could be a data table or whatever 
+      structure</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: green">// you use behind a virtual 
+      grid).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">             
+         <span style="COLOR: blue">if</span> (table.Rows.Count 
+      &gt; 10)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      table.Rows.RemoveAt(recNum);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">finally</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> skipTimer <span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span> = 
+      <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      timer_Tick(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> EventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> skipTimer <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">timerCount += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Try</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      i &lt; m_numUpdatesPerTick</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'  
+      Application.DoEvents();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> recNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      rand.Next(table.Rows.Count - 1)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> rowNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      recNum + 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> col <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      rand.Next(16) + 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> colNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      col + 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> drow <span style="COLOR: blue">As</span> DataRow = table.Rows(recNum)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Not</span>(<span style="COLOR: blue">TypeOf</span> 
+      drow(col) <span style="COLOR: blue">Is</span> DBNull) <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">drow(col) = <span style="COLOR: blue">CInt</span>(Convert.ToDouble(drow(col)) * 
+      (rand.Next(50) / 100.0f + 0.8))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">i += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Insert or remove a 
+      row.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> insertRemoveCount = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> toggleInsertRemove &gt; 0 <span style="COLOR: blue">AndAlso</span> (timerCount <span style="COLOR: blue">Mod</span> insertRemoveModulus) = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">icount += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">icount = icount <span style="COLOR: blue">Mod</span> (toggleInsertRemove * 2)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">shouldInsert = icount &lt; 
+      toggleInsertRemove</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> shouldInsert <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> ri <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      ri &lt; insertRemoveCount</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> recNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 5 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> next_Renamed <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      rand.[next](100)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> row <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>() = 
+      <span style="COLOR: blue">New</span> <span style="COLOR: blue">Object</span>(){{<span style="COLOR: #a31515">"H"</span>+ti.ToString(<span style="COLOR: #a31515">"00000"</span>),next_Renamed+1,next_Renamed+2,next_Renamed+3, 
+      next_Renamed+4, next_Renamed+5,next_Renamed+6, 
+      next_Renamed+7,next_Renamed+8,next_Renamed+9,next_Renamed+10, 
+      next_Renamed+11,next_Renamed+12,next_Renamed+13,next_Renamed+14, 
+      next_Renamed+15,next_Renamed+16,next_Renamed+17, 
+      next_Renamed+18,next_Renamed+19,next_Renamed+20}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ti += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> drow <span style="COLOR: blue">As</span> DataRow = table.NewRow()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">drow.ItemArray = row</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">table.Rows.InsertAt(drow, 
+      recNum)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ri += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> ri <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      ri &lt; insertRemoveCount</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> recNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 5 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> rowNum <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      recNum + 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Underlying data 
+      structure (this could be a data table or whatever structure</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' you use behind a 
+      virtual grid).</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> table.Rows.Count &gt; 10 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">table.Rows.RemoveAt(recNum)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ri += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Finally</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Try</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   
+<b>QueryCellStyleInfo</b> is handled to enable coloring of the cells. The 
+background colors of the cells in the records are dependent on the column <b>"1" 
+</b>values. This dependency is specified using the <b>Referenced Fields</b> 
+property. To make user friendly, you can use a CheckBox control to enable or 
+disable this coloring. Hook this event if the checked state of the CheckBox is 
+true; unhook otherwise.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Color</span><span style="FONT-FAMILY: 'Courier New'">[] colors = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Color</span>[] 
+      { <span style="COLOR: #2b91af">Color</span>.FromArgb( 0x85, 0xbf, 0x75 ), 
+      <span style="COLOR: #2b91af">Color</span>.FromArgb( 0xb4, 0xe7, 0xf2 
+      ),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Color</span><span style="FONT-FAMILY: 'Courier New'">.FromArgb( 0xff, 0xbf, 0x34 ), <span style="COLOR: #2b91af">Color</span>.FromArgb( 0x82, 0x2e, 0x1b ), <span style="COLOR: #2b91af">Color</span>.FromArgb( 0x3a, 0x86, 0x7e 
+      ),};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1_QueryCellStyleInfo(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">GridTableCellStyleInfoEventArgs</span> 
+e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">GridTableCellStyleInfo</span> style = (<span style="COLOR: #2b91af">GridTableCellStyleInfo</span>)e.Style;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (e.TableCellIdentity.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.RecordFieldCell</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    || 
+      e.TableCellIdentity.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.AlternateRecordFieldCell)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> 
+      (e.TableCellIdentity.Column.FieldDescriptor.FieldPropertyType == <span style="COLOR: blue">typeof</span>(<span style="COLOR: blue">string</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: green">// Get the value from column 1 and color all 
+      cells in record based on this value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: #2b91af">Record</span> r = 
+      e.Style.TableCellIdentity.DisplayElement.GetRecord();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">object</span> value = r.GetValue(<span style="COLOR: #a31515">"1"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">int</span> v = <span style="COLOR: #2b91af">Convert</span>.ToInt32(value) % 
+      colors.Length;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      e.Style.BackColor = colors[v];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// CheckBox event to 
+      enable or disable cell coloring.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      checkBoxColor_CheckedChanged(<span style="COLOR: blue">object</span> 
+      sender, System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{                 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">this</span>.checkBoxColor.Checked)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Callback for dynamically coloring 
+      cells.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+       gridGroupingControl1.QueryCellStyleInfo += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridTableCellStyleInfoEventHandler</span>(gridGroupingControl1_QueryCellStyleInfo);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// The color of these cells depends on value of cell 
+      1. If engines ListChanged handler</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// detects a change to column 1, it should also 
+      automatically repaint the dependant columns.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> i = 
+      2; i &lt;= 20; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      gridGroupingControl1.TableDescriptor.Fields[i.ToString()].ReferencedFields 
+      = <span style="COLOR: #a31515">"1"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">else</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      gridGroupingControl1.QueryCellStyleInfo -= <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridTableCellStyleInfoEventHandler</span>(gridGroupingControl1_QueryCellStyleInfo);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      gridGroupingControl1.TableDescriptor.Fields.LoadDefault();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> colors <span style="COLOR: blue">As</span> Color() = <span style="COLOR: blue">New</span> Color() {Color.FromArgb(&amp;H85, &amp;HBF, 
+      &amp;H75), Color.FromArgb(&amp;HB4, &amp;HE7, &amp;HF2), 
+      Color.FromArgb(&amp;HFF, &amp;HBF, &amp;H34), Color.FromArgb(&amp;H82, 
+      &amp;H2E, &amp;H1B), Color.FromArgb(&amp;H3A, &amp;H86, 
+      &amp;H7E)}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      gridGroupingControl1_QueryCellStyleInfo(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> GridTableCellStyleInfoEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> style <span style="COLOR: blue">As</span> GridTableCellStyleInfo = <span style="COLOR: blue">CType</span>(e.Style, 
+      GridTableCellStyleInfo)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> e.TableCellIdentity.TableCellType = 
+      GridTableCellType.RecordFieldCell <span style="COLOR: blue">OrElse</span> 
+      e.TableCellIdentity.TableCellType = 
+      GridTableCellType.AlternateRecordFieldCell <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> 
+      e.TableCellIdentity.Column.FieldDescriptor.FieldPropertyType <span style="COLOR: blue">Is</span> <span style="COLOR: blue">GetType</span>(<span style="COLOR: blue">String</span>) <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Get the value from 
+      column 1 and color all cells in record based on this value.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> r <span style="COLOR: blue">As</span> 
+      Record = e.Style.TableCellIdentity.DisplayElement.GetRecord()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> value <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span> = 
+      r.GetValue(<span style="COLOR: #a31515">"1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> v <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = Convert.ToInt32(value) <span style="COLOR: blue">Mod</span> colors.Length</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Style.BackColor = 
+colors(v)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      checkBoxColor_CheckedChanged(<span style="COLOR: blue">ByVal</span> sender 
+      <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> checkBoxColor.CheckedChanged</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.checkBoxColor.Checked <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Callback for 
+      dynamically coloring cells.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1.QueryCellStyleInfo, <span style="COLOR: blue">AddressOf</span> 
+      gridGroupingControl1_QueryCellStyleInfo</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' The color of these 
+      cells depends on value of cell 1. If engines ListChanged 
+handler</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' detects a change to 
+      column 1, it should also automatically repaint the dependant 
+      columns.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 2 <span style="COLOR: blue">To</span> 20</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.Fields(i.ToString()).ReferencedFields 
+      = <span style="COLOR: #a31515">"1"</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span><span style="FONT-FAMILY: 'Courier New'"> i</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">RemoveHandler</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1.QueryCellStyleInfo, <span style="COLOR: blue">AddressOf</span> 
+      gridGroupingControl1_QueryCellStyleInfo</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.Fields.LoadDefault()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Add three more 
+CheckBoxes to include options to enable or disable Grouping, Sorting and 
+Filtering at runtime. Handle their CheckedChanged events to add the code for 
+adding and removing groups, sorted columns and record filters. For example, if 
+the checked state of groupCheckBox is true, group the table against a column. 
+When its checked state is turned to false, simply ungroup the table.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Sorting 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      checkBoxSorting_CheckedChanged(<span style="COLOR: blue">object</span> 
+      sender, System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (<span style="COLOR: blue">this</span>.checkBoxSorting.Checked)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.SortedColumns.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.SortedColumns.Add(<span style="COLOR: #a31515">"1"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.SortedColumns.Add(<span style="COLOR: #a31515">"2"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.SortedColumns.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.gridGroupingControl1.Refresh();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Grouping 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      checkBoxGrouping_CheckedChanged(<span style="COLOR: blue">object</span> 
+      sender, System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (<span style="COLOR: blue">this</span>.checkBoxGrouping.Checked)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.GroupedColumns.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.GroupedColumns.Add(<span style="COLOR: #a31515">"1"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.gridGroupingControl1.Table.ExpandAllGroups();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.GroupedColumns.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.gridGroupingControl1.Refresh();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Filter 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      checkBoxFilter_CheckedChanged(<span style="COLOR: blue">object</span> 
+      sender, System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (<span style="COLOR: blue">this</span>.checkBoxFilter.Checked)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.RecordFilters.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // Gets the filter expression from a Text Box.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.RecordFilters.Add(<span style="COLOR: blue">this</span>.textBoxFilter.Text);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      gridGroupingControl1.TableDescriptor.RecordFilters.Clear();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.gridGroupingControl1.Refresh();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Sorting 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      checkBoxSorting_CheckedChanged(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> 
+      checkBoxSorting.CheckedChanged</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.checkBoxSorting.Checked <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.SortedColumns.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.SortedColumns.Add(<span style="COLOR: maroon">"1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.SortedColumns.Add(<span style="COLOR: maroon">"2"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.SortedColumns.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Grouping 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      checkBoxGrouping_CheckedChanged(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> 
+      checkBoxGrouping.CheckedChanged</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.checkBoxGrouping.Checked <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.GroupedColumns.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.GroupedColumns.Add(<span style="COLOR: maroon">"1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Table.ExpandAllGroups()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.GroupedColumns.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Filtering 
+      Option.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      checkBoxFilter_CheckedChanged(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> 
+checkBoxFilter.CheckedChanged</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.checkBoxFilter.Checked <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.RecordFilters.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.RecordFilters.Add(<span style="COLOR: blue">Me</span>.textBoxFilter.Text)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.TableDescriptor.RecordFilters.Clear()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Two TrackBar 
+controls are used to change the frequencies of the Timer and BlinkTime. The 
+frequencies that are set by the end user are integrated into the grid grouping 
+control in their respective TrackBarScroll event handlers.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To change the Blink 
+      Time Frequency.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      trackBarBlinkFrequency_Scroll(<span style="COLOR: blue">object</span> 
+      sender, System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.gridGroupingControl1.BlinkTime = <span style="COLOR: blue">this</span>.trackBarBlinkFrequency.Value*100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (<span style="COLOR: blue">this</span>.gridGroupingControl1.BlinkTime == 
+      0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.labelBlinkTime.Text = <span style="COLOR: #2b91af">String</span>.Format(<span style="COLOR: #a31515">"Disabled."</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.labelBlinkTime.Text = <span style="COLOR: #2b91af">String</span>.Format(<span style="COLOR: #a31515">"{0} milliseconds."</span>, 
+      gridGroupingControl1.BlinkTime);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">this</span>.gridGroupingControl1.Refresh();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// To change the Timer 
+      Frequency.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      trackBarTimer_Scroll(<span style="COLOR: blue">object</span> sender, 
+      System.<span style="COLOR: #2b91af">EventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (<span style="COLOR: blue">this</span>.trackBarTimer.Value == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      timer.Enabled = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.labelTimerInterval.Text = <span style="COLOR: #2b91af">String</span>.Format(<span style="COLOR: #a31515">"Timer disabled."</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      timer.Interval = 1000/(<span style="COLOR: blue">this</span>.trackBarTimer.Value*trackBarTimer.Value);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      timer.Enabled = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.labelTimerInterval.Text = <span style="COLOR: #2b91af">String</span>.Format(<span style="COLOR: #a31515">"Every {0} milliseconds."</span>, 
+      timer.Interval);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' To change the Blink 
+      Time Frequency</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      trackBarBlinkFrequency_Scroll(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> 
+trackBarBlinkFrequency.Scroll</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.BlinkTime = <span style="COLOR: blue">Me</span>.trackBarBlinkFrequency.Value * 
+100</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.gridGroupingControl1.BlinkTime = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.labelBlinkTime.Text = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"Disabled."</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.labelBlinkTime.Text = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"{0} 
+      milliseconds."</span>, gridGroupingControl1.BlinkTime)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Refresh()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' To change the Timer 
+      Frequency.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      trackBarTimer_Scroll(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> System.EventArgs) <span style="COLOR: blue">Handles</span> trackBarTimer.Scroll</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.trackBarTimer.Value = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">timer.Enabled = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.labelTimerInterval.Text = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"Timer disabled."</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">timer.Interval = 1000 / (<span style="COLOR: blue">Me</span>.trackBarTimer.Value * 
+      trackBarTimer.Value)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">timer.Enabled = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.labelTimerInterval.Text = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"Every {0} milliseconds."</span>, 
+      timer.Interval)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   Given below is a 
+sample screen shot. While running the sample, apply grouping, sorting and 
+filtering and then check for the CPU time usage in the TaskManager to detect the 
+grid performance.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_319.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">259</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+High Frequency Updates in Grid Grouping Control</span></i></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p401" id="p401"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

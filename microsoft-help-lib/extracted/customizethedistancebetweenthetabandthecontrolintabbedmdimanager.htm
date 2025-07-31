@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Customize the Distance between the Tab and the Control in TabbedMDIManager</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="24891b8d-80e3-4f52-b3d2-929970e36a4c" />
+<meta name="Title" content="Customize the Distance between the Tab and the Control in TabbedMDIManager" />
+<meta name="Microsoft.Help.TocParent" content="03c21ce5-b83f-4de1-8841-1b4306430a5d" />
+<meta name="Microsoft.Help.TocOrder" content="13" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt">Customize the Distance between 
+the Tab and the Control in TabbedMDIManager</h4>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">The height between the Tab and the 
+Control can be set using the <b>BottomBorderHeigh</b>t property of the TabHost. 
+This property can be accessed by overriding the TabbdedMDIManager as shown in 
+the code snippet.</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 27pt" class="Figure"><img border="0" alt="Description: Description: Description: C:\Users\vallarasus\Desktop\CustomTabbedMDIManager.png" src="ImagesExt/image76_1083.png" /><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></p>
+<p style="MARGIN-LEFT: 18pt" class="MsoCaption">Figure 1105: Custom BottomBorder 
+Height</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><i></i></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    
+      public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">TabbedMDIManagerExt</span> : <span style="COLOR: #2b91af">TabbedMDIManager</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> TabbedMDIManagerExt() : <span style="COLOR: blue">base</span>(){ }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> TabbedMDIManagerExt(<span style="COLOR: #2b91af">IContainer</span> container): <span style="COLOR: blue">base</span>(container){}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">protected</span> <span style="COLOR: blue">override</span> <span style="COLOR: #2b91af">TabHost</span> CreateTabHost()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">TabHost</span> tabHost = <span style="COLOR: blue">base</span>.CreateTabHost();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// Sets the Height in pixels.</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      tabHost.BottomBorderHeight = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      tabHost.BottomBorderColor = <span style="COLOR: #2b91af">Color</span>.SlateBlue;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> tabHost;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">protected</span> <span style="COLOR: blue">override</span> <span style="COLOR: #2b91af">MDITabPanel</span> CreateMDITabPanel()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MDITabPanel</span> tabPanel = <span style="COLOR: blue">base</span>.CreateMDITabPanel();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      tabPanel.ActiveTabColor = <span style="COLOR: #2b91af">Color</span>.PowderBlue;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> tabPanel;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+  }</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<p style="MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><i></i></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Class</span> 
+      TabbedMDIManagerExt</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">Inherits</span> TabbedMDIManager</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">Public</span> <span style="COLOR: blue">Sub</span> <span style="COLOR: blue">New</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">MyBase</span>.New()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">Public</span> <span style="COLOR: blue">Sub</span> <span style="COLOR: blue">New</span>(<span style="COLOR: blue">ByVal</span> container <span style="COLOR: blue">As</span> IContainer)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">MyBase</span>.New(container)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">Protected</span> <span style="COLOR: blue">Overrides</span> <span style="COLOR: blue">Function</span> CreateTabHost() <span style="COLOR: blue">As</span> TabHost</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">Dim</span> tabHost <span style="COLOR: blue">As</span> TabHost = <span style="COLOR: blue">MyBase</span>.CreateTabHost()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">               
+      ' Sets the Height in pixels.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      tabHost.BottomBorderHeight = 10</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      tabHost.BottomBorderColor = Color.SlateBlue</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">Return</span> tabHost</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">Protected</span> <span style="COLOR: blue">Overrides</span> <span style="COLOR: blue">Function</span> CreateMDITabPanel() <span style="COLOR: blue">As</span> MDITabPanel</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">Dim</span> tabPanel <span style="COLOR: blue">As</span> MDITabPanel = <span style="COLOR: blue">MyBase</span>.CreateMDITabPanel()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      tabPanel.ActiveTabColor = Color.PowderBlue</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">Return</span> tabPanel</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 54pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Class</span></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><a name="p944" id="p944"></a> </p><span id="related-topics"></span></div></body></html>

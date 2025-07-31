@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Customizing Context Menu</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="514c357a-589b-43b7-9d93-12281b43a1c3" />
+<meta name="Title" content="Customizing Context Menu" />
+<meta name="Microsoft.Help.TocParent" content="7129b6a6-f152-423f-8812-47c6f2e0dcbe" />
+<meta name="Microsoft.Help.TocOrder" content="6" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Customizing Context Menu</h5>
+<p class="BodyText1">Essential Chart for WPF enables users to add custom menu 
+items to the default context menu.</p>
+<h6 style="tab-stops: 0pt">4.1.1.10.7.1        
+Adding a Menu Item to the Context Menu</h6>
+<p class="BodyText1">Menu items can be added by using two methods: adding with the 
+default menu, or adding as a new list.</p>
+<h6 style="tab-stops: 0pt">4.1.1.10.7.2        
+Adding with the Default Menu</h6>
+<p class="BodyText1">By setting <b>ContextMenuType</b> to 
+<b>DefaultWithCustom</b>, the menu item will be added along with the default 
+list.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsContextMenuEnabled</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      ContextMenuType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="DefaultWithCustom"&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">MenuItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="MyMenuItem"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ideograph-numeric" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+                   </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p157" id="p157"></a> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_259.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 248: Menu Item Added with Default Context Menu</p>
+<h6 style="tab-stops: 0pt">4.1.1.10.7.3        
+Adding Menu Items as a New List</h6>
+<p class="BodyText1">By setting <b>ContextMenuType </b>to <b>Custom, </b>menu 
+items will be added as a new list.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 12pt">    
+      </span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsContextMenuEnabled</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      ContextMenuType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Custom"&gt;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">MenuItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="MyMenuItem"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Command</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ApplicationCommands.Save"/&gt;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_260.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 249: Added Menu Item as New List</p>
+<p class="MsoCaption"><b><span style="FONT-SIZE: 11pt"></span></b> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoCaption">Table 158: Property 
+Table</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="643">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="109">
+      <p class="TableHeading">Name of Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 94.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="126">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="78">
+      <p class="TableHeading">Type of Property</p>
+      <p class="TableHeading"> </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableHeading">Value It Accepts</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableHeading">Property Syntax</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableHeading">Sub Properties</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="109">
+      <p class="TableText">CustomContextMenuItems</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 94.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="126">
+      <p class="TableText">Used to customize the context menu.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="78">
+      <p class="TableText">Normal</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">ObservableCollection&lt;MenuItem&gt;</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">&gt;</span></p>
+      <p class="TableText"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">                    
+      </span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">&lt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">MenuItem</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: red; FONT-SIZE: 12pt"> 
+      Header</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">="MyMenuItem"/&gt;</span></p>
+      <p class="TableText"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">                
+      </span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">&lt;/</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">syncfusion</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">:</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #a31515; FONT-SIZE: 12pt">ChartArea.CustomContextMenuItems</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue; FONT-SIZE: 12pt">&gt;</span><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">Property Name : ContextMenuType </p>
+      <p class="TableText">Type:DependacyProperty /ContextMenuTypes /</p>
+      <p class="TableText">Ex: ContextMenuTypes.Custom </p>
+      <p class="TableText"> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoCaption">Table 159: Events</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 95.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="127">
+      <p class="TableHeading">Name of the Event</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.2pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableHeading">Method</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 122.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="163">
+      <p class="TableHeading">Event Args</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 95.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="127">
+      <p class="TableText">ChartContextMenuEventHadler</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.2pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Used to handle adding items to the context menu and 
+      removing items from the context menu.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ChartContextMenuEventHadler</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 122.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="163">
+      <p class="TableText">ChartContextMenuEventArgs</p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1"> </p><span id="related-topics"></span></div></body></html>

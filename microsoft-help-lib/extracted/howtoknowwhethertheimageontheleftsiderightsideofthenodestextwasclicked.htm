@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to know whether the image on the left side / Right side of the node's text was clicked</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="f1516d68-04a6-47da-893c-695dcd1cd974" />
+<meta name="Title" content="How to know whether the image on the left side / Right side of the node's text was clicked" />
+<meta name="Microsoft.Help.TocParent" content="3de6f518-6163-495f-a895-6ba88e2ae6c7" />
+<meta name="Microsoft.Help.TocOrder" content="10" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt">How to know whether the image 
+on the left side / Right side of the node's text was clicked</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">This can be done using the below 
+code snippet.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b">  </span></p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 26.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 26.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//The user could use the 
+      Left Image of</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> a </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">node as a clickable area 
+      to use</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// it as a button 
+      associated with that particular tree node</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      treeViewAdv1_MouseUp(<span style="COLOR: blue">object</span> sender, 
+      System.Windows.Forms.<span style="COLOR: teal">MouseEventArgs</span> 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    </span><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">TreeNodeAdv</span><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: 'Courier New'">node = <span style="COLOR: blue">this</span>.treeViewAdv1.SelectedNode;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Point</span> imgpt = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Point</span>(node.TextAndImageBounds.X, 
+      node.TextAndImageBounds.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Size</span> imgSize = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Size</span>(<span style="COLOR: blue">this</span>.imageList1.ImageSize.Width, <span style="COLOR: blue">this</span>.imageList1.ImageSize.Height);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Rectangle</span> imgrec = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Rectangle</span>(imgpt, imgSize);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Point</span> clickpt = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Point</span>(e.X, 
+      e.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (imgrec.Contains(clickpt) == <span style="COLOR: blue">true</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: teal">Console</span>.WriteLine(<span style="COLOR: maroon">"Clicked on "</span> + node.Text + <span style="COLOR: maroon">"'s left image"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//The user could use the 
+      Right Image of a node as a clickable area to use</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// it as a button 
+      associated with that particular tree node</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      treeViewAdv1_MouseUp(<span style="COLOR: blue">object</span> sender, 
+      System.Windows.Forms.<span style="COLOR: teal">MouseEventArgs</span> 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">TreeNodeAdv</span> node = <span style="COLOR: blue">this</span>.treeViewAdv1.SelectedNode;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Point</span> imgpt = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Point</span>(node.RightImagesX, 
+      node.TextBounds.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Size</span> imgSize = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Size</span>(<span style="COLOR: blue">this</span>.imageList1.ImageSize.Width, <span style="COLOR: blue">this</span>.imageList1.ImageSize.Height);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Rectangle</span> imgrec = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Rectangle</span>(imgpt, imgSize);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: teal">Point</span> clickpt = <span style="COLOR: blue">new</span> <span style="COLOR: teal">Point</span>(e.X, 
+      e.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (imgrec.Contains(clickpt) == <span style="COLOR: blue">true</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: teal">MessageBox</span>.Show(<span style="COLOR: maroon">"Clicked on "</span> + node.Text + <span style="COLOR: maroon">"'s right image"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: teal">Console</span>.WriteLine(<span style="COLOR: maroon">"Clicked on "</span> + node.Text + <span style="COLOR: maroon">"'s right image"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 5.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 5.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'The user could use the 
+      Left Image of a node as a clickable area to use</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' it as a button 
+      associated with that particular tree node</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span><span style="FONT-FAMILY: 'Courier New'"> treeViewAdv1_</span><span style="FONT-FAMILY: 'Courier New'">MouseUp(<span style="COLOR: blue">ByVal</span></span><span style="FONT-FAMILY: 'Courier New'"> sender</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      System</span><span style="FONT-FAMILY: 'Courier New'">.Windows.Forms.</span><span style="FONT-FAMILY: 'Courier New'">MouseEventArgs) <span style="COLOR: blue">Handles</span> treeViewAdv1.MouseUp</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> node <span style="COLOR: blue">As</span> 
+      TreeNodeAdv = <span style="COLOR: blue">Me</span>.treeViewAdv1.SelectedNode</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgpt <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">New</span> 
+      Point(node.TextAndImageBounds.X, node.TextAndImageBounds.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgSize <span style="COLOR: blue">As</span> 
+      Size = <span style="COLOR: blue">New</span> Size(<span style="COLOR: blue">Me</span>.imageList1.ImageSize.Width, <span style="COLOR: blue">Me</span>.imageList1.ImageSize.Height)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgrec <span style="COLOR: blue">As</span> 
+      Rectangle = <span style="COLOR: blue">New</span> Rectangle(imgpt, 
+      imgSize)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> clickpt <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">New</span> Point(e.X, e.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">If</span> imgrec.Contains(clickpt) = <span style="COLOR: blue">True</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      Console.WriteLine(<span style="COLOR: maroon">"Clicked on "</span> &amp; 
+      node.Text &amp; <span style="COLOR: maroon">"'s left 
+      image"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'The user could use the 
+      Right Image of a node as a clickable area to use</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' it as a button 
+      associated with that particular tree node</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      treeViewAdv1_MouseUp(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> System.Windows.Forms.MouseEventArgs) <span style="COLOR: blue">Handles</span> treeViewAdv1.MouseUp</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> node <span style="COLOR: blue">As</span> 
+      TreeNodeAdv = <span style="COLOR: blue">Me</span>.treeViewAdv1.SelectedNode</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgpt <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">New</span> Point(node.RightImagesX, 
+      node.TextBounds.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgSize <span style="COLOR: blue">As</span> 
+      Size = <span style="COLOR: blue">New</span> Size(<span style="COLOR: blue">Me</span>.imageList1.ImageSize.Width, <span style="COLOR: blue">Me</span>.imageList1.ImageSize.Height)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> imgrec <span style="COLOR: blue">As</span> 
+      Rectangle = <span style="COLOR: blue">New</span> Rectangle(imgpt, 
+      imgSize)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> clickpt <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">New</span> Point(e.X, e.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">If</span> imgrec.Contains(clickpt) = <span style="COLOR: blue">True</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      MessageBox.Show(<span style="COLOR: maroon">"</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">Clicked on "</span><span style="FONT-FAMILY: 'Courier New'"> &amp; node.Text &amp; <span style="COLOR: maroon">"'s right image"</span>)</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      Console.WriteLine(<span style="COLOR: maroon">"Clicked on "</span> &amp; 
+      node.Text &amp; <span style="COLOR: maroon">"'s right 
+      image"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,41 @@
+---
+title: wheredoifindtheinstalledsamples1.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\01_Getting_Started\wheredoifindtheinstalledsamples1.md
+created_at: 2025-07-03
+---
+
+
+{#d2h_url_template} {#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+
+
+
+
+
+  
+
+
+
+
+
+
+   
+
+
+## Where do I find the installed samples? {#where-do-i-find-the-installed-samples style="tab-stops: 0pt"}
+
+[] 
+
+This section covers the location of the installed samples and describes the procedure to run the samples through the sample browser and online. It also provides the location of the source code.
+
+[] 
+
+More:
+
+
+
+
+
+
+
+
+

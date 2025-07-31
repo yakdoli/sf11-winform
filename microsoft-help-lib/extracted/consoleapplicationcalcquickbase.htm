@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Console Application CalcQuickBase</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="19ca1c8f-ea7e-4b96-89e7-09464e944bf4" />
+<meta name="Title" content="Console Application CalcQuickBase" />
+<meta name="Microsoft.Help.TocParent" content="36241bc6-4b5a-4ac4-aacf-79860f757348" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/calculate.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Console Application CalcQuickBase</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The step-by-step procedure to create a simple console 
+application is as follows:</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   From Visual 
+Studio, use File | New | Project to create a new Console Application named 
+CalcQuickBaseTutorial. After creating the project, open the References node in 
+the Solution Explorer and add a reference to Syncfusion.Calculate.Base. At this 
+point, your Solution Explorer window should appear similar to this one.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image18_17.png" alt="" /></p>
+<p class="MsoCaption">Figure 15: Essential Calculate Reference Added to the 
+Project</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In the Main 
+method, add the code to create a <b>CalcQuickBase</b> object. Also add the code 
+to loop through the process of retrieving a string and using 
+<b>CalcQuickBase.ParseAndCompute</b> to perform the calculation that is 
+represented by the string. Given below is the code that handles these tasks.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 2.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> System;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Syncfusion.Calculate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">namespace</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CalcQuickBaseTutorial</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">  /// 
+      &lt;summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      /// Summary description for Class1.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      /// &lt;/summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Class1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">  /// 
+      &lt;summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                
+      /// The main entry point for the application.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                
+      /// &lt;/summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      [STAThread]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> static 
+      void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Main(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[] args)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      CalcQuickBase cq = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CalcQuickBase();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> s;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">while</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( (s = 
+      Console.ReadLine()) != "" )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> val = 
+      cq.ParseAndCompute(s);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                                
+      Console.WriteLine("value= " + val);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                                
+      // Blank line</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                                
+      Console.WriteLine(""); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Imports</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> System</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Imports</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Syncfusion.Calculate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Namespace</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CalcQuickBaseTutorial</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Class1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> Public 
+      Overloads Shared</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Main()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cq </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CalcQuickBase</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> s </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = 
+      Console.ReadLine()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> Do 
+      While</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> s 
+      &lt;&gt; ""</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> val </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = 
+      cq.ParseAndCompute(s)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      Console.WriteLine(("value= " + val))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      Console.WriteLine("") </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                
+      ' Blank line</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      s = Console.ReadLine()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      Main</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+      Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      Class1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">  </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  End 
+      Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      CalcQuickBaseTutorial</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Namespace</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Once the code is 
+entered, run the application by pressing F5. Then enter an expression such as 
+1+2 and press Enter. Enter additional algebraic combinations of constants and 
+named functions from the Function Library like Sin, Cos, Sum and Pi. Press Enter 
+without entering anything to terminate the program. Below is a typical display 
+of this.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"><img border="0" src="ImagesExt/image18_18.png" alt="" /></span></p>
+<p class="MsoCaption"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b">Figure 
+</span></b><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b">16</span></b><b></b><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b">: Application 
+Display</span></b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p21" id="p21"></a> </p><span id="related-topics"></span></div></body></html>

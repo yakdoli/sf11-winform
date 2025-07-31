@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Using SchedulePropertiesModel</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="ff826878-0fa9-42f4-bbe4-b77629ece840" />
+<meta name="Title" content="Using SchedulePropertiesModel" />
+<meta name="Microsoft.Help.TocParent" content="ec49e09c-836c-4267-9e5f-1183ace13a12" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/schedule1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="MARGIN-TOP: 0pt; tab-stops: 0pt"><span style="FONT-FAMILY: 'Calibri','sans-serif'">Using 
+SchedulePropertiesModel</span></h4>
+<p class="BodyText1">The steps to customize Print feature using 
+SchedulePropertiesModel are as follows: </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   C<span style="FONT-FAMILY: 'Calibri','sans-serif'">reating</span> a model in the 
+application.<span style="FONT-FAMILY: 'Calibri','sans-serif'"> </span></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Adding the 
+following code in the Index.aspx file, to create the <b>Schedule</b> control in 
+<b>View</b>.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">View[aspx]</span></b><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-WEIGHT: normal"></span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">       
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().Schedule()(<span style="COLOR: #a31515">"FlatSchedule"</span> ,<span style="COLOR: #a31515">"ScheduleModel"</span>)<span style="COLOR: #a31515"></span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">       
+      .BindList(columns =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.IdField(<span style="COLOR: #a31515">"AppId"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.SubjectField(<span style="COLOR: #a31515">"Subject"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.LocationField(<span style="COLOR: #a31515">"Location"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.StartTimeField(<span style="COLOR: #a31515">"StartTime"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.EndTimeField(<span style="COLOR: #a31515">"EndTime"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.DescriptionField(<span style="COLOR: #a31515">"Descrip"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">           
+      columns.OwnerField(<span style="COLOR: #a31515">"Resource"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">       
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; BACKGROUND: yellow"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">View[cshtml]</span></b><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-WEIGHT: normal"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="BACKGROUND: yellow">@(</span> Html.Syncfusion().Schedule()(<span style="COLOR: #a31515">"FlatSchedule"</span> ,<span style="COLOR: #a31515">"ScheduleModel"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      .BindList(columns =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.IdField(<span style="COLOR: #a31515">"AppId"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.SubjectField(<span style="COLOR: #a31515">"Subject"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.LocationField(<span style="COLOR: #a31515">"Location"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.StartTimeField(<span style="COLOR: #a31515">"StartTime"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.EndTimeField(<span style="COLOR: #a31515">"EndTime"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.DescriptionField(<span style="COLOR: #a31515">"Descrip"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      columns.OwnerField(<span style="COLOR: #a31515">"Resource"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      })<span style="BACKGROUND: yellow">)</span></span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; BACKGROUND: yellow"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; BACKGROUND: yellow"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In 
+<b>Controller</b>, add the Syncfusion.Mvc.Schedule, Syncfusion.Mvc.Shared 
+namespaces.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">[Controller]</span></b><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-WEIGHT: normal"></span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Calibri','sans-serif'"> 
+      Syncfusion.Mvc.Schedule;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Calibri','sans-serif'"> 
+      Syncfusion.Mvc.Shared;</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; BACKGROUND: yellow"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Create a 
+<b>SchedulePropertiesModel </b>in the <b>Index</b> method. Use <b>ShowPrint 
+</b>property to show the <b>Print</b> icon on the <b>viewstrip</b> toolbar.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Create a context 
+menu to perform print an appointment by using <b>ContextMenuItems 
+</b>property.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Pass this 
+<b>SchedulePropertiesModel</b> from Controller to View using <b>ViewData</b> 
+class as given below.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">[Controller]</span></b><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-WEIGHT: normal"></span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> It is used 
+      to bind the Schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span><span style="COLOR: green">View page, it displays the Schedule</span><span style="COLOR: gray">&lt;/returns&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      <span style="COLOR: #2b91af">ContextMenuItem</span> quickPrint = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ContextMenuItem</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                
+      MenuID = <span style="COLOR: #a31515">"Print"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                
+      MenuName = <span style="COLOR: #a31515">"Quick Print"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                
+      CommandName = <span style="COLOR: #2b91af">ContextCommandNames</span>.QuickPrint</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      };</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      <span style="COLOR: blue">var</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataClassesDataContext</span>().AppointmentTables.Take(200);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      <span style="COLOR: #2b91af">SchedulePropertiesModel</span> scheduleModel 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SchedulePropertiesModel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      scheduleModel.DataSource = data;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      scheduleModel.Skins = <span style="COLOR: #2b91af">ScheduleSkins</span>.Sandune;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      scheduleModel.CurrentView = <span style="COLOR: #2b91af">ScheduleViewMode</span>.Week;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      scheduleModel.ShowPrint = <span style="COLOR: blue">true</span>;</span></b></p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      scheduleModel.ContextMenuItems = <span style="COLOR: blue">new</span> 
+      <span style="COLOR: #2b91af">List</span>&lt;<span style="COLOR: #2b91af">ContextMenuItem</span>&gt;() { quickPrint 
+      };</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      ViewData[<span style="COLOR: #a31515">"ScheduleModel"</span>] = 
+      scheduleModel;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      }</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   Create a post 
+method for Index action and bind the data source to Schedule as shown in the 
+code displayed below.</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'">[Controller]</span></b><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-WEIGHT: normal"></span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> Post 
+      Requests are mapped to this method. This method invokes the 
+      HtmlActionResult</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> from the 
+      Schedule. Required response is generated.</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param name="args"&gt;</span><span style="COLOR: green">Contains post action properties </span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      HtmlActionResult which returns data displayed on the 
+      Schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/returns&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">Params</span> args, <span style="COLOR: #2b91af">SchedulePropertiesModel</span> model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #2b91af">IEnumerable</span><span style="FONT-FAMILY: 'Calibri','sans-serif'"> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataClassesDataContext</span>().AppointmentTables.Take(200);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">            
+          <span style="COLOR: blue">return</span> 
+      data.ScheduleActions&lt;<span style="COLOR: #2b91af">ScheduleHtmlActionResult</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">        
+      }</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">8.   Run the 
+application. To print a <b>Schedule</b>, click the <b>Print</b> icon. The 
+<b>Print</b> window will appear as shown below.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image55_82.png" alt="" /></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoCaption">Figure 126: Print a Schedule</p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyText1">To print an appointment, make sure the <b>Quick Print 
+</b>context menu item is added.After this setting, do the following:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">9.   Right click the 
+appointment, and click <b>Quick Print</b>.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image55_83.png" alt="" /></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoCaption">Figure 127: Print an appointment</p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p><span id="related-topics"></span></div></body></html>

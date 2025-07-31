@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Using Format()</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="540b54f9-b556-477d-b3bc-fb61f256075e" />
+<meta name="Title" content="Using Format()" />
+<meta name="Microsoft.Help.TocParent" content="9efd05e8-45ae-40fa-8790-c8e9b8210e02" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Using Format()</h4>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Grid uses <b>Format()</b> method for formatting the column. 
+This <b>Format()</b> method format both bound columns and unbounds column data. 
+In bound columns, it formats only the column values where as unbound columns it 
+formats the column by records.</p>
+<p class="BodyTextHeading">Bound Columns</p>
+<p class="BodyTextHeading"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">How to&gt;Creating the 
+Generic Collection Model</span></u></a> and <a><u><span style="COLOR: blue">How 
+to&gt;AutoFormattingClass</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><u><span style="COLOR: blue">How to&gt;Strongly Typed 
+View</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the view, you 
+can use its <b>Model</b> property in <b>Datasource()</b> to bind the data 
+source.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">AutoFormatting</span>&gt;(<span style="COLOR: #a31515">"FormatGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">        
+      .Datasource(Model)</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowCaption(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)     
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">AutoFormatting</span>&gt;(<span style="COLOR: #a31515">"FormatGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">        
+      .Datasource(Model)</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowCaption(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)     
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .Render();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Specify the 
+format for columns using the <b>Format()</b> method.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">AutoFormatting</span>&gt;(<span style="COLOR: #a31515">"FormatGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowCaption(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .Column( column =&gt; </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Currency).HeaderText(<span style="COLOR: #a31515">"Currency"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:$###,###.##}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Dates).HeaderText(<span style="COLOR: #a31515">"Dates"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:MM/dd/yyyy hh:mm:ss}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Number).HeaderText(<span style="COLOR: #a31515">"Number"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:# inch}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+          column.Add(c =&gt; c.Telephone).HeaderText(<span style="COLOR: #a31515">"Telephone<b>"</b></span><b>).Format(<span style="COLOR: #a31515">"{0:1 - (###) 
+      ###-####}"</span>)</b>;                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      })       </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">AutoFormatting</span>&gt;(<span style="COLOR: #a31515">"FormatGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowCaption(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      .Column( column =&gt; </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Currency).HeaderText(<span style="COLOR: #a31515">"Currency"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:$###,###.##}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Dates).HeaderText(<span style="COLOR: #a31515">"Dates"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:MM/dd/yyyy hh:mm:ss}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Number).HeaderText(<span style="COLOR: #a31515">"Number"</span>)<b>.Format(<span style="COLOR: #a31515">"{0:# inch}"</span>)</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.Telephone).HeaderText(<span style="COLOR: #a31515">"Telephone<b>"</b></span><b>).Format(<span style="COLOR: #a31515">"{0:1 - (###) 
+      ###-####}"</span>)</b>;                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }).Render();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Run the sample. 
+The grid will look like the following screenshot.</p>
+<p class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_79.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 205: Grid with Formatting</p>
+<p class="MsoNormal"><b>UnboundColumn</b></p>
+<p class="MsoNormal">Refer to more information regarding the formatting of unbound 
+columns in <a><u><span style="COLOR: blue">Data Binding&gt;Unbound 
+Columns</span></u></a>.</p><span id="related-topics"></span></div></body></html>

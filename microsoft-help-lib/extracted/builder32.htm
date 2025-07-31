@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Builder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="0903ff0c-12db-4e37-b4bf-f09a77dc5224" />
+<meta name="Title" content="Builder" />
+<meta name="Microsoft.Help.TocParent" content="bb375208-e089-4e8c-bd51-fb9f16464592" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Builder</h4>
+<p class="BodyText1">To create a Radar chart through Builder:</p>
+<p style="MARGIN-LEFT: 27pt; tab-stops: 27.0pt" class="NumberedList">1.   In Controller, return view to the 
+corresponding View page.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal">[C#]</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In the View page, 
+invoke the ChartBuilder by using the control ID as the first argument.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Add the 
+<b>Series</b> to the ChartModel and set the series type to <b>Radar</b>, and add 
+the <b>Points</b> to the series and set the style.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the 
+<b>ChartModel</b> and <b>ChartArea</b> properties.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b>View[ASPX]</b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"Organisation Budget"</span>).Series(series 
+      =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Name(<span style="COLOR: #a31515">"Allocated 
+      Budget"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.Radar)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(0, 40);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(1, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(2, 33);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(3, 25);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(4, 60);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(5, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .ConfigItems(configItems =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      configItems.RadarItem(item =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                          
+      item.Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartRadarDrawType</span>.Area);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">              
+          .Name(<span style="COLOR: #a31515">"Actual 
+      Spending"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.Radar)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(0, 50);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(1, 22);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">           
+                 points.Add(2, 
+      25);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(3, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(4, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(5, 45);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      })                  
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .ConfigItems(configItems =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      configItems.RadarItem(item =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                          
+      item.Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartRadarDrawType</span>.Area);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }).BorderAppearance(border =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      border.SkinStyle(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartBorderSkinStyle</span>.Pinned);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      })    .Size(<span style="COLOR: blue">new</span> 
+      System.Drawing.<span style="COLOR: #2b91af">Size</span>(500, 
+      400))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .Skins(<span style="COLOR: #2b91af">ChartModelSkins</span>.Office2007Blue)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .ChartSeriesSkins(<span style="COLOR: #2b91af">ChartSeriesSkins</span>.Analog)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .Series3D(<span style="COLOR: blue">true</span>)              
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryXAxis(xaxis =&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      xaxis.RangeType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartAxisRangeType</span>.Set)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+                 .Range(range 
+      =&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                           
+      range.Min(0).Max(6).Interval(1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryYAxis(yaxis =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      yaxis.RangeType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartAxisRangeType</span>.Set)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      .Range(range =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      range.Min(0).Max(60).Interval(10);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      })    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b>View[cshtml]</b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"> Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"Organisation Budget"</span>).Series(series 
+      =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Name(<span style="COLOR: #a31515">"Allocated 
+      Budget"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.Radar)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(0, 40);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(1, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(2, 33);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(3, 25);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(4, 60);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(5, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .ConfigItems(configItems =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      configItems.RadarItem(item =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                          
+      item.Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartRadarDrawType</span>.Area);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Name(<span style="COLOR: #a31515">"Actual 
+Spending"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.Radar)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">      
+                      points.Add(0, 
+      50);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(1, 22);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(2, 25);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(3, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(4, 20);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(5, 45);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+        })                  
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .ConfigItems(configItems =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      configItems.RadarItem(item =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                          
+      item.Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartRadarDrawType</span>.Area);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }).BorderAppearance(border =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      border.SkinStyle(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartBorderSkinStyle</span>.Pinned);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      })    .Size(<span style="COLOR: blue">new</span> 
+      System.Drawing.<span style="COLOR: #2b91af">Size</span>(500, 
+      400))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .Skins(<span style="COLOR: #2b91af">ChartModelSkins</span>.Office2007Blue)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .ChartSeriesSkins(<span style="COLOR: #2b91af">ChartSeriesSkins</span>.Analog)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .Series3D(<span style="COLOR: blue">true</span>)              
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryXAxis(xaxis =&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      xaxis.RangeType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartAxisRangeType</span>.Set)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      .Range(range =&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                           
+      range.Min(0).Max(6).Interval(1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryYAxis(yaxis =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      yaxis.RangeType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartAxisRangeType</span>.Set)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      .Range(range =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      range.Min(0).Max(60).Interval(10);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                       
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">             
+       })   </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span>  </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Build and run the 
+application, to get the following output:</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image69_112.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoCaption">Figure 146: Chart displaying Radar chart Series</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p><span id="related-topics"></span></div></body></html>

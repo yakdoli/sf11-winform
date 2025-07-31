@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Builder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="0613a279-ec59-42a6-b785-d7110242b65c" />
+<meta name="Title" content="Builder" />
+<meta name="Microsoft.Help.TocParent" content="a1c08e3b-830f-48fc-878f-b0875b5b71d3" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Builder</h4>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyText1">To create Axis Range and Intervals by using any chart through 
+Builder:</p>
+<p style="MARGIN-LEFT: 27pt; tab-stops: 27.0pt" class="NumberedList">1.   In Controller, return view to the 
+corresponding View page.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">[C#]</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In the View page, 
+invoke the ChartBuilder by using the control ID as the first argument.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Add the 
+<b>Series</b> to the ChartModel and set the series type to 
+<b>ThreeLineBreak</b>, and add the <b>Points</b> to the series and set the 
+style.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the 
+ChartModel and ChartArea properties.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">View [ASPX]</p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">double</span>[] points1 = {   
+      25.250,27.750,29.000,28.275,27.750,27.750,27.275,26.250,25.750,25.250,26.250,25.250,24.500,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      25.625,25.500,26.625,26.275,26.250,26.875,27.250,26.875,26.500,27.125,26.275,25.875,26.625,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      27.125,26.250,27.000,27.250,27.500,28.500,29.500,28.875,28.500,29.000,28.500,28.500,29.000,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      29.000,40.000,29.875,29.875,28.875,28.500,28.250,28.875,29.275,29.275,29.750,29.500,29.275,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      28.500,27.750,27.625,27.500,26.500,25.000,26.625,26.000,25.875,25.000,25.250,25.125,25.050};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">DateTime</span> current = <span style="COLOR: #2b91af">DateTime</span>.Today.AddDays(-points1.Length);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">%&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"Three Line Break 
+      Chart"</span>)        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//-------------- Addthe 
+      Series, add the points to the series and set some stylings you want to the 
+      series ------------------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryXAxis(xaxis =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      xaxis.Title(<span style="COLOR: #a31515">"Week Day"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .ValueType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartValueType</span>.DateTime)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .DateTimeFormat(<span style="COLOR: #a31515">"MMM/dd"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .DateTimeRange(<span style="COLOR: blue">new</span> 
+      Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeRange</span>(current, 
+      current.AddDays(60), 10, Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeIntervalType</span>.Days))</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .IntervalType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeIntervalType</span>.Months)                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .LabelRotate(<span style="COLOR: blue">true</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+             .LabelRotateAngle(270);                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">              
+      }).PrimaryYAxis(yaxis =&gt; {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      yaxis.Title(<span style="COLOR: #a31515">"Price 
+      ($)"</span>);                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">              
+      })</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//------------- Set the 
+      required properties to chartmodel to set skin, size, legend visibility and 
+      so on  ------------------------</span><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">View [cshtml]</p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">double</span>[] points1 = {   
+      25.250,27.750,29.000,28.275,27.750,27.750,27.275,26.250,25.750,25.250,26.250,25.250,24.500,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      25.625,25.500,26.625,26.275,26.250,26.875,27.250,26.875,26.500,27.125,26.275,25.875,26.625,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      27.125,26.250,27.000,27.250,27.500,28.500,29.500,28.875,28.500,29.000,28.500,28.500,29.000,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      29.000,40.000,29.875,29.875,28.875,28.500,28.250,28.875,29.275,29.275,29.750,29.500,29.275,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                          
+      28.500,27.750,27.625,27.500,26.500,25.000,26.625,26.000,25.875,25.000,25.250,25.125,25.050};</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">DateTime</span> current = <span style="COLOR: #2b91af">DateTime</span>.Today.AddDays(-points1.Length);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">@{</span> Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"Three Line Break 
+      Chart"</span>)        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//-------------- Addthe 
+      Series, add the points to the series and set some stylings you want to the 
+      series ------------------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      .PrimaryXAxis(xaxis =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">              
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      xaxis.Title(<span style="COLOR: #a31515">"Week Day"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .ValueType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartValueType</span>.DateTime)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .DateTimeFormat(<span style="COLOR: #a31515">"MMM/dd"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .DateTimeRange(<span style="COLOR: blue">new</span> 
+      Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeRange</span>(current, 
+      current.AddDays(60), 10, Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeIntervalType</span>.Days))</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .IntervalType(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartDateTimeIntervalType</span>.Months)                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .LabelRotate(<span style="COLOR: blue">true</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                       
+      .LabelRotateAngle(270);                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">              
+      }).PrimaryYAxis(yaxis =&gt; {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      yaxis.Title(<span style="COLOR: #a31515">"Price 
+      ($)"</span>);                       
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">              
+      })</span></b><span style="FONT-FAMILY: 'Courier New'">.Render();<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//------------- Set the 
+      required properties to chartmodel to set skin, size, legend visibility and 
+      so on  ------------------------</span><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Build and run the 
+application, to get the following output:</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image69_107.png" alt="" /></p>
+<p class="MsoCaption">Figure 265: Chart displaying Three Line Break chart 
+Series</p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p><span id="related-topics"></span></div></body></html>

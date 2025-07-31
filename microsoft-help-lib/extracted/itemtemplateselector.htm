@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Item Template Selector</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="86193209-a4f6-4bd3-a97f-4b3f740d4df7" />
+<meta name="Title" content="Item Template Selector" />
+<meta name="Microsoft.Help.TocParent" content="361e1683-1913-43e6-8a41-b44984917b4e" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Item Template Selector</h4>
+<p class="MsoListParagraph">Using <b>ItemTemplateSelector</b>, you can use 
+different templates for items depending on specific constraints. The following 
+example illustrates this.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="MsoNormal">1.  Create the template selector in the code.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">GroupBarItemTemplateSelector</span> : <span style="COLOR: #2b91af">DataTemplateSelector</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">override</span> <span style="COLOR: #2b91af">DataTemplate</span> SelectTemplate(<span style="COLOR: blue">object</span> item, <span style="COLOR: #2b91af">DependencyObject</span> container)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Window</span> window = <span style="COLOR: #2b91af">Application</span>.Current.MainWindow;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">string</span> bookname = (item <span style="COLOR: blue">as</span> System.Xml.<span style="COLOR: #2b91af">XmlElement</span>).GetAttribute(<span style="COLOR: #a31515">"Name"</span>).ToString().ToLower();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">if</span> (bookname.Contains(<span style="COLOR: #a31515">"wpf"</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+              {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">return</span> ((<span style="COLOR: #2b91af">DataTemplate</span>)window.Resources[<span style="COLOR: #a31515">"WpfBookTemplate"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">return</span> ((<span style="COLOR: #2b91af">DataTemplate</span>)window.Resources[<span style="COLOR: #a31515">"CsBookTemplate"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="MsoNormal">2.  Define the data templates in the <b>Window’s</b> 
+resources.</p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Key</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="WpfBookTemplate"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.ColumnDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ColumnDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="25" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ColumnDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="*" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.ColumnDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Image</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Source</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="wpf.png"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TextBlock</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Text</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      XPath</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">@<span style="COLOR: blue">Name}"</span><span style="COLOR: red"> 
+      Margin</span><span style="COLOR: blue">="5"</span><span style="COLOR: red"> Foreground</span><span style="COLOR: blue">="Green"</span><span style="COLOR: red"> 
+      VerticalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> 
+      FontFamily</span><span style="COLOR: blue">="Bookman Old 
+      Style"</span><span style="COLOR: red"> Grid.Column</span><span style="COLOR: blue">="1"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Key</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CsBookTemplate"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.ColumnDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ColumnDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="25" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ColumnDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="*" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.ColumnDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Image</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Source</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="images.jpg"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TextBlock</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Text</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      XPath</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">@<span style="COLOR: blue">Name}"</span><span style="COLOR: red"> 
+      Margin</span><span style="COLOR: blue">="5"</span><span style="COLOR: red"> Foreground</span><span style="COLOR: blue">="Green"</span><span style="COLOR: red"> 
+      VerticalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> 
+      FontFamily</span><span style="COLOR: blue">="Bookman Old 
+      Style"</span><span style="COLOR: red"> Grid.Column</span><span style="COLOR: blue">="1"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt">3.    
+</span>the template selector in the <b>Window’s</b> resources.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">local</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBarItemTemplateSelector</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Key</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="groupBarItemTemplateSelector"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt">4.    
+</span>Use this template selector to choose a template for the GroupBar 
+control.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">   
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="groupBar1"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red"> Margin</span><span style="COLOR: blue">="20"</span><span style="COLOR: red"> 
+      AllowCollapse</span><span style="COLOR: blue">="True"</span><span style="COLOR: red"> VisualMode</span><span style="COLOR: blue">="StackMode"</span><span style="COLOR: red"> 
+      ItemTemplateSelector</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">StaticResource</span><span style="COLOR: red"> 
+      groupBarItemTemplateSelector</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Source</span><span style="COLOR: blue">={</span><span style="COLOR: #a31515">StaticResource</span><span style="COLOR: red"> 
+      xmlSource</span><span style="COLOR: blue">},</span><span style="COLOR: red"> XPath</span><span style="COLOR: blue">=Book}"</span> 
+      <span style="COLOR: blue"> &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">           
+      </span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">This will generate the following GroupBar control.</p>
+<p class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_501.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 544: GroupBar Control customized using 
+ItemTemplateSelector</p><span id="related-topics"></span></div></body></html>

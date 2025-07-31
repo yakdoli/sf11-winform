@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How Things Work</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="5ceb9fef-00ca-4795-840d-76fc3d87091c" />
+<meta name="Title" content="How Things Work" />
+<meta name="Microsoft.Help.TocParent" content="62aefe41-8f1a-4067-a820-8a2339080e94" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/calculate.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=d26f2177-4276-44d8-b993-5b2ad2e06db3"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=cfaf8e79-72b1-411b-aad1-f20b51f6b236"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e">Reporting 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=2ea52c7f-a332-43bd-9ca7-2ea0898ff54e">Essential 
+Calculate</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=91222e44-d3ca-4392-8f0f-41bd2ae3dd3f">Concepts and 
+Features</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=62aefe41-8f1a-4067-a820-8a2339080e94">Inside 
+CalcEngine</a></div>
+<h3 style="tab-stops: 0pt">How Things Work</h3>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   What happens when 
+you enter the formula = A1 + 5 into a cell in a CalcSheet object? </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Here lets assume 
+that CalcSheet is using its own internal data storage to hold values, so that it 
+makes it simple to understand what is going on within CalcEngine. If the data is 
+being held in some other object (like a DataGrid with a DataTable datasource) 
+things will look the same from within the CalcEngine. </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Here is a sketch 
+of the major steps taken within the library code when you enter a formula into a 
+cell assuming CalcEngine.UseDependencies is True. The actual processing is more 
+involved; these steps should give you an outline of what happens:</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   The string is 
+tested to see whether it begins with an equal sign. If not, CalcSheet stores the 
+entered string in its internal memory so that it will be available if needed. A 
+check is made to see if this cell is a key in the DependentCells collection. If 
+it is, then all cells depending upon this cell are recomputed. This recomputing 
+is a recursive process as changing a cell, that depends upon the changed cell 
+which triggers the recomputing needs of the newly changed cell and so on.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   If the entered 
+string does begin with an equal sign, the CalcEngine sees this as an entered 
+formula. At this point, the CalcEngine checks to see if the cell is a key in the 
+FormulaInfoTable. </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   If the cell is a 
+key in the FormulaInfoTable, the corresponding FormulaInfo object is retrieved 
+and updated. This amounts to the following: </p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Parsing the 
+string.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Computing the 
+string.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Saving the 
+original formula, the parsed formula and the computed value in the FormulaInfo 
+object.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   If the cell is 
+not a key in the FormulaInfoTable, a new FormulaInfo object is created. This new 
+FormulaInfo object is populated from the entered string. This amounts to the 
+following: </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: red; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Parsing the 
+string.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Computing the 
+string.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Saving the 
+original formula, the parsed formula and the computed value in the FormulaInfo 
+object.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">There are several other scenarios that must be handled in the 
+CalcEngine. They include things like the newly entered string changes from an 
+existing formula cell to a non-formula cell. In this situation, the CalcEngine 
+uses the DependFormulaCells collection to remove dependencies that are no longer 
+needed.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">All this dependent tracking is done conditionally depending 
+upon CalcEngine.UseDependencies. Additionally, you can turn off formula 
+calculations using <b>CalcEngine.CalculatingSuspended</b>.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p70" id="p70"></a> </p><span id="related-topics"></span></div></body></html>

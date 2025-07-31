@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>IScheduleData Interfaces</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="9f9cfed4-ecea-471a-950a-bf282d0ac8eb" />
+<meta name="Title" content="IScheduleData Interfaces" />
+<meta name="Microsoft.Help.TocParent" content="7560a931-6cd5-42dc-a916-846ad36340b9" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/schedule3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=a0b8a1b2-b630-4251-88e6-2b390051286c"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=82a97dd7-8079-4f2d-bac9-7e7cf2709a1c"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Schedule</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=34399d3a-366c-4184-b6f9-4f2165957a91">Getting 
+Started</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7560a931-6cd5-42dc-a916-846ad36340b9">Data used by 
+ScheduleControl</a></div>
+<h3 style="tab-stops: 0pt">IScheduleData Interfaces</h3>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">The ScheduleControl gets its data through its 
+<b>DataSource</b> property, an <b>IScheduleDataProvider</b> object. </p>
+<p class="BodyText1">So, it is this IScheduleDataProvider interface (and several 
+other associated interfaces) that gives you the ability and facility to provide 
+data to the ScheduleControl. </p>
+<p class="BodyText1">This section discusses the actual interfaces required to 
+provide data to the ScheduleControl. If you need the access your own custom 
+datastore, then you can create objects that implement these interfaces on which 
+the ScheduleControl relies to provide data from your custom datastore.</p>
+<p class="BodyText1"> If you just need a local disk file datastore, then 
+using the implementation provided by the classes in the 
+SimpleScheduleDataProvider file that is shipped with the samples, may serve your 
+purpose.</p>
+<p class="BodyText1"> You also have the option of deriving the ScheduleData 
+base classes to provide custom data to the ScheduleControl. But, implementing 
+the required interfaces directly will give you the most flexibility.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">There are five interfaces that you can use to provide data 
+for a ScheduleControl. There are two 'object' interfaces, 
+<b>IScheduleAppointment</b> and <b>ILookUpObject</b>. These interfaces are 
+primarily wrappers for a collection of properties.</p>
+<p class="BodyText1"> <b>IScheduleAppointment</b> wraps individual 
+appointment data. <b>ILookUpObject</b> wraps the items you can see in droplists. 
+</p>
+<p class="BodyText1">There are two 'list' interfaces, 
+<b>IScheduleAppointmentList</b> and <b>ILookUpObjectList</b>. As their names 
+suggest, these two interfaces are essentially lists of 
+<b>IScheduleAppointments</b> and <b>ILookUpItems</b> respectively. </p>
+<p class="BodyText1">The last interface, <b>IScheduleDataProvider,</b> is a 
+wrapper that holds multiple ILookUpObjectLists and one IScheduleAppointmentList. 
+It is through this interface that the ScheduleControl interacts with the source 
+of data, and in fact, ScheduleControl.DataSource is an IScheduleDataProvider 
+object.</p>
+<p class="BodyText1">The IScheduleDataProvider object exposes methods of 
+interacting with the data like retrieving lookup lists and providing 
+appointments for specified time periods. The Essential Schedule source code file 
+<b>ScheduleAppointment.cs</b> provides a base class implementation of these 
+interfaces, exposing a partially abstract set of classes (the ScheduleData 
+classes) that you can use to indirectly implement these interfaces. </p>
+<p class="BodyText1">The <b>SimpleScheduleDataProvider</b> classes that were used 
+in the Tutorial are derived from these base classes.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">The following sections discuss these required data interfaces 
+in more detail.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=63c75fed-a50d-405f-be4c-da623f6c6142"><img border="0" alt="" align="absMiddle" src="button.gif" />The Appointments Data</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=35a208fb-e9f1-4a05-aef7-de02f2d52d2d"><img border="0" alt="" align="absMiddle" src="button.gif" />The 
+DropLists</a></p></span></div></body></html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Report with calculated member</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="0d7935bd-5b80-4634-a7d8-27eb5a274551" />
+<meta name="Title" content="Report with calculated member" />
+<meta name="Microsoft.Help.TocParent" content="ecc49b90-ef71-4d05-9d87-c6f643414783" />
+<meta name="Microsoft.Help.TocOrder" content="9" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/OlapCommon.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Report with calculated member</h5>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f2f2f2; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 127.2pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 126.5pt 321.0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CurrentCubeName = <span style="COLOR: #a31515">"Adventure Works"</span>;<br /> <br /><span style="COLOR: #2b91af">DimensionElement</span> dimensionElementColumn = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DimensionElement</span>();<br /><span style="COLOR: green">//Specifying the Name for the Dimension Element</span><br />dimensionElementColumn.Name = <span style="COLOR: #a31515">"Customer"</span>;<br />dimensionElementColumn.HierarchyName = <span style="COLOR: #a31515">"Customer Geography"</span>;<br />dimensionElementColumn.AddLevel(<span style="COLOR: #a31515">"Customer Geography"</span>, <span style="COLOR: #a31515">"Country"</span>);<br /> <br /><span style="COLOR: #2b91af">DimensionElement</span> internalDimension = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DimensionElement</span>();<br />internalDimension.Name = <span style="COLOR: #a31515">"Product"</span>;<br />internalDimension.AddLevel(<span style="COLOR: #a31515">"Product Categories"</span>, <span style="COLOR: #a31515">"Category"</span>);<br /> <br /><span style="COLOR: green">//// Calculated Measure</span><br /><span style="COLOR: #2b91af">CalculatedMember</span> calculatedMeasure1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CalculatedMember</span>();<br />calculatedMeasure1.Name = <span style="COLOR: #a31515">"Oder on Discount"</span>;<br />calculatedMeasure1.Expression = <span style="COLOR: #a31515">"[Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)"</span>;<br />calculatedMeasure1.AddElement(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MeasureElement</span> { Name = <span style="COLOR: #a31515">"Order Quantity"</span> }); <br /> <br /><span style="COLOR: green">//// Calculated Measure</span><br /><span style="COLOR: #2b91af">CalculatedMember</span> calculatedMeasure2 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CalculatedMember</span>();<br />calculatedMeasure2.Name = <span style="COLOR: #a31515">"Sales Range"</span>;<br />calculatedMeasure2.AddElement(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MeasureElement</span> { Name = <span style="COLOR: #a31515">"Sales Amount"</span> });<br />calculatedMeasure2.Expression = <span style="COLOR: #a31515">"IIF([Measures].[Sales Amount]&gt;200000,\"High\",\"Low\")"</span>;<br /> <br /><span style="COLOR: green">// Calculated Dimension</span><br /><span style="COLOR: #2b91af">CalculatedMember</span> calculateDimension = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CalculatedMember</span>();<br />calculateDimension.Name = <span style="COLOR: #a31515">"Bikes &amp; Components"</span>;<br />calculateDimension.Expression = <span style="COLOR: #a31515">"([Product].[Product Categories].[Category].[Bikes] + [Product].[Product Categories].[Category].[Components] )"</span>;<br />calculateDimension.AddElement(internalDimension);<br /> <br /><span style="COLOR: #2b91af">MeasureElements</span> measureElementColumn = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MeasureElements</span>();<br />measureElementColumn.Elements.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MeasureElement</span> { Name = <span style="COLOR: #a31515">"Sales Amount"</span> });<br />measureElementColumn.Elements.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MeasureElement</span> { Name = <span style="COLOR: #a31515">"Order Quantity"</span> });<br /> <br /><span style="COLOR: #2b91af">DimensionElement</span> dimensionElementRow = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DimensionElement</span>();<br /><span style="COLOR: green">//Specifying the Dimension Name</span><br />dimensionElementRow.Name = <span style="COLOR: #a31515">"Date"</span>;<br />dimensionElementRow.AddLevel(<span style="COLOR: #a31515">"Fiscal"</span>, <span style="COLOR: #a31515">"Fiscal Year"</span>);<br /> <br /> <br /><span style="COLOR: green">//// Adding Calculated members in calculated member collection</span><br />olapReport.CalculatedMembers.Add(calculatedMeasure1);<br />olapReport.CalculatedMembers.Add(calculateDimension);<br />olapReport.CalculatedMembers.Add(calculatedMeasure2);<br /> <br /><span style="COLOR: gray">///</span><span style="COLOR: green"> Adding Column Members</span><br />olapReport.CategoricalElements.Add(dimensionElementColumn);<br />olapReport.CategoricalElements.Add(calculateDimension);<br /><span style="COLOR: gray">///</span><span style="COLOR: green">Adding Measure Element</span><br />olapReport.CategoricalElements.Add(measureElementColumn);<br />olapReport.CategoricalElements.Add(calculatedMeasure1);<br />olapReport.CategoricalElements.Add(calculatedMeasure2);<br /> <br /><span style="COLOR: gray">///</span><span style="COLOR: green">Adding Row Members</span><br />olapReport.SeriesElements.Add(dimensionElementRow);</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 183.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                               
+      </span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b></b> </p>
+<p style="tab-stops: 127.2pt" class="MsoNormal"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f2f2f2; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 126.5pt 321.0pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p style="tab-stops: 126.5pt 321.0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dimensionElementColumn <span style="COLOR: blue">As</span> DimensionElement = <span style="COLOR: blue">New</span> DimensionElement()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Specifying the Name for 
+      the Dimension Element</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dimensionElementColumn.Name = 
+      "Customer"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dimensionElementColumn.HierarchyName = 
+      "Customer Geography"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dimensionElementColumn.AddLevel("Customer 
+      Geography", "Country")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> internalDimension <span style="COLOR: blue">As</span> DimensionElement = <span style="COLOR: blue">New</span> DimensionElement()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">internalDimension.Name = 
+      "Product"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">internalDimension.AddLevel("Product 
+      Categories", "Category")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'// Calculated 
+      Measure</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> calculatedMeasure1 <span style="COLOR: blue">As</span> CalculatedMember = <span style="COLOR: blue">New</span> CalculatedMember()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure1.Name = "Oder on 
+      Discount"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure1.Expression = 
+      "[Measures].[Order Quantity] + ([Measures].[Order Quantity] * 
+      0.10)"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure1.AddElement(<span style="COLOR: blue">New</span> MeasureElement <span style="COLOR: blue">With</span> {.Name = "Order Quantity"})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'// Calculated 
+      Measure</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> calculatedMeasure2 <span style="COLOR: blue">As</span> CalculatedMember = <span style="COLOR: blue">New</span> CalculatedMember()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure2.Name = "Sales 
+      Range"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure2.AddElement(<span style="COLOR: blue">New</span> MeasureElement <span style="COLOR: blue">With</span> {.Name = "Sales Amount"})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculatedMeasure2.Expression = 
+      "IIF([Measures].[Sales Amount]&gt;200000,""High"",""Low"")"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Calculated 
+      Dimension</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> calculateDimension <span style="COLOR: blue">As</span> CalculatedMember = <span style="COLOR: blue">New</span> CalculatedMember()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculateDimension.Name = "Bikes &amp; 
+      Components"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculateDimension.Expression = 
+      "([Product].[Product Categories].[Category].[Bikes] + [Product].[Product 
+      Categories].[Category].[Components] )"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">calculateDimension.AddElement(internalDimension)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> measureElementColumn <span style="COLOR: blue">As</span> MeasureElements = <span style="COLOR: blue">New</span> MeasureElements()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">measureElementColumn.Elements.Add(<span style="COLOR: blue">New</span> MeasureElement <span style="COLOR: blue">With</span> {.Name = "Sales Amount"})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">measureElementColumn.Elements.Add(<span style="COLOR: blue">New</span> MeasureElement <span style="COLOR: blue">With</span> {.Name = "Order Quantity"})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dimensionElementRow <span style="COLOR: blue">As</span> DimensionElement = <span style="COLOR: blue">New</span> DimensionElement()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Specifying the Dimension 
+      Name</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dimensionElementRow.Name = 
+      "Date"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dimensionElementRow.AddLevel("Fiscal", 
+      "Fiscal Year")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'// Adding Calculated 
+      members in calculated member collection</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CalculatedMembers.Add(calculatedMeasure1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CalculatedMembers.Add(calculateDimension)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CalculatedMembers.Add(calculatedMeasure2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">''' Adding Column 
+      Members</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CategoricalElements.Add(dimensionElementColumn)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CategoricalElements.Add(calculateDimension)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'''Adding Measure 
+      Element</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CategoricalElements.Add(measureElementColumn)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CategoricalElements.Add(calculatedMeasure1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.CategoricalElements.Add(calculatedMeasure2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'''Adding Row 
+      Members</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">olapReport.SeriesElements.Add(dimensionElementRow)</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 274.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                              
+      </span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b></b> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Styles and Templates</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e63de773-8c89-4b34-bf71-ff47a314c7e5" />
+<meta name="Title" content="Custom Styles and Templates" />
+<meta name="Microsoft.Help.TocParent" content="c836d90b-dbbb-44e3-b020-85845a56853a" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/gauge3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Custom Styles and Templates</h5>
+<p class="BodyText1">Styles and Templates will allow creating visually compelling 
+digital gauge to standardize on a particular appearance. Digital gauge template 
+can be re-written with proper name for parent inner border to provide proper 
+digital scale adorner support. Typically gauge scales and other child elements 
+are rendered through Gauge adorner. So better keep top border name as 
+ContinerBorder. Define the template for the digital gauge and apply through 
+style or StaticResource call. </p>
+<p class="BodyText1">Apart from Style property, digital gauge provides three 
+additional style related properties such as FirstFrameStyle, SecondFrameStyle 
+and InnerFrameStyle. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>FirstFrameStyle</b>—style for first frame border in digital gauge.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>SecondFrameStyle—</b>style for second frame border in digital 
+gauge.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>InnerFrameStyle</b>—style for inner frame border in digital gauge.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Through these properties we can set value for internal frames 
+like background, border brush and other border related properties.  The 
+following code snippet changes the background and alignment values through 
+style.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">    
+      &lt;!--First frame style--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="FirstBorderFrameStyle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="CornerRadius"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Background"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Orange"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">    
+      &lt;!--Second frame style--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="SecondBorderFrameStyle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="CornerRadius"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Margin"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="17"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Background"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="LightGreen"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">    
+      &lt;!--Inner Frame style--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="InnerCircleStyle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="CornerRadius"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Margin"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="7"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Background"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="DarkGreen"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Hosting 
+      Digital Gauge.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">DigitalGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FirstFrameStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FirstBorderFrameStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="300"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="70"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ApplyFrameStyles</span><span style="COLOR: blue">="True"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">SecondFrameStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      SecondBorderFrameStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">InnerFrameStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      InnerCircleStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">}" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="digitalGauge1"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">DigitalGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Press F5 to run the application; you should see digital gauge 
+that looks like the following figure.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image54_53.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoCaption">Figure 50: Digital Gauge with Frame Style</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image54_3.jpg" alt="" />Note: To effect the above style setting, 
+ApplyFrameStyles property value should be true.</p></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

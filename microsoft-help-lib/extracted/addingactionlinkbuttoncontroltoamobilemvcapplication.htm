@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Adding ActionLink Button Control to a Mobile MVC Application</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="248bdc96-f094-40df-8baa-84e90df4733b" />
+    <meta name="Title" content="Adding ActionLink Button Control to a Mobile MVC Application" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h4 style="tab-stops: 0pt">Adding ActionLink Button Control to a Mobile MVC 
+Application </h4>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal">In the <a><span class="UGHyperlink">Getting Started</span></a> 
+section, we discussed how to <a><span class="UGHyperlink">create a Mobile MVC 
+application</span></a> and how to <a><span class="UGHyperlink">add the Tools 
+package to the application</span></a>. This section guides you to add the 
+ActionLink Button control to an application.</p>
+      <p class="MsoNormal"> </p>
+      <p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">1.   In the <b>view</b>, invoke the <b>ActionLink 
+Button</b> helper with the text of the button as the first argument.</p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="HEIGHT: 22pt">
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 473.4pt; PADDING-RIGHT: 5.4pt; HEIGHT: 22pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.MobSyncfusion()</span>
+                <span style="FONT-FAMILY: 'Courier New'">.ActionLink(<span style="COLOR: #a31515">"Link Button"</span>, <span style="COLOR: #a31515">"ActionLink"</span>, <span style="COLOR: #a31515">"Button"</span>).AutoFormat(<span style="COLOR: #2b91af">MobSkins</span>.Spinach)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"> </span>
+                <span style="FONT-FAMILY: 'Courier New'">       
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">%&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+                <span style="FONT-FAMILY: 'Courier New'">Html.MobSyncfusion()</span>
+                <span style="FONT-FAMILY: 'Courier New'">.ActionLink(<span style="COLOR: #a31515">"Link Button"</span>, <span style="COLOR: #a31515">"ActionLink"</span>, <span style="COLOR: #a31515">"Button"</span>).AutoFormat(<span style="COLOR: #2b91af">MobSkins</span>.Spinach).</span>
+                <span style="FONT-FAMILY: 'Courier New'">Render(); </span>
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <br />        
+      <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+      <p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">2.   Run the application.<br /><br /></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 18pt; tab-stops: 36.0pt" class="NumberedList">The output is shown in the following screenshot.</p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 18pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\thivyak\Desktop\Button.png" src="ImagesExt/image103_68.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 205: ActionLink Button Sample</p>
+      <p style="TEXT-ALIGN: center" class="MsoNormal" align="center">
+        <i></i> </p>
+      <p class="MsoNormal">A sample which demonstrates a basic ActionLink Button control 
+can be downloaded from the following links.<br /><br /><a href="../../../../../../../thivyak/Desktop/ActionLink%20-%20ASPX.zip">ASPX 
+Sample</a></p>
+      <p class="MsoNormal">
+        <br />
+        <a href="../../../../../../../thivyak/Desktop/AcionLink%20-%20Razor.zip">Razor 
+Sample</a>
+      </p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal">
+        <img border="0" src="ImagesExt/image103_4.jpg" alt="" />Note: The 
+version number for the assemblies has been set to 10.104.0.43 in the 
+<b>Web.config</b> file of the attached sample. Change the version number to the 
+appropriate version in the <b>Web-2008.config</b> or <b>Web-2010.config</b> 
+files (available in root directory) and they will automatically be updated in 
+the <b>Web.config</b> file.</p>
+      <p style="TEXT-ALIGN: center" class="MsoNormal" align="center">
+        <i></i> </p>
+      <p class="RelatedHead">More:</p>
+      <span id="related-topics">
+        <p class="MsoNormal">
+          <a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=eaf85271-50d6-4b44-80f2-1f460dbc3067">
+            <img border="0" alt="" align="absMiddle" src="button.gif" />Use Case 
+Scenarios</a>
+        </p>
+      </span>
+    </div>
+  </body>
+</html>

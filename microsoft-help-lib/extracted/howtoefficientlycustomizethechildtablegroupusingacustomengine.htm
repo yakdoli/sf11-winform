@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Efficiently Customize the Child Table / Group using a Custom Engine</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e8c49231-d1f5-4c3c-adee-9c3e31a580b5" />
+<meta name="Title" content="How to Efficiently Customize the Child Table / Group using a Custom Engine" />
+<meta name="Microsoft.Help.TocParent" content="8b6db7e2-7c4c-4554-b2f8-39a2e63c8681" />
+<meta name="Microsoft.Help.TocOrder" content="5" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">How to Efficiently Customize the Child Table / Group 
+using a Custom Engine</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">When customizing the GridChildTable / GridGroup by deriving 
+the GridChildTable / GridGroup in the custom engine, the 
+OnInitializeVisibleCounters method and the OnEnsureInitialized method must also 
+be overridden along with the other overrides. Otherwise the GridGroup calls into 
+the GridGroup extend methods and sometimes bypasses the methods like 
+IsChildVisible that you have overridden.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In the OnInitializeVisibleCounters override, the total 
+visible elements count, the total vertical scroll distance of elements in pixels 
+and the total custom count of the visible elements must be calculated and set to 
+the CachedVisibleCount, CachedYamountCount and CachedVisibleCustomCount 
+respectively. The OnEnsureInitialized override method must return false (i.e 
+changes were detected and the object was not updated) to ensure that the object 
+is up to data.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p649" id="p649"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

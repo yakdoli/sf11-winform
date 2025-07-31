@@ -1,0 +1,363 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using Properties Model</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="17dfdbca-9bea-4c77-bc10-57ac6d88c196" />
+    <meta name="Title" content="Using Properties Model" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">Using Properties 
+Model       </h5>
+      <p class="MsoNormal">The following steps guide in handling client side events 
+through the Properties model.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">
+        <span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt">1.   
+</span>
+        <span style="BACKGROUND: white; COLOR: black">In </span>Controller<span style="BACKGROUND: white; COLOR: black">, create an object for the</span><span style="BACKGROUND: white; COLOR: black"> <b>Mob</b></span><b><span style="BACKGROUND: white; COLOR: black">ProgressBarPropertiesModel</span></b><span style="BACKGROUND: white; COLOR: black"> </span><span style="BACKGROUND: white; COLOR: black">class and set the</span><span style="BACKGROUND: white; COLOR: black"> </span><b><span style="BACKGROUND: white; COLOR: black">ClientSide Events</span></b><span style="BACKGROUND: white; COLOR: black">. Assign this model class to view 
+data.</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span></p>
+      <div align="center">
+        <table style="BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="631">
+          <tbody>
+            <tr style="HEIGHT: 101.15pt">
+              <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 526.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 101.15pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="703">
+                <p style="LINE-HEIGHT: 12pt" class="MsoNormal">
+                  <b>
+                    <span style="FONT-FAMILY: 'Courier New'">[Controller]</span>
+                  </b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </p>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: blue">public</span>
+                  <span style="COLOR: black"> </span>
+                  <span style="COLOR: #2b91af">ActionResult</span>
+                  <span style="COLOR: black"> Index()</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">        {</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">            </span>
+                  <span style="COLOR: #2b91af">MobProgressBarPropertiesModel</span>
+                  <span style="COLOR: black"> model = </span>
+                  <span style="COLOR: blue">new</span>
+                  <span style="COLOR: black"> </span>
+                  <span style="COLOR: #2b91af">MobProgressBarPropertiesModel</span>
+                  <span style="COLOR: black">();</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">            model.Value = 50;</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">            <b>model.ClientSideOnChange = </b></span>
+                  <b>
+                    <span style="COLOR: #a31515">"onChange"</span>
+                    <span style="COLOR: black">;</span>
+                  </b>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <b>
+                    <span style="COLOR: black">            model.ClientSideOnCreate = </span>
+                    <span style="COLOR: #a31515">"onCreate"</span>
+                    <span style="COLOR: black">;</span>
+                  </b>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <b>
+                    <span style="COLOR: black">            model.ClientSideOnComplete = </span>
+                    <span style="COLOR: #a31515">"onComplete"</span>
+                    <span style="COLOR: black">;</span>
+                  </b>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <b>
+                    <span style="COLOR: black">            model.ClientSideOnCustomTextRendering = </span>
+                    <span style="COLOR: #a31515">"onCustomText"</span>
+                    <span style="COLOR: black">;</span>
+                  </b>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">            ViewData[</span>
+                  <span style="COLOR: #a31515">"ProgressBar"</span>
+                  <span style="COLOR: black">] = model;</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">            </span>
+                  <span style="COLOR: blue">return</span>
+                  <span style="COLOR: black"> View();</span>
+                </pre>
+                <pre style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2">
+                  <span style="COLOR: black">        }</span> </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="LINE-HEIGHT: 12pt; TEXT-INDENT: 36pt" class="MsoNormal">
+        <span style="COLOR: black"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   In View, invoke 
+the ProgressBar helper with the control id and view data key as arguments.</p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 473.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p class="BodyText1">
+                <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+              </p>
+              <p class="BodyText1">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span>
+                <span style="FONT-FAMILY: 'Courier New'"> Html.MobSyncfusion().ProgressBar(<span style="COLOR: #a31515">"pBar"</span>, <span style="COLOR: #a31515">"progressBar"</span>)<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="BodyText1"> </p>
+      <p class="BodyText1"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="BACKGROUND: #f2f2f2" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <pre style="BACKGROUND: #f2f2f2">
+                <span style="BACKGROUND: yellow; COLOR: black"> </span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2">
+                <span style="BACKGROUND: yellow; COLOR: black"> </span>
+              </pre>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'">Html.MobSyncfusion().ProgressBar(<span style="COLOR: #a31515">"pBar"</span>, <span style="COLOR: #a31515">"progressBar"</span>)<span style="COLOR: black">.Render(); </span></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">}</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-SIZE: 12pt"></span> </p>
+      <p style="LINE-HEIGHT: 12pt; TEXT-INDENT: 36pt" class="MsoNormal">
+        <span style="COLOR: black"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   <span style="BACKGROUND: white">In</span><span style="BACKGROUND: white"> </span><b><span style="BACKGROUND: white">Javascript</span></b><span style="BACKGROUND: white">, 
+define the function to handle the specified events:</span></p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 2pt 36pt" class="MsoListParagraph">
+        <span style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 0.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 427.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="570">
+              <p style="LINE-HEIGHT: 200%" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="LINE-HEIGHT: 200%" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">[Javascript]</span>
+              </p>
+              <p style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">&lt;<span style="COLOR: maroon">script</span><span style="COLOR: red">type</span>="text/javascript"&gt;<b></b></span>
+              </p>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: blue">function</span>
+                <span style="COLOR: black"> onComplete(sender, args)</span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> {</span>
+              </pre>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: darkgreen">//args:</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       <span style="COLOR: darkgreen">//  _Value   
+                - Value of the 
+      ProgressBar</span></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: darkgreen">// _ProgressBar        
+      -Details of the ProgressBar</span></span>
+              </p>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> </span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">}</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: blue">function</span>
+                <span style="COLOR: black"> onCreate(sender, args)</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> {</span>
+              </pre>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: darkgreen">  
+      //args:</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       <span style="COLOR: darkgreen">//  _Value   
+                - Value of the 
+      ProgressBar</span></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: darkgreen">// _ProgressBar        
+      -Details of the ProgressBar</span></span>
+              </p>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> </span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> </span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">}</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: blue">function</span>
+                <span style="COLOR: black"> onChange(sender, args) </span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">{</span>
+              </pre>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: darkgreen">//args:</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       <span style="COLOR: darkgreen">//  _Value   
+                - Value of the 
+      ProgressBar</span></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: darkgreen">// _ProgressBar        
+      -Details of the ProgressBar</span></span>
+              </p>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> </span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">}</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: blue">function</span>
+                <span style="COLOR: black"> onCustomText(sender, args)</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> {</span>
+              </pre>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: darkgreen">  
+      //args:</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: darkgreen">//  _Value   
+                   - 
+      Value of the ProgressBar</span></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: darkgreen">// _ProgressBar        
+      -Details of the ProgressBar   </span><span style="COLOR: black"></span></span>
+              </p>
+              <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black">    </span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: darkgreen">//  
+      _Context              
+      -Context of the ProgressBar</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: black"> </span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">    </span>
+                <span style="COLOR: #3b4a1e">//  _Width =  width of the </span>
+                <span style="COLOR: darkgreen">ProgressBar</span>
+                <span style="COLOR: #3b4a1e">;</span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: #3b4a1e">    //  _OffsetX = OffsetX of the </span>
+                <span style="COLOR: darkgreen">ProgressBar text</span>
+                <span style="COLOR: #3b4a1e">;</span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: #3b4a1e">    //  _OffsetY = OffsetY of the </span>
+                <span style="COLOR: darkgreen">ProgressBar text</span>
+                <span style="COLOR: #3b4a1e">;</span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: #3b4a1e">    //  _Height = height of the </span>
+                <span style="COLOR: darkgreen">ProgressBar</span>
+                <span style="COLOR: #3b4a1e">;</span>
+              </pre>
+              <pre style="LINE-HEIGHT: 200%; MARGIN-LEFT: 18pt">
+                <span style="COLOR: #3b4a1e">    // _Radius = radius of the </span>
+                <span style="COLOR: darkgreen">ProgressBar</span>
+                <span style="COLOR: #3b4a1e">;</span>
+              </pre>
+              <pre style="MARGIN-LEFT: 18pt">
+                <span style="COLOR: black">}</span>
+              </pre>
+              <p style="LINE-HEIGHT: 12pt; MARGIN: 0pt 0pt 2pt 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">&lt;/<span style="COLOR: maroon">script&gt;</span><span style="COLOR: black"></span></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <b>
+          <u>
+            <span style="FONT-SIZE: 16pt">
+              <span style="TEXT-DECORATION: none"></span>
+            </span>
+          </u>
+        </b> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">4.   Build and run the 
+application.</p>
+      <p class="BodyText1">You can observe the handlers getting invoked when the 
+corresponding event is triggered.</p>
+      <p class="MsoNormal"> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

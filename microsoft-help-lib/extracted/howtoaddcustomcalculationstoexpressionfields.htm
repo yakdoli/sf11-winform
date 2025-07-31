@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Add Custom Calculations to Expression Fields?</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e03867d9-078c-44e3-ba2d-5893b2a9b55c" />
+<meta name="Title" content="How to Add Custom Calculations to Expression Fields?" />
+<meta name="Microsoft.Help.TocParent" content="bfb16001-cfb0-4acb-bfb4-64f7d21463fd" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grouping.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=08190e70-2e0f-4ad0-be54-e37c80a30128"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=96fda85c-535d-4d4a-9811-edbe0fd38ac7"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e">Reporting 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=37faf36d-c8f0-4c7d-90e1-39deecb620a6">Essential 
+Grouping</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=bfb16001-cfb0-4acb-bfb4-64f7d21463fd">Frequently Asked 
+Questions</a></div>
+<h2 style="tab-stops: 0pt">How to Add Custom Calculations to Expression 
+Fields?</h2>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Essential Grouping lets you add your own functions to a 
+function library which can be used in an expression field. In this manner, you 
+can do custom calculations in expressions. This is a two-step process which is 
+given below:</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 43.2pt" class="NumberedList">1    Register the 
+function name and a delegate with the grouping engine.</p>
+<p style="tab-stops: 43.2pt" class="NumberedList">2    Implement a 
+method that does your calculation.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In the code given below, we add a method named 'Func' that 
+takes two arguments and performs a certain calculation on those arguments.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Step 1 </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Add function named 
+      Func that uses a delegate named ComputeFunc to define a custom 
+      calculation.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">ExpressionFieldEvaluator</span><span style="FONT-FAMILY: 'Courier New'"> evaluator = <span style="COLOR: blue">this</span>.groupingEngine.TableDescriptor.ExpressionFieldEvaluator;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">evaluator.AddFunction(<span style="COLOR: maroon">"Func"</span>, <span style="COLOR: blue">new</span> 
+      <span style="COLOR: teal">ExpressionFieldEvaluator</span>.<span style="COLOR: teal">LibraryFunction</span>(ComputeFunc));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Sample usage in an 
+      Expression column.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.groupingEngine.TableDescriptor.ExpressionFields.Add(<span style="COLOR: maroon">"test"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.groupingEngine.TableDescriptor.ExpressionFields[<span style="COLOR: maroon">"test"</span>].Expression = <span style="COLOR: maroon">"Func([Col1], [Col2])"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//...</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Step 2 </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Define ComputeFunc 
+      that returns the absolute value of the 1st arg minus 2 * the 2nd 
+      arg.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">string</span> ComputeFunc(<span style="COLOR: blue">string</span> s)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Get the list delimiter 
+      (for en-us, it is a comma).</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">char</span><span style="FONT-FAMILY: 'Courier New'"> comma = <span style="COLOR: teal">Convert</span>.ToChar(<span style="COLOR: blue">this</span>.gridGroupingControl1.Culture.TextInfo.ListSeparator);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'">[] ss = s.Split(comma);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'">(ss.GetLength(0) != 2)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">throw</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">new</span> 
+      <span style="COLOR: teal">ArgumentException</span>(<span style="COLOR: maroon">"Requires 2 arguments."</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">double</span><span style="FONT-FAMILY: 'Courier New'"> arg1, arg2;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'">(<span style="COLOR: blue">double</span>.TryParse(ss[0], 
+      System.Globalization.<span style="COLOR: teal">NumberStyles</span>.Any, 
+      <span style="COLOR: blue">null</span>, <span style="COLOR: blue">out</span> arg1)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">&amp;&amp; <span style="COLOR: blue">double</span>.TryParse(ss[1], 
+      System.Globalization.<span style="COLOR: teal">NumberStyles</span>.Any, 
+      <span style="COLOR: blue">null</span>, <span style="COLOR: blue">out</span> arg2))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">return</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: teal">Math</span>.Abs(arg1 - 2 * 
+arg2).ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">return</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: maroon">""</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Step 1 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Add 
+      function named Func that uses a delegate named ComputeFunc to define a 
+      custom calculation.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      evaluator </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ExpressionFieldEvaluator = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.groupingEngine.TableDescriptor.ExpressionFieldEvaluator</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">evaluator.AddFunction("Func", 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ExpressionFieldEvaluator.LibraryFunction(ComputeFunc))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Sample 
+      usage in an Expression column.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.groupingEngine.TableDescriptor.ExpressionFields.Add("test")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.groupingEngine.TableDescriptor.ExpressionFields("test").Expression 
+      = "Func([Col1], [Col2])"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Step 2 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Define 
+      ComputeFunc that returns the absolute value of the 1st arg minus 2 * the 
+      2nd arg.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Public 
+      Function</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ComputeFunc(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> s As 
+      String) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">As 
+      String</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' Get the 
+      list delimiter (for en-us, it is a comma).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> comma 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">As 
+      Char</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> = 
+      Convert.ToChar(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.gridGroupingControl1.Culture.TextInfo.ListSeparator)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> ss 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">As 
+      String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">() = 
+      s.Split(comma)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ss.GetLength(0) &lt;&gt; 2 </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Throw 
+      New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ArgumentException("Requires 2 arguments.")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> arg1, 
+      arg2 </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">As 
+      Double</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Double</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.TryParse(ss(0), 
+      System.Globalization.NumberStyles.Any, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Nothing</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">, arg1) 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">AndAlso</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      _</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Double</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">.TryParse(ss(1), 
+      System.Globalization.NumberStyles.Any, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Nothing</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">, arg2) 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">Return 
+      Math.Abs((arg1 - 2 * arg2)).ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Return</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      ""</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">' 
+      ComputeFunc</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End 
+      Function</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"> 
+      </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

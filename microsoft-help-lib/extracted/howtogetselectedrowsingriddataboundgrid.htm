@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Get Selected Rows in GridDataBoundGrid</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="68d60bcd-4de7-4644-8404-a968c63ab547" />
+<meta name="Title" content="How to Get Selected Rows in GridDataBoundGrid" />
+<meta name="Microsoft.Help.TocParent" content="30fe9928-71fa-4ef0-b646-e928f383ee64" />
+<meta name="Microsoft.Help.TocOrder" content="24" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=08a5702b-8558-4296-8e7a-b0c0e4debaff"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=3a9c5b7d-486a-4f8e-bbc1-e21b137641c2"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=28ff22ed-2523-4bf9-8f6c-4d94f7bcabcc">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=30fe9928-71fa-4ef0-b646-e928f383ee64">GridDataBoundGrid</a></div>
+<h3 style="tab-stops: 0pt">How to Get Selected Rows in GridDataBoundGrid </h3>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To get the selected row use the GetSelectedRows method .It 
+returns a GridRangeInfoList object,   an array of GridRangeInfo 
+objects. This method has two arguments,</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>bRangeRowsOnly </p>
+<p style="TEXT-INDENT: 0pt" class="BulletedList"> </p>
+<p class="BodyText1">            
+ <b>True </b>- Only selected row will be returned, </p>
+<p class="BodyText1">            
+ <b>False</b> - If you want to treat single range selection as a full row 
+selection.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ConsiderCurrentCell </p>
+<p style="TEXT-INDENT: 0pt" class="BulletedList"> </p>
+<p class="BodyText1">            
+<b>True </b>- If current cell should be returned as selected range.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Example</p>
+<p class="BodyTextHeading"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoList</span><span style="FONT-FAMILY: 'Courier New'"> ranges = <span style="COLOR: blue">this </span>.gridDataBoundGrid1 .Selections. 
+      GetSelectedRows(<span style="COLOR: blue">true</span>, <span style="COLOR: blue">false</span>);</span></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">foreach</span> (<span style="COLOR: #2b91af">GridRangeInfo</span> range <span style="COLOR: blue">in</span> ranges)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+                    
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> i = 
+      range.Top; i &lt;= range.Bottom; ++i)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+                          
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">"Row 
+      {0} selected"</span>, i));</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+                          
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+                  
+      }<b></b></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      </span></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal">                     
+           </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Dim</span> ranges <span style="COLOR: blue">As</span> 
+      GridRangeInfoList = <span style="COLOR: blue">Me</span>.gridDataBoundGrid1 
+      .Selections. GetSelectedRows(<span style="COLOR: blue">True</span>, <span style="COLOR: blue">False</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">For</span> <span style="COLOR: blue">Each</span> range 
+      <span style="COLOR: blue">As</span> GridRangeInfo <span style="COLOR: blue">In</span> ranges</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">For</span> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = range.Top <span style="COLOR: blue">To</span> 
+      range.Bottom                      
+                              
+      Console.WriteLine(<span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"Row {0} selected"</span>, 
+      i))                                    
+      <span style="COLOR: blue">Next</span> i</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Next</span> range</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p><span id="related-topics"></span></div></body></html>

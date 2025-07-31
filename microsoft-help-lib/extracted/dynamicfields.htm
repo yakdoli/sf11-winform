@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Dynamic Fields</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="c3d3b0b8-19d0-4972-bfe6-60c64f92c16f" />
+<meta name="Title" content="Dynamic Fields" />
+<meta name="Microsoft.Help.TocParent" content="401bbf00-368e-4c94-9d34-f27b40127d01" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/pdf.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Dynamic Fields</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Automatic Fields or Dynamic Fields are special objects that 
+display information calculated automatically, just before the document is saved. 
+\</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The fields display the following:</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Page number 
+</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Count of 
+pages</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Author of the 
+document </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Creation and 
+current date </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It also displays other information of the document, which is 
+not always evaluated at the moment of constructing the document.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To display the correct value of the field, you should specify 
+the following important properties.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Font-</b>Font used to display the value of the field. Exception is 
+thrown if this property is not set.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Brush</b>-Brush used to print the value of the field. Exception is 
+thrown if this property is not set.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Bounds</b>-Specifies the bounds of the field.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can also use the <b>Location</b> and <b>Size</b> 
+properties to define the bounds of the field.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Location</b>-Location of the field. Default point is (0, 0).</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Size</b>-Size of the field. If it is not set, the size of the field is 
+automatically calculated to display the value.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: It is not necessary to set the Bounds and 
+Size with Location at the same time. Size and Bounds.Size have the same 
+values.</p></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Numeric fields have an additional <b>NumberingStyle</b> 
+property. There are five possible numbering styles supported by the automatic 
+fields:</p>
+<p class="BodyText1"><b></b> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Arabic (1, 
+2, 3, 4, ...)</b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Upper 
+Roman (I, II, III, IV, ...)</b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Roman (i, 
+ii, iii, iv, ...)</b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Upper 
+Latin (A, B, C, D, ..., Z, AA, AB, ...)</b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Latin (a, 
+b, c, d, ..., z, aa, ab, ...)</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">A brief description on various numbering fields is given 
+below:</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfPageNumberField</b>-Number of the page on which the field has been 
+drawn</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfPageCountField</b>-Total number of pages in the document</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfSectionPageNumberField</b>-Number of pages within a section</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfSectionPageCountField-</b>Number of sections in a document</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfSectionNumberField-</b>Number of sections within a document</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfCreationDateField</b>-Creating date of the document; the value is 
+taken from the <b>DocumentInformation.CreationDate</b> property</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfDateTimeField-</b>Current date and time</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfDestinationPageNumberField</b>-Number of the specified destination 
+page</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>PdfCompositeField</b>-Value of the field is composed of any number of 
+other automatic fields</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">PdfCreationDateField and PdfDateTimeField have the 
+<b>DateFormatString</b> property, which defines the formatting string for the 
+value of the field. This property uses the same formatting rules and specifiers 
+as DateTime type of .NET. For detailed information on formatting specifiers, see 
+<a href="http://msdn2.microsoft.com/en-us/library/73ctwf33(VS.80).aspx"><span class="UGHyperlink">http://msdn2.microsoft.com/en-us/library/73ctwf33(VS.80).aspx</span></a>.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can draw the Automatic Fields on the <b>PdfTemplate</b> 
+and set them as the document template or manually draw them on the necessary 
+pages. The values of the fields will be automatically populated on each copy of 
+the template.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code example illustrates how to insert dynamic 
+fields such as page number, count, datetime, composite fields, and so on, into 
+the existing document.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfLoadedDocument</span><span style="FONT-FAMILY: 'Courier New'"> doc = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfLoadedDocument</span>(<span style="COLOR: maroon">@"../../Sample.pdf"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfFont</span><span style="FONT-FAMILY: 'Courier New'"> font = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfStandardFont</span>(<span style="COLOR: teal">PdfFontFamily</span>.Helvetica, 12);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Create page number 
+      field</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfPageNumberField</span><span style="FONT-FAMILY: 'Courier New'"> pageNumber = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfPageNumberField</span>(font, <span style="COLOR: teal">PdfBrushes</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Create page count 
+      field</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfPageCountField</span><span style="FONT-FAMILY: 'Courier New'"> count = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfPageCountField</span>(font, <span style="COLOR: teal">PdfBrushes</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfDateTimeField</span><span style="FONT-FAMILY: 'Courier New'"> datetimefield = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfDateTimeField</span>(font, <span style="COLOR: teal">PdfBrushes</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfCompositeField</span><span style="FONT-FAMILY: 'Courier New'"> compositeField = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfCompositeField</span>(font, <span style="COLOR: teal">PdfBrushes</span>.Black, <span style="COLOR: maroon">"Page {0} of {1}{2}"</span>, pageNumber, 
+      count,datetimefield);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Bounds = <span style="COLOR: blue">new</span> <span style="COLOR: teal">RectangleF</span>(0,0,250,100);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Draw(doc.Pages[0].Graphics, 
+      <span style="COLOR: blue">new</span> <span style="COLOR: teal">PointF</span>(0, 0));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfCreationDateField</span><span style="FONT-FAMILY: 'Courier New'"> datefield = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfCreationDateField</span>(font, <span style="COLOR: teal">PdfBrushes</span>.Black);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doc <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfLoadedDocument(<span style="COLOR: maroon">"../../Sample.pdf"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> font <span style="COLOR: blue">As</span> PdfFont = <span style="COLOR: blue">New</span> PdfStandardFont(PdfFontFamily.Helvetica, 
+      12)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Create page number 
+      field</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pageNumber <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfPageNumberField(font, PdfBrushes.Black)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Create page count 
+      field</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> count <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfPageCountField(font, PdfBrushes.Black)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> datetimefield <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfDateTimeField(font, PdfBrushes.Black)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> compositeField <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfCompositeField(font, PdfBrushes.Black, <span style="COLOR: maroon">"Page {0} of {1}{2}"</span>, pageNumber, count, 
+      datetimefield)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Bounds = <span style="COLOR: blue">New</span> RectangleF(0, 0, 250, 100)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Draw(doc.Pages(0).Graphics, 
+      <span style="COLOR: blue">New</span> PointF(0, 0))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> datefield <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfCreationDateField(font, 
+PdfBrushes.Black)</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">When an automatic field is used as a component of the 
+composite field, it is not necessary to specify its Font, Brush and Bounds 
+properties. Just call its constructor without parameters.</p>
+<p class="BodyText1"> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: You must specify the preceding properties 
+for the composite field.</p></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code example illustrates how to use automatic 
+fields in templates.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfLoadedDocument</span><span style="FONT-FAMILY: 'Courier New'"> doc = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfLoadedDocument</span>(<span style="COLOR: maroon">@"../../Sample.pdf"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfFont</span><span style="FONT-FAMILY: 'Courier New'"> font = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfStandardFont</span>(<span style="COLOR: teal">PdfFontFamily</span>.Helvetica, 12f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfBrush</span><span style="FONT-FAMILY: 'Courier New'"> brush = <span style="COLOR: teal">PdfBrushes</span>.Black;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfTemplate</span><span style="FONT-FAMILY: 'Courier New'"> template = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfTemplate</span>(15, 15);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfDateTimeField</span><span style="FONT-FAMILY: 'Courier New'"> dateField = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfDateTimeField</span>(font, brush);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dateField.DateFormatString = <span style="COLOR: maroon">"dd'/'MMMM'/'yyyy"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dateField.Draw(template.Graphics);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; 50; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">PdfPage</span><span style="FONT-FAMILY: 'Courier New'"> page = 
+document.Pages.Add();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">page.Graphics.DrawPdfTemplate(template, 
+      <span style="COLOR: blue">new</span> <span style="COLOR: teal">Point</span>(50, 50));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doc <span style="COLOR: blue">As</span> PdfLoadedDocument = <span style="COLOR: blue">New</span> PdfLoadedDocument()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> font <span style="COLOR: blue">As</span> PdfFont = <span style="COLOR: blue">New</span> PdfStandardFont(PdfFontFamily.Helvetica, 
+      12.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> brush <span style="COLOR: blue">As</span> PdfBrush = PdfBrushes.Black</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> template <span style="COLOR: blue">As</span> PdfTemplate = <span style="COLOR: blue">New</span> PdfTemplate(15, 15)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dateField <span style="COLOR: blue">As</span> PdfDateTimeField = <span style="COLOR: blue">New</span> PdfDateTimeField(font, brush)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dateField.DateFormatString = <span style="COLOR: maroon">"dd'/'MMMM'/'yyyy"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dateField.Draw(template.Graphics)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0 <span style="COLOR: blue">To</span> 49</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> page <span style="COLOR: blue">As</span> PdfPage = document.Pages.Add()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">page.Graphics.DrawPdfTemplate(template, 
+      <span style="COLOR: blue">New</span> Point(50, 50))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span><span style="FONT-FAMILY: 'Courier New'"> i</span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">PDF Page Label</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">A PdfPageLabel object specifies a new numbering range to be 
+applied to the document sections. The following code example illustrates how to 
+set the numbering range to the PDF document sections.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      k = 0,i1=0; k &lt; ldoc.Section.Count; k++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: teal">PdfPageLabel</span> label = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PdfPageLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      label.StartNumber = 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (k == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      label.NumberStyle = <span style="COLOR: teal">PdfNumberStyle</span>.Numeric;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (k == 1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      label.NumberStyle = <span style="COLOR: teal">PdfNumberStyle</span>.LowerLatin;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (k == 2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      label.NumberStyle = <span style="COLOR: teal">PdfNumberStyle</span>.UpperLatin;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      label.Prefix = i1 + <span style="COLOR: maroon">"-"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      ldoc.LoadedPageLabel = label;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      i1++;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}        
+      </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> k <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0, i1 <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">While</span><span style="FONT-FAMILY: 'Courier New'"> k &lt; ldoc.Section.Count</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> label <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      PdfPageLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    label.StartNumber = 
+      1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">If</span> k = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      label.NumberStyle = PdfNumberStyle.Numeric</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">ElseIf</span> k = 1 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      label.NumberStyle = PdfNumberStyle.LowerLatin</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">ElseIf</span> k = 2 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      label.NumberStyle = PdfNumberStyle.UpperLatin</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    label.Prefix = i1 &amp; 
+      <span style="COLOR: maroon">"-"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    ldoc.LoadedPageLabel = 
+      label</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    i1 += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    k += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image22_69.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 58: Setting the numbering Range for PDF document</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

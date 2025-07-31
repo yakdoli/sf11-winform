@@ -1,0 +1,99 @@
+---
+title: usingpropertiesmodel64.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\usingpropertiesmodel64.md
+created_at: 2025-07-03
+---
+
+
+{#d2h_url_template} {#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+
+
+
+##### Using Properties Model {#using-properties-model style="tab-stops: 0pt"}
+
+The following steps explain the addition of a Listbox to an application using the Properties model:
+
+1.   In the Controller, create an instance of the **MobListboxModel**, add the list items, define the properties and pass the instance through **View Specific Data** to **View** as given below.**
+
+*[[ [] ]]{.underline}*  
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Controller\]]**                                                                                                                                              |
+|                                                                                                                                                                                                       |
+| **[]**                                                                                                                                                            |
+|                                                                                                                                                                                                       |
+| [        ] [public] [ [ActionResult] ListBox()]      |
+|                                                                                                                                                                                                       |
+| [        {]                                                                                                                                                       |
+|                                                                                                                                                                                                       |
+| [            [MobListBoxModel] list = [new][MobListBoxModel]();]                             |
+|                                                                                                                                                                                                       |
+| [            list.ItemsCollection = [new][List]\<[ListBoxItem]\>();]                         |
+|                                                                                                                                                                                                       |
+| [            **list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Windows 7\"] });**] |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Linux\"] });]**     |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Ubuntu\"] });]**    |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Solaris\"] });]**   |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Android\"] });]**   |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Eclipse\"] });]**   |
+|                                                                                                                                                                                                       |
+| **[            list.ItemsCollection.Add([new][ListBoxItem]() { Text = [\"Unix\"] });]**      |
+|                                                                                                                                                                                                       |
+| [            ViewData\[[\"lbCore\"]\] = list;]                                                                                            |
+|                                                                                                                                                                                                       |
+| [            [return] View();]                                                                                                               |
+|                                                                                                                                                                                                       |
+| [        }]                                                                                                                                                       |
+|                                                                                                                                                                                                       |
+| []                                                                                                                                                                |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+2.   In View, invoke the listbox helper with the view data key as the control ID[]
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[ASPX\]]**                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                           |
+| **[]**                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                           |
+| [    ] [\<%] [=] [ Html.MobSyncfusion().ListBox([\"lbCore\"]) [%\>]] |
+|                                                                                                                                                                                                                                                                                                           |
+| []                                                                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                           |
+| []                                                                                                                                                                                                                                                                    |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Razor\]]**                                                                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                                                                 |
+| **[]**                                                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                                 |
+| [    [\@{]] [Html.MobSyncfusion().ListBox([\"lbCore\"])] [.Render();[}]] [] |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+3.   Build and run the application.
+
+The output is shown in the following screenshot.
+
+[] 
+
+[ {border="0"} ]
+
+Figure 58: Listbox
+
+ 
+
+[]{#related-topics}
+

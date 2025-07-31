@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Edit Mode Configuration</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="1b990555-3f3f-465a-8dcb-8a0003bb50ca" />
+<meta name="Title" content="Edit Mode Configuration" />
+<meta name="Microsoft.Help.TocParent" content="f672fb9b-47fe-4035-beb0-ff6b45d7774c" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Edit Mode Configuration</h4>
+<p class="MsoNormal">Essential Grid provides two types for dialog editing mode. To 
+change the editing mode, use the <b>EditMode()</b> method as shown in the 
+following code sample:</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Grid&lt;<span style="COLOR: #2b91af">EditableOrder</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.Editing( edit=&gt;{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      edit.EditMode(<span style="COLOR: #2b91af">GridEditMode</span>.Dialog);<span style="COLOR: green">// Specify the grid edit mode.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                                                             
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> })<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[Razor]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"> Html.Grid&lt;<span style="COLOR: #2b91af">EditableOrder</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.Editing( edit=&gt;{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      edit.EditMode(<span style="COLOR: #2b91af">GridEditMode</span>.Dialog);<span style="COLOR: green">// Specify the grid edit mode.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                                                             
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      </span></p>
+      <p style="MARGIN-LEFT: 0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">The 
+</span>grid will appear in the dialog editing mode as displayed below:</p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\krishnarajd\Desktop\dialog.png" src="ImagesExt/image58_176.jpg" /></p>
+<p class="MsoCaption">Figure 185<b></b>: Dialog Edit Mode<b><span style="FONT-STYLE: normal"></span></b></p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If you want to use the <b>DialogTemplate</b> mode, follow the 
+steps displayed below. </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create the 
+template in partial view, as displayed below</p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">fieldset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">legend</span><span style="COLOR: blue">&gt;</span>Fields<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">legend</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="tablediv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="rowdiv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+                <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.OrderID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.OrderID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.OrderID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.CustomerID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.CustomerID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.CustomerID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="rowdiv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+                       <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> 
+      Html.Syncfusion().LabelFor(model =&gt; model.EmployeeID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.EmployeeID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.EmployeeID) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.ShipName) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.ShipName) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.ShipName) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="rowdiv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.ShipAddress) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.ShipAddress) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.ShipAddress) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.ShipCity) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.ShipCity) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.ShipCity) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="rowdiv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.ShipRegion) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.ShipRegion) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.ShipRegion) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.ShipCountry) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.ShipCountry) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.ShipCountry) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="rowdiv"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.Freight) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.Freight) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.Freight) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="celldiv"</span> 
+      <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">height</span><span style="COLOR: blue">: auto"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-label"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().LabelFor(model =&gt; 
+      model.OrderDate) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span> <span style="COLOR: red">class</span><span style="COLOR: blue">="editor-field"&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().TextBoxFor(model =&gt; 
+      model.OrderDate, <span style="COLOR: #2b91af">String</span>.Format(<span style="COLOR: #a31515">"{0:g}"</span>, Model.OrderDate)) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> Html.Syncfusion().ValidationMessageFor(model 
+      =&gt; model.OrderDate) <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">fieldset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Configure the 
+<b>GridEditMode</b> as <b>DialogTemplate Mode</b> and specify the name of the 
+partial view which contains the templates, as displayed below:</p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Grid&lt;<span style="COLOR: #2b91af">EditableOrder</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.Editing( edit=&gt;{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      edit.DialogModeEditorTemplate("OrderEditorTemplate");</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <b>edit.EditMode(<span style="COLOR: #2b91af">GridEditMode</span>.DialogTemplate)</b>;<span style="COLOR: green">// Specify the grid edit mode.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                                                             
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> })<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; tab-stops: 36.0pt" class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[Razor]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"> Html.Grid&lt;<span style="COLOR: #2b91af">EditableOrder</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.Editing( edit=&gt;{ </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">      
+      edit.DialogModeEditorTemplate("OrderEditorTemplate");</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      <b>edit.EditMode(<span style="COLOR: #2b91af">GridEditMode</span>.DialogTemplate)</b>;<span style="COLOR: green">// Specify the grid edit mode.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                                                             
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      </span></p>
+      <p style="MARGIN-LEFT: 0pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 0pt" class="MsoNormal"><b><span style="FONT-SIZE: 12pt"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the 
+<b>DialogTemplate mode</b>, you should handle the insert action and the edit 
+action.<b></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 0pt" class="MsoNormal"> </p>
+<p class="MsoNormal">To achieve this, check the <b>RequestType </b>property from 
+PagingParams. If the request type is either BeginEdit or BeginAddNew, then 
+render the template by using the <b>PartialView() </b>method, as displayed 
+below.<span style="COLOR: gray"> </span><b></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 0pt" class="MsoNormal"><b><span style="FONT-SIZE: 12pt"></span></b> </p>
+<table style="BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">/// 
+      &lt;summary&gt;</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> Paging and 
+      editing requests are mapped to this method. This method invokes the 
+      HtmlActionResult</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> from the 
+      grid. The required response is generated.</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param name="args"&gt;</span><span style="COLOR: green">Contains paging properties. </span><span style="COLOR: gray">&lt;/param&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      HtmlActionResult returns the data displayed in the 
+      grid.</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/returns&gt;</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PagingParams</span> args ,<span style="COLOR: blue">int</span>? OrderID)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">RequestType</span> currentRequest = (<span style="COLOR: #2b91af">RequestType</span>)<span style="COLOR: #2b91af">Convert</span>.ToInt32(args.RequestType);</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// Check if the current request is an Edit 
+      request and the edit mode is TemplateForm mode. Then call the 
+      PartialView() to render the template.</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (currentRequest == <span style="COLOR: #2b91af">RequestType</span>.BeginEdit)</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: #2b91af">EditableOrder</span> ord = (<span style="COLOR: #2b91af">EditableOrder</span>)<span style="COLOR: #2b91af">OrderRepository</span>.Select(OrderID);</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> PartialView(<span style="COLOR: #a31515">"OrderEditorTemplate"</span>, ord);</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (currentRequest == <span style="COLOR: #2b91af">RequestType</span>.BeginAddNew)</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      </span></b><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Check 
+      if the current request is an AddNew request and edit mode is TemplateForm 
+      mode. Then call the Partialview() to render the template. </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> PartialView(<span style="COLOR: #a31515">"OrderEditorTemplate"</span>, <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">EditableOrder</span>());</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">      
+            }</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: #2b91af">IEnumerable</span> data = <span style="COLOR: #2b91af">OrderRepository</span>.GetAllRecords();</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> data.GridActions&lt;<span style="COLOR: #2b91af">EditableOrder</span>&gt;();</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }  </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; tab-stops: 36.0pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   The grid will 
+appear in the dialog template editing mode as displayed below:<b><span style="FONT-SIZE: 12pt"></span></b></p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><b><span style="FONT-SIZE: 12pt"></span></b> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\krishnarajd\Desktop\dt.png" src="ImagesExt/image58_177.jpg" /></p>
+<p class="MsoCaption">Figure 186<b></b>: Dialog Template Edit Mode<b><span style="FONT-STYLE: normal"></span></b></p><span id="related-topics"></span></div></body></html>

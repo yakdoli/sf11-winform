@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Save a Report as a Stream?</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="07070a85-1a99-4988-b322-cf0acdfced5f" />
+<meta name="Title" content="Save a Report as a Stream?" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/Report Writer.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=03032598-4bba-47b1-89d2-34d32f8963fb"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=bf585262-493a-41b9-a346-f63b5e75614f"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<h2 style="tab-stops: 0pt">Save a Report as a Stream?</h2>
+<p class="BodyText1">You can save a report as a stream using 
+<b>Save(Stream,WriterFormat)</b> (overloaded method). This method is useful when 
+generating the report on the server side and sending it to a client-side 
+application. The following code explains how to save a report as a stream.</p>
+<p class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 1: create the 
+      report data source</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ReportDataSourceCollection</span><span style="FONT-FAMILY: 'Courier New'"> dataSources = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ReportDataSourceCollection</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dataSources.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ReportDataSource</span>() { Name = <span style="COLOR: #a31515">"Sales"</span>, Value = GetDataSource() 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 2: Instantiate the 
+      report writer with the parameter "ReportPath" and ReportDataSource 
+      Collection</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ReportWriter</span><span style="FONT-FAMILY: 'Courier New'"> reportWriter = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ReportWriter</span>(reportPath, 
+      dataSources);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MemoryStream</span><span style="FONT-FAMILY: 'Courier New'"> stream = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MemoryStream</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 3: Save the report 
+      as PDF, Word or Excel document in the form of stream contents</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">reportWriter.Save(stream,</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"> 
+      WriterFormat</span><span style="FONT-FAMILY: 'Courier New'">.PDF);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 1: Create the 
+      report data source</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dataSources <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">ReportDataSourceCollection</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dataSources.Add(<span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">ReportDataSource</span>() <span style="COLOR: blue">With</span> {.Name = <span style="COLOR: #a31515">"Sales"</span>, .Value = 
+      GetDataSource()})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 2: Instantiate the 
+      report writer with the parameter "ReportPath" and ReportDataSource 
+      Collection</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> reportWriter <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">ReportWriter</span>(reportPath, 
+      dataSources)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> stream <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">MemoryStream</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 3: Save the report 
+      as PDF, Word or Excel document in the form of stream contents</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">reportWriter.Save(stream</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"> 
+      WriterFormat</span><span style="FONT-FAMILY: 'Courier New'">.PDF)</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

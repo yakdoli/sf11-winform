@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Data-Binding to Objects</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="2101b1ef-0605-4b42-9076-22125208a892" />
+<meta name="Title" content="Data-Binding to Objects" />
+<meta name="Microsoft.Help.TocParent" content="938f0e26-c8f3-473e-b580-db404ac7e7d8" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Data-Binding to Objects</h4>
+<p class="MsoNormal">The GroupBar control also supports binding to objects. The 
+following example demonstrates this.</p>
+<p class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">1.  Create a class that acts as a model for the GroupBar 
+control.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 478.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[</span></b><b><span style="FONT-FAMILY: 'Courier New'">C#]</span></b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">Model</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> Header { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> Content { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">       
+      public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">bool</span> IsSelected { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">2.  Create a <b>ViewModel</b> class and initialize the 
+items as follows.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 478.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   <span style="COLOR: blue">public</span> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">ViewModel</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">Model</span>&gt; GroupItems { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> ViewModel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      GroupItems = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">Model</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      PopulateData();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">private</span> <span style="COLOR: blue">void</span> PopulateData()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Model</span> model1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Model</span>() 
+      { Header = <span style="COLOR: #a31515">"Item1"</span>, Content = <span style="COLOR: #a31515">"GroupBarItem1"</span>, IsSelected = <span style="COLOR: blue">true</span> };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Model</span> model2 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Model</span>() 
+      { Header = <span style="COLOR: #a31515">"Item2"</span>, Content = <span style="COLOR: #a31515">"GroupBarItem2"</span> };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Model</span> model3 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Model</span>() 
+      { Header = <span style="COLOR: #a31515">"Item3"</span>, Content = <span style="COLOR: #a31515">"GroupBarItem3"</span> };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Model</span> model4 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Model</span>() 
+      { Header = <span style="COLOR: #a31515">"Item4"</span>, Content = <span style="COLOR: #a31515">"GroupBarItem4"</span> };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      GroupItems.Add(model1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+            GroupItems.Add(model2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      GroupItems.Add(model3);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      GroupItems.Add(model4);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">3.  Create a <b>ViewModel</b> instance and use it as 
+<b>DataContext</b> for the root window.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.DataContext</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">local</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ViewModel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">/&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.DataContext</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">4.  Now configure the <b>ItemsSource</b> and 
+<b>ItemContainerStyle</b> of <b>GroupBar</b>.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="groupBar1"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      GroupItems</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}" 
+      </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">VisualMode</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="StackMode"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar.ItemContainerStyle</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Style</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      TargetType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Type</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">GroupBarItem</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Setter</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Property</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="HeaderText"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Value</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Setter</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Property</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Content"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Value</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Content</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Setter</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Property</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="IsSelected"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Value</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsSelected</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Style</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar.ItemContainerStyle</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GroupBar</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">This creates the following GroupBar control. </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image30_498.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 541: GroupBar Control Bound to an Object</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

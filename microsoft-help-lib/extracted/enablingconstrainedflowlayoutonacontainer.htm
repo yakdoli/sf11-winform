@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Enabling Constrained FlowLayout on a Container</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="1104a628-148f-473b-9424-99e56f2fc8ea" />
+<meta name="Title" content="Enabling Constrained FlowLayout on a Container" />
+<meta name="Microsoft.Help.TocParent" content="9310d4f6-605d-47b7-b755-7590efc60865" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Enabling Constrained FlowLayout on a Container<a name="p827" id="p827"></a></h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyText1">This section will illustrate how Constrained FlowLayout can 
+be used to implement complex form layout logic.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">For example, create a 'User Info entry' panel with 
+autolabels, textboxes and comboboxes to allow the user to enter personal 
+information. This Container panel should also be capable of handling different 
+widths by repositioning and resizing the Child controls appropriately.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Steps to achieve the above layout and behavior are described 
+below.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Place five 
+textboxes and one combobox to represent the different data input controls in the 
+panel. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Declare the textboxes, 
+      combobox and panel controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">TextBox</span> textBox5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">TextBox</span> textBox4;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">TextBox</span> textBox3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">TextBox</span> textBox2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">TextBox</span> textBox1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">ComboBox</span> comboBox1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> System.Windows.Forms.<span style="COLOR: teal">Panel</span> panel1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Initialize the 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox1 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">TextBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox2 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">TextBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox3 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">TextBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox4 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">TextBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox5 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">TextBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.comboBox1 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">ComboBox</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1 = <span style="COLOR: blue">new</span> System.Windows.Forms.<span style="COLOR: teal">Panel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Add the controls to 
+      the panel control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.textBox1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.textBox2);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.textBox3);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.textBox4);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.textBox5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">this</span>.comboBox1);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Declare the textboxes, 
+      combobox and panel controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> textBox5 <span style="COLOR: blue">As</span> System.Windows.Forms.TextBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> textBox4 <span style="COLOR: blue">As</span> System.Windows.Forms.TextBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> textBox3 <span style="COLOR: blue">As</span> System.Windows.Forms.TextBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> textBox2 <span style="COLOR: blue">As</span> System.Windows.Forms.TextBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> textBox1 <span style="COLOR: blue">As</span> System.Windows.Forms.TextBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> comboBox1 <span style="COLOR: blue">As</span> System.Windows.Forms.ComboBox</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> panel1 <span style="COLOR: blue">As</span> System.Windows.Forms.Panel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Initialize the 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox1 = <span style="COLOR: blue">New</span> System.Windows.Forms.TextBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox2 = <span style="COLOR: blue">New</span> System.Windows.Forms.TextBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox3 = <span style="COLOR: blue">New</span> System.Windows.Forms.TextBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox4 = <span style="COLOR: blue">New</span> System.Windows.Forms.TextBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox5 = <span style="COLOR: blue">New</span> System.Windows.Forms.TextBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.comboBox1 = <span style="COLOR: blue">New</span> System.Windows.Forms.ComboBox()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1 = <span style="COLOR: blue">New</span> System.Windows.Forms.Panel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Add the controls to the 
+      panel control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.textBox1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.textBox2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.textBox3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.textBox4)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.textBox5)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.panel1.Controls.Add(<span style="COLOR: blue">Me</span>.comboBox1)</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Add one autolabel 
+for each control and set the autolabel's <b>LabeledControl</b> property to the 
+corresponding control. Also, change the <b>Text</b> property of the autolabel 
+control appropriately and set the <b>AutoSize</b> property to 'True'. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Declare the autolabel 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel4;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span> autoLabel6;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Initialize the 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">AutoLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Set their 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1.LabeledControl = <span style="COLOR: blue">this</span>.textBox1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1.Text = <span style="COLOR: maroon">"First Name:"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2.LabeledControl = <span style="COLOR: blue">this</span>.textBox2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2.Text = <span style="COLOR: maroon">"MI:"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3.LabeledControl = <span style="COLOR: blue">this</span>.textBox3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3.Text = <span style="COLOR: maroon">"Last Name:"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4.LabeledControl = <span style="COLOR: blue">this</span>.textBox4;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4.Text = <span style="COLOR: maroon">"Address:"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5.LabeledControl = <span style="COLOR: blue">this</span>.textBox5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5.Text = <span style="COLOR: maroon">"State"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6.AutoSize = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6.LabeledControl = <span style="COLOR: blue">this</span>.comboBox1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6.Text = <span style="COLOR: maroon">"Zip"</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Declare the autolabel 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel1 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel2 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel3 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel4 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel5 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> autoLabel6 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Initialize the 
+      controls.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.AutoLabel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set their 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1.LabeledControl = <span style="COLOR: blue">Me</span>.textBox1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel1.Text = <span style="COLOR: maroon">"First Name:"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2.LabeledControl = <span style="COLOR: blue">Me</span>.textBox2</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel2.Text = <span style="COLOR: maroon">"MI:"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3.LabeledControl = <span style="COLOR: blue">Me</span>.textBox3</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel3.Text = <span style="COLOR: maroon">"Last Name:"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4.LabeledControl = <span style="COLOR: blue">Me</span>.textBox4</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel4.Text = <span style="COLOR: maroon">"Address:"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5.LabeledControl = <span style="COLOR: blue">Me</span>.textBox5</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel5.Text = <span style="COLOR: maroon">"State"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6.LabeledControl = <span style="COLOR: blue">Me</span>.comboBox1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.autoLabel6.Text = <span style="COLOR: maroon">"Zip"</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Now add the<b> 
+</b>FlowLayout component and set the panel to be its Container control. The 
+FlowLayout will layout the controls in the order in which they were added to the 
+panel. Use the <b>Bring To Front</b> and <b>Send To Back</b> design time verbs 
+to move the controls to the front or back of the layout order. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image76_1.jpg" alt="" /> Note: The FlowLayout will treat each control 
+and it's autolabel pair as a single unit during layout.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Declare the 
+      FlowLayout.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">FlowLayout</span> flowLayout1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Initialize the 
+      Flowlayout and set the panel control as it's Container control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1 = <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">FlowLayout</span>(<span style="COLOR: blue">this</span>.components);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.ContainerControl = <span style="COLOR: blue">this</span>.panel1;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Declare the 
+      FlowLayout.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> flowLayout1 <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.FlowLayout</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Initialize the 
+      Flowlayout and set the panel control as it's Container control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1 = <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.FlowLayout(<span style="COLOR: blue">Me</span>.components)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.ContainerControl = <span style="COLOR: blue">Me</span>.panel1</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Now set some 
+appropriate constraints on the input controls as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Select the 
+<b>First Name </b>textbox and browse to the extended <b>Constraints on 
+flowLayout</b> property. Set the <b>HAlign</b> property to 'Justify', so that 
+this control's width will be resized to fit any available empty horizontal space 
+in the row. This also requires that you specify an appropriate preferred size 
+for the control, such as (100, 20).</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The <b>Middle 
+Initial </b>textbox needs to be left aligned and not justified. This is the 
+default constraint setting, so we don't need to make any changes to it's 
+constraints.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Select the 
+<b>Last Name </b>textbox and specify the same constraints as the 'First Name'<b> 
+</b>textbox.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The 
+<b>Address </b>textbox should always begin in a new row, so set the 
+<b>NewLine</b> property to 'True' in it's constraints. Also, set the 
+<b>HAlign</b> property to 'Justify' and also provide a preferred size.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The <b>State 
+</b>combobox and <b>Zip </b>textbox<b> </b>controls can also be left with the 
+default constraints.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Set the constraints 
+      for the textboxes.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">this</span>.textBox1, <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">FlowLayoutConstraints</span>(<span style="COLOR: blue">true</span>, Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">HorzFlowAlign</span>.Justify, 
+      Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">VertFlowAlign</span>.Center, <span style="COLOR: blue">false</span>, <span style="COLOR: blue">false</span>, 
+      <span style="COLOR: blue">false</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">this</span>.textBox1, <span style="COLOR: blue">new</span> System.Drawing.<span style="COLOR: teal">Size</span>(100, 20));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">this</span>.textBox3, <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">FlowLayoutConstraints</span>(<span style="COLOR: blue">true</span>, Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">HorzFlowAlign</span>.Justify, 
+      Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">VertFlowAlign</span>.Center, <span style="COLOR: blue">false</span>, <span style="COLOR: blue">false</span>, 
+      <span style="COLOR: blue">false</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">this</span>.textBox3, <span style="COLOR: blue">new</span> System.Drawing.<span style="COLOR: teal">Size</span>(100, 20));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">this</span>.textBox4, <span style="COLOR: blue">new</span> Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">FlowLayoutConstraints</span>(<span style="COLOR: blue">true</span>, Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">HorzFlowAlign</span>.Justify, 
+      Syncfusion.Windows.Forms.Tools.<span style="COLOR: teal">VertFlowAlign</span>.Center, <span style="COLOR: blue">true</span>, <span style="COLOR: blue">false</span>, 
+      <span style="COLOR: blue">false</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">this</span>.textBox4, <span style="COLOR: blue">new</span> System.Drawing.<span style="COLOR: teal">Size</span>(100, 20));.Center, <span style="COLOR: blue">false</span>, <span style="COLOR: blue">false</span>, 
+      <span style="COLOR: blue">true</span>));</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set the constraints for 
+      the textboxes.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">Me</span>.textBox1, <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.FlowLayoutConstraints(<span style="COLOR: blue">True</span>, 
+      Syncfusion.Windows.Forms.Tools.HorzFlowAlign.Justify, 
+      Syncfusion.Windows.Forms.Tools.VertFlowAlign.Center, <span style="COLOR: blue">False</span>, <span style="COLOR: blue">False</span>, 
+      <span style="COLOR: blue">False</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">Me</span>.textBox1, <span style="COLOR: blue">New</span> System.Drawing.Size(100, 20))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">Me</span>.textBox3, <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.FlowLayoutConstraints(<span style="COLOR: blue">True</span>, 
+      Syncfusion.Windows.Forms.Tools.HorzFlowAlign.Justify, 
+      Syncfusion.Windows.Forms.Tools.VertFlowAlign.Center, <span style="COLOR: blue">False</span>, <span style="COLOR: blue">False</span>, 
+      <span style="COLOR: blue">False</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">Me</span>.textBox3, <span style="COLOR: blue">New</span> System.Drawing.Size(100, 20))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetConstraints(<span style="COLOR: blue">Me</span>.textBox4, <span style="COLOR: blue">New</span> 
+      Syncfusion.Windows.Forms.Tools.FlowLayoutConstraints(<span style="COLOR: blue">True</span>, 
+      Syncfusion.Windows.Forms.Tools.HorzFlowAlign.Justify, 
+      Syncfusion.Windows.Forms.Tools.VertFlowAlign.Center, <span style="COLOR: blue">True</span>, <span style="COLOR: blue">False</span>, 
+      <span style="COLOR: blue">False</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.SetPreferredSize(<span style="COLOR: blue">Me</span>.textBox4, <span style="COLOR: blue">New</span> System.Drawing.Size(100, 
+  20))</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   The panel itself 
+should increase or decrease in width when the number of rows in the layout 
+increases or decreases. To get this behavior, set the FlowLayout's 
+<b>AutoHeight</b> property to 'True'.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Set the AutoHeight 
+      property of FlowLayout.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.AutoHeight = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set the AutoHeight 
+      property of FlowLayout.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.flowLayout1.AutoHeight = <span style="COLOR: blue">True</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image76_1.jpg" alt="" /> Note: During run time, the input controls 
+get resized and repositioned appropriately based on the constraints 
+provided.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_667.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="MsoCaption">Figure 678: User Info Panel with a Larger Width</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_668.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="MsoCaption">Figure 679: User Info Panel with a Smaller Width</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyTextHeading">AutoLabel Control</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyText1">The AutoLabel control is a label-derived control that lets 
+you pair a label with any other control. Once paired, the AutoLabel will be 
+automatically repositioned as the labeled control's position changes.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_669.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="MsoCaption">Figure 680: AutoLabel Labeling a ComboBox in the 
+Designer</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyText1">The AutoLabel control can be positioned relative to the top, 
+left, bottom or right of the labeled control. It can also be positioned at a 
+custom distance from the labeled control specified via its DX and DY properties. 
+When using relative positioning, you can also specify the gap between the label 
+and the control.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The FlowLayout will always treat the 
+'AutoLabel-LabeledControl' pair as a unit. You can use AutoLabels and FlowLayout 
+together to implement complex and powerful form layouts.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #333399; FONT-SIZE: 8pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><span style="COLOR: #333399; FONT-SIZE: 8pt"><img border="0" src="ImagesExt/image76_1.jpg" alt="" /></span> Note: Refer to AutoLabel under 
+Editors Package for more details.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #4a5c8c; FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #333399"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a><span class="UGHyperlink">Configuring FlowLayout</span></a><span class="UGHyperlink">, 
+</span><a><span class="UGHyperlink">FlowLayout - Configuring Child 
+Controls</span></a><span class="UGHyperlink">, </span><a><span class="UGHyperlink">Centering the Child Controls Horizontally and 
+Vertically</span></a><span class="UGHyperlink"> </span></p><span id="related-topics"></span></div></body></html>

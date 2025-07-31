@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Event Handling</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="66235837-299c-4189-9403-241cd825b1c5" />
+<meta name="Title" content="Event Handling" />
+<meta name="Microsoft.Help.TocParent" content="d886144a-1a4e-49bb-a712-219118f42315" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Event Handling</h5>
+<p class="BodyTextHeading">Selection Events</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyText1">The ComboBoxBase fires different events for the different 
+user interaction scenarios. The occurrence and order of the events are tabulated 
+below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableHeading">Scenarios</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableHeading">SelectionChangedCommitted</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableHeading">SelectedValueChanged</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableHeading">SelectedIndexChanged</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableHeading">Validating/Validated</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">TextArea-Change Selection by Keys</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">Yes:1</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:2</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:3</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">TextArea-On AutoComplete</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Drop-Down List-Change Selection by Keys</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:1</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:2</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Drop-Down List-Change Selection by Mouse Move</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Drop-Down Close by Enter Key</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">Yes:1</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Drop-Down Close by Escape Key</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Drop-Down Close by Click</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">Yes:1</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:2</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:3</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Losing Focus</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">Yes:2 (in DropDownStyle.DropDown (editable) mode 
+      only)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">Yes:1</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 80.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="107">
+      <p class="TableText">Changing Text Property in Code</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 104.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="139">
+      <p class="TableText">Yes:1</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 93.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="125">
+      <p class="TableText">No</p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<h6 style="tab-stops: 0pt"><a name="p414" id="p414"></a><a name="_DropDownCloseOnClick_Event" id="_DropDownCloseOnClick_Event"></a>3.3.5.3.4.1 DropDownCloseOnClick Event</h6>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyText1">This section deals with associating a CheckedListBox and 
+handling the events. After the dropdown had closed, the checked items will be 
+displayed on the dropdown text area. The steps are as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a 
+CheckedListBox and populate it.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_361.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="MsoCaption">Figure 365: Adding String Collection to CheckedListBox 
+Control</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Associate it with 
+the ComboBoxBase control.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_362.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="MsoCaption">Figure 366: Associating CheckedListBox Control as Dropdown 
+for ComboBoxBase</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   To avoid the 
+closing of dropdown when we are in checking the items, handle the<b> 
+DropDownCloseOnClick</b> event and set <b>args.Cancel=true</b>.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Avoids the closing of 
+      dropdown.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      comboBoxBase1_DropDownCloseOnClick(<span style="COLOR: blue">object</span> 
+      sender, Syncfusion.Windows.Forms.Tools.MouseClickCancelEventArgs args) 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">args.Cancel=<span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Avoids the closing of 
+      dropdown.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private  
+      Sub</span><span style="FONT-FAMILY: 'Courier New'"> 
+      comboBoxBase1_DropDownCloseOnClick(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As Object</span>, <span style="COLOR: blue">ByVal</span> args <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Tools.MouseClickCancelEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">args.Cancel=<span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+  Sub</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Handle 
+<b>SelectedIndexChanged</b> event of the CheckedListBox and add the following 
+code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Sets the corresponding 
+      selected text in the ComboBoxBase TextBox.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      checkedListBox1_SelectedIndexChanged(<span style="COLOR: blue">object</span> sender, System.EventArgs e) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">comboBoxBase1.TextBox.Text="";</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">foreach</span><span style="FONT-FAMILY: 'Courier New'">(<span style="COLOR: blue">object</span> s <span style="COLOR: blue">in</span> 
+      checkedListBox1.CheckedItems ) </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">comboBoxBase1.TextBox.Text  += 
+      s.ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Sets the corresponding 
+      selected text in the ComboBoxBase TextBox.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private  
+      Sub</span><span style="FONT-FAMILY: 'Courier New'"> 
+      checkedListBox1_SelectedIndexChanged(ByVal sender <span style="COLOR: blue">As Object</span>, <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      System.EventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">comboBoxBase1.TextBox.Text=""</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> s <span style="COLOR: blue">As 
+      Object</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For Each</span><span style="FONT-FAMILY: 'Courier New'"> s <span style="COLOR: blue">In</span> 
+      checkedListBox1.CheckedItems</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">comboBoxBase1.TextBox.Text  += 
+      s.ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+  Sub</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image76_363.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="MsoCaption">Figure 367: ComboBoxBase with selected options at Run 
+Time</p>
+<h6 style="tab-stops: 0pt"><a name="p415" id="p415"></a>3.3.5.3.4.2 DropDown Event</h6>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyText1">In order to place ComboBoxBase within a 
+PopupControlContainer, derive from our PopupControlContainer, override the 
+<b>OnPopup</b> method and set the focus to the derived control. This ensures 
+that the derived PopupControlContainer does not lose focus and close 
+prematurely.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Derive from 
+      PopupControlContainer.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CustomPopupControlContainer : 
+      Syncfusion.Windows.Forms.PopupControlContainer<br />{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">CustomPopupControlContainer()<br />{<br />}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"><br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CustomPopupControlContainer(IContainer container):</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">()<br />{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">container.Add(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">protected override 
+      void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      OnPopup(EventArgs args)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">  </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> // Sets focus to 
+      the derived control.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">base.OnPopup(args);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.Focus();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Derive from 
+      PopupControlContainer.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      CustomPopupControlContainer </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Inherits</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Syncfusion.Windows.Forms.PopupControlContainer</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> New()<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> New(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> container </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> IContainer) : 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">()<br />container.Add(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Sets focus to the 
+      derived control.<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Protected Overrides 
+      Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      OnPopup(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> args </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      EventArgs)<br />MyBase.OnPopup(args)<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.Focus()<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"><br />End 
+  Class</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyText1">Here the specification of the parent-child relationship 
+between the ComboBoxBase's popup and the PopupControlContainer is explained with 
+the help of coding.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      comboBoxBase1_DropDown(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender, System.EventArgs 
+      e)<br />{<br /> </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">/* Setup the relationship 
+      between the ComboBoxBase's dropdown and it's parent PopupControlContainer, 
+      so that the popup will not close when the ComboBoxBase’s dropdown is shown 
+      */</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.comboBoxBase1.PopupContainer.PopupParent 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.popupControlContainer1;<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.popupControlContainer1.CurrentPopupChild 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.comboBoxBase1.PopupContainer;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      comboBoxBase1_DropDown(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">,</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      System.EventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> 'Setup the 
+      relationship between the ComboBoxBase's dropdown and it's parent 
+      PopupControlContainer, so that the popup will not close when the 
+      ComboBoxBase’s  dropdown is shown<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"><br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.comboBoxBase1.PopupContainer.PopupParent 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.popupControlContainer1<br /></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.popupControlContainer1.CurrentPopupChild 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.comboBoxBase1.PopupContainer</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+  Sub</span></p></td></tr></tbody></table><span id="related-topics"></span></div></body></html>

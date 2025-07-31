@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating a Circular Gauge</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="d85622a4-2374-422a-ac5e-afb3e79a70b2" />
+<meta name="Title" content="Creating a Circular Gauge" />
+<meta name="Microsoft.Help.TocParent" content="18c91374-412c-49b8-aa16-f0345764600f" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/gauge1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Creating a Circular Gauge</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: red; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">You have now <a>created a Silverlight application</a> and 
+deployed Essential Gauge. Lets see how to create a Circular Gauge in this 
+application. Circular Gauges can be created either with full circle frame type 
+or half circle frame type. This is done either by using XAML code or with C# 
+code. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Step-by-step instructions for creating a Circular 
+Gauge</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Add reference in 
+Xaml as well as in the procedural code and then add the CircularGauge to the 
+panel (the default value for Frame Type is “FullCircle” and for Radius is 
+“150”).</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 34.5pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 34.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="LayoutRoot"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="White"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      Gauge to the application.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Radius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="170"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="circularGauge1" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> circulargauge1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(circulargauge1);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   To add a Scale to 
+the Circular Gauge in Silverlight Application, use the below code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">Radius</span><span style="COLOR: blue">="170"</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">="circularGauge1" 
+      &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      Scale to the gauge.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_scale"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Radius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartAngle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="110"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">GapSweepAngle</span><span style="COLOR: blue">="320"</span><span style="COLOR: red"> 
+      ScaleBarSize</span><span style="COLOR: blue">="5"</span><span style="COLOR: red"> ShadowOffset</span><span style="COLOR: blue">="5"</span><span style="COLOR: red">               
+      Minimum</span><span style="COLOR: blue">="0"</span><span style="COLOR: red"> Maximum</span><span style="COLOR: blue">="100"</span><span style="COLOR: red"> 
+      MinorIntervalValue</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> MajorIntervalValue</span><span style="COLOR: blue">="10"</span><span style="COLOR: red"> 
+      BorderBrush</span><span style="COLOR: blue">="Gray"</span><span style="COLOR: red">Background</span><span style="COLOR: blue">="Silver"</span><span style="COLOR: red"> 
+      Location</span><span style="COLOR: blue">="50,50" &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> circulargauge1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(circulargauge1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating scale object and adding to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Radius = 
+      110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.StartAngle = 
+      120;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.GapSweepAngle = 
+      300;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(50, 50);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.Scales.Add(c_scale);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   To add a Pointer 
+to the Circular Gauge in Silverlight Application, use the below code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Radius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="170"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="circularGauge1" 
+      &gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      Scale to the gauge.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_scale"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Radius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartAngle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="110"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      GapSweepAngle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="320"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ScaleBarSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ShadowOffset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">        
+      Minimum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Maximum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      MinorIntervalValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      MajorIntervalValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BorderBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Gray"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Location</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="50,50" 
+      &gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      ticks to the scale--&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      labelticks to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="13"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Foreground</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_label"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">TickPlacement</span><span style="COLOR: blue">="Outside"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                
+      VerticalContentAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Bottom"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      DistanceFromScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      markticks to the scale--&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="8"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Triangle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="MajorTick"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="majorLabelTick"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="4"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                        
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">"Silver"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="4"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="MinorTick"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="minorTick"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">Background</span><span style="COLOR: blue">="Silver"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   <span style="COLOR: red">                 TickPlacement</span><span style="COLOR: blue">="Inside"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      pointer to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">   </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      NeedleStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Triangle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      MarkerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Diamond"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_pointer1"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      <span style="COLOR: red">          BorderBrush</span><span style="COLOR: blue">="Silver"</span><span style="COLOR: red"> 
+      PointerLength</span><span style="COLOR: blue">="100"</span><span style="COLOR: red"> PointerWidth</span><span style="COLOR: blue">="15"</span><span style="COLOR: red"> 
+      Value</span><span style="COLOR: blue">="0"</span><span style="COLOR: red"> 
+      PointerNeedleType</span><span style="COLOR: blue">="Needle"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                
+      PointerPlacement</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Inside"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      pointercap to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BorderBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Black"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BorderThickness</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="1"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">PointerCapRadius</span><span style="COLOR: blue">="20"</span><span style="COLOR: red"> 
+      Background</span><span style="COLOR: blue">="Black" &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">                
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.PointerCap&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> circulargauge1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(circulargauge1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating scale object and adding to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Radius = 
+      110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.StartAngle = 
+      120;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.GapSweepAngle = 
+      300;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(50, 50);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.Scales.Add(c_scale);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating LabelTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LabelTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontSize = 
+      15;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Arial"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.DistanceFromScale 
+      = 5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.TickPlacement = 
+      <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Brown);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_label);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating major MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_majortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickWidth = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickHeight 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MajorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_majortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating minor MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_minortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MinorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_minortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// Adding 
+      pointercap to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.PointerCapRadius 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding pointer to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_pointer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularPointer</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerLength 
+      = 110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerWidth 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.NeedleStyle = 
+      <span style="COLOR: #2b91af">NeedleStyle</span>.Triangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Pointers.Add(c_pointer);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   To add a Complete 
+Circular Gauge in Silverlight Application, use the below code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Full Circle Gauge</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="gauge_help.Page" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="http://schemas.microsoft.com/winfx/2006/xaml"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="clr-namespace:Syncfusion.Silverlight.Gauge;assembly=Syncfusion.Gauge.Silverlight" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="400"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="400"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="LayoutRoot"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="White"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      Gauge to the application--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: blue; FONT-SIZE: 12pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: red">Radius</span><span style="COLOR: blue">="170"</span> 
+      <span style="COLOR: red">Name</span><span style="COLOR: blue">="circularGauge1" &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">   &lt;!--Adding 
+      Scale to the gauge--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: blue; FONT-SIZE: 12pt">     &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_scale"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Radius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartAngle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="110" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">GapSweepAngle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="320"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ScaleBarSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ShadowOffset</span><span style="COLOR: blue">="5"</span><span style="COLOR: red"> 
+      Minimum</span><span style="COLOR: blue">="0" </span><span style="COLOR: red">Maximum</span><span style="COLOR: blue">="100"</span><span style="COLOR: red"> 
+      MinorIntervalValue</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> MajorIntervalValue</span><span style="COLOR: blue">="10"</span><span style="COLOR: red"> 
+      BorderBrush</span><span style="COLOR: blue">="Gray"</span><span style="COLOR: red">Background</span><span style="COLOR: blue">="Silver"</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Location</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="50,50"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      ticks to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: blue; FONT-SIZE: 12pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      labelticks to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="13"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Foreground</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_label" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">TickPlacement</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Outside"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      VerticalContentAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Bottom"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      DistanceFromScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      markticks to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="8"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Triangle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="MajorTick"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="majorLabelTick"</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">     
+      TickWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="4"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 108pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="4"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      TickStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="MinorTick"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="minorTick" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">          
+      TickPlacement</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Inside"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      pointer to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      NeedleStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Triangle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      MarkerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Diamond"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_pointer1" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">             BorderBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Silver"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">PointerLength</span><span style="COLOR: blue">="100"</span> <span style="COLOR: red">PointerWidth</span><span style="COLOR: blue">="15"</span><span style="COLOR: red"> 
+      Value</span><span style="COLOR: blue">="0" </span><span style="COLOR: red">PointerNeedleType</span><span style="COLOR: blue">="Needle"</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">      
+      PointerPlacement</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Inside"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      pointercap to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">            </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">PointerCap</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">BorderBrush</span><span style="COLOR: blue">="Black"</span> <span style="COLOR: red">BorderThickness</span><span style="COLOR: blue">="1"</span> <span style="COLOR: red">PointerCapRadius</span><span style="COLOR: blue">="20" 
+      </span><span style="COLOR: red">Background</span><span style="COLOR: blue">="Black"</span><span style="COLOR: red"> </span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">            </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      range to the scale--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="70"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      EndValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="range"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">StartWidth</span><span style="COLOR: blue">="0"</span><span style="COLOR: red"> EndWidth</span><span style="COLOR: blue">="15"</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">        
+      RangePosition</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Inside"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      DistanceFromScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="10" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Blue"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 90pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      state indicators to the gauge--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_indicator"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Green"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ActiveBackgroundBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Red"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">Location</span><span style="COLOR: blue">="50,80"</span><span style="COLOR: red">                      
+      IndicatorHeight</span><span style="COLOR: blue">="6"</span><span style="COLOR: red"> IndicatorWidth</span><span style="COLOR: blue">="6" 
+      </span><span style="COLOR: red">FontSize</span><span style="COLOR: blue">="12"</span><span style="COLOR: red"> 
+      FontFamily</span><span style="COLOR: blue">="Verdana"</span> <span style="COLOR: red">IndicatorStyle</span><span style="COLOR: blue">="CircularLED"</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="ON"</span><span style="COLOR: red">                
+      ActiveText</span><span style="COLOR: blue">="On"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="70"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      EndValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      labels to the gauge--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">GaugeLabel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Syncfusion"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="20"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Foreground</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Black"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Location</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="20,50"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">&lt;!--Adding 
+      images to the gauge--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfguage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Images</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">        </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfguage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">GaugeImage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ImageSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="C:/image/synclogo.jpg"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">Location</span><span style="COLOR: blue">="50,50"</span><span style="COLOR: red"> 
+      ImageHeight</span><span style="COLOR: blue">="30"</span><span style="COLOR: red"> ImageWidth</span><span style="COLOR: blue">="70"</span><span style="COLOR: red">                       
+      ResizeMode</span><span style="COLOR: blue">="Stretch" 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">        </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfguage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge.Images</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515; FONT-SIZE: 12pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Namespace to be added.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">using 
+      Syncfusion.Silverlight.Gauge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating gauge object.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> circulargauge1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(circulargauge1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">           
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating scale object and adding to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Radius = 
+      110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.StartAngle = 
+      120;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.GapSweepAngle = 
+      300;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(50, 50);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.Scales.Add(c_scale);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating LabelTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LabelTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontSize = 
+      15;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Arial"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.DistanceFromScale 
+      = 5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.TickPlacement = 
+      <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Brown);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_label);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating major MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_majortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickWidth = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickHeight 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MajorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_majortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating minor MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_minortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MinorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_minortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// Adding 
+      pointercap to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.PointerCapRadius 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding pointer to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_pointer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularPointer</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerLength 
+      = 110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerWidth 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.NeedleStyle = 
+      <span style="COLOR: #2b91af">NeedleStyle</span>.Triangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Pointers.Add(c_pointer);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding Range to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularRange</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_range = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularRange</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.StartValue = 
+      80;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.EndValue = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.StartWidth = 
+      1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.EndWidth = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.DistanceFromScale 
+      = 3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ranges.Add(c_range);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding state indicator to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> s_indicator = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StateIndicator</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.StateRanges.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StateRange</span>(70, 100));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.ActiveBackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(60, 80);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorWidth 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Text = 
+      <span style="COLOR: #a31515">"Off"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.ActiveText 
+      = <span style="COLOR: #a31515">"On"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorStyle 
+      = <span style="COLOR: #2b91af">IndicatorStyle</span>.CircularLED</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.StateIndicators.Add(s_indicator);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding label to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">GaugeLabel</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GaugeLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.FontSize = 
+      17;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>( <span style="COLOR: #a31515">"Verdana"</span> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Location = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>( 
+      50, 80 );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Text = <span style="COLOR: #a31515">"Silverlight"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>( <span style="COLOR: #2b91af">Colors</span>.Black );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circularGauge1.CustomLabels.Add( 
+      label ); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding image to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">GaugeImage</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> gaugeImage = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GaugeImage</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageWidth = 
+      90;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageHeight 
+      = 30; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">BitmapImage</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> bmp = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BitmapImage</span>( <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Uri</span>(<span style="COLOR: #a31515">"../Images/synclogo.jpg"</span>, <span style="COLOR: #2b91af">UriKind</span>.Relative) );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageSource 
+      = bmp;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>( 50, 15 );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ResizeMode = 
+      <span style="COLOR: #2b91af">GaugeImageResizeMode</span>.Stretch;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circularGauge1.Images.Add( 
+      gaugeImage );</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image60_22.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 15: Full Circle Gauge</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Half Circle Gauge</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: red; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">gauge_help.Page</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:Syncfusion.Silverlight.Gauge;assembly=Syncfusion.Gauge.Silverlight</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">400</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Height</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">400</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">LayoutRoot</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">White</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      Gauge to the application</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Auto</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Width</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Auto</span>"<span style="COLOR: blue">  
+      </span><span style="COLOR: red">Radius</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">170</span>"<span style="COLOR: blue">  </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">circularGauge1</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">FrameType</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">HalfCircle</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Margin</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">3</span>"<span style="COLOR: blue">  &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding  
+      scale to gauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">m_scale</span>"<span style="COLOR: blue">   
+      </span><span style="COLOR: red">Radius</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">100</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">StartAngle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">180</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">GapSweepAngle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">180</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ScaleBarSize</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">5</span>"<span style="COLOR: blue">  </span><span style="COLOR: red">ShadowOffset</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">5</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Minimum</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">0</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Maximum</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">100</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">MinorIntervalValue</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">2</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">MajorIntervalValue</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">10</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">BorderBrush</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Gray</span>"<span style="COLOR: blue">   </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Location</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">50,73</span>"<span style="COLOR: blue"> &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      ticks to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      labelticks to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">13</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Foreground</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">m_label</span>"<span style="COLOR: blue">         
+      </span><span style="COLOR: red">TickPlacement</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Outside</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">VerticalContentAlignment</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Bottom</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">DistanceFromScale</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">0</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      markticks to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">8</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">TickShape</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Triangle</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">TickStyle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">MajorTick</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">majorLabelTick</span>"<span style="COLOR: blue">   </span><span style="COLOR: red">TickWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">4</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">TickHeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">4</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">TickWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">1</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">TickStyle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">MinorTick</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">minorTick</span>"<span style="COLOR: blue">    </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">TickPlacement</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Inside</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      pointer to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Background</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">NeedleStyle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Triangle</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">MarkerStyle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Diamond</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">m_pointer1</span>"<span style="COLOR: blue">  
+      </span><span style="COLOR: red">BorderBrush</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">PointerLength</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">100</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">PointerWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">15</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Value</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">0</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">                       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">PointerNeedleType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Needle</span>"<span style="COLOR: blue">     </span><span style="COLOR: red">PointerPlacement</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Inside</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      pointercap to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">BorderBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Black</span>"<span style="COLOR: blue">  
+      </span><span style="COLOR: red">BorderThickness</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">1</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">                                  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">PointerCapRadius</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">15</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Silver</span>"<span style="COLOR: blue"> &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.PointerCap</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      range to the scale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">StartValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">70</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">EndValue</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">100</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Name</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">range</span>"<span style="COLOR: blue">  
+      </span><span style="COLOR: red">StartWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">0</span>"<span style="COLOR: blue">    </span><span style="COLOR: red">EndWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">15</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">RangePosition</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Inside</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">DistanceFromScale</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">10</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Blue</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      state indicators to the gauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">m_indicator</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Background</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Green</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ActiveBackgroundBrush</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Red</span>"<span style="COLOR: blue">  </span><span style="COLOR: red">Location</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">60,70</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">IndicatorHeight</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">6</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">IndicatorWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">6</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">12</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">FontFamily</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Verdana</span>"<span style="COLOR: blue">  
+      </span><span style="COLOR: red">IndicatorStyle</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">CircularLED</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">Text</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">ON</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ActiveText</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">On</span>"<span style="COLOR: blue">  &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:StateRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">StartValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">70</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">EndValue</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">100</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      labels to the gauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:GaugeLabel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Syncfusion</span>"<span style="COLOR: blue"> 
+      </span><span style="COLOR: red">FontSize</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">20</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Foreground</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Black</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Location</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">20,50</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      images to the gauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge.Images</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:GaugeImage</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">ImageSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">C:/image/synclogo.jpg</span>"<span style="COLOR: blue">  </span><span style="COLOR: red">Location</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">50,50</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ImageHeight</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">30</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ImageWidth</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">70</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">ResizeMode</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Stretch</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">:CircularGauge.Images</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">sfgauge:CircularGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Namespace to be added.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">using 
+      Syncfusion.Silverlight.Gauge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding gauge object.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.FrameType<span style="COLOR: green"> = </span><span style="COLOR: #33a3a3">GaugeFrameType</span>.HalfCircle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(circulargauge1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding scale to the gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Radius = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.StartAngle = 
+      180;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.GapSweepAngle = 
+      180;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(50, 50);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.ShadowOffset = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.Scales.Add(c_scale);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating LabelTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LabelTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LabelTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontSize = 
+      15;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Ariel"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.DistanceFromScale 
+      = 5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.TickPlacement = 
+      <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_label.Foreground = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Brown);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_label);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating major MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_majortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickWidth = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickHeight 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MajorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_majortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_majortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating minor MarkTick object and adding it to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">MarkTickSet</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_minortick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MarkTickSet</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MinorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_minortick.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ticks.Add(c_minortick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// Adding 
+      pointer cap to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.PointerCapRadius 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderThickness 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0.5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.PointerCap.BorderBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding pointer to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularPointer</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_pointer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularPointer</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerLength 
+      = 110;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.PointerWidth 
+      = 20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_pointer.NeedleStyle = 
+      <span style="COLOR: #2b91af">NeedleStyle</span>.Triangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Pointers.Add(c_pointer);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding Range to scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">CircularRange</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> c_range = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CircularRange</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.StartValue = 
+      80;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.EndValue = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.StartWidth = 
+      1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.EndWidth = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.DistanceFromScale 
+      = 3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_range.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">c_scale.Ranges.Add(c_range);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding state indicator to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> s_indicator = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StateIndicator</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.StateRanges.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StateRange</span>(70, 100));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.ActiveBackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Blue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Background 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(60, 80);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorWidth 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.Text = 
+      <span style="COLOR: #a31515">"Off"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.ActiveText 
+      = <span style="COLOR: #a31515">"On"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">s_indicator.IndicatorStyle 
+      = <span style="COLOR: #2b91af">IndicatorStyle</span>.CircularLED</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circulargauge1.StateIndicators.Add(s_indicator);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding label to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">GaugeLabel</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GaugeLabel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.FontSize = 
+      17;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>( <span style="COLOR: #a31515">"Verdana"</span> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Location = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>( 
+      50, 80 );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Text = <span style="COLOR: #a31515">"Silverlight"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">label.Background = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>( <span style="COLOR: #2b91af">Colors</span>.Black );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circularGauge1.CustomLabels.Add( 
+      label ); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating and adding image to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">GaugeImage</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> gaugeImage = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GaugeImage</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageWidth = 
+      90;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageHeight 
+      = 30; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">BitmapImage</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> bmp = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BitmapImage</span>( <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Uri</span>(<span style="COLOR: #a31515">"../Images/synclogo.jpg"</span>, <span style="COLOR: #2b91af">UriKind</span>.Relative) );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ImageSource 
+      = bmp;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>( 50, 15 );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">gaugeImage.ResizeMode = 
+      <span style="COLOR: #2b91af">GaugeImageResizeMode</span>.Stretch;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">circularGauge1.Images.Add( 
+      gaugeImage );</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"><img border="0" src="ImagesExt/image60_23.jpg" alt="" /></span></p>
+<p class="MsoCaption">Figure 16: Half Circle Gauge</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p18" id="p18"></a> </p><span id="related-topics"></span></div></body></html>

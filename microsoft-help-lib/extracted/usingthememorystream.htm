@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Using the Memory Stream</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="8be58d61-ce40-4777-8bd8-354f260eea48" />
+<meta name="Title" content="Using the Memory Stream" />
+<meta name="Microsoft.Help.TocParent" content="639e2a01-a60b-438c-b98e-002f9831e0c2" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="LINE-HEIGHT: 115%; TEXT-INDENT: -50.4pt; MARGIN: 10pt 0pt 0pt 50.4pt; tab-stops: 50.4pt">Using 
+the Memory Stream</h5>
+<p class="BodyText10">The following code snippets illustrate the implementation of 
+saving the diagram page using a memory stream:</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 473.4pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">Contoller</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DiagramPropertiesModel</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> serializeModel = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramPropertiesModel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">public</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: #2b91af">ActionResult</span> Serialization()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: blue">this</span>.GetNodesConnectors(serializeModel);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.Height = 650;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.Width = 800;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.DiagramMode = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DiagramMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.SVG;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.IsSymbolPaletteEnabled = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.BoundaryConstraintsEnabled = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.SaveStreamMapper = <span style="COLOR: #a31515">"SaveDiagramAsStream"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      ViewData[<span style="COLOR: #a31515">"Serialization"</span>] = 
+      serializeModel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 11pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">&lt;summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 11pt"> Gets 
+      the nodes connectors.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 11pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">&lt;/summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 11pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">&lt;param 
+      name="serializeModel"&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 11pt">The 
+      serialize model.</span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray; FONT-SIZE: 11pt">&lt;/param&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: blue">void</span> GetNodesConnectors(<span style="COLOR: #2b91af">DiagramPropertiesModel</span> 
+      serializeModel)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> tv = AddNodeSerialize(<span style="COLOR: #a31515">"tv"</span>, <span style="COLOR: #a31515">""</span>, 350, 50, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> seat = AddNodeSerialize(<span style="COLOR: #a31515">"seat"</span>, <span style="COLOR: #a31515">""</span>, 100, 150, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> speaker = AddNodeSerialize(<span style="COLOR: #a31515">"speaker"</span>, <span style="COLOR: #a31515">""</span>, 550.00, 150, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> home = AddNodeSerialize(<span style="COLOR: #a31515">"home"</span>, <span style="COLOR: #a31515">""</span>, 350.00, 250.00, 103.00, 110.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> garden = AddNodeSerialize(<span style="COLOR: #a31515">"garden"</span>, <span style="COLOR: #a31515">""</span>, 100.00, 350.00, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">  
+        <span style="COLOR: #2b91af">Node</span> paint = 
+      AddNodeSerialize(<span style="COLOR: #a31515">"paint"</span>, <span style="COLOR: #a31515">""</span>, 550, 350.00, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> cooking = AddNodeSerialize(<span style="COLOR: #a31515">"cooking"</span>, <span style="COLOR: #a31515">""</span>, 350, 500.00, 103.00, 103.00, <span style="COLOR: #a31515">""</span>, 1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line1 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line1"</span>, tv, 
+      home, <span style="COLOR: #2b91af">ConnectorType</span>.Straight);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line2 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line2"</span>, seat, 
+      home, <span style="COLOR: #2b91af">ConnectorType</span>.Orthogonal);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line3 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line3"</span>, 
+      speaker, home, <span style="COLOR: #2b91af">ConnectorType</span>.Orthogonal);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line4 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line4"</span>, garden, 
+      home, <span style="COLOR: #2b91af">ConnectorType</span>.Orthogonal);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line5 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line5"</span>, paint, 
+      home, <span style="COLOR: #2b91af">ConnectorType</span>.Orthogonal);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> line6 = 
+      AddConnectorSerialize(<span style="COLOR: #a31515">"line6"</span>, 
+      cooking, home, <span style="COLOR: #2b91af">ConnectorType</span>.Straight);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.Nodes = <span style="COLOR: blue">new 
+      NodesCollection()</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      home, tv, seat, speaker, garden, paint, cooking</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      serializeModel.Connectors = <span style="COLOR: blue">new 
+      LinesCollection()</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      line1, line2, line3, line4, line5, line6</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">public</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: #2b91af">ActionResult</span> SaveDiagramAsStream(<span style="COLOR: #2b91af">DiagramPropertiesModel</span> 
+      diagramModel)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      saveStream = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MemoryStream</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: blue">return</span> 
+      diagramModel.Save(saveStream);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">public</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: #2b91af">Node</span> AddNodeSerialize(<span style="COLOR: blue">string</span> name, <span style="COLOR: blue">string</span> label, <span style="COLOR: blue">double</span> offsetX, <span style="COLOR: blue">double</span> offsetY, <span style="COLOR: blue">double</span> width, <span style="COLOR: blue">double</span> height, <span style="COLOR: blue">string</span> bgColor, <span style="COLOR: blue">double</span> bWidth)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">Node</span> node = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Name = name,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Label = <span style="COLOR: #a31515">""</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelHorizontalAlignment = <span style="COLOR: #2b91af">Horizontal</span>.Center,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelVerticalAlignment = <span style="COLOR: #2b91af">Vertical</span>.Middle,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      OffsetX = offsetX,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      OffsetY = offsetY,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Shape = <span style="COLOR: #2b91af">Shapes</span>.Default,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Height = height,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Width = width,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      BackgroundColor = bgColor != <span style="COLOR: blue">null</span> 
+      &amp;&amp; bgColor != <span style="COLOR: #a31515">""</span> ? bgColor : 
+      <span style="COLOR: #a31515">"#fff"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      BorderColor = bgColor != <span style="COLOR: blue">null</span> &amp;&amp; 
+      bgColor != <span style="COLOR: #a31515">""</span> ? bgColor : <span style="COLOR: #a31515">"#7a7772"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      BorderWidth = bWidth,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelFontColor = <span style="COLOR: #a31515">"black"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelFontSize = 12,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelFontFamily = <span style="COLOR: #a31515">"Times New 
+      Roman"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LabelLetterSpacing = 4,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      ContentId = name + <span style="COLOR: #a31515">"_Content"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: blue">return</span> node;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">public</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: #2b91af">LineConnector</span> AddConnectorSerialize(<span style="COLOR: blue">string</span> name, <span style="COLOR: #2b91af">Node</span> headNode, <span style="COLOR: #2b91af">Node</span> tailNode, <span style="COLOR: #2b91af">ConnectorType</span> connectorType)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span> lineConnector = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LineConnector</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      Name = name,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      HeadNode = headNode,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      TailNode = tailNode,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">       
+       HeadDecoratorShape = <span style="COLOR: #2b91af">DecoratorShape</span>.None,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      TailDecoratorShape = <span style="COLOR: #2b91af">DecoratorShape</span>.None,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      ConnectorType = connectorType,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LineColor = <span style="COLOR: #a31515">"#7a7772"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      LineWidth = 2</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: blue">return</span> lineConnector;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">}</span><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></b></p></td></tr></tbody></table></div>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">View</span></b><span style="FONT-SIZE: 11pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="BACKGROUND: yellow">&lt;%</span>{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">          
+      Html.Syncfusion().Diagram("Serialization")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">              
+      .Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-SIZE: 11pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image70_144.png" alt="" /></p>
+<p class="MsoCaption">Figure 144: Save Diagram Using a Memory Stream</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

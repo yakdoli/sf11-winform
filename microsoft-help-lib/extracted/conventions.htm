@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Conventions</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="74a161a2-e6fd-4a2f-b0ed-aa786788ccd2" />
+<meta name="Title" content="Conventions" />
+<meta name="Microsoft.Help.TocParent" content="7888e3ed-424d-4720-94b6-3942cb69e475" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/calculate.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Conventions</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">There are two conventions that are honored by Essential 
+Calculate. While processing strings that are used as data values, any string 
+beginning with "=" is treated as a formula that is to be parsed and evaluated. 
+You can change the "=" to some other character by setting this static (Shared in 
+VB) member, CalcEngine.FormulaCharacter. If you call Parse routines directly 
+from code, the FormulaCharacter is optional.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The second convention involves zero-based and one-based 
+indexing. It should be noted that a lot of data sources use zero-based indexing 
+to access values, but in CalcEngine one-based indexing is used to mimic Excel. 
+This leads to possible indexing conflicts. To keep things consistent and to make 
+sure that it is clear what should be used, Essential Calculate expects any 
+indexes (rows / column integer values) to be one-based. This means that you may 
+have to tweak the indexes that are passed through the ICalcData methods and 
+event arguments to make them consistent with any zero-based data sources that 
+you might be using. One such example is the DataGrid discussed in this section. 
+You can see the index-based adjustments in the following code samples.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CalcDataGrid : DataGrid, 
+      Syncfusion.Calculate.ICalcData</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CalcDataGrid() : 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">base</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> // 
+      Avoid the complexity of sorting.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.AllowSorting = 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 1) Used to subscribe 
+      to the DataTable.ColumnChanged event. This ColumnChanged event will raise 
+      the required ValueChanged event.</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // Without this ValueChanged event, the CalcEngine would have no knowledge 
+      of the data.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      WireParentObject()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Assumes 
+      grid's datasource is a DataTable.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      DataTable dt = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">as</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataTable;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      dt.ColumnChanged += </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      DataColumnChangeEventHandler(dt_ColumnChanged);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> // 
+      Avoids the complexity of a new row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      dt.DefaultView.AllowNew = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // 2) This event handler raises the required ICalcData.ValueChanged event 
+      when the data in the DataTable changes.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> private 
+      void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      dt_ColumnChanged(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender, 
+      DataColumnChangeEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      CurrencyManager cm = (CurrencyManager) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.BindingContext[</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataMember];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      DataTable dt = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource as 
+      DataTable;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> pos = 
+      cm.Position;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> field = 
+      dt.Columns.IndexOf(e.Column);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> val = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[pos, 
+      field].ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      e1.RowIndex, e1.ColIndex needs to be one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      Syncfusion.Calculate.ValueChangedEventArgs e1 = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ValueChangedEventArgs(pos + 1, field + 1, val);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      ValueChanged(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, e1);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">   
+           }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // 3) Returns the value at the one-based row and col.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  public 
+      object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GetValueRowCol(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> row, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> col)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> // 
+      Row, col are one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        return 
+      this[row-1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, 
+      col-1];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // 4) Sets the value at the one-based row and col.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">   public 
+      void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      SetValueRowCol(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> row, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> col)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Row, col 
+      are one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      DataTable dt = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">as</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataTable;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      dt.Rows[row - 1][col - 1] = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      // 5) Required ICalcData event.     </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> public 
+      event</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ValueChangedEventHandler ValueChanged;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CalcDataGrid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Inherits</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataGrid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Implements</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Syncfusion.Calculate.ICalcData </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Sub New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">        
+      ' Avoids the complexity of sorting.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.AllowSorting = 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'1) Used to subscribe to 
+      the DataTable.ColumnChanged event. This event will raise the required 
+      ValueChanged event. Without 
+      this           
+      ValueChanged event, the CalcEngine would have no knowledge of the 
+      data.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> WireParentObject() 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Implements</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ICalcData.WireParentObject</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Assumes 
+      the grid's datasource is a DataTable.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> dt </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataTable = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> dt.ColumnChanged, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddressOf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      dt_ColumnChanged</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> ' 
+      Avoids the complexity of a new row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      dt.DefaultView.AllowNew = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 2) This event handler 
+      raises the required ICalcData.ValueChanged event when the data in the 
+      DataTable changes.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      dt_ColumnChanged(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      DataColumnChangeEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cm </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CurrencyManager = 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.BindingContext(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataMember), 
+      CurrencyManager)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> dt </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataTable = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> pos </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = cm.Position</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> field </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = 
+      dt.Columns.IndexOf(e.Column)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> val </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(pos, 
+      field).ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 
+      e1.RowIndex, e1.COlIndex needs to be one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e1 = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ValueChangedEventArgs(pos + 1, field + 1, val)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      ValueChanged(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, e1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 3) Returns the value at 
+      the one-based row and col.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public 
+      Function</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GetValueRowCol(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> row </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> col</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Implements</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ICalcData.GetValueRowCol</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Row, col 
+      are one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> Return 
+      Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(row - 1, 
+      col - 1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Function</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 4) Sets the value at 
+      the one-based row and col.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      SetValueRowCol(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> value </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> row</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> col </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Implements</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ICalcData.SetValueRowCol</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> ' Row, 
+      col are one-based.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> dt </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> DataTable = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.DataSource '</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      dt.Rows(row - 1)(col - 1) = value</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">  </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' 5) Required ICalcData 
+      event.     </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public Event</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> ValueChanged 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> ValueChangedEventHandler 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Implements</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ICalcData.ValueChanged</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' CalcDataGrid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following is an explanation of the preceding code.</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   This is the 
+implementation of the <b>ICalcData.WireParentObject</b>. One of the requirements 
+of the ICalcData object is to tell the CalcEngine "when" values have changed. 
+This is necessary so that the CalcEngine can maintain the proper state of its 
+data structures. The ICalcData object performs this notification task by raising 
+the <b>ICalcData.ValueChanged</b> event whenever a data value changes. 
+WireParentObject is a callback method from CalcEngine which gives the ICalcData 
+object a chance to do whatever it needs to initially set up this notification 
+process. In this particular case, this means subscribing to the<b> 
+DataTable.ColumnChanged</b> event whose event handler will raise the required 
+ValueChanged event. These type of actions cannot be done in the ICalcData 
+constructor as the data source of the DataGrid would not have been set at this 
+point. Using the WireParentObject callback, enables the DataGrid to have things 
+completely set up before the WireParentObject is triggered when the CalcEngine 
+is created.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   This is the 
+DataTable.ColumnChanged event handler. Its purpose is to raise the 
+ICalcData.ValueChanged event. It uses the <b>CurrencyManager</b> to retrieve the 
+row position of the changed row, and looks up the changed column in the Columns 
+collection. One point to note is that both these values are zero-based indexes. 
+Anytime you interact with an ICalcData object, the indexes have to be one-based. 
+So, when the <b>ValueChangedEventArgs</b> are created, the indexes are 
+incremented by one.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   This 
+<b>GetValueRowCol</b> implementation returns the value in the DataGrid for a 
+certain row and column index, which are passed in by the caller. These values 
+must be one-based in the call list. So, before they are used to retrieve the 
+value from the DataGrid, they are decremented to be proper zero-based indexes on 
+the DataGrid.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   This 
+<b>SetValueRowCol</b> implementation sets the value in the DataGrid for a 
+certain row and column index, which are passed in by the caller. Again the row 
+and column indexes are adjusted for the base difference.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   This is the 
+declaration of the ValueChanged event that was raised in the ColumnChanged event 
+discussed in item two.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

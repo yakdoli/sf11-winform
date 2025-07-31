@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Resizing and Positioning of Chart Elements</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e9173e9f-8550-4d3e-9912-a17e0683a122" />
+<meta name="Title" content="Resizing and Positioning of Chart Elements" />
+<meta name="Microsoft.Help.TocParent" content="d3e468dc-28cf-4c78-be96-0d34133e935a" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Resizing and Positioning of Chart Elements</h5>
+<p class="BodyText1">Chart elements such as chart title, legend, and plot area, 
+can be positioned and resized easily as needed. To avoid spacing problems caused 
+by the lengthy chart titles, plot area, or legends, the user can change the way 
+that how these elements have to be positioned in the chart. You can also specify 
+the exact position of the chart elements in the chart area.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code examples illustrate how to resize and 
+position the chart elements.</p>
+<p style="TEXT-INDENT: 21.6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 1: Instantiate the 
+      spreadsheet creation engine</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ExcelEngine</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ExcelEngine</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 2: Instantiate the 
+      excel application object</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IApplication</span><span style="FONT-FAMILY: 'Courier New'"> application = 
+      excelEngine.Excel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorkbook</span><span style="FONT-FAMILY: 'Courier New'"> workbook = 
+      application.Workbooks.Open(<span style="COLOR: #a31515">@"../../Data/Sample.xlsx"</span>, <span style="COLOR: #2b91af">ExcelOpenType</span>.Automatic);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorksheet</span><span style="FONT-FAMILY: 'Courier New'"> sheet = 
+      workbook.Worksheets[0];<br /><span style="COLOR: #2b91af">IChart</span> 
+      chart = sheet.Charts[0];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Manually positioning 
+      chart title<b> </b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Edge: Specifies that 
+      the width or Height will be interpreted as right or bottom of the chart 
+      element</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Factor: Specifies that 
+      the width or Height will be interpreted as the width or height of the 
+      chart element</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LeftMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.TopMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Value in points should 
+      not be a negative value if LayoutMode is Edge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//It can be a negative 
+      value if the LayoutMode is Factor.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.ChartTitleArea.Layout.Left = 
+      1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.ChartTitleArea.Layout.Top = 
+      20;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Manually positioning 
+      and resizing chart plot area<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Inner: Specifies that 
+      the plot area size will determine the size of the plot area, without 
+      including the tick marks and axis labels</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LayoutTarget = 
+      LayoutTargets.inner;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LeftMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.TopMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Left = 
+      50;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Top = 
+      75;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Width = 
+      300;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Height = 
+      200;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Manually positioning 
+      and resizing chart legend</span><b><span style="FONT-FAMILY: 'Courier New'"> </span></b><span style="FONT-FAMILY: 'Courier New'">     </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.LeftMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.TopMode = 
+      LayoutModes.edge;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Left = 
+      400;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Top = 
+      150;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Width = 
+      50;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Height = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Saving 
+      workbook</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Version = <span style="COLOR: #2b91af">ExcelVersion</span>.Excel2007;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> fileName = <span style="COLOR: #a31515">@"../../Output/SampleOutput.xlsx"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(fileName);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose();</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 1: Instantiate the 
+      spreadsheet creation engine</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine <span style="COLOR: blue">As</span> ExcelEngine = <span style="COLOR: blue">New</span> ExcelEngine()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 2: Instantiate the 
+      excel application object</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> application <span style="COLOR: blue">As</span> IApplication = excelEngine.Excel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> workbook <span style="COLOR: blue">As</span> IWorkbook = application.Workbooks.Open(<span style="COLOR: #a31515">"../../Data/Sample.xlsx"</span>, 
+      ExcelOpenType.Automatic)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> worksheet <span style="COLOR: blue">As</span> IWorksheet = workbook.Worksheets(0) 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> chart <span style="COLOR: blue">As</span> IChart = worksheet.Charts(0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">Manually positioning 
+      chart title</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Edge: Specifies that 
+      the Width or Height will be interpreted as the right or bottom of the 
+      chart element</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Factor: Specifies that 
+      the Width or Height will be interpreted as the width or height of the 
+      chart element</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LeftMode = 
+      LayoutModes.edge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.TopMode = 
+      LayoutModes.edge </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Value in points should 
+      not be negative value if LayoutMode is Edge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//It can be a negative 
+      value if LayoutMode is Factor.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.ChartTitleArea.Layout.Left = 
+      1        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.ChartTitleArea.Layout.Top = 20 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">Manually positioning and 
+      resizing chart plot area</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">Inner: Specifies that the 
+      plot area size shall determine the size of the plot area without including 
+      the tick marks and axis labels</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LayoutTarget = 
+      LayoutTargets.inner </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.LeftMode = 
+      LayoutModes.edge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.TopMode = 
+      LayoutModes.edge </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">Floating point value 
+      between -1 and 1</span><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Left = 
+      50</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Top = 
+      75</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Width = 
+      300            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.PlotArea.Layout.Height = 
+      200</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">Manually positioning and 
+      resizing chart legend</span><span style="FONT-FAMILY: 'Courier New'"> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.LeftMode = 
+      LayoutModes.edge  </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.TopMode = 
+      LayoutModes.edge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Left = 
+      400          </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Top = 
+      150           
+</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Width = 
+      50           </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">chart.Legend.Layout.Height = 
+      100</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Saving the workbook to 
+      disk</span><span style="FONT-FAMILY: 'Courier New'">            
+        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(fileName) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Close the 
+      workbook</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'No exception will be 
+      thrown if there are unsaved workbooks</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.ThrowNotSavedOnDestroy = 
+      <span style="COLOR: blue">False</span>          
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose()</span><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

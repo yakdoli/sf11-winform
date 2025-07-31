@@ -1,0 +1,231 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using ChartModel</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="8932310c-815e-4f0f-a4a4-bb3ba6a299a2" />
+    <meta name="Title" content="Using ChartModel" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/chart%20MVC%20in%20HTML%205.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">Using ChartModel</h5>
+      <p class="BodyText1">The steps to show a Legend in chart through ChartModel are as 
+follows:</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">1.   In Controller, 
+create an instance of MVCChartModel.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   Set the 
+<b>ShowTooltips </b>property of chart model to <b>True  </b>and  set 
+the <b>ChartModel.Calcregions</b> property to True.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   Set the 
+ChartSeries, ChartArea, and ChartModel properties.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">4.   Return view to 
+the corresponding View page after setting the ChartModel to the ViewData.</p>
+      <p class="MsoNormalCxSpFirst">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+              <p style="tab-stops: 72.0pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">[C#]</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">
+                  <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">ChartModel</span> model = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">ChartModel</span>();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      series.Points.Add(1900, 100);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      series.Points.Add(1920, 
+      120);           
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      . . .</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      series.Type = <span style="COLOR: #2b91af">SeriesType</span>.Spline;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      model.Series.Add(series);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      series.Symbol.Visible = <span style="COLOR: blue">true</span>;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      series.Symbol.Shape = <span style="COLOR: #2b91af">SymbolShape</span>.Star;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Enabling 
+      the tooltip support</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      model.ShowToolTip = <span style="COLOR: blue">true</span>;</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      model.CalcRegion = <span style="COLOR: blue">true</span>;</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span>
+                </b> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      ViewData[<span style="COLOR: #a31515">"ChartModel"</span>] = 
+      model;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span> View();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span>
+              </p>
+              <p style="tab-stops: 72.0pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 12pt">          
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"> </span>
+                <span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 12pt"></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormalCxSpMiddle">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; tab-stops: 159.0pt" class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">5.   In the View page, 
+invoke the ChartBuilder by using the control ID as the first argument, and 
+convert the ViewData to <b>MVCChartModel</b> and set it as the second 
+argument.</p>
+      <p class="MsoNormalCxSpFirst">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">&lt;%</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      Html.Syncfusion.Chart(<span style="COLOR: #a31515">"SimpleChart"</span>, 
+      (<span style="COLOR: #2b91af">ChartModel</span>)ViewData[<span style="COLOR: #a31515">"ChartModel"</span>])<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">  </span>
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">@</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">(Html.Syncfusion.Chart("SimpleChart", 
+      (ChartModel)ViewData["ChartModel"]))</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormalCxSpMiddle">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">6.   Build and run the 
+code, to get the following output:</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="Figure">
+        <img border="0" src="ImagesExt/image106_90.jpg" alt="" />
+      </p>
+      <p class="MsoCaption">Figure 27: Chart Tooltip</p>
+      <p class="MsoNormal"> </p>
+      <p class="BodyText1"> </p>
+      <p class="BodyText1"> </p>
+      <p class="BodyText1"> </p>
+      <p class="BodyText1"> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

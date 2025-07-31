@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Sorting</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="65bf39ed-d2dc-447f-b79b-c4e0e20002ff" />
+<meta name="Title" content="Custom Sorting" />
+<meta name="Microsoft.Help.TocParent" content="86277a82-d7e5-4f37-8605-c39069f2936e" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Custom Sorting</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Custom Sorting allows you to implement custom sorting logic 
+when the standard sorting techniques do not meet your needs. To support custom 
+sorting in Grid Grouping control, the user needs to add an <b>IComparer</b> 
+object and handle one event<span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8pt">.</span></p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8pt"></span> </p>
+<p class="BodyText1">The <b>Comparer</b> object allows you to control how the 
+sorting is done on the column. This is the place where you can define your own 
+sorting logic. After customizing the sorting logic through IComparer, you can 
+make the grouping grid use this special IComparer by handling an event.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Verdana','sans-serif'; FONT-SIZE: 8pt"></span> </p>
+<p class="BodyText1"><b>Example</b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyText1">Consider a scenario where one of the data columns of your 
+datasource consists of <b>Date-Numeric</b> combination values. In this case, the 
+default sorting will not produce the results we desire. The sorting has to be 
+done first on date values and then on numeric values. Hence we need to write a 
+custom sorting logic by defining a special IComparer object. The grouping grid 
+could then be made to use this custom comparer by handling an event that gets 
+fired while sorting the columns.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyText1">The example illustrates this process in a step by step 
+manner.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Setup a 
+datasource and bind it to a grid grouping control.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Create a Data 
+      Source.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">DataTable</span><span style="FONT-FAMILY: 'Courier New'"> dt = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DataTable</span>(<span style="COLOR: #a31515">"MyTable"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'"> nCols = 4;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'"> nRows = 30;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; nCols; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    dt.Columns.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DataColumn</span>(<span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">"Col{0}"</span>, i)));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Random</span><span style="FONT-FAMILY: 'Courier New'"> r = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Random</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; nRows; ++i)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">DataRow</span> dr = dt.NewRow();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> j = 
+      0; j &lt; nCols; j++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      dr[j] = <span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">"row{0} col{1}"</span>, i, j);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">DateTime</span> d = <span style="COLOR: #2b91af">DateTime</span>.Now.AddDays(r.Next(i &lt; 20 ? 700 
+      : 1));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    dr[nCols - 1] = 
+      <span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">"{0:MMM}{1:00} - {2:0.00}"</span>, d, d.Year, 
+      r.Next(1000000) / 100d);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      dt.Rows.Add(dr);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Bind the data source 
+      to the grouping grid.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.DataSource = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DataView</span>(dt);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Create a Data 
+      Source.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dt <span style="COLOR: blue">As</span> 
+      DataTable = <span style="COLOR: blue">New</span> DataTable(<span style="COLOR: #a31515">"MyTable"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> nCols <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      4</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> nRows <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      30</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      i &lt; nCols</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dt.Columns.Add(<span style="COLOR: blue">New</span> DataColumn(<span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"Col{0}"</span>, i)))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">i += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> r <span style="COLOR: blue">As</span> 
+      Random = <span style="COLOR: blue">New</span> Random()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">i = 0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      i &lt; nRows</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dr <span style="COLOR: blue">As</span> 
+      DataRow = dt.NewRow()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> j <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">While</span> 
+      j &lt; nCols</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dr(j) = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"row{0} col{1}"</span>, i, j)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">j += 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> d <span style="COLOR: blue">As</span> 
+      DateTime = DateTime.Now.AddDays(r.Next(IIf(i &lt; 20, 700, 1)))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dr(nCols - 1) = <span style="COLOR: blue">String</span>.Format(<span style="COLOR: #a31515">"{0:MMM}{1:00} - {2:0.00}"</span>, d, d.Year, 
+      r.Next(1000000) / 100.0R)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dt.Rows.Add(dr)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">i += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Bind the data source to 
+      the grouping grid.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.DataSource = 
+      <span style="COLOR: blue">New</span> 
+DataView(dt)</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Define a Custom 
+Comparer by implementing the IComparer interface.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Sorts first on date 
+      and then on value.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">DateComparer</span> : <span style="COLOR: #2b91af">IComparer</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// IComparer Members.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">int</span> 
+      Compare(<span style="COLOR: blue">object</span> x, <span style="COLOR: blue">object</span> y)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (x == <span style="COLOR: blue">null</span> &amp;&amp; y == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (x == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> -1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (y == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> 1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">DateTime</span> xdate = <span style="COLOR: #2b91af">Convert</span>.ToDateTime(x.ToString());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">DateTime</span> ydate = <span style="COLOR: #2b91af">Convert</span>.ToDateTime(y.ToString());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">int</span> c = 
+xdate.CompareTo(ydate);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> c;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Sorts first on date and 
+      then on value.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Class</span> 
+      DateComparer : <span style="COLOR: blue">Implements</span> 
+      IComparer</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' IComparer 
+      Members.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span> Compare(<span style="COLOR: blue">ByVal</span> x <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> y <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Object</span>) <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> 
+      <span style="COLOR: blue">Implements</span> IComparer.Compare</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> x <span style="COLOR: blue">Is</span> 
+      <span style="COLOR: blue">Nothing</span> <span style="COLOR: blue">AndAlso</span> y <span style="COLOR: blue">Is</span> 
+      <span style="COLOR: blue">Nothing</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> 0</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span> x 
+      <span style="COLOR: blue">Is</span> <span style="COLOR: blue">Nothing</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> -1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span> y 
+      <span style="COLOR: blue">Is</span> <span style="COLOR: blue">Nothing</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> 1</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> c <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 
+      GetDate(x.ToString()).CompareTo(GetDate(y.ToString()))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> c = 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">c = 
+      GetDouble(x.ToString()).CompareTo(GetDouble(y.ToString()))</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> c</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span> GetDate(<span style="COLOR: blue">ByVal</span> s <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">String</span>) <span style="COLOR: blue">As</span> DateTime</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dt <span style="COLOR: blue">As</span> 
+      DateTime = DateTime.MinValue</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pos <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      s.IndexOf(<span style="COLOR: #a31515">"-"c</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> pos &gt; -1 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">DateTime.TryParse(s.Substring(0, pos), 
+      dt)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> dt</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span> GetDouble(<span style="COLOR: blue">ByVal</span> s <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">String</span>) <span style="COLOR: blue">As</span> <span style="COLOR: blue">Double</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> d <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Double</span> = <span style="COLOR: blue">Double</span>.NaN</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pos <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      s.IndexOf(<span style="COLOR: #a31515">"-"c</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> pos &gt; -1 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Double</span><span style="FONT-FAMILY: 'Courier New'">.TryParse(s.Substring(pos + 1), 
+      d)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Return</span><span style="FONT-FAMILY: 'Courier New'"> d</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Class</span>   
+</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Handle the 
+SortColumnsChanging event to make the grid use the custom comparer.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">string</span> specialDateColName = <span style="COLOR: #a31515">"Col3"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> DateComparer specialDateComparer = 
+      <span style="COLOR: blue">new</span> DateComparer();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Set up support for 
+      custom sort on Grid Grouping control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.TableDescriptor.SortedColumns.Changing 
+      += <span style="COLOR: blue">new</span> 
+      ListPropertyChangedEventHandler(SortedColumns_Changing);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Make the Grid Grouping 
+      control use the special IComparer.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> SortedColumns_Changing(<span style="COLOR: blue">object</span> sender, ListPropertyChangedEventArgs 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">SortColumnDescriptor</span> scd = e.Item <span style="COLOR: blue">as</span> <span style="COLOR: #2b91af">SortColumnDescriptor</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">if</span> (e.Action == ListPropertyChangedType.Add 
+      &amp;&amp; scd != <span style="COLOR: blue">null</span> &amp;&amp; 
+      scd.Name == specialDateColName)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      ((<span style="COLOR: #2b91af">SortColumnDescriptor</span>)e.Item).Comparer = 
+      specialDateComparer;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> specialDateColName <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: #a31515">"Col3"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> specialDateComparer <span style="COLOR: blue">As</span> DateComparer = <span style="COLOR: blue">New</span> DateComparer()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set up support for 
+      custom sort on Grid Grouping control.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1.TableDescriptor.SortedColumns.Changing, <span style="COLOR: blue">AddressOf</span> SortedColumns_Changing</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Make the Grid Grouping 
+      control use the special IComparer.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      SortedColumns_Changing(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> ListPropertyChangedEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> scd <span style="COLOR: blue">As</span> SortColumnDescriptor = <span style="COLOR: blue">CType</span>(IIf(<span style="COLOR: blue">TypeOf</span> e.Item <span style="COLOR: blue">Is</span> SortColumnDescriptor, e.Item, <span style="COLOR: blue">Nothing</span>), SortColumnDescriptor)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> e.Action = ListPropertyChangedType.Add 
+      <span style="COLOR: blue">AndAlso</span> <span style="COLOR: blue">Not</span> scd <span style="COLOR: blue">Is</span> 
+      <span style="COLOR: blue">Nothing</span> <span style="COLOR: blue">AndAlso</span> scd.Name = specialDateColName <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'">(e.Item, SortColumnDescriptor).Comparer 
+      = specialDateComparer</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   When you run the 
+sample, click on Col3 to sort it. You will see the effect of the custom sorting 
+logic. The screen shots given below shows the sorted grid with/without Custom 
+Comparer.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_469.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">410</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Sorted Grid without Custom Comparer</span></i><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_470.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">411</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Sorted Grid with Custom Comparer</span></i></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p481" id="p481"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

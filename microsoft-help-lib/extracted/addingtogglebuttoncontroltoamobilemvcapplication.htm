@@ -1,0 +1,131 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Adding ToggleButton Control to a Mobile MVC Application</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="9ca17e51-cdf4-47d8-bea9-1288069f5d62" />
+    <meta name="Title" content="Adding ToggleButton Control to a Mobile MVC Application" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h4 style="tab-stops: 0pt">Adding ToggleButton Control to a Mobile MVC 
+Application</h4>
+      <p class="MsoNormal">In the <a><span class="UGHyperlink">Getting Started</span></a> 
+section, we discussed how to <a><span class="UGHyperlink">create a Mobile MVC 
+application</span></a> and <a><span class="UGHyperlink">add the Tools package to 
+an application</span></a>. This section guides you to add the ToggleButton 
+control to an application.</p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; tab-stops: 25.2pt" class="NumberedList">1.   In the <b>view</b>, invoke the 
+<b>ToggleButton</b> helper with the toggle button ID as the first argument.</p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="HEIGHT: 22pt">
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 473.4pt; PADDING-RIGHT: 5.4pt; HEIGHT: 22pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+                <span style="FONT-FAMILY: 'Courier New'">   </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <br /> <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span><br />Html.MobSyncfusion().ToggleButton(<span style="COLOR: #a31515">"Togg"</span>)<br />                                 
+      .ToggleState(<span style="COLOR: #2b91af">MobToggleState</span>.On)<br />                                 
+      .OnText(<span style="COLOR: #a31515">"Enable"</span>)<br />                                 
+      .OffText(<span style="COLOR: #a31515">"Disable"</span>)<br />                                 
+      .AutoFormat(<span style="COLOR: #2b91af">MobSkins</span>.Spinach)<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">       
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <br />       
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'">Html.MobSyncfusion().ToggleButton(<span style="COLOR: #a31515">"Togg"</span>)<br />                                        
+      .ToggleState(<span style="COLOR: #2b91af">MobToggleState</span>.On)<br />                                        
+      .OnText(<span style="COLOR: #a31515">"Enable"</span>)<br />                                        
+      .OffText(<span style="COLOR: #a31515">"Disable"</span>)<br />                                         
+      .AutoFormat(<span style="COLOR: #2b91af">MobSkins</span>.Spinach).Render();</span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; tab-stops: 25.2pt" class="NumberedList">2.   Run the application.</p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+      <p class="BodyText1">The output is shown in the following screenshot:</p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\thivyak\Desktop\OnState.png" src="ImagesExt/image103_98.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 163: ToggleButton—Sample</p>
+      <p class="MsoNormal"> </p>
+      <p class="BodyText1">A sample that demonstrates a basic ToggleButton control can 
+be downloaded from the following links:</p>
+      <p class="MsoNormal">
+        <a href="file:///D:\Rajendran_Reference\Aspx">ToggleButton—ASPX Sample</a>
+      </p>
+      <p class="MsoNormal">
+        <a href="file:///D:\Rajendran_Reference\Razor">ToggleButton—Razor Sample</a>
+      </p>
+      <p class="MsoNormal"> </p>
+      <div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+        <p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">
+          <img border="0" src="ImagesExt/image103_4.jpg" alt="" />Note: The version number for the assemblies has 
+been set to 10.104.0.44 in the Web.config file of the attached sample. Change 
+the version number to the appropriate version in the Web-2008.config or 
+Web-2010.config files (available in the root directory) and they will 
+automatically be updated in the Web.config file.</p>
+      </div>
+      <p class="MsoNormal"> </p>
+      <p class="BodyTextHeading">Use Case Scenario</p>
+      <p class="BodyText1">The ToggleButton control can be used to toggle connections 
+such as Wi-Fi or Bluetooth between “On” and “Off.”</p>
+      <p class="BodyText1"> </p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\thivyak\Desktop\icon.png" src="ImagesExt/image103_99.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 164: ToogleButton Control used to Set Wi-Fi and 
+Bluetooth Connections</p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

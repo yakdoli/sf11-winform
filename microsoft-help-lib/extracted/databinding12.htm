@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Data Binding</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="5d96b0b1-8e9c-4c40-9e02-8a03a20bedd5" />
+<meta name="Title" content="Data Binding" />
+<meta name="Microsoft.Help.TocParent" content="606a11eb-7b58-441e-a66c-0f070745fb38" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Data Binding</h4>
+<p class="MsoNormal">The Menu provides extensive data binding support to populate 
+Menu items so that the columns of a table can be mapped to the Menu properties, 
+namely Id, ParentId, Text, ImageUrl, SpriteCss, ImageAttributes, and 
+HtmlAttributes.</p>
+<p class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="MsoNormal">The Data Binding feature helps users to plug-in data from a 
+DataTable or DataSet to the Menu. </p>
+<p class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Adding Data Binding to an Application </p>
+<p class="MsoNormal">Data Binding in the Menu can be customized by using two ways, 
+namely:</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>MenuBuilder</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>MenuModel</p>
+<p class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Using MenuBuilder</p>
+<p class="MsoNormal">To customize Data Binding in the Menu by using 
+MenuBuilder:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   In the 
+<b>Controller</b>, pass the data to the <b>View</b> page.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 121.9pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 121.9pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                
+      </span><b><span style="FONT-FAMILY: 'Courier New'">[Controller]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">Northwind</span> data = SqlCE;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// Passing the data to the 
+      View.</span></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View(data.MenuData);</span></p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'">  }   
+  </span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 155.4pt" class="MsoNormalCxSpLast"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList"><span style="COLOR: black">2.   Create a </span><a><span class="UGHyperlink">Strongly Typed View</span></a><span style="COLOR: black">. 
+</span></p>
+<p style="tab-stops: 25.2pt" class="NumberedList"><span style="COLOR: black">3.   In the <b>View</b>, invoke the <b>Menu</b> 
+helper with the control ID.</span></p>
+<p style="tab-stops: 25.2pt" class="NumberedList"><span style="COLOR: black">4.   Set the <b>DataSource </b>and<b> BindTo 
+</b>methods.</span></p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 25.2pt; tab-stops: list 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 161.95pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 632.35pt; PADDING-RIGHT: 5.4pt; HEIGHT: 161.95pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="843">
+      <p class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Menu(<span style="COLOR: #a31515">"myMenu"</span>)</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.<b>DataSource(Model)</b></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">.BindTo(bind=&gt;</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-INDENT: 36pt; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">bind.Text(<span style="COLOR: #a31515">"Title"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .Id(<span style="COLOR: #a31515">"MenuId"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .ParentId(<span style="COLOR: #a31515">"ParentId"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .SpriteCss(<span style="COLOR: #a31515">"SpriteClass"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .ImageUrl(<span style="COLOR: #a31515">"ImagePath"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    
+      .ImageAttributes(<span style="COLOR: #a31515">"Imageattributes"</span>)</span></b><span style="FONT-FAMILY: 'Courier New'">)<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-INDENT: 36pt; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 62.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 62.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 11pt">View[cshtml]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Menu(<span style="COLOR: #a31515">"myMenu"</span>)</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.<b>DataSource(Model)</b></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">.BindTo(bind=&gt;</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-INDENT: 36pt; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">bind.Text(<span style="COLOR: #a31515">"Title"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .Id(<span style="COLOR: #a31515">"MenuId"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .ParentId(<span style="COLOR: #a31515">"ParentId"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .SpriteCss(<span style="COLOR: #a31515">"SpriteClass"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    .ImageUrl(<span style="COLOR: #a31515">"ImagePath"</span>)</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    
+      .ImageAttributes(<span style="COLOR: #a31515">"Imageattributes"</span>)</span></b><span style="FONT-FAMILY: 'Courier New'">)</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      .Render();</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 108pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"><span style="BACKGROUND: yellow"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Build and run the 
+application.</p>
+<p style="MARGIN-BOTTOM: 2pt; tab-stops: list 25.2pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image56_164.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 151: Menu - Data Binding Using MenuBuilder</p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption"> </p>
+<p class="BodyTextHeading">Using MenuModel</p>
+<p class="MsoNormal">To customize Data Binding in the Menu by using MenuModel:</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>In the 
+<b>Controller</b>, create an object for the <b>MenuModel</b> class. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Set the 
+<b>DataSource</b> and <b>BindTo</b> properties. </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Pass the 
+<b>MenuModel</b> class to the <b>ViewData</b>.</p>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 44.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      <b>[Controller]</b></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">Northwind</span> context = SqlCE;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MenuFields</span> menuFields = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuFields</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Id = <span style="COLOR: #a31515">"Id"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      ParentId = <span style="COLOR: #a31515">"ParentId"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Text = <span style="COLOR: #a31515">"Text"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      ImageUrl = <span style="COLOR: #a31515">"ImageUrl"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      SpriteCSS = <span style="COLOR: #a31515">"SpriteCSS"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MenuModel</span> menuModel = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuModel</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      DataSource = context.MenuData.ToList(),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      BindTo = menuFields,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ViewData[<span style="COLOR: #a31515">"myMenuModel"</span>] = 
+      menuModel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  
+      }   </span></p></td></tr></tbody></table></div>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 155.4pt" class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 40.5pt; tab-stops: 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt">1.    
+</span>In the <b>View</b>, invoke the <b>Menu</b> helper with the control 
+ID.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 40.5pt; tab-stops: 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt">2.    
+</span>From the <b>ViewData</b>, assign the <b>MenuModel </b>class to the 
+<b>Menu</b> helper.</p>
+<p style="MARGIN-BOTTOM: 2pt" class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 53.45pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 464.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.45pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="620">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 11pt">View</span></b><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 11pt">[ASPX]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">        
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html</span><span style="FONT-FAMILY: 'Courier New'">.Syncfusion()</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.Menu(<span style="COLOR: #a31515">"myMenu"</span>, (<span style="COLOR: #2b91af">MenuModel</span>)ViewData[<span style="COLOR: #a31515">"myMenuModel"</span>])<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table></div>
+<p style="MARGIN: 0pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 53.45pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 464.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.45pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="620">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 11pt">View[cshtml]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 11pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">        
+      <span style="BACKGROUND: yellow">@{</span><span style="COLOR: blue"> 
+      </span>Html</span><span style="FONT-FAMILY: 'Courier New'">.Syncfusion()</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.Menu(<span style="COLOR: #a31515">"myMenu"</span>, (<span style="COLOR: #2b91af">MenuModel</span>)ViewData[<span style="COLOR: #a31515">"myMenuModel"</span>]).Render();<span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table></div>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; TEXT-INDENT: 36pt; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 40.5pt; tab-stops: 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt">3.    
+</span>Build and run the application.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 25.2pt; tab-stops: list 25.2pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image56_165.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 152: Menu - Data Binding Using MenuModel</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Properties</p>
+<p class="MsoNormal">The properties of the Data Binding feature in the Menu are 
+described in the following tabulation:</p>
+<p class="MsoCaption"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="603">
+  <tbody>
+  <tr style="HEIGHT: 5.6pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 5.6pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 5.6pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 5.6pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableHeading">Type</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 5.6pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableHeading">Data Type</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 5.6pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableHeading">Reference links</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">DataSource</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the data source, which is used to populate 
+      the Menu with the Menu items.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">IEnumerable</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 38.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 38.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">BindTo</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 38.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Maps the Menu fields to their respective columns from 
+      the data source.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 38.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 38.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">MenuFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 38.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">Id</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the ID column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">ParentId</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the parent ID column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">Text</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the text column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">SpriteCss</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the sprite column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">ImageUrl</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the image path column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">HtmlAttributes</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the HTML attributes column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 84.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="112">
+      <p class="TableText">ImageAttributes</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 118.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="158">
+      <p class="TableText">Gets or sets the image attributes column name.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="109">
+      <p class="TableText">Server-side</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 88.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="118">
+      <p class="TableText">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 79.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="106">
+      <p class="TableText">Not applicable</p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="MsoNormal">To view a sample:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Open the 
+<b>Tools</b> Sample Browser from the dashboard. (Refer to the <a>Samples and 
+Location</a> chapter.)</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Navigate to 
+<b>Tools.Mvc </b>-&gt;<b> Menu </b>-&gt;<b> Data Binding Demo</b>.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p><span id="related-topics"></span></div></body></html>

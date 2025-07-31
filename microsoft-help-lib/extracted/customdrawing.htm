@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Drawing</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="7a692343-3a20-4c92-afe5-81ea5f4b1865" />
+<meta name="Title" content="Custom Drawing" />
+<meta name="Microsoft.Help.TocParent" content="ffd49f03-f677-452a-81e4-aa2f18f1b9a0" />
+<meta name="Microsoft.Help.TocOrder" content="5" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=16941ec8-5ac6-4ed4-bda2-ec94bed59dd5"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=678d2656-44f8-414e-933c-4df7bc379e6a"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=25c35330-c127-4dad-9a92-ed79dc7261a6">Essential 
+ASP.NET</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Chart</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=100687ce-82f2-4424-9d16-0949ea76cf15">Concepts and 
+Features</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=ffd49f03-f677-452a-81e4-aa2f18f1b9a0">Chart 
+Appearance</a></div>
+<h3 style="tab-stops: 0pt">Custom Drawing</h3>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Essential Chart lets you render any data on the chart area. 
+If the built-in features and functionality are not sufficient you can simply 
+draw whatever you want on the chart surface.</p>
+<p class="BodyText1">You can do so by listening to the <b>ChartAreaPaint</b> 
+event. This event is raised both when a chart is painted as well as when the 
+chart is exported to other image formats, SVG, etc. Remember to do your custom 
+drawing in this event instead of in the <b>Paint </b>event (which will not be 
+called during chart export).</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      ChartWebControl1_ChartAreaPaint(<span style="COLOR: blue">object</span> 
+      sender, PaintEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Get the right end of the X axis</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Point ptX = <span style="COLOR: blue">this</span>.ChartWebControl1.ChartArea.GetPointByValue(<span style="COLOR: blue">new</span> ChartPoint(<span style="COLOR: blue">this</span>.ChartWebControl1.PrimaryXAxis.Range.Max, 
+      <span style="COLOR: blue">this</span>.ChartWebControl1.PrimaryYAxis.Range.Min));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptX1 = <span style="COLOR: blue">new</span> PointF(ptX.X - 7, ptX.Y - 4);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptX2 = <span style="COLOR: blue">new</span> PointF(ptX.X, ptX.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptX3 = <span style="COLOR: blue">new</span> PointF(ptX.X - 7, ptX.Y + 4);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Draws an arrow at the end of the X 
+      axis</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.FillPolygon(Brushes.Black, <span style="COLOR: blue">new</span> 
+      PointF[] { ptX1, ptX2, ptX3 });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Get the top end of the Y axis</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Point ptY = <span style="COLOR: blue">this</span>.ChartWebControl1.ChartArea.GetPointByValue(<span style="COLOR: blue">new</span> ChartPoint(<span style="COLOR: blue">this</span>.ChartWebControl1.PrimaryXAxis.Range.Min, 
+      <span style="COLOR: blue">this</span>.ChartWebControl1.PrimaryYAxis.Range.Max));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptY1 = <span style="COLOR: blue">new</span> PointF(ptY.X - 4, ptY.Y + 7);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptY2 = <span style="COLOR: blue">new</span> PointF(ptY.X, ptY.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    PointF ptY3 = <span style="COLOR: blue">new</span> PointF(ptY.X + 4, ptY.Y + 7);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Draws an arrow at the top of the Y 
+      Axis.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.FillPolygon(Brushes.Black, <span style="COLOR: blue">new</span> 
+      PointF[] { ptY1, ptY2, ptY3 });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Draws a line through the center of the 
+      chart.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.DrawLine(Pens.Gray, ptY.X, ptX.Y, ptX.X, ptY.Y);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      ChartWebControl1_ChartAreaPaint(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> PaintEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">' Get the right end of the X axis </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptX <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">Me</span>.ChartWebControl1.ChartArea.GetPointByValue(<span style="COLOR: blue">New</span> ChartPoint(<span style="COLOR: blue">Me</span>.ChartWebControl1.PrimaryXAxis.Range.Max, 
+      <span style="COLOR: blue">Me</span>.ChartWebControl1.PrimaryYAxis.Range.Min))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptX1 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptX.X - 7, ptX.Y - 
+      4)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptX2 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptX.X, ptX.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptX3 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptX.X - 7, ptX.Y + 
+      4)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">' Draws an arrow at the end of the X axis 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.FillPolygon(Brushes.Black, <span style="COLOR: blue">New</span> 
+      PointF() {ptX1, ptX2, ptX3})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">' Get the top end of the Y axis </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptY <span style="COLOR: blue">As</span> 
+      Point = <span style="COLOR: blue">Me</span>.ChartWebControl1.ChartArea.GetPointByValue(<span style="COLOR: blue">New</span> ChartPoint(<span style="COLOR: blue">Me</span>.ChartWebControl1.PrimaryXAxis.Range.Min, 
+      <span style="COLOR: blue">Me</span>.ChartWebControl1.PrimaryYAxis.Range.Max))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptY1 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptY.X - 4, ptY.Y + 
+      7)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptY2 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptY.X, ptY.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">Dim</span> ptY3 <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> PointF(ptY.X + 4, ptY.Y + 
+      7)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">' Draws an arrow at the top of the Y Axis. 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.FillPolygon(Brushes.Black, <span style="COLOR: blue">New</span> 
+      PointF() {ptY1, ptY2, ptY3})</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">' Draws a line through the center of the chart. 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      e.Graphics.DrawLine(Pens.Gray, ptY.X, ptX.Y, ptX.X, ptY.Y)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"><img border="0" src="ImagesExt/image64_313.jpg" alt="" /></span><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span></b> </p>
+<p class="MsoCaption">Figure 305: Chart with custom drawing - arrows at the end of 
+the axes and a Diagonal Line</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 9pt"></span></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a><span class="UGHyperlink">Chart Area Bounds</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p211" id="p211"></a> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Put a CheckBox in a Header Cell in a GridControl or GridDataBoundGrid</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="eba5670a-4c76-4dad-987c-2cb3e6e40808" />
+<meta name="Title" content="How to Put a CheckBox in a Header Cell in a GridControl or GridDataBoundGrid" />
+<meta name="Microsoft.Help.TocParent" content="d7132129-5014-47d6-9419-88a1e83d196a" />
+<meta name="Microsoft.Help.TocOrder" content="27" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=70291070-8190-41fb-a879-b4f7f168ffef"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=e653bcf0-c54b-476a-9225-981d5c7ef783"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=28ff22ed-2523-4bf9-8f6c-4d94f7bcabcc">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=d7132129-5014-47d6-9419-88a1e83d196a">Common to 
+GridControl, GridDataBoundGrid and GridGrouping</a></div>
+<h3 style="tab-stops: 0pt">How to Put a CheckBox in a Header Cell in a 
+GridControl or GridDataBoundGrid</h3>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Introduction</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">To place a CheckBox in a <b>GridControl</b> you must set the 
+<b>CellType</b> to CheckBox and assign string values for the <b>CheckedValue</b> 
+and the <b>UncheckedValue</b> in the <b>CheckBoxOptions</b> property. The value 
+of the CheckBox will be stored to a particular cell in the GridControl. When the 
+CheckBox is clicked the <b>CheckBoxClick</b> event gets triggered.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">To place a CheckBox in the GridDataBoundGrid, 2 events have 
+to be implemented: the <b>QueryCellInfo</b> event which, is used to set the 
+style properties and the <b>SaveCellInfo</b> event which, is used to save the 
+cell's value. The value of the CheckBox cannot be stored in the 
+GridDataBoundGrid so, any datatype / collection can be used to store the value. 
+The CheckBoxClick event gets triggered when the CheckBox is clicked.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Example</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'MS Shell Dlg','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+CheckBoxValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Model_QueryCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender, 
+      GridQueryCellInfoEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">      
+      // Check for a row header.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">     
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(e.ColIndex &gt; 0 
+      &amp;&amp; e.RowIndex == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">           
+      int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      colIndex1 = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.gridDataBoundGrid1.Binder.NameToColIndex("Column2");</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">           
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(colIndex1 
+      == e.ColIndex)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.Description = "Check";</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                 
+      // Display the CellValue.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.CellValue = CheckBoxValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.CellValueType = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">typeof</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                 
+      // Determine CheckBoxOptions Values.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.CheckBoxOptions = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GridCheckBoxCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.ToString(), </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.ToString(), "", 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // Set up a CheckBox control in the header.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.CellType = "CheckBox";</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.CellAppearance = GridCellAppearance.Raised;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                 
+      e.Style.Enabled = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Model_SaveCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender, 
+      GridSaveCellInfoEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(e.ColIndex &gt; 0 
+      &amp;&amp; e.RowIndex == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">       
+      int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      colIndex1 = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.gridDataBoundGrid1.Binder.NameToColIndex("Column2");</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">       
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(colIndex1 
+      == e.ColIndex)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      // Save the changes that are made in the Cell Value.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">           
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(e.Style.CellValue != 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">null</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           
+      CheckBoxValue = (</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)e.Style.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> CheckBoxValue 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As 
+      Boolean</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private Sub </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Model_QueryCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GridQueryCellInfoEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">     
+      ' Check for a row header.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e.ColIndex &gt; 0 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AndAlso</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e.RowIndex = 0 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> colIndex1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.gridDataBoundGrid1.Binder.NameToColIndex("Column2")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> colIndex1 = e.ColIndex 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.Description = "Check"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">            
+      ' Display the CellValue.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.CellValue = CheckBoxValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.CellValueType = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">GetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Boolean</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">            
+      ' Determine CheckBoxOptions Values.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.CheckBoxOptions = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">New</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GridCheckBoxCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.ToString(), </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.ToString(), "", 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">            
+      ' Set up a CheckBox control in the header.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.CellType = "CheckBox"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.CellAppearance = GridCellAppearance.Raised</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      e.Style.Enabled = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">  
+          </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Sub</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      Model_SaveCellInfo(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> As Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByVal</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GridSaveCellInfoEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e.ColIndex &gt; 0 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AndAlso</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e.RowIndex = 0 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> colIndex1 </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As Integer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.gridDataBoundGrid1.Binder.NameToColIndex("Column2")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> colIndex1 = e.ColIndex 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">            
+      ' Save the changes that are made in the Cell Value.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Not</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> e.Style.CellValue 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Is Nothing 
+      Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      CheckBoxValue = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CBool</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(e.Style.CellValue)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      End If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">     
+      End If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+  Sub</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p634" id="p634"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

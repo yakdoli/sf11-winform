@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Spell Checking Using ISpellEditor</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e86af7bb-1738-4c25-89d2-349d172d3c4d" />
+<meta name="Title" content="Spell Checking Using ISpellEditor" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5>Spell Checking Using ISpellEditor  </h5>
+<p class="BodyText1">In the following code snippet, a wrapper class is created for 
+TextBox, by implementing ISpellEditor interface.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">public class 
+      TextBoxSpellEditor: ISpellEditor</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      private TextBox textBox;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public TextBoxSpellEditor(Control control)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ControlToCheck = control;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public Control ControlToCheck</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      get</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      return textBox;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      set</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+            textBox = value as TextBox;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public string SelectedText</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      get</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      return textBox.SelectedText;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      set</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      textBox.SelectedText = value;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public string Text</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      get</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      return textBox.Text;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      set</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      textBox.Text = value;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+       public void Select(int selectionStart, int 
+      selectionLength)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      textBox.Select(selectionStart, selectionLength);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public bool HasMoreTextToCheck()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      return false;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public void Focus()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      textBox.Focus();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      public void UpdateTextField()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+  }</span></p></td></tr></tbody></table>
+<p class="BodyText1">After creating the wrapper class, you need to pass the 
+instance of the ISpellEditor to SpellCheckForEditor method, as given in the 
+following code snippet:</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">SpellChecker 
+      spellCheck = new SpellChecker();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">TextBoxSpellEditor spellEditor = new 
+      TextBoxSpellEditor(txtbx);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">spellCheck.SpellCheckForEditor(spellEditor);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1">To view samples:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Open the 
+Synfusion Dashboard.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Select User 
+Interface.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Click the SL 
+drop-down list and select Explore Samples.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Navigate to Tools 
+-&gt; SpellChecker -&gt; SpellCheckerDemo.</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

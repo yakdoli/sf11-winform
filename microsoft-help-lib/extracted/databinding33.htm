@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Data binding</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="44baa138-328e-41a0-bd5c-b9ab5ca8eaa1" />
+<meta name="Title" content="Data binding" />
+<meta name="Microsoft.Help.TocParent" content="560ba9ac-a372-416c-892c-a2f9d90821b9" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Data binding</h5>
+<p class="BodyText1">Data binding is the process of establishing a connection 
+between the application UI and business logic.</p>
+<p class="BodyText1"> </p>
+<h6 style="tab-stops: 0pt">3.22.2.1.1.1        
+Binding to an object</h6>
+<p class="BodyText1">To bind to a Business Object collection, the 
+<b>ItemsSource</b> property and <b>ItemTemplate</b> should be used in 
+HierarchyNavigator. HierarchicalDataTemplate should be used for all item 
+templates.</p>
+<p class="BodyText1">The steps to bind to a Business Object collection are as 
+follows:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a class 
+named HierarchyItem.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">HierarchyItem</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> 
+      ContentString { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> HierarchyItem(<span style="COLOR: blue">string</span> content, <span style="COLOR: blue">params</span> <span style="COLOR: #2b91af">HierarchyItem</span>[] myItems)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">this</span>.ContentString = content;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      itemsObservableCollection = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">foreach</span> (<span style="COLOR: blue">var</span> item <span style="COLOR: blue">in</span> 
+      myItems)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      itemsObservableCollection.Add(item);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      HierarchyItems = itemsObservableCollection;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">private</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; 
+      itemsObservableCollection;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; HierarchyItems</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">get</span> { <span style="COLOR: blue">return</span> itemsObservableCollection; }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">set</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">if</span> (itemsObservableCollection != <span style="COLOR: blue">value</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      itemsObservableCollection = <span style="COLOR: blue">value</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormalCxSpLast"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a 
+collection for <b>ItemsSource</b> to bind with.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">HierarchicalItemsSource</span> : <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> HierarchicalItemsSource()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">this</span>.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"Syncfusion"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                        
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"User Interface"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"Silverlight"</span>),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"WPF"</span>),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"ASP .Net"</span>),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"MVC"</span>)),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                        
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"Reporting Edition"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"IO"</span>),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+           <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"PDF generator"</span>),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                            
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>(<span style="COLOR: #a31515">"WPF"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                        
+      )));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormalCxSpLast"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In XAML, bind the 
+collections to the <b>ItemsSource</b> property of the HierarchyNavigator 
+control.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">XAML</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="hierarchyNavigator2"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">local</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchicalItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchicalDataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      HierarchyItems</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TextBlock</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Text</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ContentString</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Margin</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="2,0" 
+      /&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchicalDataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt; 
+      </span></p></td></tr></tbody></table>
+<p class="MsoNormal"><a name="_Ref261870212" id="_Ref261870212"></a> </p>
+<p class="BodyText1">Figure 18 shows the items added in code displayed on the 
+interface.</p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_525.png" alt="" /></p>
+<p class="Figure"> </p>
+<p class="MsoCaption">Figure 570: Data binding output</p>
+<p class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">3.22.2.1.1.2        
+Binding XML data</h6>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To bind XML data to a HierarchyNavigator control, convert the 
+XML to a collection, and then bind the collection by using the 
+<b>ItemsSource</b> property.</p>
+<p class="BodyText1">The XML displayed below is used in this example (attached in 
+the sample project named HierarchyItems.xml).</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 477.9pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="637">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">XML</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">categories</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">  
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Synfusion</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">    
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">User Interface</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">      
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Silverlight</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Tools</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Grid</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Schedule</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Ribbon</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Gauge</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">        
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">Essential Chart</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">      
+      &lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">      
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">WPF</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">      
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">MVC</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">      
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">"<span style="COLOR: blue">ASP .Net</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">    
+      &lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">  
+      &lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">category</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">categories</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">The steps to bind XML data to a HierarchyNavigator control 
+are as follows:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Create a separate 
+class that represents the node in an XML document. In this example, a class 
+named Category is created.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">HierarchyItem</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> ContentStr { <span style="COLOR: blue">get</span>; <span style="COLOR: blue">set</span>; 
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; hierarchyItems = <span style="COLOR: blue">new</span>  <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; HierarchyItems { <span style="COLOR: blue">get</span> { <span style="COLOR: blue">return</span> 
+      hierarchyItems; } <span style="COLOR: blue">set</span> { hierarchyItems = 
+      <span style="COLOR: blue">value</span>; } }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Convert the XML 
+data to a collection, and then bind the collection to the <b>ItemsSource</b> 
+property of HierarchyNavigator.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">partial</span> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">MainPage</span> : <span style="COLOR: #2b91af">UserControl</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> MainPage()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      InitializeComponent();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      CreateXMLDataItemsSource();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">private</span> <span style="COLOR: blue">void</span> 
+      CreateXMLDataItemsSource()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; categories = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: #2b91af">XDocument</span> XMLItemSource = <span style="COLOR: #2b91af">XDocument</span>.Load(<span style="COLOR: #a31515">"/HierarchyItems.xml"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      categories = <span style="COLOR: blue">this</span>.GetCategories(XMLItemSource.Element(<span style="COLOR: #a31515">"categories"</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      hierarchyNavigator1.ItemsSource = categories;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">private</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; GetCategories(<span style="COLOR: #2b91af">XElement</span> element)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">var</span> item = <span style="COLOR: blue">from</span> category <span style="COLOR: blue">in</span> element.Elements(<span style="COLOR: #a31515">"category"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                   
+      <span style="COLOR: blue">select</span> category;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">var</span> itemsObservableCollection = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">foreach</span> (<span style="COLOR: blue">var</span> itm <span style="COLOR: blue">in</span> 
+      item)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">var</span> subitm = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      subitm.ContentStr = itm.Attribute(<span style="COLOR: #a31515">"name"</span>).Value;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      subitm.HierarchyItems = <span style="COLOR: blue">this</span>.GetCategories(itm);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      itemsObservableCollection.Add(subitm);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">return</span> 
+      itemsObservableCollection;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   The code for the 
+HierarchyNavigator is shown below. Declare <b>HierarchicalDataTemplate</b>, 
+because the data is in a hierarchical structure. Refer <a href="ms-xhelp:///?Id=fd8f9f20-4af8-4f27-9c8e-929ae4f57c92"><span class="UGHyperlink">Template Customizing</span></a><span class="UGHyperlink">.</span></p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">XAML</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      VerticalAlignment</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Center"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="hierarchyNavigator1"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="30"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchicalDataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      HierarchyItems</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TextBlock</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Margin</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="10,0,0,0"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Text</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ContentStr</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Grid.Column</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="0"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchicalDataTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator.ItemTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">HierarchyNavigator</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">The image displayed below shows the output of the above 
+code—items bound to XML data.</p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_526.png" alt="" /></p>
+<p class="MsoCaption">Figure 571: Items bound to XML data</p>
+<h6 style="tab-stops: 0pt">3.22.2.1.1.3        
+Binding to WCF Service</h6>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt">XML 
+data can be bound through WCF services by enabling WCF Services.</span></p>
+<p class="BodyText1">The steps to bind XML data through WCF services are as 
+follows:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create an XML and 
+a class object. Refer the XML data-binding class and the XML used in the </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Figure 18 shows 
+the items added in code displayed on the interface.</p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_527.png" alt="" /></p>
+<p class="Figure"> </p>
+<p class="MsoCaption">Figure 572: Data Binding Output</p>
+<p class="MsoCaption"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Binding XML data 
+section.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Add an ASP.NET 
+Web application with the sample application, and then add a new WCF Service item 
+to the Web application, to create a WCF service application.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Create an 
+Observable Collection from XML data to bind in <b>ItemsSource</b>, as shown 
+below in the service class that has a return type of ObservableCollection.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">[<span style="COLOR: #2b91af">ServiceContract</span>(Namespace = <span style="COLOR: #a31515">""</span>)]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">[<span style="COLOR: #2b91af">AspNetCompatibilityRequirements</span>(RequirementsMode 
+      = <span style="COLOR: #2b91af">AspNetCompatibilityRequirementsMode</span>.Allowed)]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">Service1</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    [<span style="COLOR: #2b91af">OperationContract</span>]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; 
+      CreateXMLDataItems()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; categories = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: #2b91af">XDocument</span> XMLItemSource = <span style="COLOR: #2b91af">XDocument</span>.Load(<span style="COLOR: #a31515">"YourXMLLocation/HierarchyItems.xml"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      categories = <span style="COLOR: blue">this</span>.GetCategories(XMLItemSource.Element(<span style="COLOR: #a31515">"categories"</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">return</span> categories;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">private</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; GetCategories(<span style="COLOR: #2b91af">XElement</span> element)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">var</span> item = <span style="COLOR: blue">from</span> category <span style="COLOR: blue">in</span> element.Elements(<span style="COLOR: #a31515">"category"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                   
+      <span style="COLOR: blue">select</span> category;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">var</span> itemsObservableCollection = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">foreach</span> (<span style="COLOR: blue">var</span> itm <span style="COLOR: blue">in</span> 
+      item)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">var</span> subitm = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">HierarchyItem</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      subitm.ContentStr = itm.Attribute(<span style="COLOR: #a31515">"name"</span>).Value;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      subitm.HierarchyItems = <span style="COLOR: blue">this</span>.GetCategories(itm);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      itemsObservableCollection.Add(subitm);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">return</span> 
+      itemsObservableCollection;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">To connect WCF services with the sample application, use the 
+code snippets displayed below. Also refer <a href="ms-xhelp:///?Id=334b16df-9870-4101-a9fc-0bd10c88916e">Binding data with 
+WCF Service</a> in the <b>How To</b> section.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">C#</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">namespace</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      WCFServicesInHierarchy</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">partial</span> 
+      <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">MainPage</span> : <span style="COLOR: #2b91af">UserControl</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> MainPage()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      InitializeComponent();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">CustomSource</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> CustomSource()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: green">//This loads WCF Service</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Service1Client</span> client = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Service1Client</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      client.CreateXMLDataItemsCompleted += <span style="COLOR: blue">new</span> 
+      <span style="COLOR: #2b91af">EventHandler</span>&lt;<span style="COLOR: #2b91af">CreateXMLDataItemsCompletedEventArgs</span>&gt;(client_CreateXMLDataItemsCompleted);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">         
+         client.CreateXMLDataItemsAsync();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">this</span>.Categories = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">private</span> <span style="COLOR: blue">void</span> client_CreateXMLDataItemsCompleted(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">CreateXMLDataItemsCompletedEventArgs</span> 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">if</span> (e.Error == <span style="COLOR: blue">null</span> &amp;&amp; e.Result != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">foreach</span> (<span style="COLOR: #2b91af">HierarchyItem</span> c <span style="COLOR: blue">in</span> e.Result)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">this</span>.Categories.Add(c);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">HierarchyItem</span>&gt; Categories</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">get</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">set</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">XAML</span></b><span style="FONT-FAMILY: Consolas; COLOR: blue"></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515">Window</span><span style="FONT-FAMILY: Consolas"><br /><span style="COLOR: red">     xmlns</span><span style="COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: red">     
+      xmlns</span><span style="FONT-FAMILY: Consolas; COLOR: blue">:</span><span style="FONT-FAMILY: Consolas; COLOR: red">x</span><span style="FONT-FAMILY: Consolas; COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml"</span><span style="FONT-FAMILY: Consolas"><br /><span style="COLOR: red">     xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">syncfusion</span><span style="COLOR: blue">="http://schemas.syncfusion.com/wpf"</span><br />   <span style="COLOR: red">  xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">local</span><span style="COLOR: blue">="clr-namespace:WCFServicesInHierarchy"</span> <br /><span style="COLOR: red">     x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Class</span><span style="COLOR: blue">="WCFServicesInHierarchy.MainWindow"</span><br /><span style="COLOR: red">x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Name</span><span style="COLOR: blue">="Window"</span><span style="COLOR: red"> Title</span><span style="COLOR: blue">="MainWindow"</span><span style="COLOR: red"> UseLayoutRounding</span><span style="COLOR: blue">="True"</span><span style="COLOR: red"> Width</span><span style="COLOR: blue">="640"</span><span style="COLOR: red"> Height</span><span style="COLOR: blue">="480"&gt;</span><br /><span style="COLOR: #a31515">    </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Window.DataContext</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">        </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">local</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">CustomSource</span><span style="COLOR: blue">/&gt;</span><br /><span style="COLOR: #a31515">    </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Window.DataContext</span><span style="COLOR: blue">&gt;</span><br /> <br /><span style="COLOR: #a31515">    </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Grid</span><span style="COLOR: red"> x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Name</span><span style="COLOR: blue">="LayoutRoot"&gt;</span><br /><span style="COLOR: #a31515">        </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">syncfusion</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">HierarchyNavigator</span><span style="COLOR: red"> Name</span><span style="COLOR: blue">="hierarchyNavigator1"</span><span style="COLOR: red"> VerticalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> Categories</span><span style="COLOR: blue">}"&gt;</span><br /><span style="COLOR: #a31515">            </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">syncfusion</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">HierarchyNavigator.ItemTemplate</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">                </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">HierarchicalDataTemplate</span><span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> HierarchyItems</span><span style="COLOR: blue">}"&gt;</span><br /><span style="COLOR: #a31515">                    </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Border</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">                        </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> ContentStr</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> Margin</span><span style="COLOR: blue">="2,0"/&gt;</span><br /><span style="COLOR: #a31515">                    </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Border</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">                </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">HierarchicalDataTemplate</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">            </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">syncfusion</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">HierarchyNavigator.ItemTemplate</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">        </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">syncfusion</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">HierarchyNavigator</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: #a31515">    </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Grid</span><span style="COLOR: blue">&gt;</span><br /><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Window</span><span style="COLOR: blue">&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">The image displayed below shows the output of the above 
+code—items bound to XML data.</p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid" class="MsoNormal" align="center"><img border="0" src="ImagesExt/image30_526.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid" class="MsoNormal" align="center"> </p>
+<p class="MsoCaption">Figure 573: Items bound to XML data by WCF Service</p>
+<p class="MsoCaption"> </p><span id="related-topics"></span></div></body></html>

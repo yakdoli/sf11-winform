@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Document Object Model</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="7bef96b6-a3e3-4abf-bc30-3e53a1fa443e" />
+<meta name="Title" content="Document Object Model" />
+<meta name="Microsoft.Help.TocParent" content="11954952-701e-4242-a33c-ebf438823ba5" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/pdf.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Document Object Model</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>PdfDocument</b> is a top-level object in Essential PDF, 
+which is a representation of a PDF document. The document contains a collection 
+of sections that are represented by the <b>PdfSection</b> class, which is a 
+logical entity containing a collection of pages and their settings. Pages (which 
+are represented by <b>PdfPage class</b>) are the main destinations of the 
+graphics output.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image22_2.jpg" alt="" />Note: A document should contain at least one 
+section with one page.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">A page does not contain any self-settings, but it inherits 
+them from its parent section instead. It means that all the pages in the same 
+section have the same dimensions. If a new page with different settings has to 
+be created, then a new section should be created. A document also has 
+capabilities to specify page settings. When a new section is created, it 
+inherits page settings from the parent document.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">You can save a document either to a file or stream through 
+its <b>Save </b>method.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><br clear="all" /></p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image22_32.png" alt="" /></p>
+<p class="MsoCaption">Figure 25: DOM</p>
+<p class="MsoCaption"> </p>
+<p class="BodyTextHeading">PDF Document</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">It manipulates with general document properties and stores 
+sections. By default, an empty PDF document is created with a single page.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>PdfDocument</b> class is used to create a PDF document. 
+The following are the public members of the PdfDocument class.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Methods</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">AddFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Adds the fields connected to the page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Append</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Appends the specified loaded document to this one. 
+    </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">CheckFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Checks what fields are connected with the page. 
+  </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Clone</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Creates a shallow copy of the current document. 
+  </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">ClonePage</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Clones pages and their resource dictionaries and adds 
+      them into the document.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Close</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Closes the document and releases the memory.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">DisposeOnClose</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Adds an object to a collection of the objects that will 
+      be disposed during document closing. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">GetForm</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the form. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">ImportPage</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Imports a Page.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">ImportPageRange</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Imports a page range from a loaded document. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">OnDocumentSaved</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Raises DocumentSaved event. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">OnPageSave</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Called when a page is saved. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">OnSaveProgress</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Raises the [E:Progress] event. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">PageLabelsSet</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Informs the document that the page labels were set. 
+    </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Save</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Saves the document.</p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Properties</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Actions</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the additional document's actions.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Attachments</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the attachments of the document.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Bookmarks</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the root of the bookmark tree in the 
+    document.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Cache</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets collection of the cached objects.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Catalog</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the PDF document catalog. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">ColorSpace</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets the color space for the page that will be 
+      created. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Compression</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets the desired level of stream 
+      compression.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Conformance</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets the Pdf Conformance level. Supported: 
+      PDF/A-1b - Level B compliance in Part 1.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">DefaultFont</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the default font. It is used for complex objects 
+      when font is not explicitly defined. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">DisposeObjects</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets a list of the objects that have to be disposed 
+      after document closing. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">DocumentInformation</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets document's information and properties. 
+    </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">FileStructure</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets the internal structure of the PDF file. 
+      </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Form</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the interactive form of the document. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Pages</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the collection of the pages in the document. 
+    </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">PageSettings</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets default page settings of the document's 
+      sections. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Sections</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the collection of the sections in the document. 
+      </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Security</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets the security parameters of the document. 
+</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">Template</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets a template that is applied to all pages in 
+      the document. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">ViewerPreferences</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">Gets or sets a viewer preference object controlling the 
+      way the document is to be presented on the screen or in print. 
+  </p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Events</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">DocumentSaved</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">This event is raised when the document is saved. 
+  </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 139.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="186">
+      <p class="TableText">SaveProgress</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 316.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="422">
+      <p class="TableText">This event exposes the progression of the save state of 
+      the document.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Section</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Contains 
+pages with the same parameters.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>When new 
+pages are added to the section, it obtains parameters from the section even if 
+it was imported from another section or document.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>When a 
+high-level graphic object needs to be drawn on more than one page, it adds a new 
+page to the section of the start page from which the object starts, if 
+required.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>PdfSection</b> class allows creating and managing 
+sections. The following are the members exposed by the PdfSection class.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Methods</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 3.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; HEIGHT: 3.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; HEIGHT: 3.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Add</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Overloaded. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Clear</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Removes all the pages from the section. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Contains</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Determines whether the page is within the section. 
+    </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">DrawTemplates</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Draws page templates on the page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">IndexOf</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the index of the page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Insert</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Inserts a page at the specified index. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">OnPageAdded</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Called when the page is added.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">OnPageSaving</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Called when a page is being saved. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Remove</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Removes the page from the section. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">RemoveAt</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Removes the page by its index in the section. 
+  </p></td></tr></tbody></table></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Properties</p>
+<p class="BodyText1"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">Count</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets the count of the pages in the section. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">Document</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets the document. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">Item</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets the PdfPage at the specified index. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">PageLabel</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets or sets the page label. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">Pages</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets the pages. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">PageSettings</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets or sets the page settings of the section. 
+  </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 137.25pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="183">
+      <p class="TableText">Template</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318.75pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="425">
+      <p class="TableText">Gets or sets a template for the pages in the section. 
+      </p></td></tr></tbody></table></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Events</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">PageAdded</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">This event is raised when a new page is 
+  added.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Page</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Represents a rectangular area where the user can draw 
+something, attach annotations, and so on. Each page has layers. When a page is 
+created, it has one default layer. You can create more layers and refer them by 
+an index. Each layer is associated with a graphics stream and has its own 
+graphics (PdfGraphics class).</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>PdfPage</b> class is used to create a page. The following 
+are the members exposed by this class.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Methods</b></p>
+<p class="BodyText1"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">CreateTemplate</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Creates a template from the page content and all 
+      annotation appearances. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">ExtractImages</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Extracts images from the given PDF page.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">ExtractText</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Extracts text from the given PDF Page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">GetAnnots</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Gets the annotations array. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">GetClientSize</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Returns a page size reduced by page margins and page 
+      template dimensions. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">GetContent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Gets the content of the page in form of a PDF template. 
+      </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">OnBeginSave</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Raises BeginSave event. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">ResetProgress</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Resets the progress. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">SetProgress</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Sets the progress. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 136.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="182">
+      <p class="TableText">SetSection</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 319.5pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="426">
+      <p class="TableText">Sets parent section to the page. 
+</p></td></tr></tbody></table></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Properties</p>
+<p class="BodyTextHeading"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Annotations</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets a collection of annotations of the page. 
+</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Contents</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets array of page's content. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">DefaultLayer</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the default layer of the page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">DefaultLayerIndex</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets or sets index of the default layer. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Dictionary</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the page dictionary. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Document</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets current document. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Graphics</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the graphics of the DefaultLayer. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Layers</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the collection of the page's layers. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Orientation</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the page orientation. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Rotation</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the page rotation. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Section</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the parent section of the page. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">Size</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Gets the size of the 
+page.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Events</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableText">BeginSave</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 318pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="424">
+      <p class="TableText">Raises before the page saves. 
+</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

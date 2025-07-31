@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>DragIcon</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="3d222eea-deac-41b3-9598-99e89eacc3d9" />
+<meta name="Title" content="DragIcon" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4><a name="DragIcon" id="DragIcon">DragIcon</a></h4>
+<p class="BodyText1">DragIcon is an image that describes the object that is being 
+dragged. It will follow the mouse pointer and will always be on top 
+of other objects.  This feature provides more visual guide for the 
+drag and drop operations. </p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="BodyText1">The DragIcon provides information to the user about the 
+object that is being dragged. It prevents the mistake of dragging objects that 
+the user does not want to drag.</p>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Adding DragIcon to an Application </p>
+<p class="BodyText1">In order to set a DragIcon, use the DragIcon property, which 
+is part of the DragDropEventArgs.<b> </b>The most suitable moment to set a 
+DragIcon<b> </b>is in the DragAndDropManager_DragStarted()<b> </b>event handler. 
+The following lines of code explain this.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 466.1pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 150%; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 150%; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> DragAndDropManager_DragStarted(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">DragDropEventArgs</span> args)</span></p>
+      <p style="LINE-HEIGHT: 150%; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> {</span></p>
+      <p style="LINE-HEIGHT: 150%; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  args.DragIcon = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Image</span>() 
+      { Source = obj.Icon };</span></p>
+      <p style="LINE-HEIGHT: 150%; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> }</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal">Example:</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_1033.jpg" alt="" /><a name="DragArrow" id="DragArrow"></a></p>
+<p class="MsoCaption">Figure 1140 : DragIcon<span style="COLOR: black"></span></p><span id="related-topics"></span></div></body></html>

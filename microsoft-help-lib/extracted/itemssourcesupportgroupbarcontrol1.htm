@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Itemssource Support/GroupBar Control</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="0d01867a-c661-4309-9164-7856ada532e0" />
+<meta name="Title" content="Itemssource Support/GroupBar Control" />
+<meta name="Microsoft.Help.TocParent" content="96bf5e0c-701b-4dea-a62a-135deb09f157" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Itemssource Support/GroupBar Control</h4>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Items in a GroupBar can also be added by binding a collection 
+of business object through Itemssource property. The following is an example of 
+the business object, which is used for Itemssource binding. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.4pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">public</span> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">RegionStatistics</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black">       </span><span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> 
+      Population{get; set;}</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black">       </span><span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> 
+      Name{get; set;}</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black">       </span><span style="COLOR: blue">public</span> <span style="COLOR: blue">string</span> 
+      Location{get; set;}</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyTextHeading">Adding Items to the ObservableCollection</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">Add items to the ObservableCollection, by using the following 
+code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="620">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">private</span> <span style="COLOR: blue">void</span> 
+      Window1_Loaded(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">RegionStatistics</span>&gt;();</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"Mexico"</span>, Population = <span style="COLOR: #a31515">"107,449,525"</span>, Location=<span style="COLOR: #a31515">"North America"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"Canada"</span>, Population = <span style="COLOR: #a31515">"33,098,932"</span>, Location = <span style="COLOR: #a31515">"North America"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"United States"</span>, Population = <span style="COLOR: #a31515">"304,228,357"</span>, Location = <span style="COLOR: #a31515">"North America"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"Costa Rica"</span>, Population = <span style="COLOR: #a31515">"04,075,261"</span>, Location = <span style="COLOR: #a31515">"Central America"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"Brazil"</span>, Population = <span style="COLOR: #a31515">"188,078,287"</span>, Location = <span style="COLOR: #a31515">"South America"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      gri.DataContext = <span style="COLOR: blue">this</span>;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        
+  }</p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyTextHeading">Binding Itemssource Property</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1"> Set the <b>Itemssource </b>property, by using the 
+following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="620">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">sync</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">GroupBar</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">="gBar"</span><span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      SampleList</span><span style="COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="620">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #2b91af">Binding</span> bind = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Binding</span>();</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">          
+      bind.Source = <span style="COLOR: blue">this</span>;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">          
+      bind.Path = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PropertyPath</span>(<span style="COLOR: #a31515">"SampleList"</span>);</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">          
+      gBar.SetBinding(GroupBar.ItemssourceProperty, 
+bind);</p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_472.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 514: ItemSource bound GroupBar</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 14pt"></span></b> </p>
+<p class="BodyTextHeading">Using ItemTemplate</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Apply the <b>ItemTemplate </b>to GroupBar, by using the 
+following code. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="620">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="COLOR: black">[XAML]</span></b><b><span style="COLOR: blue">   </span></b><span style="COLOR: blue">    </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"> &lt;</span><span style="COLOR: #a31515">sync</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">GroupBar.ItemTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                    
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">            
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">sync</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">GroupBar.ItemTemplate</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_473.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 515: GroupBar with ItemTemplate Applied</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span></b> </p>
+<p class="BodyTextHeading">Using ItemContainer Style </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">The above image shows that the GroupBar is bounded with the 
+ObservableCollection SampleList. Write the HeaderTemplate and ContentTemplate 
+for the ItemContainer, by using the following code. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The Item Container Style should be declared as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="620">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="COLOR: maroon; FONT-SIZE: 9pt">sync</span><span style="COLOR: blue; FONT-SIZE: 9pt">:</span><span style="COLOR: maroon; FONT-SIZE: 9pt">GroupBar.ItemContainerStyle</span><span style="COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="COLOR: maroon; FONT-SIZE: 9pt">Style</span><span style="COLOR: black; FONT-SIZE: 9pt"> </span><span style="COLOR: red; FONT-SIZE: 9pt">TargetType</span><span style="COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="COLOR: maroon; FONT-SIZE: 9pt">x</span><span style="COLOR: black; FONT-SIZE: 9pt">:</span><span style="COLOR: maroon; FONT-SIZE: 9pt">Type</span><span style="COLOR: black; FONT-SIZE: 9pt"> </span><span style="COLOR: red; FONT-SIZE: 9pt">sync</span><span style="COLOR: blue; FONT-SIZE: 9pt">:</span><span style="COLOR: red; FONT-SIZE: 9pt">GroupBarItem</span><span style="COLOR: blue; FONT-SIZE: 9pt">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="COLOR: maroon; FONT-SIZE: 9pt">Style</span><span style="COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="COLOR: maroon; FONT-SIZE: 9pt">sync:GroupBar.ItemContainerStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"> </p>
+<p class="BodyText1">Apply<b> Header Template</b> to the <b>Header Template</b> 
+property of the Item, by using the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="Header"</span><span style="COLOR: red"> <span style="BACKGROUND: yellow">Value</span></span><span style="BACKGROUND: yellow; COLOR: blue">="{</span><span style="BACKGROUND: yellow; COLOR: #a31515">Binding</span><span style="BACKGROUND: yellow; COLOR: blue">}"</span><span style="COLOR: blue">/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                        
+      &lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> Property</span><span style="COLOR: blue">="HeaderTemplate"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                            
+      &lt;</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                               
+      &lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                                     
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                                
+      &lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                           
+      </span><span style="COLOR: #a31515"> </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">                         
+      &lt;/</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+<p class="BodyText1">Apply <b>Content Template</b> to <b>Content Template</b> 
+property of the item, by using the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #a31515"> </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="Content"</span><span style="COLOR: red"> <span style="BACKGROUND: yellow">Value</span></span><span style="BACKGROUND: yellow; COLOR: blue">="{</span><span style="BACKGROUND: yellow; COLOR: #a31515">Binding</span><span style="BACKGROUND: yellow; COLOR: blue">}"</span><span style="COLOR: blue">/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="ContentTemplate"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                            
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                    
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: red"> 
+      Height</span><span style="COLOR: blue">="50"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                     
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> Margin</span><span style="COLOR: blue">="1"</span><span style="COLOR: red"> 
+      HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontSize</span><span style="COLOR: blue">="14"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Location</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Population</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                    
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                            
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_474.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 516: GroupBar with ItemContainer Style applied</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><i><span style="FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span></b> </p>
+<p class="BodyTextHeading">Using Template Selector</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Template can be applied according to the logic set by the 
+user using Template Selector.</p>
+<p class="BodyText1">The following code illustrates this.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">          <img border="0" src="ImagesExt/image30_5.jpg" alt="" />Note:Data Template has been written for North 
+America Statistics data.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: red"> 
+      x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Key</span><span style="COLOR: blue">="North"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">         
+      &lt;</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: red"> Height</span><span style="COLOR: blue">="50"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">              
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> Margin</span><span style="COLOR: blue">="1"</span><span style="COLOR: red"> 
+      HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontSize</span><span style="COLOR: blue">="14"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Blue"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">    
+                &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Location</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Blue"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">              
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Population</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Blue"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">         
+      &lt;/</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #a31515"> </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">          <img border="0" src="ImagesExt/image30_5.jpg" alt="" />Note: Data Template has been written for South 
+America Statistics data.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: red"> 
+      x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Key</span><span style="COLOR: blue">="South"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">        
+      &lt;</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: red"> Height</span><span style="COLOR: blue">="50"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">            
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> Margin</span><span style="COLOR: blue">="1"</span><span style="COLOR: red"> 
+      HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontSize</span><span style="COLOR: blue">="14"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Red"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">            
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Location</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Red"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">            
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Population</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Red"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #a31515">        
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image30_5.jpg" alt="" />Note:Data Template has been written for Other 
+Statistics data.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: red"> 
+      x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Key</span><span style="COLOR: blue">="Other"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">    &lt;</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: red"> 
+      Height</span><span style="COLOR: blue">="50"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">        
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"</span><span style="COLOR: red"> Margin</span><span style="COLOR: blue">="1"</span><span style="COLOR: red"> 
+      HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> FontSize</span><span style="COLOR: blue">="14"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Brown"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">        
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Location</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Brown"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">        
+      &lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Population</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> HorizontalAlignment</span><span style="COLOR: blue">="Center"</span><span style="COLOR: red"> 
+      Foreground</span><span style="COLOR: blue">="Brown"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">      &lt;/</span><span style="COLOR: #a31515">StackPanel</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"><img border="0" src="ImagesExt/image30_5.jpg" alt="" /></span>Note: Following is the data template 
+selector logic set by the user.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">    <span style="COLOR: gray">///</span><span style="COLOR: green"> Logic for 
+      Template Selector</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">    <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;/summary&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">    <span style="COLOR: blue">public</span> 
+      <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">SampleTemplateSelector</span> : <span style="COLOR: #2b91af">DataTemplateSelector</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">    {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        <span style="COLOR: blue">public</span> <span style="COLOR: blue">override</span> <span style="COLOR: #2b91af">DataTemplate</span> SelectTemplate(<span style="COLOR: blue">object</span> item, <span style="COLOR: #2b91af">DependencyObject</span> container)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      <span style="COLOR: #2b91af">Window</span> win = <span style="COLOR: #2b91af">Application</span>.Current.MainWindow;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      <span style="COLOR: blue">if</span> (((<span style="COLOR: #2b91af">RegionStatistics</span>)item).Location == <span style="COLOR: #a31515">"North America"</span>)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">                
+      <span style="COLOR: blue">return</span> win.Resources[<span style="COLOR: #a31515">"North"</span>] <span style="COLOR: blue">as</span> 
+      <span style="COLOR: #2b91af">DataTemplate</span>;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      }</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (((<span style="COLOR: #2b91af">RegionStatistics</span>)item).Location == 
+      <span style="COLOR: #a31515">"South America"</span>)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">                
+      <span style="COLOR: blue">return</span> win.Resources[<span style="COLOR: #a31515">"South"</span>] <span style="COLOR: blue">as</span> 
+      <span style="COLOR: #2b91af">DataTemplate</span>;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      }</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      <span style="COLOR: blue">else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">                
+      <span style="COLOR: blue">return</span> win.Resources[<span style="COLOR: #a31515">"Other"</span>] <span style="COLOR: blue">as</span> 
+      <span style="COLOR: #2b91af">DataTemplate</span>;</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">            
+      }</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        }</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">    }</p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"><img border="0" src="ImagesExt/image30_5.jpg" alt="" /></span>Note: The ContentTemplate Selector can be 
+applied as follows.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">sync</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">GroupBar.ItemContainerStyle</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                    
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Style</span><span style="COLOR: red"> 
+      TargetType</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">x</span><span style="COLOR: blue">:</span><span style="COLOR: #a31515">Type</span><span style="COLOR: red"> 
+      sync</span><span style="COLOR: blue">:</span><span style="COLOR: red">GroupBarItem</span><span style="COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="Header"</span><span style="COLOR: red"> Value</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="HeaderTemplate"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                            
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                    
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">TextBlock</span><span style="COLOR: red"> 
+      Text</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: red"> 
+      Name</span><span style="COLOR: blue">}"</span><span style="COLOR: red"> 
+      FontWeight</span><span style="COLOR: blue">="Bold"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                                
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">DataTemplate</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                            
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Setter.Value</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                        
+      </span><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Setter</span><span style="COLOR: red"> 
+      Property</span><span style="COLOR: blue">="Content"</span><span style="COLOR: red"> Value</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">Binding</span><span style="COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: #a31515">                    
+      </span><span style="BACKGROUND: yellow; COLOR: blue">&lt;</span><span style="BACKGROUND: yellow; COLOR: #a31515">Setter</span><span style="BACKGROUND: yellow; COLOR: red"> Property</span><span style="BACKGROUND: yellow; COLOR: blue">="ContentTemplateSelector"</span><span style="BACKGROUND: yellow; COLOR: red"> Value</span><span style="BACKGROUND: yellow; COLOR: blue">="{</span><span style="BACKGROUND: yellow; COLOR: #a31515">StaticResource</span><span style="BACKGROUND: yellow; COLOR: red"> Selector</span><span style="BACKGROUND: yellow; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Style</span><span style="COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_475.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 517: GroupBar with Content Template Selector 
+Applied</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Events associated with GroupBar ContextMenu</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">When <b>Itemssource</b> is in use, <b>Add Tab</b>, <b>Delete 
+Tab</b>, <b>Rename Tab</b>, etc Commands in <b>Context menu</b> cannot be used. 
+To enable this user can use the following event associated with the context 
+menu.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>ContextMenuItemClick - </b>The Event is called when any of 
+the <b>ContextMenu</b> items clicked. It contains the following property.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>MenuItem</b> –Gets the <b>MenuItem</b>. Users can perform 
+the require command in this menu.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">            
+Add a new tab when <b>Itemssource</b> in use, by using the following code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">gBar.ContextMenuItemClick += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GroupBarContextMenuItemEventHandler</span>(gBar_ContextMenuItemClick);</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="COLOR: blue">private</span> <span style="COLOR: blue">void</span> 
+      gBar_ContextMenuItemClick(<span style="COLOR: blue">object</span> sender, 
+      <span style="COLOR: #2b91af">GroupBarContextMenuItemEventArgs</span> 
+e)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">        {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">           
+      <span style="COLOR: blue">if</span> (e.MenuItem.ToString() == <span style="COLOR: #a31515">"Add Tab"</span>)</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">          
+         {</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">      SampleList.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RegionStatistics</span>() { Name = <span style="COLOR: #a31515">"New Item"</span>, Population = 
+                  
+             <span style="COLOR: #a31515">"00,000,000"</span>, Location = <span style="COLOR: #a31515">"**** ****"</span> });</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">                
+      <span style="BACKGROUND: yellow">e.Handled = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">       }</p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal">}</p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"><img border="0" src="ImagesExt/image30_5.jpg" alt="" /></span>Note: Set the Handled property of 
+GroupBarContextMenuItemEventArgs to true to avoid the in-built logic to 
+execute<span style="COLOR: black">.</span></p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_476.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 518: Add New Tab Command Executing</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9.75pt" class="MsoNormal"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_477.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 519: New Tab added while ItemsSource in Use</p><span id="related-topics"></span></div></body></html>

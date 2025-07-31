@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Excel like Resizing Support</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="666e84c6-82bf-4ef1-9610-3c7ee1fb25c1" />
+<meta name="Title" content="Excel like Resizing Support" />
+<meta name="Microsoft.Help.TocParent" content="94329caa-76cc-4e2d-be24-7a4b19f9fd2b" />
+<meta name="Microsoft.Help.TocOrder" content="6" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Excel like Resizing Support</h4>
+<p class="BodyText1">Essential Grid control supports Excel like resizing to hide 
+or unhide columns. It also acts as a visual marker to indicate hidden 
+columns.<b></b></p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="BodyText1">This feature can be implemented for application which 
+contains more rows and columns. You can also make some rows and columns to be 
+hidden.   <b></b></p>
+<p class="BodyText1">                                    
+<b></b></p>
+<p class="BodyTextHeading">Adding Resizing Support to an Application </p>
+<p class="BodyText1">This topic explains how to implement the Resizing support to 
+an application. The following steps explain the implementation of the Resizing 
+support to an application. <b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Set the Resizing 
+border properties</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Resizing is a 
+built-in property and there is no need to set any special property to enable it. 
+But there are options to set the hidden border color and thickness. Set the 
+HiddenBorderBrush property to any color of the brush for the Model object.  
+The assigned color will be brushed in the border color of the hidden column or 
+row. Set the HiddenBorderThickness property to an int value say 3. <b></b></p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyText1">The following code snippet explains the implementation of the 
+HiddenBorderBrush and HidderBorderThickness properties.<b></b></p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 59.35pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 59.35pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridControl.Model.HiddenBorderBrush = 
+      <span style="COLOR: #2b91af">Brushes</span>.Red ;<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridControl.Model.HiddenBorderThikness 
+      = 3;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"> 
+      <b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">[VB]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridControl.Model.HiddenBorderBrush = 
+      <span style="COLOR: #2b91af">Brushes</span>.Red<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridControl.Model.HiddenBorderThikness 
+      = 3<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Run the 
+application</p>
+<p class="BodyText1">To set the rows or columns as hidden by code, you can use the 
+SetHidden() method. It has two int type parameters to get “from Index” and “to 
+Index”, a Boolean type which sets True for hide and False for unhide. Run the 
+application and you will find the given rows or columns to be hidden. 
+<b></b></p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyText1">The following code snippet explains the implementation of the 
+SetHidden() method of ColumnWidths and RowHeights property.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 59.35pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 59.35pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #08962d">// </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #08962d">To hide columns and 
+      rows.</span><b><span style="COLOR: #08962d"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.ColumnWidths.SetHidden(3, 
+      4, <span style="COLOR: blue">true</span>);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.RowHeights.SetHidden(3, 
+      4, <span style="COLOR: blue">true</span>);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #08962d">// </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #08962d">To unhide columns and 
+      rows.</span><b><span style="COLOR: #08962d"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.ColumnWidths.SetHidden(3, 
+      4, <span style="COLOR: blue">false</span>);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.RowHeights.SetHidden(3, 
+      4, <span style="COLOR: blue">false</span>);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">[VB]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #08962d">// To hide columns and rows.<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Me</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.ColumnWidths.SetHidden(3, 
+      4, <span style="COLOR: blue">True</span>)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Me</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.RowHeights.SetHidden(3, 
+      4, <span style="COLOR: blue">True</span>)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #08962d">// To unhide columns and rows.<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Me</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.ColumnWidths.SetHidden(3, 
+      4, <span style="COLOR: blue">False</span>)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Me</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.gridControl.RowHeights.SetHidden(3, 
+      4, <span style="COLOR: blue">False</span>)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following is a sample output of Resizing support 
+implementation.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_154.png" alt="" /></p>
+<p class="MsoCaption">Figure 80: Row index and Column index for 3 and 4 are 
+hidden</p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; tab-stops: 0pt" class="MsoNormal"><i><span style="COLOR: #002060">          
+</span></i></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Hide and unhide a 
+rows or Columns during run-time.</p>
+<p class="BodyText1">To hide a column or a row, hover at the line of the column or 
+row. It shows a resizing cursor with a single bar so that you can drag the line 
+to its next header cell. After joining to the neighbor Header Cell, the line 
+will be darkened which means that a column or a row is hidden. To unhide the 
+hidden rows or columns, hover on the dark marked line. The cursor will then be 
+changed to a double bar and by double clicking, l the hidden rows or columns can 
+be resized to its original size.<b></b></p>
+<p class="BodyText1">The following screenshot explains how to hide and unhide a 
+Column.<b></b></p>
+<p class="BodyText1">Hover over the header cell’s border line. The cursor will be 
+changed to single bar, as like in the following screenshot.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_155.png" alt="" /></p>
+<p class="MsoCaption">Figure 81: Hover on the border line of a header</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b></b> </p>
+<p class="BodyText1">Drag it to Column 2 so that the Border color changes as like 
+in the following screenshot.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_156.png" alt="" /> </p>
+<p class="MsoCaption">Figure 82: After dragging and joining the border line to the 
+neighbor cell</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following image shows the output after hiding the row by 
+Mouse Dragging.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_157.png" alt="" /></p>
+<p class="MsoCaption">Figure 83: Output of the hidden column to the neighbor 
+cell</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To unhide the hidden row, hover the mouse on the hidden 
+column border line. A double bar cursor will then be displayed as in the 
+following screenshot.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_158.png" alt="" /></p>
+<p class="MsoCaption">Figure 84: Hover on the hidden Column the Cursor changes to 
+double bar</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Double clicking on it will unhide all the hidden columns in 
+that particular hidden column.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_159.png" alt="" /></p>
+<p class="MsoCaption">Figure 85: After double clicking the hidden column it 
+unhides all the hidden Columns</p>
+<p class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Tables for Properties, Methods, and Events</p>
+<p class="BodyTextHeading">Properties</p>
+<p class="MsoCaption">Table 21: Resizing support Table</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 35.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 117.9pt; PADDING-RIGHT: 0pt; HEIGHT: 35.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="157">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135pt; PADDING-RIGHT: 0pt; HEIGHT: 35.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 58.5pt; PADDING-RIGHT: 0pt; HEIGHT: 35.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableHeading">Data Type</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 63pt; PADDING-RIGHT: 0pt; HEIGHT: 35.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableHeading">Default value</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 85.5pt; PADDING-RIGHT: 0pt; HEIGHT: 35.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableHeading">Class Name</p></td></tr>
+  <tr style="HEIGHT: 53.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 117.9pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="157">
+      <p class="TableText">HiddenBorderBrush<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableText">Sets the border brush color for the hidden rows or 
+      columns.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 58.5pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">Brush<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 63pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">Black<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 85.5pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridModel<b></b></p></td></tr>
+  <tr style="HEIGHT: 53.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 117.9pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="157">
+      <p class="TableText">HiddenBorderThickness<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableText">Sets the border thickness for the hidden rows or 
+      columns.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 58.5pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">int<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 63pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">1<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 85.5pt; PADDING-RIGHT: 0pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridModel<b></b></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><a name="_Tokens_to_filter" id="_Tokens_to_filter"></a><b></b> </p>
+<p class="BodyTextHeading">Methods</p>
+<p class="MsoCaption">Table 22: Resizing support Table</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="613">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 10.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 68.15pt; PADDING-RIGHT: 0pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="91">
+      <p class="TableHeading">Method</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135.25pt; PADDING-RIGHT: 0pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 90pt; PADDING-RIGHT: 0pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="120">
+      <p class="TableHeading">Parameters</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 99pt; PADDING-RIGHT: 0pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="132">
+      <p class="TableHeading">Available inside the Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 67.5pt; PADDING-RIGHT: 0pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="90">
+      <p class="TableHeading">Return Type</p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 68.15pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="91">
+      <p class="TableText">SetHidden()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135.25pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableText">Sets the specified “from” rows to “to” rows as hidden. 
+      <b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 90pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="120">
+      <p class="TableText">int from, int to, bool hide<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 99pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="132">
+      <p class="TableText">RowHeights<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 67.5pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="90">
+      <p class="TableText">void<b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 68.15pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="91">
+      <p class="TableText">SetHidden()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 135.25pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="180">
+      <p class="TableText">Sets the specified “from” rows to “to” rows as hidden. 
+      <b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 90pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="120">
+      <p class="TableText">int from, int to, bool hide<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 99pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="132">
+      <p class="TableText">ColumnWidths<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 67.5pt; PADDING-RIGHT: 0pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" width="90">
+      <p class="TableText">void<b></b></p></td></tr></thead>
+  <tbody></tbody></table></div>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1">Refer to the sample in the shipped Sample Browser. 
+<b></b></p>
+<p class="BodyText1">Go to Essential Studio WPF Sample Browser <span style="FONT-FAMILY: Wingdings">à</span> Grid <span style="FONT-FAMILY: Wingdings">à</span> GridDataControl-Advanced<span style="FONT-FAMILY: Wingdings">à</span> HiddenRowColDemo.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #15428b"></span> </p><span id="related-topics"></span></div></body></html>

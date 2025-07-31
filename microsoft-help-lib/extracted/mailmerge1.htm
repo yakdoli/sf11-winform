@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Mail Merge</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="06ce96d5-ee64-4760-95b5-19c8990a47ad" />
+<meta name="Title" content="Mail Merge" />
+<meta name="Microsoft.Help.TocParent" content="655bff97-b031-4849-9a97-4f9cc3c696e1" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/DocIo.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=655bff97-b031-4849-9a97-4f9cc3c696e1"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=af4db30d-1d9a-46fe-92f0-79ed70ceaf9b"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e">Reporting 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=b88d77b3-4c51-460f-a761-d2ef6d5b0ca6">Essential 
+DocIO</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=82ce5b36-6d4b-438d-b8f8-cf8bbfb1678f">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=655bff97-b031-4849-9a97-4f9cc3c696e1">Migration from 
+Microsoft Office Automation to Essential DocIO</a></div>
+<h3 style="tab-stops: 0pt">Mail Merge</h3>
+<p class="BodyText1">Mail merge feature can be used to generate reports and 
+letters in MS word. The following code examples show how to generate an employee 
+report from an MDB data source using office automation and DocIO.</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Using MS Office Interop</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">Office automation performs the mail merge by executing a SQL 
+query on the word document. The output of the mail merge can be sent to a new 
+word document. Alternatively, it can be sent to a printer and a fax machine and 
+forwarded to an e-mail address.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="TableGrid1" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="PAGE-BREAK-INSIDE: avoid">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'"> word = 
+      Microsoft.Office.Interop.Word;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">---------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Initialize objects</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'"> nullobject = <span style="COLOR: #2b91af">Missing</span>.Value;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'"> filepath = <span style="COLOR: #a31515">"EmployeesReportDemo.doc"</span>;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'"> sqlStmt = <span style="COLOR: #a31515">"SELECT * FROM [Employees]"</span>;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> sDBPath = <span style="COLOR: #a31515">"Northwind.mdb"</span>;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Start the word application</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.<span style="COLOR: #2b91af">Application</span> wordApp = <span style="COLOR: blue">new</span> word.<span style="COLOR: #2b91af">Application</span>();</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Open the word document</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.<span style="COLOR: #2b91af">Document</span> document = 
+      wordApp.Documents.Open(<span style="COLOR: blue">ref</span> filepath, 
+      <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject);</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">wordApp.Visible = 
+      <span style="COLOR: blue">false</span>;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Perform Mail Merge</span><span style="FONT-FAMILY: 'Courier New'">      
+      </span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">document.MailMerge.OpenDataSource(sDBPath, 
+      <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> sqlStmt, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject);</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">document.MailMerge.Execute(<span style="COLOR: blue">ref</span> nullobject);</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Send output of Mail Merge to a new document</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">document.MailMerge.Destination = 
+      word.<span style="COLOR: #2b91af">WdMailMergeDestination</span>.wdSendToNewDocument;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Close the document</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">document.Close(<span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject);</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Quit the application</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">wordApp.Quit(<span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject, <span style="COLOR: blue">ref</span> nullobject);</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="TableGrid1" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="PAGE-BREAK-INSIDE: avoid">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Imports</span><span style="FONT-FAMILY: 'Courier New'"> word = 
+      Microsoft.Office.Interop.Word</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">----------------</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Initialize 
+      objects</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> nullobject <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span> = 
+      Missing.Value</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dataBase <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: #a31515">"Northwind.mdb"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> filePath <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span> = 
+      <span style="COLOR: #a31515">"EmployeesReportDemo.doc"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> sqlStmt <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: #a31515">"SELECT * FROM [Employees]"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> falseobj <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span> = 
+      <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Start the word 
+      application</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> wordApp <span style="COLOR: blue">As</span> word.Application = <span style="COLOR: blue">New</span> word.Application()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Open the word 
+      document</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doc <span style="COLOR: blue">As</span> word.Document = 
+      wordApp.Documents.Open(filePath, nullobject, nullobject, nullobject, 
+      nullobject, nullobject, nullobject, nullobject, nullobject, nullobject, 
+      nullobject, falseobj, nullobject, nullobject, nullobject, 
+      nullobject)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">wordApp.Visible = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Perform Mail 
+      Merge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">With</span><span style="FONT-FAMILY: 'Courier New'"> doc.MailMerge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     
+      .OpenDataSource(dataBase, nullobject, nullobject, nullobject, nullobject, 
+      nullobject, nullobject, nullobject, nullobject, nullobject, nullobject, 
+      nullobject, sqlStmt, nullobject, nullobject, nullobject)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     
+      .Execute(nullobject)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     .Destination = 
+      word.WdMailMergeDestination.wdSendToNewDocument</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">With</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Close the document 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.Close(nullobject, nullobject, 
+      nullobject)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Quit the 
+      application</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">wordApp.Quit(nullobject, nullobject, 
+      nullobject)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="BodyTextHeading">Using DocIO</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">DocIO performs the mail merge using the <i>Execute ()</i> 
+method as illustrated in the following example. </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="TableGrid1" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 299.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 299.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> dataBase = <span style="COLOR: #a31515">"Northwind.mdb"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Open existing 
+      template</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">WordDocument</span><span style="FONT-FAMILY: 'Courier New'"> doc = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">WordDocument</span>(<span style="COLOR: #a31515">"EmployeesReportDemo.doc"</span>, <span style="COLOR: #2b91af">FormatType</span>.Doc);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Get Data from the 
+      Database.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">OleDbConnection</span><span style="FONT-FAMILY: 'Courier New'"> conn = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">OleDbConnection</span>(<span style="COLOR: #a31515">"Provider=Microsoft.Jet.OLEDB.4.0;Data 
+      Source="</span> + dataBase);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conn.Open();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Populate data 
+      table</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">DataTable</span><span style="FONT-FAMILY: 'Courier New'"> table = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DataTable</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">OleDbDataAdapter</span><span style="FONT-FAMILY: 'Courier New'"> adapter = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">OleDbDataAdapter</span>(<span style="COLOR: #a31515">"select * from employees"</span>, conn);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">adapter.Fill(table);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">adapter.Dispose();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Perform Mail 
+      Merge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.MailMerge.Execute(table);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Save the 
+      document</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.Save(<span style="COLOR: #a31515">"MailMerge.doc"</span>, <span style="COLOR: #2b91af">FormatType</span>.Doc);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Close the 
+      document</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.Close();</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="TableGrid1" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 291.1pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 291.1pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dataBase <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: #a31515">"Northwind.mdb"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Open the word 
+      document</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doc <span style="COLOR: blue">As</span> WordDocument = <span style="COLOR: blue">New</span> WordDocument(<span style="COLOR: #a31515">"EmployeesReportDemo.doc"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Create database 
+      connection </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> conn <span style="COLOR: blue">As</span> OleDbConnection = <span style="COLOR: blue">New</span> OleDbConnection(<span style="COLOR: #a31515">"Provider=Microsoft.Jet.OLEDB.4.0;Data 
+      Source="</span> + dataBase)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">conn.Open()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Populate data 
+      table</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> table <span style="COLOR: blue">As</span> DataTable = <span style="COLOR: blue">New</span> DataTable()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> adapter <span style="COLOR: blue">As</span> OleDbDataAdapter = <span style="COLOR: blue">New</span> OleDbDataAdapter(<span style="COLOR: #a31515">"select * from employees"</span>, conn)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">adapter.Fill(table)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">adapter.Dispose()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Perform Mail 
+      Merge</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.MailMerge.Execute(table)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Save the 
+      document</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.Save(<span style="COLOR: #a31515">"MailMerge.doc"</span>, FormatType.Doc)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Close the 
+      document</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">doc.Close()</span><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image24_1.jpg" alt="" />Note: For more information on performing the mail 
+merge using DocIO, you can refer the online documentation link given 
+below:</p></div>
+<p style="PAGE-BREAK-AFTER: avoid; MARGIN: 3pt 0pt" class="MsoNormal"><b><i><span style="LAYOUT-GRID-MODE: line; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><a href="http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/46mailmerge.htm"><span class="UGHyperlink">http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/46mailmerge.htm</span></a><span class="UGHyperlink"></span></p><span id="related-topics"></span></div></body></html>

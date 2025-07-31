@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Through GridBuilder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="133ea7fa-2581-4eb2-a5da-e250cf67bc26" />
+<meta name="Title" content="Through GridBuilder" />
+<meta name="Microsoft.Help.TocParent" content="cf90d91d-c0ff-409e-9566-faf2dadc0431" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Through GridBuilder</h5>
+<p class="MsoNormal">To configure the keyboard interface using 
+<b>GridBuilder</b>:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><u><span style="COLOR: blue">How to&gt;Strongly Typed 
+View</span></u></a>).</p>
+<p class="MsoNormal">In the view, you can use its <b>Model</b> property in 
+<b>Datasource()</b> to bind the data source.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Set 
+<b>AllowKeyboardNavigation</b> to <b>True</b> in order to allow the grid to 
+support keyboard interface.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Configure the 
+keys for all the actions using the <b>KeyConfigurator</b> method. For example, 
+<b>ExportToExcel</b> and <b>FocusKey</b> actions are configured in the following 
+code snippet.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyTextHeading"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.</span><span style="FONT-FAMILY: 'Courier New'">Syncfusion().</span><span style="FONT-FAMILY: 'Courier New'">Grid&lt;MvcSampleApplication.Models.<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"FlatGrid"</span>)</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      .Datasource(Model)        
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+            </span><b><span style="FONT-FAMILY: 'Courier New'">.AllowKeyboardNavigation(<span style="COLOR: blue">true</span>)</span></b></p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"> .KeyConfigurator(key =&gt; 
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+              key.ExportToExcel(<span style="COLOR: #2b91af">Keys</span>.AltPlusA);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      key.FocusKey(<span style="COLOR: #2b91af">Keys</span>.CtrlPlusAltPlusA);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">             
+      })</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> .EnablePaging()</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      .EnableSorting()</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 18pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+      <p class="MsoNormalCxSpMiddle"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.</span><span style="FONT-FAMILY: 'Courier New'">Syncfusion().</span><span style="FONT-FAMILY: 'Courier New'">Grid&lt;MvcSampleApplication.Models.<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"FlatGrid"</span>)</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      .Datasource(Model)        
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+            </span><b><span style="FONT-FAMILY: 'Courier New'">.AllowKeyboardNavigation(<span style="COLOR: blue">true</span>)</span></b></p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"> .KeyConfigurator(key =&gt; 
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+              key.ExportToExcel(<span style="COLOR: #2b91af">Keys</span>.AltPlusA);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      key.FocusKey(<span style="COLOR: #2b91af">Keys</span>.CtrlPlusAltPlusA);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">             
+      })</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 72pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> .EnablePaging()</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      .EnableSorting()</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      .Render();</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-INDENT: 18pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+      <p class="MsoNormalCxSpMiddle"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; tab-stops: 155.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Set the data 
+source and render the view.</p>
+<p style="TEXT-ALIGN: justify; LINE-HEIGHT: 14pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: gray">///</span><span style="COLOR: green"> </span><span style="COLOR: gray">&lt;summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> Used for 
+      rendering the grid initially.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span><span style="COLOR: green">View page; it displays the grid.</span><span style="COLOR: gray">&lt;/returns&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">var</span> Data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StudentDataContext</span>().AutoFormatStudent.Take(200);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">return</span> View(Data);   
+</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      }</span><b><i><span style="COLOR: #4f81bd"></span></i></b></p>
+      <p class="MsoNormalCxSpMiddle"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; tab-stops: 155.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   In order to work 
+with paging and sorting actions, create a <b>Post</b> method for <b>Index</b> 
+actions and  bind the data source to the grid as shown in the following 
+code.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">  ///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">&lt;summary&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      Paging/sorting requests are mapped to this method. This method invokes the 
+      </span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      HtmlActionResult from the grid. The required response is 
+      generated.</span></span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PagingParams</span> args)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">var</span> Data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StudentDataContext</span>().AutoFormatStudent.Take(20);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">return</span> Data.GridActions&lt;<span style="COLOR: #2b91af">Student</span>&gt;();          
+      </span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><b><i><span style="FONT-FAMILY: 'Courier New'; COLOR: #4f81bd"></span></i></b></p>
+      <p class="MsoNormalCxSpMiddle"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><b><i><span style="COLOR: #4f81bd"></span></i></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList"><span style="COLOR: gray">7.   </span>Run the application. Now 
+<b>FocusKey</b> and <b>ExportToExcel</b> actions keyboard shortcuts are 
+configured.<span style="COLOR: gray"></span></p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

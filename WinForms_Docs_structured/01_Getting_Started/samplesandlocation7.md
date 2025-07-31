@@ -1,0 +1,113 @@
+---
+title: samplesandlocation7.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\01_Getting_Started\samplesandlocation7.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+## Samples and Location {#samples-and-location style="tab-stops: 0pt"}
+
+ 
+
+This section covers the location of the installed samples and describes the procedure to run the samples through the sample browser and online. It also provides the location of the source code.
+
+[] 
+
+Samples Installation Location
+
+[                ]
+
+[The Grid MVC samples are installed in the following location, locally on the disk:]
+
+[] 
+
+***\<Install Location\>\\Syncfusion\\EssentialStudio\\\<Version Number\>\\MVC\\gridmvc\\samples\\3.5***
+
+[] 
+
+Viewing Samples
+
+[] 
+
+To view the samples, follow the steps below:
+
+[] 
+
+1.   Click **Start**\>**All Programs**\>**Syncfusion**\>**Essential Studio** **\<version number\>** \>**Dashboard**. The **Syncfusion Essential Studio Dashboard \<version number\>** window is displayed.
+
+ 
+
+[] 
+
+{border="0"}
+
+Figure 2: Syncfusion Essential Studio Dashboard
+
+[] 
+
+2.   In the **Dashboard** window, click **ASP.NET MVC** in the **User Interface** panel and click **Run Samples**. The **ASP.NET MVC Sample Browser** window is displayed.
+
+[] 
+
+
+{border="0"}Note: You can view the samples in any of the following three ways:
+
+
+[] 
+
+[·      ]**Run Samples**---Click to view the locally installed samples.
+
+[·      ]**Online Samples**---Click to view online samples.
+
+[·      ]**Explore Samples**---Explore ASP.NET MVC samples on disk.
+
+[] 
+
+{border="0"}
+
+Figure 3: ASP.NET MVC Sample Browser
+
+ 
+
+3.   Click **Grid** in the bottom-left of the browser where other ASP.NET MVC products are displayed. The Grid samples are displayed.
+
+[] 
+
+{border="0"}
+
+Figure 4: Grid Samples Displayed in the ASP.NET MVC Sample Browser
+
+ 
+
+4.   Select any sample and browse through its features.
+
+[] 
+
+Source Code Location
+
+[] 
+
+The default location of the Essential Grid for MVC source code is:
+
+ 
+
+**\[System Drive\]:\\Program Files\\Syncfusion\\Essential Studio\\\[Version Number\]\\MVC\\Grid.MVC\\Src**
+
+[]{#related-topics}
+

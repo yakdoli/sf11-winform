@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Suppress KeyDown Event</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="63f3835c-71be-4456-8ff3-4267d82489cf" />
+<meta name="Title" content="How to Suppress KeyDown Event" />
+<meta name="Microsoft.Help.TocParent" content="d7132129-5014-47d6-9419-88a1e83d196a" />
+<meta name="Microsoft.Help.TocOrder" content="40" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=11adb22a-b13f-4cb8-aa8d-5ba158c19b07"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=769dd427-bfd8-490f-9bf9-e5b10c663fd1"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=28ff22ed-2523-4bf9-8f6c-4d94f7bcabcc">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=d7132129-5014-47d6-9419-88a1e83d196a">Common to 
+GridControl, GridDataBoundGrid and GridGrouping</a></div>
+<h3 style="tab-stops: 0pt">How to Suppress KeyDown Event</h3>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p class="BodyText1">To suppress the <i>TablecontrolCurrentCellKeyDown</i> event, 
+enable the <i>SuppressKeyPress</i> property in this event.  To get the Keys 
+data, override the <i>ProcessCmdKey()</i> method,.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Suppress the 
+<i>KeyDown</i> event as given in the following code:</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+<table style="WIDTH: 495pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="660">
+  <tbody>
+  <tr style="HEIGHT: 84.1pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 495pt; PADDING-RIGHT: 5.75pt; HEIGHT: 84.1pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="660">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">[c#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      gridGroupingControl1_TableControlCurrentCellKeyDown(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Windows.Forms.Grid.Grouping.<span style="COLOR: #2b91af">GridTableControlKeyEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Inner.SuppressKeyPress = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p>
+<table style="WIDTH: 505.65pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="674">
+  <tbody>
+  <tr style="HEIGHT: 75.15pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 505.65pt; PADDING-RIGHT: 5.75pt; HEIGHT: 75.15pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="674">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">.[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Private</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">Sub</span> 
+      gridGroupingControl1_TableControlCurrentCellKeyDown(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlKeyEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      e.Inner.SuppressKeyPress = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="DISPLAY: none"></span> </p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Handle the 
+<i>ProcessCmdKey()</i> method to get the keys data as given in the following 
+code: </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<table style="WIDTH: 505.65pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="674">
+  <tbody>
+  <tr style="HEIGHT: 75.15pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 505.65pt; PADDING-RIGHT: 5.75pt; HEIGHT: 75.15pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="674">
+      <p style="LINE-HEIGHT: 12pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">protected</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">override</span> <span style="COLOR: blue">bool</span> 
+      ProcessCmdKey(<span style="COLOR: blue">ref</span> <span style="COLOR: #2b91af">Message</span> msg, <span style="COLOR: #2b91af">Keys</span> keyData)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">Keys</span> keyCode = keyData &amp; <span style="COLOR: #2b91af">Keys</span>.KeyCode;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">switch</span> (keyCode)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.Down: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"down"</span>);                 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   
+                       <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.Up: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Up"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.Right: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Right"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.Left: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Left"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   
+                       <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.PageUp: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"PageUp"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">case</span> <span style="COLOR: #2b91af">Keys</span>.PageDown: <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"PageDown"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">break</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span> <span style="COLOR: blue">base</span>.ProcessCmdKey(<span style="COLOR: blue">ref</span> msg, keyData);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<table style="WIDTH: 495pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="660">
+  <tbody>
+  <tr style="HEIGHT: 35pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 495pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="660">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">[VB]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Protected</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">Overrides</span> <span style="COLOR: blue">Function</span> ProcessCmdKey(<span style="COLOR: blue">ByRef</span> msg <span style="COLOR: blue">As</span> 
+      <span style="COLOR: #2b91af">Message</span>, <span style="COLOR: blue">ByVal</span> keyData <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">Keys</span>) 
+      <span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">Dim</span> keyCode <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">Keys</span> = 
+      keyData <span style="COLOR: blue">And</span> <span style="COLOR: #2b91af">Keys</span>.KeyCode</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">Select</span> <span style="COLOR: blue">Case</span> keyCode</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.Down</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"down"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.Up</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Up"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.Right</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+                <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Right"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.Left</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"Left"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.PageUp</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"PageUp"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">Case</span> <span style="COLOR: #2b91af">Keys</span>.PageDown</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: #2b91af">Console</span>.WriteLine(<span style="COLOR: #a31515">"PageDown"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      <span style="COLOR: blue">Exit Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Select</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">Return</span> <span style="COLOR: blue">MyBase</span>.ProcessCmdKey(msg, keyData)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Function</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

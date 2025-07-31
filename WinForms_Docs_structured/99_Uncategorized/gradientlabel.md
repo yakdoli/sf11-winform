@@ -1,0 +1,59 @@
+---
+title: gradientlabel.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\gradientlabel.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+#### GradientLabel {#gradientlabel style="tab-stops: 0pt"}
+
+[] 
+
+The **GradientLabel** class provides a way to create fancy and appealing labels in your forms.
+
+ 
+
+The GradientLabel class is fully compatible with the Windows Forms label that it derives from and gets most of its uniqueness from the **BrushInfo** class that is used for the **GradientLabel.BackgroundColor** property.
+
+ 
+
+The **GradientLabel.Border3DStyle** is another property that can specify the look and feel of the GradientLabel.
+
+[] 
+
+{border="0"}
+
+[] 
+
+Figure 600: GradientLabel Control
+
+[] 
+
+The .NET framework provides a label control typically used to provide descriptive text for a control. The Essential Tools\' GradientLabel control provides an easy way to display labels with attractive shades and backgrounds.
+
+[] 
+
+
+{border="0"} Note: All the other functions of the GradientLabel is the same as the System.Windows.Forms.Label control in the Windows Forms library.
+
+
+[] 
+
+See Also
+
+[] 
+
+More:
+
+
+
+
+
+
+
+
+

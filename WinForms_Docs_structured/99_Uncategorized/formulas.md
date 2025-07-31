@@ -1,0 +1,39 @@
+---
+title: formulas.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\formulas.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+### Formulas {#formulas style="tab-stops: 0pt"}
+
+Formulas
+
+Spreadsheet control supports most commonly used mathematical formulas and also supports all the formals that are supported by the Essential Grid control. These formulas can be used to manipulate data and calculate strings and numbers.
+
+ 
+
+Name ranges
+
+Spreadsheet control also supports the name ranges in the formulas. By using the name ranges, you can specify the name of the cell range, and then you can use it in the formula more easily without hassling of remembering cell locations.
+
+ 
+
+[]{#related-topics}
+

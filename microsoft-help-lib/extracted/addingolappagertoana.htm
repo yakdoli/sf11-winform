@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding OlapPager to an Application</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="1a2c13a5-ec60-4790-b25b-400408ef71dc" />
+<meta name="Title" content="Adding OlapPager to an Application" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Adding OlapPager to an Application </h5>
+<p class="BodyText1">To enable paging in the application: </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Drag and drop 
+<b>OlapGrid</b> to the page.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Bind the 
+<b>OlapDataManager</b> to the grid.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Drag and drop the 
+<b>OlapPager</b> to the page.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the 
+<b>OlapControlID</b> to Pager.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Call the 
+<b>DataBind()</b> of <b>OlapGrid</b> method.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code snippets demonstrate how to enable 
+paging.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="CodeTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: medium none; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="MARGIN-BOTTOM: 3pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[ASPX]</span></b></p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">OlapGrid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">ID</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="OlapGridControl1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">runat</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="server"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">IsAsyncRequestData</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="false"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">/&gt;</span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">Pager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">ID</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="pager1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">runat</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="server"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">OlapControlID</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="OlapGridControl1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">/&gt;</span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="CodeTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: medium none; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">var 
+      dataProvider = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">AdomdDataProvider</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(connectionString);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">var 
+      DataManager = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">OlapDataManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(dataProvider);<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">DataManager.SetCurrentReport(CreateOlapReport());<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.OlapGridControl1.OlapDataManager = DataManager;<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.OlapGridControl1.DataBind();<b></b></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="CodeTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: medium none; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB]</span></b></p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dataProvider = <span style="COLOR: blue">New</span> 
+      AdomdDataProvider(connectionString)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">DataManager = <span style="COLOR: blue">New</span> 
+      OlapDataManager(dataProvider)<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">DataManager.SetCurrentReport(CreateOlapReport())<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.OlapGridControl1.OlapDataManager = 
+      DataManager<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.OlapGridControl1.DataBind()</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

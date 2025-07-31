@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Customizing the Behavior</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="6b787e40-d6b7-4521-ad55-8091ed16787f" />
+<meta name="Title" content="Customizing the Behavior" />
+<meta name="Microsoft.Help.TocParent" content="fb16fd66-9a97-49cc-84ce-8320d6c45d2d" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Customizing the Behavior</h5>
+<h6 style="tab-stops: 0pt">3.14.5.2.3.1        
+Enable/Disable Docking, Floating, AutoHide, Closing</h6>
+<p class="BodyText1">The following description gives you a clear knowledge 
+aboutdocking, float and closing a dockable window.</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Docking a Dockable Window</p>
+<p class="BodyText1">DockingManager facilitates the users to allow or restrict a 
+dockable window to move to the docked state. This is done by using the 
+<b>CanDock</b> property of the <b>DockingManager</b>. When this property is set 
+to False, the dockable window will be restricted to enter the docked state; it 
+can either be in floating or in auto hidden state. Also this setting will not 
+allow the transition of states from Auto Hide to Float or vice versa, as the 
+window needs to change the dock state as a part of the transition.</p>
+<p class="BodyText1">For settings, <b>CanDock</b> property, use the following 
+code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt">[XAML]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="Properties"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.CanDock</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.SetCanDock(Properties, 
+      <span style="COLOR: blue">true</span>);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyTextHeading">Floating a Dock Window</p>
+<p class="BodyText1">The Floating state of a dockable window is controlled by 
+using the <b>CanFloat</b> property. When the <b>CanFloat</b> property is set to 
+False, the window can take either docked or auto hidden states. It will not be 
+allowed to float until the <b>CanFloat</b> property is enabled.</p>
+<p class="BodyText1">To enable the <b>CanFloat</b> property of DockingManager, use 
+the following code. </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="Properties"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.CanFloat</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.SetCanFloat(Properties, 
+      <span style="COLOR: blue">true</span>);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image803644431.jpg" src="ImagesExt/image30_306.jpg" /></p>
+<p class="MsoCaption">Figure 327: CanFloat = "False"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image188242848.jpg" src="ImagesExt/image30_307.jpg" /></p>
+<p class="MsoCaption">Figure 328: CanFloat = "True"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyTextHeading">Closing a Dock Window</p>
+<p class="BodyText1">The DockingManager gives the option for users to control the 
+closing functionality of the dockable window. A window is restricted from 
+closing by disabling the <b>CanClose</b> property of the DockingManager. When 
+this property is set to False, it will not display the close button in the 
+header of the window.</p>
+<p class="BodyText1">To set this property, refer the following code.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="Properties"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.CanClose</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="True"&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.SetCanClose(Properties, 
+      <span style="COLOR: blue">true</span>);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image1015755465.jpg" src="ImagesExt/image30_308.jpg" /></p>
+<p class="MsoCaption">Figure 329: CanClose = "False"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image1824565565.jpg" src="ImagesExt/image30_309.jpg" /></p>
+<p class="MsoCaption">Figure 330: CanClose = "True"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Refer Also</p>
+<p class="MsoNormal"><a href="ms-xhelp:///?Id=5ff18338-2f26-4cdc-94d4-1b1ce31f9f5a"><span class="UGHyperlink">Dealing with States</span></a><span class="UGHyperlink"></span></p>
+<p class="MsoNormal"><a href="ms-xhelp:///?Id=5ff18338-2f26-4cdc-94d4-1b1ce31f9f5a"><span class="UGHyperlink">Document State Child</span></a><span class="UGHyperlink"></span></p>
+<p class="MsoNormal"><span class="UGHyperlink"><span style="TEXT-DECORATION: none"></span></span> </p>
+<p class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">3.14.5.2.3.2        
+AutoHide Button Visibility</h6>
+<p class="BodyText1">By default, all docked windows will have the ability to auto 
+hide, when the user clicks the auto hide button. This feature can be disabled 
+using the <b>AutoHideVisibility</b> property. This property is typically used to 
+allow or deny the changing element's state to auto hidden, through Graphical 
+User Interface (GUI), by showing / hiding the AWL button in the host header and 
+hence auto hiding the context menu item. </p>
+<p class="BodyText1">Here is the code snippet for setting the above property.</p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">&lt;!--Declaring 
+      Docking Manager AutoHideVisibility to False --&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      AutoHideVisibility</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="False"&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">&lt;!--Your 
+      contents here--&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//Creating 
+      an instance for Docking Manager.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager = 
+      <span style="COLOR: blue">new</span> DockingManager();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//Setting 
+      AutoHideVisibility to true.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.AutoHideVisibility 
+      = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image611161089.jpg" src="ImagesExt/image30_310.jpg" /></p>
+<p class="MsoCaption">Figure 331: AutoHideVisibility = "False"</p>
+<p class="MsoCaption"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image1917721802.jpg" src="ImagesExt/image30_311.jpg" /></p>
+<p class="MsoCaption">Figure 332: AutoHideVisibility = "True"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p class="BodyTextHeading">Refer Also</p>
+<p class="MsoNormal"><a href="ms-xhelp:///?Id=9c6b11bd-859e-44b4-b19e-b91adaf5aefa"><span class="UGHyperlink">AutoHide Visibility</span></a><span class="UGHyperlink"></span></p>
+<h6 style="tab-stops: 0pt"><a name="_Auto_Hide_Mode" id="_Auto_Hide_Mode"></a>3.14.5.2.3.3        
+Auto Hide Mode</h6>
+<p class="BodyText1">There are two modes of auto hiding behavior. They are:</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>AutoHideGroup 
+(default): All elements in the tabbed host will be auto hidden.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>AutoHideActive: Only the active window will be auto hidden.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">&lt;!--Declaring 
+      Docking Manager with AutoHide Active--&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      AutoHideTabsMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="AutoHideActive"&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">&lt;!--Your 
+      contents here--&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 29.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; HEIGHT: 29.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//Creating 
+      the instance of the Docking Manager.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager = 
+      <span style="COLOR: blue">new</span> DockingManager();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//Setting 
+      AutoHideGroup for the Docking Manager.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.AutoHideTabsMode 
+      = AutoHideTabsMode.AutoHideGroup;</span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Events Handled While Auto hiding</p>
+<p class="BodyText1">The following events are handled while Auto hiding.</p>
+<p class="BodyText1"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableHeading">Event</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableText">AutoHideAnimationStartEvent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableText">Handled when auto hiding operation starts.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableText">AutoHideAnimationEndEvent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 225pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="300">
+      <p class="TableText">Handled when auto hiding operation 
+  ends.</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<h6 style="tab-stops: 0pt"><a name="_Tab_Strip_Placement" id="_Tab_Strip_Placement"></a>3.14.5.2.3.4        
+Using AutoHide Animation Modes</h6>
+<p class="BodyText1">DockingManager supports three different built–in animations 
+for auto-hiding the windows. They are listed below.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Slide: 
+Elements auto hides in a sliding style.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Scale: 
+Elements follows a particular scale while auto hiding.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Fade: 
+Element’s appearance fades while it auto hides.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The animation modes can be applied by using the 
+<b>AutoHideAnimationMode</b> property of the <b>Docking</b> Manager. </p>
+<p class="BodyText1">To apply different animation styles to the docking windows, 
+use the following code. This setting will get reflected when the user auto hides 
+a window at run time.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">&lt;!--To 
+      set the Fade animation mode--&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="DocManager1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      AutoHideAnimationMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="Fade"/&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//To 
+      set the Fade animation mode.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.DockingManager.AutoHideAnimationMode 
+      = AutoHideAnimationMode.Fade;</span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Animation Duration</p>
+<p class="BodyText1">DockingManager enables you to control the duration for 
+animation or the animation delay, while auto hiding the docking windows. 
+Animation delay is set by using the <b>AnimationDelay</b> property of the 
+DockingManager. It accepts the duration in milliseconds. </p>
+<p class="BodyText1">The following code sets the <b>AnimationDelay</b> 
+property.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//To 
+      set Very slow animation delay.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.DockingManager.SetAnimationDelay(DocManager1, 
+      <span style="COLOR: blue">new</span> Duration(<span style="COLOR: blue">new</span> TimeSpan(30000000)));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9.5pt">//To 
+      set Very fast animation delay.</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.DockingManager.SetAnimationDelay(DocManager1, 
+      <span style="COLOR: blue">new</span> Duration(<span style="COLOR: blue">new</span> 
+TimeSpan(10000)));</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="_Closing_Options_for_1" id="_Closing_Options_for_1"></a>3.14.5.2.3.5        
+Closing Options for Tabbed Windows</h6>
+<p class="BodyText1">To set <b>CloseTabs</b> as <b>CloseActive</b> mode, use the 
+following code:</p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="DocManager1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CloseTabs</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="CloseActive"/&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.DockingManager.CloseTabs 
+      = CloseTabsMode.CloseActive;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="_Enable/Disable_Dragging_a" id="_Enable/Disable_Dragging_a"></a>3.14.5.2.3.6        
+Enable/Disable Dragging a Window</h6>
+<p class="BodyText1">The DockingManager enables you to restrict an element to be 
+dragged from one side to another. The dragging functionality is disabled for a 
+window by setting the CanDrag property to false.</p>
+<p class="BodyText1">The following code is used to enable the <b>CanDrag</b> 
+property.</p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="Properties"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt"> 
+      sftools</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.CanDrag</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">DockingManager.SetCanDrag(Properties, 
+      <span style="COLOR: blue">true</span>);</span></p></td></tr></tbody></table>
+<p class="Figure"> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image1537050122.jpg" src="ImagesExt/image30_312.jpg" /></p>
+<p class="MsoCaption">Figure 333: CanDrag = "False"<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: http://help.syncfusion.com/ug_82/WPFUI_Tools/Images/image27394988.jpg" src="ImagesExt/image30_313.jpg" /></p>
+<p class="MsoCaption">Figure 334:CanDrag = "True"</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

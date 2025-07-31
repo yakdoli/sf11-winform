@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Windows Forms Host</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="9e008918-e8cc-4fc7-a182-cc54052aa294" />
+<meta name="Title" content="Windows Forms Host" />
+<meta name="Microsoft.Help.TocParent" content="2ea58a12-9426-4a63-96b4-89eb80232c2c" />
+<meta name="Microsoft.Help.TocOrder" content="48" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=34278c2c-1002-402e-9075-dd9506815dc4"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=70793969-b79f-4dcf-b70d-3ad90c4479e5"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7f4f82c5-151c-4262-94d0-75c4626c77bc">Essential 
+WPF</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Tools</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=2ea58a12-9426-4a63-96b4-89eb80232c2c">Tools WPF 
+Controls</a></div>
+<h2 style="tab-stops: 0pt">Windows Forms Host</h2>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal">There are some situations in which 
+we will need to host some Windows Forms controls in our WPF application. This 
+section guides you on this scenario.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">For instance, if we have to host a WF button inside a WPF 
+application, follow the below guidelines.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>Step 1 </b>– You need to add a HWND to your WPF 
+applications in UI, to host Windows Form controls, a default implementation that 
+is suitable for many common needs and it is called as WindowsFormsHost. To use 
+this class, we need to include System.Windows.Forms and WindowsFormsIntegration 
+assemblies which is provided by the Microsoft.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_1076.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoCaption">Figure 1189:System.Windows.Forms and WindowsFormsIntegration 
+assemblies referenced to host Windows Forms Controls</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>System.Windows.Forms - Deals with Windows Form controls</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>WindowsFormsIntegration - Lets you to add HWND to WPF applications and 
+enables interoperability for WPF with Windows Forms.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>Step 2</b> - In order to use these assemblies inside your 
+WPF application, we need to include the namespaces in to your XAML 
+application.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Application.Window1</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span>"<span style="COLOR: red"> </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wfi</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">WFH in a WPF application</span>"<span style="COLOR: blue"> &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b>Step 3 </b>- WindowsFormsHost can contain controls from 
+Windows Forms  as its children. For example, to add a WF Button to an 
+application and set a name for it, use the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Application .Window1</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wfi</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">WFH in a WPF application</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wfi:WindowsFormsHost</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">250</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Height</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">150</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wf:Button</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">buttonone</span>"<span style="COLOR: blue"> 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wfi:WindowsFormsHost</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Additional Note – Using WFH in a Syncfusion Control</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">In this section, we will give a code snippet to add the WFH 
+to a Syncfusion WPF control; Docking Manager for example.</p>
+<p class="BodyText1">In order to use WFH element in a WPF application, we need to 
+set <b>UseInteropCompatibilityMode</b> property to true to make the Docking 
+Manager to be compatible with the WFH.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">WpfApplication11.Window1</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.microsoft.com/winfx/2006/xaml</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wfi</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:wf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns:syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">http://schemas.syncfusion.com/wpf</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Window1</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Height</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">300</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Width</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">300</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Set 
+      UseInteropCompatibilityMode to True in Docking Manager to use WFH 
+      compatible Docking Manager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion:DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">UseInteropCompatibilityMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">True</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">syncfusion:DockingManager.State</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Dock</span>"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">                  
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">syncfusion:DockingManager.SideInDockedMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Left</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding 
+      WFH in the Dock Panel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wfi:WindowsFormsHost</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Auto</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Width</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">Auto</span>"<span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;!--</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">Adding WF 
+      Button to it</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">          
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wf:Button</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x:Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">"<span style="COLOR: blue">Button1</span>"<span style="COLOR: blue"> </span><span style="COLOR: red">Text</span><span style="COLOR: blue">=</span>"<span style="COLOR: blue">WFH Button</span>"<span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">        
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">wfi:WindowsFormsHost</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">      
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StackPanel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion:DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Constraints in hosting a WFH in a WPF application</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">There are some complexities involved when a Windows Forms 
+control is hosted in a WPF control.  To explain this, we have a sample 
+using the standard Microsoft WPF Controls with WFH in it. Following are the 
+limitations of the WPF framework with a Windows Forms Host which is clearly 
+explained in the sample.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>In a WPF 
+application, when you add a Windows Forms Host control, it will always render at 
+the top layer of the WPF element, which is the default behavior of the WPF 
+Framework.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>WFH in WPF 
+cannot display a transparent pop up.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>In the 
+sample, <b>MouseLeave</b> event is raised for WPF border when we move the mouse 
+over its child ( WFH )</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>WFH doesn't 
+support animation; </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Doesn't 
+support routed events.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">You can download the sample from the below mentioned location 
+to see the behavior of a WFH in standard Microsoft WPF controls.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a href="http://www.syncfusion.com/support/user/uploads/WPF_WFH_Problem-1819107450.zip"><span class="UGHyperlink">http://www.syncfusion.com/support/user/uploads/WPF_WFH_Problem-1819107450.zip</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p672" id="p672"></a> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,73 @@
+---
+title: sorting5.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\sorting5.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+#### Sorting {#sorting style="tab-stops: 0pt"}
+
+[] 
+
+Sorting feature available in Grid Data Bound Grid control allows the user to arrange items in a sequence and/or in different sets. **SortBehaviour** property under the control allows you to sort a column in a data bound grid when the column header cell is clicked. Implementation of this property will rearrange the cell data in the clicked column. This property can be set either using code or designer. By default, it is set to perform sorting on a double-click.
+
+ 
+
+**GridSortBehavior** is an enumeration that defines the sorting behavior options/values.
+
+ 
+
+Following is the list of options/values that can be assigned to the SortBehaviour property:
+
+[] 
+
+[·      ]**SingleClick**: Sort column when user clicks once.
+
+[·      ]**DoubleClick**: Sort column when user double-clicks.
+
+[·      ]**None**: No sorting when user clicks.
+
+[] 
+
+The following code example illustrates sorting of columns on a single click.
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                                                                                          |
+|                                                                                                                                                                                         |
+| []                                                                                                                                    |
+|                                                                                                                                                                                         |
+| [this][.gridDataBoundGrid1.SortBehavior = [GridSortBehavior].SingleClick;] |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB.NET\]]**                                                                                         |
+|                                                                                                                                                            |
+| []                                                                                                       |
+|                                                                                                                                                            |
+| [Me][.gridDataBoundGrid1.SortBehavior = GridSortBehavior.SingleClick] |
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+{border="0"}
+
+[] 
+
+*[Figure ][213][: Sorting Column]*
+
+ 
+
+[]{#p376} 
+
+ 
+
+[]{#related-topics}
+

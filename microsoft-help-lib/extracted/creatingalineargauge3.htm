@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating a Linear Gauge</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="164142a8-e324-42b1-a4b8-632e94f3ce28" />
+<meta name="Title" content="Creating a Linear Gauge" />
+<meta name="Microsoft.Help.TocParent" content="d716349f-79c5-425f-9427-be17bc1c24cd" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/gauge3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Creating a Linear Gauge<span style="FONT-SIZE: 10pt"></span></h4>
+<p class="BodyText1">Following step-by-step instructions illustrate create a 
+Linear Gauge and add elements.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">1.   Add a Linear Gauge control to the Panel by 
+using the following code. Note that the Default orientation of the gauge is 
+Vertical.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="WpfApplication1.Window1" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="http://schemas.microsoft.com/winfx/2006/xaml"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="clr-namespace:Syncfusion.Windows.Gauge;assembly=Syncfusion.Gauge.WPF"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">glob</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="clr-namespace:System.Globalization;assembly=mscorlib" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Title</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Window1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="300"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="300"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="LayoutRoot"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="350"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Margin</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="25,-14,0,0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="linearGauge"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="150"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      HorizontalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Left"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                        
+      VerticalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Top"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Window</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> lineargauge = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.Height = 
+      350;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.Width = 
+      150;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.HorizontalAlignment 
+      = <span style="COLOR: #2b91af">HorizontalAlignment</span>.Left;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.VerticalAlignment 
+      = <span style="COLOR: #2b91af">VerticalAlignment</span>.Top;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(lineargauge);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">2.   To add a Scale to the Linear Gauge, make use 
+of the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Maximum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Minimum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ScaleBarLength</span><span style="COLOR: blue">="220"</span><span style="COLOR: red"> 
+      ScaleBarSize</span><span style="COLOR: blue">="10"</span> <span style="COLOR: red"> BorderBrush</span><span style="COLOR: blue">="White"</span><span style="COLOR: red"> 
+      BorderWidth</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> BackgroundBrush</span><span style="COLOR: blue">="Gray"</span><span style="COLOR: red"> 
+      MajorIntervalValue</span><span style="COLOR: blue">="10"</span><span style="COLOR: red"> MinorIntervalValue</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> 
+      ShadowOffset</span><span style="COLOR: blue">="0"</span><span style="COLOR: red"> ScaleDirection</span><span style="COLOR: blue">="CounterClockwise"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleBarLength = 
+      220;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BorderWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BackgroundBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ShadowOffset = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleDirection = 
+      ScaleDirection.CounterClockwise;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">3.   To add a Pointer to the Linear Gauge, make use 
+of the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearBarPointer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="pointer"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      PointerWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="8"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearPointer</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> pointer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearBarPointer</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">pointer.Value = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">pointer.PointerWidth = 
+      8;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Pointers.Add(pointer);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="NumberedList">4.   To add a complete Linear Gauge, make use of 
+the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="350"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Margin</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="25,20,0,0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="linearGauge"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="150" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">HorizontalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Left"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">VerticalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Top"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="m_indicator"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">,</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">ElementName</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">=pointer1}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Text</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Off"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">FontFamily</span><span style="COLOR: blue">="Verdana"</span><span style="COLOR: red">                
+      FontSize</span><span style="COLOR: blue">="12"</span><span style="COLOR: red"> IndicatorHeight</span><span style="COLOR: blue">="20"</span><span style="COLOR: red"> 
+      IndicatorStyle</span><span style="COLOR: blue">="CircularLED"</span><span style="COLOR: red"> IndicatorWidth</span><span style="COLOR: blue">="15"</span> <span style="COLOR: red">Location</span><span style="COLOR: blue">="50,93"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">                
+      &lt;!--Hosting State Range to Indicator.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      EndValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      StartValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="70"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator.StateRanges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.StateIndicators</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">        
+      &lt;!--Scale Style is Thermometer.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Maximum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="100"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Minimum</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      ScaleStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Thermometer"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ScaleBarLength</span><span style="COLOR: blue">="220"</span><span style="COLOR: red"> 
+      ScaleBarSize</span><span style="COLOR: blue">="10"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">        
+      BorderBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="White"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BorderWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BackgroundBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Gray"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">MajorIntervalValue</span><span style="COLOR: blue">="10"</span><span style="COLOR: red"> 
+      MinorIntervalValue</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> ShadowOffset</span><span style="COLOR: blue">="0"</span><span style="COLOR: red">                
+      ScaleDirection</span><span style="COLOR: blue">="CounterClockwise"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">                
+      &lt;!--Bar Style of Bar Pointer is Thermometer.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearBarPointer</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="pointer1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      PointerWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="8"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">BarStyle</span><span style="COLOR: blue">="Thermometer" 
+      /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Pointers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BackgroundBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="DarkBlue"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      RangePosition</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Outside"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">DistanceFromScale</span><span style="COLOR: blue">="10"</span><span style="COLOR: red"> 
+      StartWidth</span><span style="COLOR: blue">="5"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                
+      EndWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="15"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">StartValue</span><span style="COLOR: blue">="70"</span><span style="COLOR: red"> 
+      EndValue</span><span style="COLOR: blue">="100" &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">                
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearRange</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">            
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Ranges</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearMarkTick</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      DistanceFromScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="1"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red"> TickHeight</span><span style="COLOR: blue">="2"</span><span style="COLOR: red"> 
+      TickPlacement</span><span style="COLOR: blue">="Inside"</span> <span style="COLOR: red">TickStyle</span><span style="COLOR: blue">="MinorTick"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                
+      TickWidth</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="2" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearLabelTick</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="label1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      DistanceFromScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="10"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FontSize</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="11"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">TickPlacement</span><span style="COLOR: blue">="Inside"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">                
+      TickStyle</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="MajorTick" 
+      &gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearLabelTick.NumberFormatInfo</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">glob</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">NumberFormatInfo</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      NumberDecimalDigits</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="0"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearLabelTick.NumberFormatInfo</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearLabelTick</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale.Ticks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearScale</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.Scales</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">    
+      &lt;!--Custom labels for each set of label and mark 
+ticks.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">CircularCustomLabel</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="custlabel1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      FontWeight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="5"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt"> 
+      BackgroundBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="GhostWhite"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">FontSize</span><span style="COLOR: blue">="15"</span><span style="COLOR: red"> 
+      TextAngle</span><span style="COLOR: blue">="0"</span><span style="COLOR: red">                 
+      Location</span><span style="COLOR: blue">="32,90"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge.CustomLabels</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 9pt">LinearGauge</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearGauge</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> lineargauge = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearGauge</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.Height = 
+      350;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.Width = 
+      150;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.HorizontalAlignment 
+      = <span style="COLOR: #2b91af">HorizontalAlignment</span>.Left;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.VerticalAlignment 
+      = <span style="COLOR: #2b91af">VerticalAlignment</span>.Top;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">StateIndicator</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> m_indicator = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StateIndicator</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.Location = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Point</span>(75, 93);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.IndicatorHeight 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.IndicatorWidth 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.FontSize = 
+      12;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.IndicatorStyle 
+      = <span style="COLOR: #2b91af">IndicatorStyle</span>.CircularLED;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.Text = 
+      <span style="COLOR: #a31515">"Normal"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.BackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Green);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.ActiveBackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Red);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">m_indicator.ActiveText 
+      = <span style="COLOR: #a31515">"High"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.StateIndicators.Add(m_indicator);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating Scale and adding to gauge.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearScale</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> scale = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearScale</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Maximum = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Minimum = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleBarLength = 
+      220;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleBarSize = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BorderBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BorderWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.BackgroundBrush = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.MajorIntervalValue 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.MinorIntervalValue 
+      = 2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ShadowOffset = 
+      0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.ScaleDirection = 
+      ScaleDirection.CounterClockwise;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating Pointer and adding to Scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearPointer</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> pointer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearBarPointer</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">pointer.Value = 
+      10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">pointer.PointerWidth = 
+      8;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Pointers.Add(pointer);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating Range and adding to Scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearRange</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> l_range = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearRange</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.BackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.DarkBlue);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.RangePosition = 
+      <span style="COLOR: #2b91af">ScalePlacement</span>.Outside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.DistanceFromScale 
+      = 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.StartWidth = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.EndWidth = 
+      15;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.StartValue = 
+      70;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_range.EndValue = 
+      100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Ranges.Add(l_range);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating Mark Tick and adding to Scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearMarkTick</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> l_marktick = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearMarkTick</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.TickShape = 
+      <span style="COLOR: #2b91af">TickShape</span>.Rectangle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.TickWidth = 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.TickHeight = 
+      5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.TickStyle = 
+      <span style="COLOR: #2b91af">TickStyle</span>.MajorTick;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.DistanceFromScale 
+      = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_marktick.TickPlacement 
+      = <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Ticks.Add(l_marktick);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">// 
+      Creating Tick Label and adding to Scale.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9pt">LinearLabelTick</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> l_label = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">LinearLabelTick</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_label.FontSize = 
+      15;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_label.FontFamily = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Arial"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_label.DistanceFromScale 
+      = 5;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_label.TickPlacement = 
+      <span style="COLOR: #2b91af">ScalePlacement</span>.Inside;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">l_label.BackgroundBrush 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Brown);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">scale.Ticks.Add(l_label);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">lineargauge.Scales.Add(scale);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">LayoutRoot.Children.Add(lineargauge);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image54_61.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 58: Complete Linear Gauge</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a href="ms-xhelp:///?Id=6cce3743-478e-4a52-98ce-ac4cb3bae7f5"><span class="UGHyperlink">Concepts and Features</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p55" id="p55"></a> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Tooltip Support for ChartAxisLabels</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="ff58a119-125f-47f5-b894-99be09ac4908" />
+<meta name="Title" content="Tooltip Support for ChartAxisLabels" />
+<meta name="Microsoft.Help.TocParent" content="3ebe3f35-8337-4075-82f2-46d7704afba3" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Tooltip Support for ChartAxisLabels</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Essential Chart provides tooltip support for ChartAxisLabel. 
+By default ChartAxisLabel will be displayed as tooltip. You can also customize 
+the tooltip to show any content you want.</p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="BodyText1">If a ChartAxisLabel is too long and truncated, the tooltip 
+for the label will show the full text. You can also show additional information 
+about the ChartAxisLabel. </p>
+<p style="LINE-HEIGHT: 115%; TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<p class="BodyTextHeading">Adding Tooltip for ChartAxisLabel</p>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">To add a tooltip for chart, set the <i>ShowToolTips 
+</i>property to true. By default ChartAxisLabel content will be taken as tooltip 
+content.  You can also customize the tooltip content using the 
+<i>ChartFormatAxisLabel</i> event. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code illustrates how to add a customized 
+tooltip for ChartAxisLabel:</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartFormatAxisLabel += 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ChartFormatAxisLabelEventHandler</span>(chartControl1_ChartFormatAxisLabel);</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'"> series = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ChartSeries</span>(<span style="COLOR: #a31515">"Series"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series.Points.Add(0,120);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series.Points.Add(1,220);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series.Points.Add(2, 150);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series.Points.Add(3, 240);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">this</span>.chartControl1.Series.Add(series);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set 
+labeltext</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrLabel.Add(<span style="COLOR: #a31515">"India"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrLabel.Add(<span style="COLOR: #a31515">"Pakistan"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrLabel.Add(<span style="COLOR: #a31515">"Srilanka"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrLabel.Add(<span style="COLOR: #a31515">"Japan"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set tooltip content 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrTooltip.Add(<span style="COLOR: #a31515">"IND"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrTooltip.Add(<span style="COLOR: #a31515">"PAK"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrTooltip.Add(<span style="COLOR: #a31515">"SRL"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      arrTooltip.Add(<span style="COLOR: #a31515">"JPN"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">this</span>.chartControl1.ShowToolTips = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">this</span>.chartControl1.Series3D = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">this</span>.chartControl1.PrimaryYAxis.Title = 
+      <span style="COLOR: #a31515">"Product sold (Millions)"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">this</span>.chartControl1.PrimaryXAxis.Title = 
+      <span style="COLOR: #a31515">"Country"</span>;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">this</span>.chartControl1.Title.Text = <span style="COLOR: #a31515">"Product Sales"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> 
+      chartControl1_ChartFormatAxisLabel(<span style="COLOR: blue">object</span> 
+      sender, <span style="COLOR: #2b91af">ChartFormatAxisLabelEventArgs</span> 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">int</span> index = (<span style="COLOR: blue">int</span>)e.Value;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (e.AxisOrientation == <span style="COLOR: #2b91af">ChartOrientation</span>.Horizontal)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+          <span style="COLOR: blue">if</span> (index &gt;= 0 
+      &amp;&amp; index &lt; arrLabel.Count)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      e.Label = arrLabel[index].ToString();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Specify arrTooltip 
+      content as chartAxisLabel Tooltip </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      e.ToolTip = arrTooltip[index].ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      e.Handled = <span style="COLOR: blue">true</span>;   </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'"> chartControl1.ChartFormatAxisLabel, 
+      <span style="COLOR: blue">AddressOf</span> 
+      chartControl1_ChartFormatAxisLabel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> series <span style="COLOR: blue">As</span> ChartSeries = <span style="COLOR: blue">New</span> ChartSeries("Series")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      series.Points.Add(0,120)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      series.Points.Add(1,220)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      series.Points.Add(2, 150)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      series.Points.Add(3, 240)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Me</span>.chartControl1.Series.Add(series)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set 
+labeltext</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrLabel.Add("India")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrLabel.Add("Pakistan")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrLabel.Add("Srilanka")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrLabel.Add("Japan")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Set tooltip 
+      content</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrTooltip.Add("IND")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrTooltip.Add("PAK")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrTooltip.Add("SRL")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      arrTooltip.Add("JPN")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Me</span>.chartControl1.ShowToolTips = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Me</span>.chartControl1.Series3D = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+         <span style="COLOR: blue">Me</span>.chartControl1.PrimaryYAxis.Title = "Product 
+      sold (Millions)"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+         <span style="COLOR: blue">Me</span>.chartControl1.PrimaryXAxis.Title = 
+      "Country"</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+         <span style="COLOR: blue">Me</span>.chartControl1.Title.Text 
+      = "Product Sales"</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">Private</span> <span style="COLOR: blue">Sub</span> chartControl1_ChartFormatAxisLabel(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> ChartFormatAxisLabelEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Dim</span> index <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      <span style="COLOR: blue">CInt</span>(Fix(e.Value))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">If</span> e.AxisOrientation = 
+      ChartOrientation.Horizontal <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">If</span> index &gt;= 0 <span style="COLOR: blue">AndAlso</span> index &lt; arrLabel.Count <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      e.Label = arrLabel(index).ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Specify arrTooltip 
+      content as chartAxisLabel Tooltip</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      e.ToolTip = arrTooltip(index).ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      e.Handled = <span style="COLOR: blue">True</span></span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\sivakumard\Desktop\Tooltip.png" src="ImagesExt/image84_263.png" /></p>
+<p class="MsoCaption">Figure 263: Customized Tooltip</p>
+<p class="MsoCaption"> </p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Refer Also </p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1"><a><span class="UGHyperlink">Customizing Label Text</span></a> 
+and <a><span class="UGHyperlink">ToolTip</span></a></p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

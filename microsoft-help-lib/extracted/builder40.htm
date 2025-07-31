@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Builder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="96b90c84-03f3-45d0-824c-137bfd453152" />
+<meta name="Title" content="Builder" />
+<meta name="Microsoft.Help.TocParent" content="0f2c5a03-ad9b-41b9-adf7-d897e307b302" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Builder</h5>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyText1">To create a HiLoOpenClose chart with OpenCloseDrawMode 
+through Builder:</p>
+<p style="MARGIN-LEFT: 27pt; tab-stops: 27.0pt" class="NumberedList">1.   In Controller, return view to the 
+corresponding View page.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">[C#]</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In the <b>View 
+Page</b>, invoke the ChartBuilder by using the control ID as the first 
+argument.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Add the 
+<b>Series</b> to the ChartModel and set the series type to <b>HiLoOpenClose</b>, 
+and add the <b>Points</b> to the series and set the style.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the 
+<b>ChartModel</b> and <b>ChartArea</b> properties.</p>
+<p class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">View [ASPX]</p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"HiLo Chart"</span>).Series(series =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Name(<span style="COLOR: #a31515">"FT"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.HiLoOpenClose)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      <span style="COLOR: #2b91af">DateTime</span> start = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DateTime</span>(2006, 2, 12);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(0), 456, 214, 364, 386);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(1), 491, 234, 321, 378);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(2), 482, 193, 302, 352);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(3), 437, 243, 354, 391);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(4), 421, 223, 317, 367);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(5), 434, 263, 339, 385);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(6), 425, 245, 365, 396);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(7), 457, 234, 385, 398);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(8), 482, 267, 316, 389);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(9), 496, 285, 374, 399);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    
+      .ConfigItems(configitems =&gt; {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      configitems.HiLoOpenCloseItem(item =&gt; 
+      {                          
+      item.DrawMode(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartOpenCloseDrawMode</span>.Open);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//---------Set the 
+      ChartModel and ChartArea properties that you want------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p class="MsoNormal">View [cshtml]</p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="BACKGROUND: yellow">@{</span> Html.Chart(<span style="COLOR: #a31515">"chart_Model"</span>).Text(<span style="COLOR: #a31515">"HiLo Chart"</span>).Series(series =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series.Add()</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Name(<span style="COLOR: #a31515">"FT"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      .Type(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartSeriesType</span>.HiLoOpenClose)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      .Points(points =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                      
+      <span style="COLOR: #2b91af">DateTime</span> start = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DateTime</span>(2006, 2, 12);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(0), 456, 214, 364, 386);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(1), 491, 234, 321, 378);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(2), 482, 193, 302, 352);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(3), 437, 243, 354, 391);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(4), 421, 223, 317, 367);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(5), 434, 263, 339, 385);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(6), 425, 245, 365, 396);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">        
+                    points.Add(start.AddDays(7), 
+      457, 234, 385, 398);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(8), 482, 267, 316, 389);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      points.Add(start.AddDays(9), 496, 285, 374, 399);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">    
+      .ConfigItems(configitems =&gt; {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      configitems.HiLoOpenCloseItem(item =&gt; 
+      {                          
+      item.DrawMode(Syncfusion.Windows.Forms.Chart.<span style="COLOR: #2b91af">ChartOpenCloseDrawMode</span>.Open);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                      
+      });</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                  
+      });</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//---------Set the 
+      ChartModel and ChartArea properties that you want------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Build and run the 
+application, to get the following output:</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image69_174.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 249: HiLoOpenClose chart with OpenCloseDrawMode as 
+Open</p>
+<p class="MsoCaption"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Diagram Architecture</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="13e3ac00-b902-4204-8731-38db68c5c6fc" />
+<meta name="Title" content="Diagram Architecture" />
+<meta name="Microsoft.Help.TocParent" content="c37538af-02be-40ac-bc8d-eef94f6fd0ed" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram4.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=c37538af-02be-40ac-bc8d-eef94f6fd0ed"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=33751d65-5b2d-4ab6-aee1-95d79273d2cd"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7f4f82c5-151c-4262-94d0-75c4626c77bc">Essential 
+WPF</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Diagram</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c37538af-02be-40ac-bc8d-eef94f6fd0ed">Getting 
+Started</a></div>
+<h2 style="tab-stops: 0pt">Diagram Architecture</h2>
+<p class="BodyText1">The following is a general description about the important 
+classes of Diagram WPF. These classes form the base of the control. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Diagram Control</p>
+<p class="BodyText1">The Diagram control is the base class, which contains the 
+view and the model. It receives user input and translates it into actions and 
+commands on the model and view. It also implements SymbolPalette and scrolling, 
+and enables horizontal and vertical scrollbars when the size of the view exceeds 
+the size of the window. <br /><br /><b>Diagram Model</b></p>
+<p class="BodyText1">A model represents data for an application and contains the 
+logic for adding, accessing, and manipulating the data. Nodes and connectors are 
+added to the Diagram Control using the <b>Model</b> property. A predefined 
+layout can be applied using the <b>LayoutType </b>property of the DiagramModel, 
+or the position of the nodes can be manually specified.</p>
+<p class="BodyTextHeading"><span style="FONT-SIZE: 9pt"><br /></span>Diagram 
+View</p>
+<p class="BodyText1">The view obtains data from the model and presents them to the 
+user. It typically manages the overall layout of the data obtained from the 
+model.<br /><br />Apart from presenting the data, view also handles navigation 
+between the items, and some aspects of item selection. The views also implements 
+basic user interface features, such as rulers, and drag-and-drop. It handles the 
+events, which occur on the objects, obtained from the model. Command mechanism 
+is also implemented by the view.<br /><br />A view can be constructed without a 
+model, but a model must be provided before it can display useful information. 
+Views can also render additional visual information that do not exist inside the 
+model such as bounding boxes and grids. These additional view-specific objects 
+are referred to as decorators, because they provide additional visual aids and 
+window dressing to the view; but they are not actually a part of the model.</p>
+<p class="BodyTextHeading"><br />Diagram Page</p>
+<p class="BodyText1">The DiagramPage is just a container to hold the objects(nodes 
+and connectors) added through the model. The DiagramView uses the page to 
+display the diagram objects. As mentioned before, the view implements several 
+basic user interface features like rulers, grids, events and commands. So 
+therefore page is just a container to hold the graphical objects added through 
+the model and the DiagramView uses it to display the objects.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">SymbolPalette</p>
+<p class="BodyText1">The SymbolPalette control displays node shapes and allows a 
+user to drag and drop symbols onto diagrams. It supports grouping and filtering 
+symbols. It allows users to classify items as groups, so they can be navigated 
+easily. Also, custom shapes can be added to the SymbolPalette.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">SymbolPaletteGroup</p>
+<p class="BodyText1">A SymbolPalette group is a collection of SymbolPalette items. 
+It is used to group the items in the SymbolPalette control based on 
+classifications provided. The SymbolPalette group can be added to the 
+SymbolPalette using the SymbolGroups property.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">SymbolPaletteFilter<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-WEIGHT: normal"></span></p>
+<p class="BodyText1">A SymbolPalette filter can be added to the SymbolPalette 
+control, using the <b>SymbolFilters</b> property, so that only desired 
+SymbolPalette groups get displayed. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">SymbolPaletteItem<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-WEIGHT: normal"></span></p>
+<p class="BodyText1">SymbolPalette items are contained in the SymbolPalette group. 
+A SymbolPalette item does not restrict users to the type of content that can be 
+added to it. A SymbolPalette item can be a text box, combo box, image, button, 
+and so on.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">Horizontal / Vertical Ruler<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></p>
+<p class="BodyText1">Rulers display the coordinates of elements on the diagram 
+page. Negative label values get displayed on the ruler in case the page is 
+panned to the right side. On Zooming, the ruler values get adjusted accordingly, 
+to match with the current Zoom level. At any point, the ruler value always 
+indicates the exact coordinates of the page and its elements. So when the page 
+is zoomed, the interval values get halved or doubled depending upon the zoom 
+level.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\jeganr\Desktop\UGDocumentation\diagramWPF\DiagramPageIllustrated.png" src="ImagesExt/image82_14.jpg" /></p>
+<p class="MsoCaption">Figure 10: Diagram Page Illustrated<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p><span id="related-topics"></span></div></body></html>

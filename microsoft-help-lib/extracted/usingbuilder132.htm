@@ -1,0 +1,775 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using Builder</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="fab33341-9827-4683-b8e0-91be80e26e54" />
+    <meta name="Title" content="Using Builder" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">Using Builder</h5>
+      <p class="BodyText1">The following steps explain the addition of a dialog to an 
+application using Builder.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">1.   In <b>View</b>, 
+invoke the tab helper with the Control ID as the first argument and add the Tab 
+items using the items Add() method.</p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 468.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="624">
+        <tbody>
+          <tr style="HEIGHT: 35.15pt">
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468.05pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.15pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+              <p class="MsoNormalCxSpMiddle">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p class="MsoNormalCxSpMiddle">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p class="MsoNormalCxSpMiddle">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Site.Master]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'"> 
+      Html.MobSyncfusion().StyleManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      stylesheets.Add(<span style="COLOR: #2b91af">MobComponentType</span>.Tab);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Index.ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>Html.MobSyncfusion().Tab(<span style="COLOR: #a31515">"tab "</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .TabStyle(<span style="COLOR: #2b91af">TabStyle</span>.Closed)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Items(tabitem =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      .Text(<span style="COLOR: #a31515">"Christiano Ronaldo"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      .Content((Tab) =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+                {<span style="BACKGROUND: yellow">%&gt;</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Cristiano Ronaldo dos Santos Aveiro<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      5 February 1985 (age 25)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+                    Ronaldo 
+      is a Portuguese footballer who plays as a winger for Spanish club Real 
+      Madrid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>});</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      .Text(<span style="COLOR: #a31515">"Villa"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                 
+      .Content((Tab) =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                 
+      {<span style="BACKGROUND: yellow">%&gt;</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      David Villa Sánchez<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      3 December 1981 (age 29)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      David Villa is a Spanish footballer who currently plays as a striker for 
+      FC Barcelona</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      and the Spanish national football team.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>});</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">     .Text(<span style="COLOR: #a31515">"Rooney"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      
+      .Content((Tab) =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      {<span style="BACKGROUND: yellow">%&gt;</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Wayne Mark Rooney<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+          24 October 1985 (age 25)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Rooney is an English footballer who plays as a striker for Premier League 
+      club Manchester</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      United and the England national team.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>});</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+          })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      
+      .Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+        </b> </p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+        </b> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">Razor:</span>
+                </b>
+              </p>
+              <p class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[_Layout.cshtml]</span>
+                </b>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    
+      Html.MobSyncfusion().StyleManager()</span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      {</span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      stylesheets.Add(</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">MobComponentType</span>
+                <span style="FONT-FAMILY: 'Courier New'">.Tab);</span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      }).Render();</span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Index.cshtml]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">Html.MobSyncfusion().Tab(<span style="COLOR: #a31515">"tab"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    .TabStyle(<span style="COLOR: #2b91af">TabStyle</span>.Closed)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    .Items(tabitem 
+      =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      .Text(<span style="COLOR: #a31515">"Christiano Ronaldo"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      .Content(<span style="BACKGROUND: yellow">@</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Cristiano Ronaldo dos Santos Aveiro<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      5 February 1985 (age 25)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                  
+      Ronaldo is a Portuguese footballer who plays as a winger for Spanish club 
+      Real Madrid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;)</span>;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      
+      .Text(<span style="COLOR: #a31515">"Villa"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       
+      .Content(<span style="BACKGROUND: yellow">@</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      David Villa Sánchez<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+             <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      3 December 1981 (age 29)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      David Villa is a Spanish footballer who currently plays as a striker for 
+      FC Barcelona</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      and the Spanish national football team.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    );</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      tabitem.Add()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">     .Text(<span style="COLOR: #a31515">"Rooney"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      
+      .Content(<span style="BACKGROUND: yellow">@</span><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">         
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pInfo"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Full Name:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Wayne Mark Rooney<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Date of Birth :<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      24 October 1985 (age 25)<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="pTitle"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Description:<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">  
+                  <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">div</span><span style="COLOR: red">class</span><span style="COLOR: blue">="playerDesc"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      Rooney is an English footballer who plays as a striker for Premier League 
+      club Manchester</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      United and the England national team.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;&lt;</span><span style="COLOR: maroon">br</span><span style="COLOR: blue">/&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">div</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">.Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span>
+              </p>
+              <p class="MsoNormalCxSpMiddle">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+        </b> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   Build and run the 
+application in an emulator. The output will be as follows:</p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\krishnarajd\Desktop\tab-s1.png" src="ImagesExt/image103_226.jpg" />
+      </p>
+      <p class="MsoNormal">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 12pt"></span>
+        </b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Selecting Points</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="ef79122f-b530-400b-b933-ed0b8663bd63" />
+<meta name="Title" content="Selecting Points" />
+<meta name="Microsoft.Help.TocParent" content="350a4174-4413-41a6-aa6c-ad875a5c4c7f" />
+<meta name="Microsoft.Help.TocOrder" content="11" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Selecting Points</h5>
+<p class="BodyText1">Chart for WPF lets you implement list box-like selection of 
+data point segments in your chart. The following steps illustrate this.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="BodyTextHeading">1.   Bind the Chart to a 
+CollectionViewSource</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">Wrap your data in a CollectionViewSource and bind this to a 
+Chart Series.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!--Create a 
+      CollectionViewSource.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">local</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">MyDataCollection</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="SeriesData1"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">CollectionViewSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="cvs"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Source</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SeriesData1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue"> /&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!--Bind this to a 
+      Chart Series.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">sfchart</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ChartSeries</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> DataSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Source</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">={</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> cvs</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Template</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SeriesTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Column"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> BindingPathX</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Date"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> BindingPathsY</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Y2" 
+  /&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">The CollectionViewSource has a <b>CurrentItem </b>property 
+which tracks the "selected item". The Chart control listens to this property 
+change and updates the corresponding data point's <b>ChartSegment.IsSelected</b> 
+property appropriately.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="BodyTextHeading">2.   Create a Custom Template</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">Create a custom template that renders a data-point segment 
+with a "selected" look and feel, when the ChartSegment.IsSelected property 
+changes to <b><i>true</i></b>.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!-- This template 
+      helps in 2 ways. 1) It enables to bind to IsSelected property to change 
+      the selected segment color. 2) It enables to listen to Canvas.MouseDown 
+      event to change selection.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="SeriesTemplate"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!--Change the 
+      CollectionView.CurrentItem in the handler.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Canvas</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MouseDown</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Canvas_MouseDown"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Canvas.Left</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> X</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Canvas.Top</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Y</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ColumnRect"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      VerticalAlignment</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Bottom"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Width</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Height</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Border.Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> TargetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Type</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="BorderThickness"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="BorderBrush"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Black"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Background"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Interior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style.Triggers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTrigger</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTrigger.Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!-- By 
+      binding to IsSelected you can change the background of 
+      "CollectionView.CurrentItem".--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                    
+      </span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span></b><b><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span></b><b><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Path</span></b><b><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="IsSelected"/&gt;</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTrigger.Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Setter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Property</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Background"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">StaticResource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      MouseHoverInterior</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTrigger</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style.Triggers</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Border.Style</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Border</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Canvas</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DataTemplate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">&lt;!--Defines the 
+      interior that will be used as the "highlight" color.--&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">LinearGradientBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Key</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="MouseHoverInterior"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> StartPoint</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0,0.5"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> EndPoint</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1,0.5"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GradientStop</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Color</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="#FFFDAE41"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Offset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GradientStop</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Color</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="#FFFDC55C"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Offset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0.860442"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GradientStop</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Color</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="#FFFDDD77"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Offset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="0.989014"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GradientStop</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Color</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="#FFFDDD77"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Offset</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="1"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">LinearGradientBrush</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">This will cause the CollectionView.CurrentItem to be rendered 
+distinctly. Note that the CurrentItem can be changed by a different Control 
+bound to the same CollectionView, and this change will be automatically 
+reflected in the Chart.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="BodyTextHeading">3.   Change CollectionView.CurrentItem </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Change it when any Mouse Button is pressed while the Mouse 
+Pointer is moved over a Data Point Segment.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To change the CurrentItem when any mouse button is pressed 
+while the mouse pointer is moved over a data point segment, listen to the 
+<b>MouseDown</b> event of the top-level Canvas in the template, as illustrated 
+in the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      Canvas_MouseDown(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">MouseButtonEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Get the corresponding Chart 
+      Segment.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">ChartSegment</span> seg = ((<span style="COLOR: #2b91af">ChartSeriesPresenter</span>.<span style="COLOR: #2b91af">ChartSegmentPresenter</span>)(((<span style="COLOR: #2b91af">Canvas</span>)sender).TemplatedParent)).Segment;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Get the corresponding bound 
+      CollectionView.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">CollectionView</span> cv = seg.Series.DataSource 
+      <span style="COLOR: blue">as</span> <span style="COLOR: #2b91af">CollectionView</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: green">// Set the CurrentItem in the 
+      CollectionView.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      cv.MoveCurrentToPosition(seg.CorrespondingPoints[0].Index);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image81_109.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 105: Selecting Data Points as in a List Box</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">A sample which demonstrates Data Point highlighting feature 
+is available in the following sample installation path.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"><b><i>..My Documents\Syncfusion\EssentialStudio\&lt;Version 
+Number&gt;\WPF\Chart.WPF\Samples\3.5\WindowsSamples\Chart Series\Selectable Data 
+Points Demo</i></b></p>
+<p class="BodyText1"><b><i></i></b> </p>
+<p class="BodyTextHeading">See Also</p>
+<p class="MsoNormal"><a href="ms-xhelp:///?Id=063226c4-6e21-484f-98cc-f4ef6b23cc96"><span class="UGHyperlink">Highlighting Series,</span></a><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"> 
+</span><a href="ms-xhelp:///?Id=a691e0fa-d7b6-402f-ac3c-7789791734d5"><span class="UGHyperlink">Highlighting Data Points</span></a><a name="p64" id="p64"></a><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt">, 
+</span><a href="ms-xhelp:///?Id=bc84e9bb-bdf8-437e-a4b5-780a1646e087"><span class="UGHyperlink">Populating Chart Series</span></a><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"> 
+</span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

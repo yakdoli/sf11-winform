@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>BaseStyles</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="15e2aa37-1cc9-4c6e-9ef7-c7bd57fbd3d7" />
+<meta name="Title" content="BaseStyles" />
+<meta name="Microsoft.Help.TocParent" content="8000625c-29ba-4604-b9b7-426e9e30a6ba" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">BaseStyles</h5>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">In addition to the parent styles discussed in the previous 
+topics, Essential Grid supports one other parent-type style which, can 
+contribute to a cell's appearance, they are BaseStyles of GridStyleInfo objects 
+which, can be associated with an arbitrary collection of cells.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">BaseStyles provide the way to create StyleTemplates that can 
+be applied to the cells. It allows you to apply styles with ease and in faster 
+manner. For example, in a word processing software, there is the common task of 
+defining a particular style (such as style Header1 representing a bold, 20-point 
+Helvetica font) and then using it repeatedly in your document whenever you need 
+a 'Header1' type.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">BaseStyles play the same role within Essential Grid. You can 
+define a BaseStyle named Header1 as having certain properties and then you can 
+place these properties onto any cell just by applying this BaseStyle Header1 to 
+the cell. More importantly is that if later on you want to change what Header1 
+means (for example, changing its BackColor property from white to red), you can 
+make the change one time by just changing the Header1 BaseStyle and not having 
+to relabel every other cell assigned to this BaseStyle.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">BaseStyles are stored in the 
+GridGroupingControl.TableModel.BaseStylesMap class. In addition to the 
+standardstyle, other BaseStyles used by all Essential Grids include Row Header, 
+Header and Column Header. You can define and apply your own BaseStyles as 
+well.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Users can add base styles to the engine and inherit the style 
+settings through GridStyleInfo.BaseStyle property. You can create any number of 
+style templates through BaseStyles. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Applying BaseStyles</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Segoe UI','sans-serif'; COLOR: #4a5c8c; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   To add style 
+templates at design time, you need to access the BaseStyles property in the 
+property editor. This will open the GridTableStyle Collection Editor that lists 
+the StyleInfo properties that can be associated to a grid cell. Here is a 
+property editor that shows the creation of two style templates named BaseStyle1 
+and BaseStyle2.</p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_385.png" alt="" /></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"> </p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">327</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+GridTableBaseStyle Collection Editor</span></i></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Your next step is 
+to set the base styles created above, to the grid cells as required. Suppose if 
+you want to set BaseStyle1 for alternate record field cells and BaseStyle2 for 
+the remaining cells, then this can be specified by setting 
+Appearance.AlternateRecordFieldCell.BaseStyle property to BaseStyle1 and 
+Appearance.AnyCell.BaseStyle property to BaseStyle2 as shown in the image 
+below.</p>
+<p class="MsoNormal"> </p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_386.png" alt="" /></p>
+<p class="Figure"> </p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">328</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Setting the Base Styles to the respective Grid Cells</span></i></p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Here is a sample 
+screenshot.</p>
+<p class="MsoNormal"> </p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_387.png" alt="" /></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">329</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Base Styles applied to the Grid Grouping Control</span></i></p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Programmatically</p>
+<p class="BodyText1"><span style="COLOR: #4a5c8c; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Base styles can also be set through code. The following code 
+example illustrates how to create and apply the above styles to the grouping 
+grid.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridTableBaseStyle</span><span style="FONT-FAMILY: 'Courier New'"> style1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridTableBaseStyle</span>(<span style="COLOR: #a31515">"BaseStyle 1"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.Name = 
+      <span style="COLOR: #a31515">"BaseStyle 1"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.StyleInfo.Font.Facename = <span style="COLOR: #a31515">"Verdana"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.StyleInfo.Interior = <span style="COLOR: blue">new</span> BrushInfo(<span style="COLOR: #2b91af">Color</span>.FromArgb(255, 128, 0));</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridTableBaseStyle</span><span style="FONT-FAMILY: 'Courier New'"> style2 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridTableBaseStyle</span>(<span style="COLOR: #a31515">"BaseStyle 2"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.Name = 
+      <span style="COLOR: #a31515">"BaseStyle 2"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.StyleInfo.Font.Facename = <span style="COLOR: #a31515">"Arial"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.StyleInfo.Interior = <span style="COLOR: blue">new</span> BrushInfo(<span style="COLOR: #2b91af">Color</span>.FromArgb(192, 192, 255));</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles.AddRange(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridTableBaseStyle</span>[] { style1, style2 
+      });</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Appearance.AlternateRecordFieldCell.BaseStyle 
+      = <span style="COLOR: #a31515">"BaseStyle 1"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Appearance.AnyCell.BaseStyle 
+      = <span style="COLOR: #a31515">"BaseStyle 
+  2"</span>;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> style1 <span style="COLOR: blue">As</span> GridTableBaseStyle = <span style="COLOR: blue">New</span> GridTableBaseStyle(<span style="COLOR: #a31515">"BaseStyle 1"</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.Name = 
+      <span style="COLOR: #a31515">"BaseStyle 1"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.StyleInfo.Font.Facename = <span style="COLOR: #a31515">"Verdana"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style1.StyleInfo.Interior = <span style="COLOR: blue">New</span> BrushInfo(Color.FromArgb(255, 128, 
+      0))</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> style2 <span style="COLOR: blue">As</span> GridTableBaseStyle = <span style="COLOR: blue">New</span> GridTableBaseStyle(<span style="COLOR: #a31515">"BaseStyle 2"</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.Name = 
+      <span style="COLOR: #a31515">"BaseStyle 2"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.StyleInfo.Font.Facename = <span style="COLOR: #a31515">"Arial"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">style2.StyleInfo.Interior = <span style="COLOR: blue">New</span> BrushInfo(Color.FromArgb(192, 192, 
+      255))</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.BaseStyles.AddRange(<span style="COLOR: blue">New</span> GridTableBaseStyle() { style1, style2 
+      });</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Appearance.AlternateRecordFieldCell.BaseStyle 
+      = <span style="COLOR: #a31515">"BaseStyle 1"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">gridGroupingControl1.Appearance.AnyCell.BaseStyle 
+      = <span style="COLOR: #a31515">"BaseStyle 
+  2"</span>;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p454" id="p454"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

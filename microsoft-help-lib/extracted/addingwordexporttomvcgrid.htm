@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Word Export to MVC Grid</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="9f4288d0-898f-4db9-878f-2ea0fddd00fe" />
+<meta name="Title" content="Adding Word Export to MVC Grid" />
+<meta name="Microsoft.Help.TocParent" content="da6429bd-4ff5-4756-b503-ae7eecff11e0" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Adding Word Export to MVC Grid</h4>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Through GridBuilder</p>
+<p class="MsoNormal">The steps to enable the Word exporting feature through 
+<b>GridBuilder</b> are as follows:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   <a>Create a model 
+in the application<span style="COLOR: windowtext">.</span></a></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   <a>Create a 
+strongly typed view<span style="COLOR: windowtext">.</span></a> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the view, use 
+the <b>Model</b> property in the <b>Datasource()</b> to bind the data 
+source.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Configure the 
+grid toolbar and add a mapper to enable grid record exporting.</p>
+<p style="MARGIN-LEFT: 36pt; tab-stops: 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">ASPX</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"OrdersGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 89.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      ----------------</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 89.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      ----------------</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .ToolBar( toolbar =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      toolbar.Add(<span style="COLOR: #2b91af">GridToolBarItems</span>.WordExport,<span style="COLOR: #a31515">"Word Export"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Mappers(map =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  
+                            map. 
+      ExportWordAction(<span style="COLOR: #a31515">"ExportToWord"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Razor</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@ {</span><span style="FONT-FAMILY: 'Courier New'"> Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"OrdersGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 89.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      ----------------</span></p>
+      <p style="TEXT-AUTOSPACE: ; tab-stops: 89.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      ----------------</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .ToolBar( toolbar =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      toolbar.Add(<span style="COLOR: #2b91af">GridToolBarItems</span>.WordExport,<span style="COLOR: #a31515">"Word Export"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      .Mappers(map =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      map. ExportWordAction(<span style="COLOR: #a31515">"ExportToWord"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Set its data 
+source and render the view.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">var</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span> 
+      ().Orders.Take(200).ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> View(data);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+  }</span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Specify the file 
+name and document version details in the <b>GridExportToWord()</b> method.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> ExportToWord(<span style="COLOR: #2b91af">PagingParams</span> args)</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">var</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.Take(200).ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> data.GridExportToWord&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"GridWord.doc"</span>, <span style="COLOR: #2b91af">DocumentVersion</span>.Word2007, 
+      args.ExportOption);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p class="BodyTextHeading">Through Properties Model</p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   <a>Create a model 
+in the application.</a> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Add the following 
+code to the view.</p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"OrdersGrid","GridModel",</span> column 
+      =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>).Format(<span style="COLOR: #a31515">"{0:dddd, MMMM d, yyyy}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipPostalCode).HeaderText(<span style="COLOR: #a31515">"Ship postal Code"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.Freight).HeaderText(<span style="COLOR: #a31515">"Frieght"</span>).Format(<span style="COLOR: #a31515">"{Freight:#,#}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">%&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[Razor]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"> Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"OrdersGrid","GridModel",</span> column 
+      =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>).Format(<span style="COLOR: #a31515">"{0:dddd, MMMM d, yyyy}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ShipPostalCode).HeaderText(<span style="COLOR: #a31515">"Ship postal Code"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.Freight).HeaderText(<span style="COLOR: #a31515">"Frieght"</span>).Format(<span style="COLOR: #a31515">"{Freight:#,#}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }).Render();;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Create a 
+<b>GridPropertiesModel</b> and assign the grid properties in the model.</p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 473pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="631">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">GridPropertiesModel</span> &lt;<span style="COLOR: #2b91af">Order</span>&gt; model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPropertiesModel</span> &lt;<span style="COLOR: #2b91af">Order</span>&gt;()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      DataSource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.Take(200),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      Caption = <span style="COLOR: #a31515">"Orders"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      AllowPaging = <span style="COLOR: blue">true</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      AllowSorting = <span style="COLOR: blue">true</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+  };</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Configure the 
+<b>GridPropertiesModel</b> as displayed below to accept the WordExport 
+,ActionMapper and to render the toolbar.</p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 473pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="631">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ToolbarSettings</span><span style="FONT-FAMILY: 'Courier New'"> toolbar = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ToolbarSettings</span> ();</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">toolbar.Enable = <span style="COLOR: blue">true</span>; <span style="COLOR: green">// Used to 
+      enable the toolbar.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Add the Word toolbar 
+      item to the toolbar with a caption and mapper name.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">toolbar.Items.Add(<span style="COLOR: #2b91af">GridToolBarItems</span>.WordExport, <span style="COLOR: #a31515">" </span>Word Export<span style="COLOR: #a31515">"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">model.ToolBar = 
+  toolbar;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Specify the file 
+name, PDF version, and export option details in the <b>GridExportToWord()</b> 
+method.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 473pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="631">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Controller</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> ExportToWord(<span style="COLOR: #2b91af">PagingParams</span> args)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">var</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.Take(200).ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> data.GridExportToWord&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"GridWord.doc"</span>, <span style="COLOR: #2b91af">DocumentVersion</span>.Word2007, 
+      args.ExportOption);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

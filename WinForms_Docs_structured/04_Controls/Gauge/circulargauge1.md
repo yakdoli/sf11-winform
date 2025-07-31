@@ -1,0 +1,37 @@
+---
+title: circulargauge1.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\04_Controls\Gauge\circulargauge1.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+## Circular gauge {#circular-gauge style="tab-stops: 0pt"}
+
+[] 
+
+Circular gauge can be used for representing a range of values in Circular form. It can be used to create sophisticated dashboards, clocks, industrial equipments, medical equipment and many more. This section comprises the following[]{#p14}
+
+More:
+
+
+
+
+
+
+

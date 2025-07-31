@@ -1,0 +1,314 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Add StyleManager and ScriptManager</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="736cbb0a-0c8f-4440-90d5-ec90d5233fe6" />
+    <meta name="Title" content="Add StyleManager and ScriptManager" />
+    <link rel="stylesheet" type="text/css" href="Theme/nav.css" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/chart%20MVC%20in%20HTML%205.css" />
+    <script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+      <div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+        <div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+          <p class="d2h_main_linknav" align="left">
+            <a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=bcafc1da-d96b-49ae-83c0-9f260b19f20f"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=09604f98-8f6f-4cd0-9e34-4cfe0bf15754"></a></p>
+        </div>
+      </div>
+    </div>
+    <div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+      <div id="d2h_breadcrumbs" class="d2h_breadcrumbs">
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=4b14e7d1-65c4-4f67-b1aa-2c37709905a5">Essential ASP.NET 
+MVC</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <span class="d2h_breadcrumbsContentsOnly">Essential Chart in HTML 5</span>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7be0cc3e-239f-44db-9c07-5f5ed873d123">Getting Started in 
+ASP.NET MVC</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e9e28e04-6ad0-4db3-9a78-79cc6f53cd9d">Adding Essential 
+Chart MVC to the Application</a>
+      </div>
+      <h3 style="TEXT-INDENT: -36pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt">Add 
+StyleManager and ScriptManager </h3>
+      <p class="BodyTextHeading">Adding StyleManager</p>
+      <p class="BodyText1">
+        <b>StyleManager</b> is a new CSS resource manager that helps 
+in registering CSS files which enables Minification, Compression, Combination of 
+CSS resources for ASP.NET MVC web applications. The files in StyleManager 
+resources are set to be combined, minified, and compressed (either gzip or 
+deflate, depending on your browser) before sending to browser. All are done 
+using a single HTTP request per resource set.</p>
+      <p class="BodyText1">Add the StyleManager extension method in the HEAD tag of the 
+View pages (in most cases, it is reasonable to call it within the Site.Master 
+page). Use Register method to register Grid component.</p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 468pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="624">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>{</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      Html.Syncfusion().StyleManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Minify(<span style="COLOR: blue">true</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Combine(<span style="COLOR: blue">false</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      stylesheets.Add(<span style="COLOR: #2b91af">ComponentType</span>.{ComponentName});</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      }).Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      } <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="BodyTextHeading"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 468pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="624">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">@{</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      Html.Syncfusion().StyleManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      stylesheets.Add(<span style="COLOR: #2b91af">ComponentType</span>.{ComponentName});</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      }).Render();</span>
+              </p>
+              <p class="BodyTextHeading">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="BodyTextHeading"> </p>
+      <p class="BodyTextHeading"> </p>
+      <p class="BodyTextHeading">Adding ScriptManager</p>
+      <p class="BodyText1">
+        <b>ScriptManager</b> is a new script resource manager that 
+helps in registering the JavaScript files. The ScriptManager registers only the 
+Syncfusion.Mvc components script files. The files in ScriptManager resources are 
+set to be combined, minified, and compressed (either gzip and deflate, depending 
+on your browser) before sending to browser.</p>
+      <p class="MsoNormal"> </p>
+      <p class="BodyText1">ScriptManager() extension has improved performance over the 
+<b>RegisterStaticResource</b>() method. Hence we always suggest this method in 
+registering the scripts.</p>
+      <p class="MsoNormal"> </p>
+      <p class="BodyText1">The ScriptManager() method should be placed after all the 
+components on the page. Generally, you can use this method at the end of the 
+master page.</p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+        <span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 468pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="624">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">body</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">…</span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">…</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>{</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      Html.Syncfusion().ScriptManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                 
+      .Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      } <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <br />
+                  <span style="COLOR: blue">&lt;/</span>
+                  <span style="COLOR: maroon">body</span>
+                  <span style="COLOR: blue">&gt;</span>
+                </span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="BodyText1"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 468pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="624">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">body</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">…</span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">…</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">@{</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      Html.Syncfusion().ScriptManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      .Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <br />
+                  <span style="COLOR: blue">&lt;/</span>
+                  <span style="COLOR: maroon">body</span>
+                  <span style="COLOR: blue">&gt;</span>
+                </span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+              <p class="BodyText1">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="BodyText1"> </p>
+      <div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+        <p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">
+          <img border="0" src="ImagesExt/image106_5.jpg" alt="" />Note : Add this ScriptManager() at the end of 
+body tag. Don’t add this in top of body tag.</p>
+      </div>
+      <p class="MsoNormal">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Triggers</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="9bcd6658-d476-4e26-89d4-3dfbe8572902" />
+<meta name="Title" content="Triggers" />
+<meta name="Microsoft.Help.TocParent" content="22ea7b72-6c03-4a29-904c-8490843ae7c4" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Triggers</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Triggers in Uploads contains list of Ids to trigger upload. 
+The triggers will work when <b>PostBackOnUpload</b> property is set to 
+<b>False</b>. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">When UploadBox has it's <b>Trigger</b> property set, on form 
+submit if form _EventTarget value is not in UploadBox's Trigger value, then 
+UploadBox's &lt;input type="file"&gt; should be cleared to prevent upload 
+process. If UploadBox has PostBackOnUpload set to False, upload process will not 
+be done on form submit, because Uploadbox's &lt;input type="file"/&gt; is 
+rendered in individual frame element.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In this case user can call client side <b>UploadFile</b> 
+method to call UploadBox's child frame form submit. UploadFile method only calls 
+submit of UploadBox's frame form. This method should be called without any 
+parameters and file will be uploaded, that are entered into UploadBox's 
+&lt;input type="file"/&gt; element. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Triggers property of UploadProgress</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">UploadProgress allows you to specify the target UploadBox 
+controls, for which the progress control should be triggered displaying details 
+of the process. Triggers property of UploadProgress specifies a comma-delimited 
+list of the UploadBox controls Ids to trigger the UploadProgress control.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following sample demonstrates how to show summary of both 
+files uploading process, when two files are uploading asynchronously 
+(UploadBox's PostbackOnUpload set to False).</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadBox</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="UploadBox1"</span> 
+      <b><span style="COLOR: red">PostbackOnUpload</span><span style="COLOR: blue">="false"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadBox</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="UploadBox2"</span> 
+      <b><span style="COLOR: red">PostbackOnUpload</span><span style="COLOR: blue">="false"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadProgress</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="SummaryProgress"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <b><span style="COLOR: red">Triggers</span><span style="COLOR: blue">="UploadBox1, UploadBox2"</span></b> <span style="COLOR: red">Inline</span><span style="COLOR: blue">="True"&gt;&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">UploadProgress</span><span style="COLOR: blue">&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">If files are uploading synchronously (UploadBox's 
+PostbackOnUpload set to True), all triggered UploadProgresses display summary 
+process, because all files are uploaded simultaneously in one request to the 
+server and this process cannot be divided.</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">For more details, see <a><span class="UGHyperlink">Multiple 
+File Uploads</span></a><span style="COLOR: #15428b">.</span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Triggers property of UploadBox</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Triggers property of UploadBox is a comma-delimited list of 
+the controls Ids, to trigger the UploadBox. You can hide UploadBox's Upload 
+button and start to upload file on postback from some controls. For this, you 
+need add these controls Ids to Triggers property of UploadBox. If Page's 
+postback will be sent from any other controls, then UploadBox's value will be 
+cleared to prevent upload process.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">The following sample demonstrates how 
+      to trigger UploadBoxes controls:</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadBox</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="UploadBox1"</span> 
+      <b><span style="COLOR: red">Triggers</span><span style="COLOR: blue">="SubmitButton, WebButton"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: red">ShowSubmitButton</span><span style="COLOR: blue">="false"</span> <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadBox</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="UploadBox2"</span> 
+      <b><span style="COLOR: red">Triggers</span><span style="COLOR: blue">="SubmitButton, WebButton"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">input</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">type</span><span style="COLOR: blue">="submit"</span> 
+      <b><span style="COLOR: red">id</span><span style="COLOR: blue">="SubmitButton"</span></b> <span style="COLOR: red">value</span><span style="COLOR: blue">="Upload 
+      files  synchronously"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">asp</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">Button</span><span style="FONT-FAMILY: 'Courier New'"> <b><span style="COLOR: red">ID</span><span style="COLOR: blue">="WebButton"</span></b> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Upload 
+      files  synchronously"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"/&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Triggers property  of the UploadBox works when the 
+PostbackOnUpload property of the UploadBox is set to True. In other case, for 
+triggering UploadBox with PostbackOnUpload is set to False, you can call client 
+side UploadFile method of UploadBox script object to start file uploading and 
+file will be uploaded that are entered into UploadBox control.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following sample demonstrates how to trigger UploadBox 
+control, when PostbackOnUpload is set to False.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">UploadBox</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="UploadBox1"</span> 
+      <span style="COLOR: red">ClientObjectId</span><span style="COLOR: blue">="_sfUploadBox1"</span> <b><span style="COLOR: red">PostbackOnUpload</span><span style="COLOR: blue">="false"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: red">ShowSubmitButton</span><span style="COLOR: blue">="false"</span> <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">input</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">type</span><span style="COLOR: blue">="button"</span> 
+      <span style="COLOR: red">id</span><span style="COLOR: blue">="SubmitButton"</span> <span style="COLOR: red">value</span><span style="COLOR: blue">="Upload 
+      file"</span> <b><span style="COLOR: red">onclick</span><span style="COLOR: blue">="_sfUploadBox1.UploadFile()"</span></b><span style="COLOR: blue">/&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

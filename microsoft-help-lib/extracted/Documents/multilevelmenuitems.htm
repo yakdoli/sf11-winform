@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Multilevel Menu Items</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="05bede53-dfc5-402e-a034-a7125086d33a" />
+<meta name="Title" content="Multilevel Menu Items" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4>Multilevel Menu Items</h4>
+<p class="BodyText1">ContextMenuAdv supports hierarchy.  You can build any 
+levels of menu items that are required to achieve the navigation. Here is the 
+code to illustrate this feature.  When the sub menu of ContextMenuItem is 
+opened, the IsOpen property set to True.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-SIZE: 12pt">[XAML]</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-SIZE: 12pt"></span></b> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="LayoutRoot"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Background</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="White"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuAdvService.ContextMenuAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">          
+            </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="View"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="IconType"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Large 
+      icons"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="RadioButton"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      GroupName</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="group1"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Medium 
+      icons"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="RadioButton"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsChecked</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      GroupName</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="group1"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Small 
+      icons"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="RadioButton"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      GroupName</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="group1"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Auto 
+      arrange icons"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CheckBox"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Align icons 
+      to grid"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CheckBox"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsChecked</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">SeparatorAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Show 
+      desktop icon"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CheckBox"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsChecked</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Show 
+      desktop gadgets"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsCheckable</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      CheckIconType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CheckBox"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsChecked</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="True"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Sort 
+      by"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Name"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Size"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Item 
+      type"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Date 
+      modified"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Refresh"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">SeparatorAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Paste"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsEnabled</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="False"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Paste 
+      shortcut"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      IsEnabled</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="False"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Undo 
+      Delete"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">     
+                     </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">SeparatorAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Personalize"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Screen 
+      resolution"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuItemAdv</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Header</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Personalize"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">        
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">shared</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">ContextMenuAdvService.ContextMenuAdv</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><b><span style="FONT-SIZE: 11pt"></span></b></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_788.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 886: ContextMenu with Multi Levels</p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Control the Number of Visible Items in a Combo Box Cell</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="2b5ad8af-2393-4d02-9022-a134a801f33e" />
+<meta name="Title" content="How to Control the Number of Visible Items in a Combo Box Cell" />
+<meta name="Microsoft.Help.TocParent" content="d7132129-5014-47d6-9419-88a1e83d196a" />
+<meta name="Microsoft.Help.TocOrder" content="6" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=7a624028-799a-4168-bb0f-e0035bb9a49b"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=10d68c46-3ad3-46d3-ba5b-9e163a62a562"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=28ff22ed-2523-4bf9-8f6c-4d94f7bcabcc">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=d7132129-5014-47d6-9419-88a1e83d196a">Common to 
+GridControl, GridDataBoundGrid and GridGrouping</a></div>
+<h3 style="tab-stops: 0pt">How to Control the Number of Visible Items in a Combo 
+Box Cell</h3>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Introduction</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">There is a <b>GridComboBoxListBoxPart.DropDownRows</b> 
+property which, you can set to control this. The <b>GridComboBoxListBoxPart</b> 
+is the actual control type of the list that is dropped to display the items. 
+But, it is buried a little deep and generally needs an event handler to set it. 
+The reason of using an event handler is that normally a single combobox control 
+is shared among all combobox cells. Each cell can potentially have a different 
+list and may need different numbers of visible rows. So to handle this, you must 
+catch the <b>Grid.CurrentCellShowingDropDown</b> event and set the property 
+there depending upon the exact row and column.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Example</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      grid_CurrentCellShowingDropDown(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> sender, 
+      GridCurrentCellShowingDropDownEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{ </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      GridControlBase grid = sender </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">as</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> GridControlBase; 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(grid != </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">null</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      { </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      GridCurrentCell cc = grid.CurrentCell; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      GridComboBoxCellRenderer cr = cc.Renderer as 
+      GridComboBoxCellRenderer;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">            
+      // Set number of visible items for comboboxes in Row 6 as 4, Row 4 as 7, 
+      Row 2 as 10 , and so on. </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cc != </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">null</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      { </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cc.RowIndex == 6) 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                     
+      ((GridComboBoxListBoxPart)cr.ListBoxPart).DropDownRows = 4; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">else 
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cc.RowIndex == 4) 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                     
+      ((GridComboBoxListBoxPart)cr.ListBoxPart).DropDownRows = 7; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    else 
+      if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cc.RowIndex == 
+      2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                     
+      ((GridComboBoxListBoxPart)cr.ListBoxPart).DropDownRows = 10; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">else</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      ((GridComboBoxListBoxPart)cr.ListBoxPart).DropDownRows = 6; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      } </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">         
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private Sub </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Grid_CurrentCellShowingDropDown(sender 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As 
+      Object</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">, e 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      GridCurrentCellShowingDropDownEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Try</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> grid </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> GridControlBase = 
+      sender</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cc </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> GridCurrentCell = 
+      grid.CurrentCell</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cc.Renderer </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Is GetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(GridComboBoxCellRenderer) 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cr </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> GridComboBoxCellRenderer 
+      = cc.Renderer</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">                
+      // Set number of visible items for comboboxes in Row 6 as 4, Row 4 as 7, 
+      Row 2 as 10 , and so on.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cc.RowIndex = 6 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cr.ListBoxPart, 
+      GridComboBoxListBoxPart).DropDownRows = 4</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ElseIf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cc.RowIndex = 4 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cr.ListBoxPart, 
+      GridComboBoxListBoxPart).DropDownRows = 7</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ElseIf</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> cc.RowIndex = 2 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Then</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cr.ListBoxPart, 
+      GridComboBoxListBoxPart).DropDownRows = 10</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Else</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">CType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(cr.ListBoxPart, 
+      GridComboBoxListBoxPart).DropDownRows = 6</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">            
+      End If</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      Catch</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      End Try</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End 
+  Sub</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p613" id="p613"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

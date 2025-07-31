@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Excel 2007</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="5cc1e03c-a07a-4771-9986-eb6c4578ef8f" />
+<meta name="Title" content="Excel 2007" />
+<meta name="Microsoft.Help.TocParent" content="d54186c8-499f-4d4c-accb-cbfc1870a789" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Excel 2007</h4>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Segoe UI','sans-serif'; COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Pivot Table Creation By Using MS Excel 2007</p>
+<p class="BodyText1">In Excel, Pivot table can be inserted by selecting the<b> 
+PivotTable</b> option from the <b>Insert</b> menu.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_93.png" alt="" /></p>
+<p class="MsoCaption">Figure 87: Create PivotTable Dialog Box<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Excel automatically selects the entire range. However, it is 
+possible to modify it if necessary. It also allows choosing where to place the 
+PivotTable (New Worksheet is most commonly used to place the pivot table).</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_94.png" alt="" /></p>
+<p class="MsoCaption">Figure 88: New Sheet to place the Pivot Table<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Once you select a field, the Pivot Table appears. Now you 
+need to populate it with data fields, which appear in the field list on the 
+right. Fields can be dragged to the Pivot Table grid, to one of the defined 
+areas.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_95.png" alt="" /></p>
+<p class="MsoCaption">Figure 89: Adding fields to the Pivot table<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">To filter by a field, open its drop-down list and select the 
+value by which to filter. The table now displays data only for the filtered 
+criterion (in this case, the Central region).</p>
+<p class="BodyText1">You can also sort by a field by opening its drop-down list 
+and selecting one of the sort orders.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">PivotTable Creation Manipulation Using XlsIO</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">XlsIO provides support for creation and manipulation of Pivot 
+Table by using simple APIs. <b>IPivotCache</b> interface caches the data that 
+needs to be summarized. <b>IPivotTable</b> represents a pivot table in object, 
+and has properties that allow customizing it. IPivotTable interface returns the 
+collection of Pivot Tables present in a worksheet. <b>IPivotField</b> represents 
+the field in the pivot table. This includes row, column and data field axis. 
+<b>IPivotDataFields</b> gets collection of data field.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image47_1.jpg" alt="" />Note: Pivot Table is currently not supported for 
+.xls format.</p></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following code example illustrates how to create a pivot 
+table by using XlsIO.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotCache</span><span style="FONT-FAMILY: 'Courier New'"> cache = 
+      book.PivotCaches.Add(sheet[<span style="COLOR: #a31515">"A1:D136"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      sheet1.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, 
+      sheet1[<span style="COLOR: #a31515">"A1"</span>], cache);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[0].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[1].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[3].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">         
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> field = 
+      pivotTable.Fields[2];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"sum"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum);</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Properties</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following properties of the IPivotTable interface are 
+used to fetch pivot table fields.</p>
+<p class="BodyText1"><b><i></i></b> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Table 
+</span></i><i><span style="FONT-SIZE: 9pt">1</span></i><i></i><i><span style="FONT-SIZE: 9pt">: IPivotTable Properties Table</span></i></p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 98.16%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="98%">
+  <tbody>
+  <tr style="HEIGHT: 15.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets or sets pivot table name</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Location</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns pivot table location </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">CacheIndex</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets Index of the pivot Cache. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Fields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets collection of pivot fields. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">DataFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets IDataField collection of pivot table data fields. 
+      Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ColumnFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns the collection of Column field for the 
+      specified pivot table. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">RowFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns the collection of Row field for the specified 
+      pivot table. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">PageFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns the collection of page field for the specified 
+      pivot table. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">CalculatedFields</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns the collection of calculated fields of the 
+      specified pivot table. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ColumnsPerPage</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the number of columns per page for this 
+      PivotTable that the filter area will occupy</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">RowsPerPage</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the number of rows per page for this 
+      PivotTable that the filter area will occupy</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Options</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Represents the pivot table 
+  options.Read-only</p></td></tr></tbody></table></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following properties of the IPivotTableOption interface 
+are used to customize the settings of the pivot table.</p>
+<p class="BodyText1"> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Table 2: 
+IPivotTableOption Properties Table</span></i></p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 98.16%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="98%">
+  <tbody>
+  <tr style="HEIGHT: 15.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ShowAsteriskTotals</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if an asterisk (*) is displayed next to each 
+      subtotal and grand total value in the specified PivotTable 
+report</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ColumnHeaderCaption</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the string to be displayed in column header 
+      of pivot Table when in compact layout mode.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">RowHeaderCaption</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the string to be displayed in Row header of 
+      pivot table when in compact layout mode</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ShowCustomSortList</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies a boolean value that indicates whether the 
+      "custom lists" option is offered when sorting this PivotTable</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ShowFieldList</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">False, to disable the ability to display the field list 
+      for the PivotTable. If the field list was already being displayed it 
+      disappears</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">IsDataEditable</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, to disable the alert for when the user overwrites 
+      values in the data area of the PivotTable</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">EnableFieldProperties</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if the PivotTable Field dialog box is available 
+      when you double-click the PivotTable field</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Indent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the indentation increment for compact axis 
+      and can be used to set the Report Layout to Compact Form</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ErrorString</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns or sets the string displayed in cells that 
+      contain errors when the DisplayErrorString property is True</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">DisplayErrorString</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if the PivotTable report displays a custom error 
+      string in cells that contain errors. The default value is False</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">MergeLabels</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if the specified PivotTable report’s outer-row 
+      item, column item, subtotal, and grand total labels use merged 
+    cells.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">PageFieldWrapCount</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns or sets the number of page fields in each 
+      column or row in the PivotTable report.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">PageFieldsOrder</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns or sets the order in which page fields are 
+      added to the PivotTable report’s layout</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">DisplayNullString</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if the PivotTable report displays a custom string 
+      in cells that contain null values. The default value is True.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">NullString</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns or sets the string displayed in cells that 
+      contain null values when the DisplayNullString property is True.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">PreserveFormatting</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if formatting is preserved when the report is 
+      refreshed or recalculated by operations such as pivoting, sorting, or 
+      changing page field items.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">ShowTooltips</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if tooltips displayed for the pivot table 
+      cell.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">DisplayFieldCaptions</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets/sets value controlling whether or not filter 
+      buttons and PivotField captions for rows and columns are displayed in the 
+      grid.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">PrintTitles</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">True, if the print titles for the worksheet are set 
+      based on the PivotTable report. </p>
+      <p class="TableText">False, if the print titles for the worksheet are 
+      used.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">RowLayout</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">This property specifies the pivot table row layout 
+      settings.</p></td></tr></tbody></table></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following are the properties of the IPivotCache 
+interface.</p>
+<p class="BodyText1"> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Table 3: 
+IPivotCache Properties Table</span></i></p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 98.16%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="98%">
+  <tbody>
+  <tr style="HEIGHT: 15.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Index</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Gets zero-based cache index. Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">SourceType</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Specifies the pivot table cache source type. 
+      Read-only</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">SourceRange</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p class="TableText">Returns the data source for the PivotTable report. 
+      Read-only.</p></td></tr></tbody></table></div>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">SubTotals</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can also insert various subtotal types for the pivot 
+table through the <b>PivotSubtotalTypes</b> enum.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It is also possible to insert multiple subtotals for a field 
+by using <b>Subtotal</b> property of IPivotField. This is demonstrated in the 
+following code example.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      sheet1.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, 
+      sheet1[<span style="COLOR: #a31515">"A1"</span>], cache);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[0].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[0].Subtotals = <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum| <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Average | <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Max | <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Min;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Pivot Table Options</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel provides various options through the 
+<b>PivotTableOptions</b> dialog box to customize the appearance of the pivot 
+table.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_96.png" alt="" /></p>
+<p class="MsoCaption">Figure 90: PivotTable Options Dialog Box<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO supports the pivot table options using 
+IPivotTableOptions interface to control various settings for the existing Pivot 
+table.  The following code snippet illustrates the same.  </p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      sheet.PivotTables[0];</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTableOptions</span><span style="FONT-FAMILY: 'Courier New'"> options = 
+      pivotTable.Options;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ShowFieldList = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ColumnHeaderCaption = <span style="COLOR: #a31515">"Sales Details"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ColumnHeaderCaption = <span style="COLOR: #a31515">"Customer Names"</span>;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ErrorString = <span style="COLOR: #a31515">"#ERROR#"</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Show or Hide the Field List</p>
+<p class="BodyText1">In MS Excel, click the Field List button in the Design Tab. 
+Show or Hide the pivot table field list pane in XlsIO,</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ShowFieldList = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><i></i></b> </p>
+<p class="BodyTextHeading">Header Caption:</p>
+<p class="BodyText1">In MS Excel, the Field Header button is used to show or hide 
+the pivot table caption. In XlsIO, to enable and disable the caption, use the 
+<b>DisplayFieldCaption</b> property. Use the <b>RowHeaderCaption</b> and 
+<b>ColumnHeadercaption</b> properties to edit the respective pivot table 
+headers.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.RowHeaderCaption = <span style="COLOR: #a31515">"Payment Dates"</span>;</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">options.ColumnHeaderCaption = <span style="COLOR: #a31515">"Payments"</span>; </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">Grand Total</p>
+<p class="BodyText1">You can display or hide the totals for the current Pivot 
+Table report by selecting an option from <b>Design -&gt; Layout-&gt; Grand 
+Totals</b>. XlsIO provides an equivalent API to perform with simple properties 
+as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.ColumnGrand = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.RowGrand = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Show/Hide Collapse Button</p>
+<p class="BodyText1">You can also show/hide the <b>Collapse</b> button that 
+appears in the fields of the pivot table, when there exists more than one item 
+in a field. The following code example illustrates how to do this.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.ShowDrillIndicators = <span style="COLOR: blue">true;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Display Field Caption and Filter Option</p>
+<p class="BodyText1">It is also possible to show/hide the <b>Filter</b> button and 
+field name in the pivot table by using the PivotTable Options dialog box in 
+Excel. This is illustrated in the following code.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DisplayFieldCaptions = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_97.png" alt="" /></p>
+<p class="MsoCaption">Figure 91: Field Captions<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Repeating Row Label on Each Page</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO allows setting the row label on each page, while 
+printing, allowing users to view the header on each page.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.RepeatItemsOnEachPrintedPage 
+      = <span style="COLOR: blue">false</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Formatting the Pivot Table By using Excel 2007</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Excel 2007 provides set of built-in styles that allow 
+formatting the pivot table row and column header. When your cell pointer is 
+inside the pivot table, you will have two new ribbon tabs under <b>PivotTable 
+Tools heading - Options and Design</b>. On the Design ribbon, the Pivot Table 
+Styles gallery offers 85 built-in formats for pivot tables. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_98.png" alt="" /></p>
+<p class="MsoCaption">Figure 92: Pivot Table Styles Gallery</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Formatting Pivot Table By Using XlsIO</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">XlsIO supports 85 built-in styles of Excel 2007, enabling 
+users to create a table with rich formatting. This is done by using the 
+<b>BuiltInStyle</b> property of IPivotTable as follows.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.BuiltInStyle = <span style="COLOR: #2b91af">PivotBuiltInStyles</span>.PivotStyleDark12;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="BodyTextHeading">Adding Calculated Field in the existing Pivot Table</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyText1">Calculated fields are a special type of database field that 
+perform calculations by using the contents of other fields in the pivot table 
+with the given formula. The formula can contain operators and expressions as in 
+other worksheet formulas. You can use constants and refer to data from the 
+PivotTable., XlsIO supports to read and create the Calculated Fields in the 
+existing pivot table. The following are MS Excel restriction when using the 
+formula.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Formula 
+cannot contain cell references or defined names and</p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Formula 
+cannot contains Worksheet functions that require cell references </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Formula 
+cannot use array functions.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In MS Excel, the Calculated Field can be added using the 
+calculation option from the Option tab. In XlsIO, same can be achieved with 
+following code snippet.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      sheet.PivotTables[0];</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> field = 
+      pivotTable.CalculatedFields.Add(<span style="COLOR: #a31515">"Percent"</span>, <span style="COLOR: #a31515">"Sales/Total*100"</span>);</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyText1">The formula can be fetched from the formula property of the 
+IPivotField.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">field.Formula = <span style="COLOR: #a31515">"Sales/Total*100"</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Lay Out the Pivot Table as MS Excel 2007</p>
+<p class="MsoNormal">We have provided support for drawing a pivot table similar to 
+the MS Excel layout using Essential XlsIO. Previously, we let MS Excel lay out 
+the pivot table for XlsIO. By using a layout method, we draw the pivot table 
+layout using XlsIO. Now we can get any values of the pivot table using XlsIO 
+dynamically, apply a filter to the pivot table, and can get the filtered values 
+of the pivot table dynamically.</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Methods</p>
+<div align="center">
+<table style="WIDTH: 98.16%; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="98%">
+  <tbody>
+  <tr style="HEIGHT: 15.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p style="TEXT-ALIGN: center; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b>Method Name</b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; HEIGHT: 15.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p style="TEXT-ALIGN: center; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b>Description</b></p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p style="LINE-HEIGHT: 14pt; tab-stops: 36.0pt" class="MsoNormal">Layout</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; PADDING-RIGHT: 3pt; BACKGROUND: white; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 3pt" valign="top">
+      <p style="LINE-HEIGHT: 14pt; tab-stops: 36.0pt" class="MsoNormal">Method to 
+      lay out the pivot table using XlsIO like the MS Excel pivot table 
+      layout.</p></td></tr></tbody></table></div>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"><br />The following code example 
+illustrates how to enable Essential XlsIO to lay out the pivot table like MS 
+Excel. </p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotCache</span><span style="FONT-FAMILY: 'Courier New'"> cache = 
+      book.PivotCaches.Add(sheet[<span style="COLOR: #a31515">"A1:D136"</span>]);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      sheet1.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, 
+      sheet1[<span style="COLOR: #a31515">"A1"</span>], cache);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9.5pt">IPivotField</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"> field = 
+      pivotTable.Fields[0];</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Field.Axis = 
+      <span style="COLOR: #2b91af">PivotAxisTypes</span>.Page;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">//Setting the 
+      Filter to Page field of Pivot table</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 9.5pt">IPivotFilter</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"> filter = field 
+      .PivotFilters.Add();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">filter.Value1 = <span style="COLOR: #a31515">"East"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[0].FilterValue=”Binder”;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[1].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[3].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> field = 
+      pivotTable.Fields[2];</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"sum"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">//The 
+      following code snippet must be included to XlsIO layout the pivot //table 
+      like MS Excel.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Layout();</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.Net]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim cache As 
+      <span style="COLOR: #2b91af">IPivotCache</span> = 
+      book.PivotCaches.Add(sheet("A1:D136"))</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim pivotTable 
+      As <span style="COLOR: #2b91af">IPivotTable</span> = 
+      sheet1.PivotTables.Add("PivotTable1", sheet1("A1"), cache)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim field As 
+      IPivotField = pivotTable.Fields(0)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Field.Axis = 
+      PivotAxisTypes.Page</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">'Setting the 
+      Filter to Page field of Pivot table</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim filter As 
+      IPivotFilter = field.PivotFilters.Add()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">filter.Value1 
+      = "East"</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(1).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(3).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Dim field As 
+      <span style="COLOR: #2b91af">IPivotField</span> = 
+      pivotTable.Fields(2)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, "sum", 
+      <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">'The following 
+      code snippet must be included to XlsIO layout the pivot table 'like MS 
+      Excel.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Layout()</span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"><span style="FONT-WEIGHT: normal"></span> </p>
+<p style="LINE-HEIGHT: 12pt; MARGIN-BOTTOM: 2pt" class="MsoNormal"><b>Supported 
+Elements:</b></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 2pt 0pt 2pt 36pt; tab-stops: 36.0pt" class="MsoNormal">1.  <span style="FONT-FAMILY: 'Arial','sans-serif'">Apply 
+filter value to page filter of the pivot table.</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 2pt 0pt 2pt 36pt; tab-stops: 36.0pt" class="MsoNormal">2.  <span style="FONT-FAMILY: 'Arial','sans-serif'">Pivot 
+table values can be accessed dynamically.</span></p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Apply Filter to Pivot Table</p>
+<p class="BodyText1">In Microsoft Excel, filtered data of a pivot table displays 
+only the subset of data that meet the <a href="javascript:AppendPopup(this,'420434735_1')"><span style="COLOR: windowtext">criteria<span style="DISPLAY: none"> (criteria: 
+Conditions you specify to limit which records are included in the result set of 
+a query or filter.)</span></span></a> we specified. The Excel has drop-down 
+filter arrows for report/page filter fields, row fields, and column fields. This 
+can be achieved in XlsIO using the <b>IPivotFilters</b> interface.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Page Field Filter</p>
+<p class="BodyText1">The page field filter filters the pivot table based on page 
+field items. The following code example illustrates how to apply multiple 
+filters to the page field items.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 1: Instantiate the 
+      spreadsheet creation engine.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ExcelEngine</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ExcelEngine</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 2: Instantiate the 
+      excel application object.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IApplication</span><span style="FONT-FAMILY: 'Courier New'"> application = 
+      excelEngine.Excel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set the default version 
+      as Excel 2010.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">application.DefaultVersion = <span style="COLOR: #2b91af">ExcelVersion</span>.Excel2010;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorkbook</span><span style="FONT-FAMILY: 'Courier New'"> workbook = 
+      application.Workbooks.Open(<span style="COLOR: #a31515">"PivotCodeDate.xlsx"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// The first worksheet 
+      object in the worksheets collection is accessed.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorksheet</span><span style="FONT-FAMILY: 'Courier New'"> worksheet = 
+      workbook.Worksheets[0];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Access the worksheet to 
+      draw pivot table.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorksheet</span><span style="FONT-FAMILY: 'Courier New'"> pivotSheet = 
+      workbook.Worksheets[1];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Select the data to add 
+      in cache.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotCache</span><span style="FONT-FAMILY: 'Courier New'"> cache = 
+      workbook.PivotCaches.Add(worksheet[<span style="COLOR: #a31515">"A1:H50"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Insert the pivot table. 
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      pivotSheet.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, pivotSheet[<span style="COLOR: #a31515">"A1"</span>], cache);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set field axis to 
+      page.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[4].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Page;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set field axis to 
+      row.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[2].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[6].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set field axis to 
+      column.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[3].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> field = 
+      pivotSheet.PivotTables[0].Fields[5];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"Sum of Units"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Apply page field 
+      filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> pageField = 
+      pivotTable.Fields[4];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Select multiple items 
+      in page field to filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pageField.Items[1].Visible = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pageField.Items[2].Visible = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Apply built-in 
+      style.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.BuiltInStyle = <span style="COLOR: #2b91af">PivotBuiltInStyles</span>.PivotStyleMedium2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Activate the pivot 
+      worksheet.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotSheet.Activate();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Save the workbook to 
+      disk.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(<span style="COLOR: #a31515">"PivotTable.xlsx"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Close the 
+      workbook.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//No exception will be 
+      thrown if there are unsaved workbooks.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.ThrowNotSavedOnDestroy = 
+      <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">  </span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"> [VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 1: Instantiate the 
+      spreadsheet creation engine.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">ExcelEngine</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 2: Instantiate the 
+      excel application object.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> application <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IApplication</span> = excelEngine.Excel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set the default version 
+      as Excel 2010.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">application.DefaultVersion = <span style="COLOR: #2b91af">ExcelVersion</span>.Excel2010</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Get the path of input 
+      file.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> workbook <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorkbook</span> = application.Workbooks.Open(<span style="COLOR: #a31515">"PivotCodeDate.xlsx"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'The first worksheet 
+      object in the worksheets collection is accessed.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> worksheet <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorksheet</span> = 
+      workbook.Worksheets(0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Access the worksheet to 
+      draw pivot table.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pivotSheet <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorksheet</span> = 
+      workbook.Worksheets(1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Select the data to add 
+      in cache.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> cache <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotCache</span> = 
+      workbook.PivotCaches.Add(worksheet(<span style="COLOR: #a31515">"A1:H50"</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Insert the pivot table. 
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotTable</span> = 
+      pivotSheet.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, pivotSheet(<span style="COLOR: #a31515">"A1"</span>), cache)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set field axis to 
+      page.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(4).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Page</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set field axis to 
+      row.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(2).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(6).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set field axis to 
+      column.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(3).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> field <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotField</span> = 
+      pivotSheet.PivotTables(0).Fields(5)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"Sum of Units"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Apply page field 
+      filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pageField <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotField</span> = 
+pivotTable.Fields(4)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Select multiple items in 
+      page field to filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pageField.Items(1).Visible = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pageField.Items(2).Visible = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Apply built-in 
+      style.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.BuiltInStyle = <span style="COLOR: #2b91af">PivotBuiltInStyles</span>.PivotStyleMedium2</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Activate the pivot 
+      worksheet.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotSheet.Activate()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Save the workbook to 
+      disk.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(<span style="COLOR: #a31515">"PivotTable.xlsx"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Close the 
+      workbook.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'No exception will be 
+      thrown if there are unsaved workbooks.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.ThrowNotSavedOnDestroy = 
+      <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_99.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 93: Applying multiple filter<span style="FONT-STYLE: normal"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Row Field and Column Field Filter</p>
+<p class="BodyText1">The row field and column field filter filters the pivot table 
+based on labels, values and items of fields. The following code example 
+illustrates how to apply this filter to a pivot table.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 1: Instantiate the 
+      spreadsheet creation engine.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ExcelEngine</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ExcelEngine</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Step 2: Instantiate the 
+      excel application object.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IApplication</span><span style="FONT-FAMILY: 'Courier New'"> application = 
+      excelEngine.Excel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set the default version 
+      as Excel 2010.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">application.DefaultVersion = <span style="COLOR: #2b91af">ExcelVersion</span>.Excel2010;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorkbook</span><span style="FONT-FAMILY: 'Courier New'"> workbook = 
+      application.Workbooks.Open(<span style="COLOR: #a31515">"PivotCodeDate.xlsx"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// The first worksheet 
+      object in the worksheets collection is accessed.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorksheet</span><span style="FONT-FAMILY: 'Courier New'"> worksheet = 
+      workbook.Worksheets[0];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Access the worksheet to 
+      draw pivot table.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWorksheet</span><span style="FONT-FAMILY: 'Courier New'"> pivotSheet = 
+      workbook.Worksheets[1];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Select the data to add 
+      in cache.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotCache</span><span style="FONT-FAMILY: 'Courier New'"> cache = 
+      workbook.PivotCaches.Add(worksheet[<span style="COLOR: #a31515">"A1:H50"</span>]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Insert the pivot table. 
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotTable</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable = 
+      pivotSheet.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, pivotSheet[<span style="COLOR: #a31515">"A1"</span>], cache);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[4].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Page;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[2].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[6].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields[3].Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> field = 
+      pivotSheet.PivotTables[0].Fields[5];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"Sum of Units"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Apply row field 
+      filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> rowField = 
+      pivotTable.Fields[2];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Applying Label based 
+      row field filter</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rowField .PivotFilters.Add(<span style="COLOR: #2b91af">PivotFilterType</span>.CaptionEqual, <span style="COLOR: blue">null</span>, <span style="COLOR: #a31515">"East"</span>, <span style="COLOR: blue">null</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Apply column field 
+      label based filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IPivotField</span><span style="FONT-FAMILY: 'Courier New'"> colField = 
+      pivotTable.Fields[3];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">colField.Items[0].Visible = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">colField.Items[1].Visible = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Apply built-in 
+      style.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.BuiltInStyle = <span style="COLOR: #2b91af">PivotBuiltInStyles</span>.PivotStyleMedium2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Activate the pivot 
+      worksheet.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotSheet.Activate();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Save the workbook to 
+      disk.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(<span style="COLOR: #a31515">"PivotTable.xlsx"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Close the 
+      workbook.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//No exception will be 
+      thrown if there are unsaved workbooks.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.ThrowNotSavedOnDestroy = 
+      <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"> [VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 1: Instantiate the 
+      spreadsheet creation engine.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> excelEngine <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">ExcelEngine</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Step 2: Instantiate the 
+      excel application object.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> application <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IApplication</span> = excelEngine.Excel</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set the default version 
+      as Excel 2010.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">application.DefaultVersion = <span style="COLOR: #2b91af">ExcelVersion</span>.Excel2010</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> workbook <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorkbook</span> = application.Workbooks.Open(<span style="COLOR: #a31515">"PivotCodeDate.xlsx"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'The first worksheet 
+      object in the worksheets collection is accessed.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> worksheet <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorksheet</span> = 
+      workbook.Worksheets(0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Access the worksheet to 
+      draw pivot table.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pivotSheet <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWorksheet</span> = 
+      workbook.Worksheets(1)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Select the data to add 
+      in cache.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> cache <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotCache</span> = 
+      workbook.PivotCaches.Add(worksheet(<span style="COLOR: #a31515">"A1:H50"</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Insert the pivot table. 
+      </span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pivotTable <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotTable</span> = 
+      pivotSheet.PivotTables.Add(<span style="COLOR: #a31515">"PivotTable1"</span>, pivotSheet(<span style="COLOR: #a31515">"A1"</span>), cache)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(4).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Page</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(2).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(6).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.Fields(3).Axis = <span style="COLOR: #2b91af">PivotAxisTypes</span>.Column</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> field <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotField</span> = 
+      pivotSheet.PivotTables(0).Fields(5)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.DataFields.Add(field, <span style="COLOR: #a31515">"Sum of Units"</span>, <span style="COLOR: #2b91af">PivotSubtotalTypes</span>.Sum)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Apply row field 
+      filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> rowField <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotField</span> = 
+pivotTable.Fields(2)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Applying Label based row 
+      field filter</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rowField.PivotFilters.Add(<span style="COLOR: #2b91af">PivotFilterType</span>.CaptionEqual, <span style="COLOR: blue">Nothing</span>, <span style="COLOR: #a31515">"East"</span>, <span style="COLOR: blue">Nothing</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Apply column field label 
+      based filter.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> colField <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IPivotField</span> = 
+pivotTable.Fields(3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">colField.Items(0).Visible = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">colField.Items(1).Visible = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Apply built-in 
+      style.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotTable.BuiltInStyle = <span style="COLOR: #2b91af">PivotBuiltInStyles</span>.PivotStyleMedium2</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Activate the pivot 
+      worksheet.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pivotSheet.Activate()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Save the workbook to 
+      disk.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.SaveAs(<span style="COLOR: #a31515">"PivotTable.xlsx"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Close the 
+      workbook.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">workbook.Close()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'No exception will be 
+      thrown if there are unsaved workbooks.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.ThrowNotSavedOnDestroy = 
+      <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">excelEngine.Dispose()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_100.png" alt="" /></p>
+<p class="MsoCaption">Figure 94: Applying Row Field Filter</p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_101.png" alt="" /></p>
+<p class="MsoCaption">Figure 95: Setting Value to the Filter</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Feature to resize the FloatWindow dynamically depend on child size</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="fbd43978-5aa4-4cd4-a201-0968ba2645b6" />
+<meta name="Title" content="Feature to resize the FloatWindow dynamically depend on child size" />
+<meta name="Microsoft.Help.TocParent" content="f75f9086-b61d-4ab6-ae31-7c25951df341" />
+<meta name="Microsoft.Help.TocOrder" content="22" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Feature to resize the FloatWindow dynamically depend 
+on child size</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Normally <b>SizetoContentInFloat</b> property can be used to 
+resize the FloatWindow to its child size while initializing the FloatWindow. But 
+when Float child of DockingManager is resized,dynamically it doesn’t have any 
+options to resize the FloatWindow to that content size. FloatWindowHeight and 
+FloatWindowWidth are introduced for this purpose.. The usage has been shown 
+below.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-SIZE: 12pt">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">   
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.RowDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">     
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">RowDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="0.08*"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">     
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">RowDefinition</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="*"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">   
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid.RowDefinitions</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">  
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Button</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Content</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="click"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Click</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Button_Click"/&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">  
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="dockingmanager"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Grid.Row</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="1"&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="grid1"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="300"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="300"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.FloatWindowWidth</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">,</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      RelativeSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">={</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">RelativeSource</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Self</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">},</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Mode</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=OneWay}"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.FloatWindowHeight</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">,</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">RelativeSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">={</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">RelativeSource</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Self</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">},</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Mode</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=OneWay}"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.DesiredWidthInFloatingMode</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="300"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">DockingManager.DesiredHeightInFloatingMode</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="300"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red"> syncfusion</span><span style="COLOR: blue">:</span><span style="COLOR: red">DockingManager.State</span><span style="COLOR: blue">="Float"/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">  
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">DockingManager</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Grid</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-SIZE: 12pt">C#:</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">private</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: blue">void</span> Button_Click(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      grid1.Width += 50;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      grid1.Height + = 50;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">When the button is clicked width and height of the controls 
+changes dynamically so that the binded FloatWindowWidth and FloatWindowHeight 
+gets reflected dynamically. Similarly we can use FloatWindowSize property to set 
+size of floatwindow dynamically.</p>
+<p class="BodyText1"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Handlers through MultiColumnDropDownModel</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="41732d19-031b-4852-8ad3-5896f5eb0dd8" />
+<meta name="Title" content="Adding Handlers through MultiColumnDropDownModel" />
+<meta name="Microsoft.Help.TocParent" content="8bb7541b-5278-49f1-ab76-943a576e0b19" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Adding Handlers through MultiColumnDropDownModel</h4>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Configure the <b>MultiColumnDropDownModel</b> as shown below 
+to add the handlers. </p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Create instance to 
+      MultiColumnDropDown model and assign properties.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MultiColumnDropDownModel</span> dropdown = 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MultiColumnDropDownModel</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Datasource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">StudentDataContext</span>().JSONStudent.Skip(0).Take(30).ToList(),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Text = <span style="COLOR: #a31515">"--Select--"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      DisplayExpression = <span style="COLOR: blue">new</span> <span style="COLOR: blue">int</span>[3] { 2, 3, 5 },</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Width = 500,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      AutoFormat = <span style="COLOR: #2b91af">Skins</span>.Office2007Black,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      InitiallyPopupShown=<span style="COLOR: blue">true</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <b>ClientSideOnBeforePopupShown = <span style="COLOR: #a31515">"OnBeforePopup"</span>,</b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      ClientSideOnPopupHidden = <span style="COLOR: #a31515">"popupHidden"</span>,</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      ClientSideOnPopupShown = <span style="COLOR: #a31515">"popupShown"</span>,</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      ClientSideOnSelect = <span style="COLOR: #a31515">"onRecordSelect"</span>,</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      ClientSideOnTextChanged = <span style="COLOR: #a31515">"onTextChanged"</span></span></b></p>
+      <p style="MARGIN-BOTTOM: 2pt; tab-stops: list 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[JavaScript]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">script</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: blue">function</span> OnBeforePopup(sender, args) 
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedRow() contains the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args.get_DisplayValue() contains the display value. </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedValue() contains the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args._SelectedRow returns the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args._DisplayValue returns the display value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//     
+      args._SelectedValue returns the selected Value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">function</span> popupHidden(sender, args) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedRow() contains the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_DisplayValue() contains the display value. </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedValue() contains the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedRow returns the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._DisplayValue returns the display value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedValue returns the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">function</span> popupShown(sender, args) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedRow() contains the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+       <span style="COLOR: darkgreen">//     
+      args.get_DisplayValue() contains the display value. </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedValue() contains the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedRow returns the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._DisplayValue returns the display value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedValue returns the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">function</span> onRecordSelect(sender, args) 
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedRow() contains the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_DisplayValue() contains the display value. </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedValue() contains the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedRow returns the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._DisplayValue returns the display value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedValue returns the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">function</span> onTextChanged(sender, args) 
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedRow() contains the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_DisplayValue() contains the display value. </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args.get_SelectedValue() contains the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedRow returns the selected record object 
+      (JSON).</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._DisplayValue returns the display value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: darkgreen">//     
+      args._SelectedValue returns the selected value.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Serialization Support</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="f52590e0-d7fb-4cf0-8417-7a9640bc5d3d" />
+<meta name="Title" content="Serialization Support" />
+<meta name="Microsoft.Help.TocParent" content="7b54a403-0e9e-4539-948b-dbe0726ed273" />
+<meta name="Microsoft.Help.TocOrder" content="11" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid4.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=a097ba0e-ef19-4ec7-9d37-734151b4ae8b"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=e9aeb59d-d6ab-4862-87f7-4f169b1d763e"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7f4f82c5-151c-4262-94d0-75c4626c77bc">Essential 
+WPF</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=094c35c7-db8e-4341-9619-16644b2a4e34">Installation and 
+Deployment</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=1249c159-5431-465a-b1af-1cf1e5e90ac8">Grid WPF 
+Controls</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7b54a403-0e9e-4539-948b-dbe0726ed273">Grid 
+Control</a></div>
+<h3 style="tab-stops: 0pt">Serialization Support</h3>
+<p class="BodyText1">Essential GridControl supports Serialization. The whole grid 
+can be serialized and deserialized at run-time. <b></b></p>
+<p class="BodyText1">Use Case Scenarios</p>
+<p class="BodyText1">Serialization can be implemented for the applications which 
+need to save its data and structure after the application is closed. 
+Serialization supports to save the structure and data of the GridControl to an 
+XML file and it can be loaded at any time.<b></b></p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Adding Serialization to an Application </p>
+<p class="BodyText1">The following sample application explains the implementation 
+of the Serialization support to GirdControl.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create an 
+application <b></b></p>
+<p class="BodyText1">Create a WPF application and add the GridControl to it. 
+<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Call the 
+Serialization support methods</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">In the application, create three buttons. The first button to 
+call the Serialize() method, the second button to make changes to the Grid and 
+the third button is to call the Deserialize() method. The following code snippet 
+explains the implementation of Serialization.<b></b></p>
+<p class="BodyText1"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 23.4pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">[C#]</span></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #009e47">// To Serialize the 
+      GridControl.</span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.grid.Model.Serialize(<span style="COLOR: #a31515">"Data.xml"</span>);<b></b></span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #009e47">// To Deserialize the 
+      GridControl.</span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.grid.Model.Deserialize(<span style="COLOR: #a31515">"Data.xml"</span>);<b></b></span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><b></b> </p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Run the 
+application</p>
+<p class="BodyText1">Run the application. Click the Serialize button to serialize 
+the initial load; this creates an XML file and saves it. Click the second button 
+ModifyGridStyle to make some changes in the GridControl. Now click the 
+Deserialize button which restores the old settings of the GridControl. 
+<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">Supported Properties for Serialization</p>
+<p class="BodyText1">The following properties are Serialized in the 
+GridControl.<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>RowCount<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ColCount<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ActivateCurrentCellBehavior<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>AllowSelection<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>AllowSelectionOnShiftTab<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ColumnSizer<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>CurrentCellBorder<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>CurrentCellBorderWidth<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>DataObjectConsumerOptions<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>DrawSelectionOptions<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ExcelLikeCurrentCell<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ExcelLikeSelectionFrame<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>HighlightSelectionBorder<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>HighlightSelectionBorderWidth<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ListBoxModeAllowUIElementClick<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ListBoxSelectionMode<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>MaxLength<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ScrollFrozen<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ShowCurrentCell<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>WrapCell<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>WrapCellBehavior<b></b></p>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">Methods</p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoCaption">Table 39: Serialization 
+Support Table</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="607">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 10.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableHeading">Method </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableHeading">Parameters </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableHeading">Return Type </p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">Serialize()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">A virtual method called to Serialize the GridControl. 
+      It stores the settings in an xml file named as specified in its 
+      parameter.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">string  fileName<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">void<b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">Deserialize()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">A virtual method called to Deserialize the GridControl. 
+      It restores the settings in an xml file named as specified in its 
+      parameter.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">string  fileName<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">void<b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 50.8pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 50.8pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">SerializeToStream()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 50.8pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">Serializes the Grid to Stream.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 50.8pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">TextWriter textWriter<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 50.8pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public <b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 50.8pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">void<b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 47.2pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47.2pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">SerializeAsString()<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47.2pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">Serializes the Grid as String.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47.2pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">NA<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47.2pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47.2pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">string <b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">DeserializeFromStream<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">Deserializes from the given TextReader.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">TextReader textReader<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">void<b></b></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">DeserializeFromString<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 198.25pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="264">
+      <p class="TableText">Deserializes from the given String 
+    content.<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">string content<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 40.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="54">
+      <p class="TableText">public<b></b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">void<b></b></p></td></tr></thead>
+  <tbody></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Refer to the 
+samples in the shipped Sample Browser. <b></b></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Go to Essential 
+Studio WPF Sample Browser <span style="FONT-FAMILY: Wingdings">à</span> Grid 
+<span style="FONT-FAMILY: Wingdings">à</span> Serialization <span style="FONT-FAMILY: Wingdings">à</span>GridControl Serialization Demo<b></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><i><span style="COLOR: #15428b"></span></i></b> </p><span id="related-topics"></span></div></body></html>

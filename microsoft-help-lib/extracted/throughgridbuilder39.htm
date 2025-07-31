@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Through Grid Builder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="5a04280d-0678-4d30-a163-31430e9c6a69" />
+<meta name="Title" content="Through Grid Builder" />
+<meta name="Microsoft.Help.TocParent" content="cbd77497-1796-424b-b6c5-89fd43829b31" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Through Grid Builder</h4>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><span class="UGHyperlink">Getting Started&gt;Adding a 
+Model to the Application</span></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><span class="UGHyperlink">How to&gt;Strongly Typed 
+View</span></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   JSON mode uses 
+ASP.NET AJAX 4.0 Client templates for displaying the Grid. Hence, 
+<b>MicrosoftAjaxTemplates.js</b> should be added in the view as follows.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">This can be downloaded from the following location: <a href="http://ajaxcontroltoolkit.codeplex.com/releases/view/36097#DownloadId=93514"><span class="UGHyperlink">http://ajaxcontroltoolkit.codeplex.com/releases/view/36097#DownloadId=93514</span></a></p>
+<p class="MsoNormal"><u><span style="COLOR: blue"><span style="TEXT-DECORATION: none"></span></span></u> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[Site.Master]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">head</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">script</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">src</span><span style="COLOR: blue">="</span><span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> 
+      Url.Content("~/Scripts/Templates/MicrosoftAjax.js") <span style="BACKGROUND: yellow">%&gt;</span><span style="COLOR: blue">"</span> 
+      <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span>  </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">script</span> 
+      <span style="COLOR: red">src</span><span style="COLOR: blue">="</span><span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> 
+      Url.Content("~/Scripts/Templates/MicrosoftAjaxTemplates.js") <span style="BACKGROUND: yellow">%&gt;</span><span style="COLOR: blue">"</span>  <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">   
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">head</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[_Layout.cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">head</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">         
+      &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">script</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red">src</span><span style="COLOR: blue">="</span><span style="BACKGROUND: yellow">@</span><span style="COLOR: blue">Url.Content(</span><span style="COLOR: #a31515">"~/Scripts/Templates</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: #c00000">/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt"> 
+      MicrosoftAjax.js</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #c00000"> "</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">)"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+       <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">script</span> <span style="COLOR: red">src</span><span style="COLOR: blue">="</span><span style="BACKGROUND: yellow">@</span><span style="COLOR: blue">Url.Content(</span><span style="COLOR: #a31515">"~/Scripts/MicrosoftAjaxTemplates.js"</span><span style="COLOR: blue">)"</span> <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">head</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   In the view you 
+can use its <b>Model</b> property in <b>Datasource</b> in order to bind the data 
+source.</p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal">[Index.aspx]</p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View <span style="COLOR: black">[ASPX]</span></span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">&lt;%</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">=</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"JsonGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .EnablePaging()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .EnableSorting()      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      .Column(column =&gt;  {    </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]<span style="BACKGROUND: yellow"></span></span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">@{</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"JsonGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .EnablePaging()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      .EnableSorting()      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      .Column(column =&gt;  {    </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      column.Add(p =&gt; p.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">           
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Create a row 
+template for rendering the record rows and set its CSS <b>display</b> property 
+as <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">none</span>. </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">table</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">tr</span> 
+      <span style="COLOR: red">id</span><span style="COLOR: blue">="RowTemplate"</span> <span style="COLOR: red">style</span><span style="COLOR: blue">="</span><span style="COLOR: red">visibility</span><span style="COLOR: blue">: hidden; 
+      </span><span style="COLOR: red">display</span><span style="COLOR: blue">: 
+      none"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowHeader"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowCell"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {{CustomerID}}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowCell"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {{EmployeeID}}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowCell"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {{OrderID}}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowCell"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {{ShipCountry}}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">td</span> 
+      <span style="COLOR: red">class</span><span style="COLOR: blue">="RowCell"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {{ShipCity}}</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">td</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">tr</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">table</span><span style="COLOR: blue">&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Specify the 
+action mode using the <b>ActionMode</b> property. In this case, <span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">JSON"</span> is the action 
+mode. Specify the client template ID by using the  <b>ItemTemplate</b> 
+property (in this case <span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"RowTemplate"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">)</span> as shown below:</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View <span style="COLOR: black">[ASPX]</span></span></b><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"JsonGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .ActionMode(<span style="COLOR: #a31515">"JSON"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .ItemTemplate(<span style="COLOR: #a31515">"RowTemplate"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .EnablePaging()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .EnableSorting()      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      .Column(column =&gt;  {    </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      })           </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [</span></b><b><span style="FONT-FAMILY: 'Courier New'">cshtml</span></b><b><span style="FONT-FAMILY: 'Courier New'">]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'"> Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"JsonGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .ActionMode(<span style="COLOR: #a31515">"JSON"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .ItemTemplate(<span style="COLOR: #a31515">"RowTemplate"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .EnablePaging()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .EnableSorting()      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      .Column(column =&gt;  {    </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(P =&gt; P.ShipCountry).HeaderText(<span style="COLOR: #a31515">"Ship Country"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      column.Add(p =&gt; p.ShipCity).HeaderText(<span style="COLOR: #a31515">"Ship City"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">          
+      }).Render();       </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   In this 
+controller, set its <b>datasource</b> and render the view.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">var</span> datasource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.Take(200);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View(datasource);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">8.   Now, for example, 
+consider  that you are trying to navigate to a page by clicking a page 
+number (paging feature). This request will be sent to the controller from the UI 
+(view).</p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p class="MsoNormal">The controller gets the JSON paging request and prepares a 
+query for processing. This paging request is processed by the <b>Index 
+httpPost</b> method. The required data is fetched according to the query from 
+the database and the response is sent to the view. This is illustrated in the 
+code below.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If the controller receives a paging request, then the 
+required data is fetched according to the query from the database and the 
+response is sent to the view. This is also illustrated in the code below.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">///</span><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">&lt;summary&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      Sorting/paging requests are mapped to this method.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> Sorting 
+      and paging is done in this method.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param 
+      name="requestType"&gt;</span><span style="COLOR: green">Type of the 
+      request paging or sorting.</span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param name="pageSize"&gt;</span><span style="COLOR: green">Number of rows displayed in a page.</span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param 
+      name="startIndex"&gt;</span><span style="COLOR: green">Number of elements 
+      to skip.</span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param 
+      name="sortColumn"&gt;</span><span style="COLOR: green">Sorted columns 
+      collection.</span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;param 
+      name="sortDirection"&gt;</span><span style="COLOR: green">Direction of 
+      each sorted column.</span><span style="COLOR: gray">&lt;/param&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span><span style="COLOR: green">JSON data is returned.</span><span style="COLOR: gray">&lt;/returns&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">ActionResult</span> JsonPaging(<span style="COLOR: #2b91af">PagingParams</span> args)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">IEnumerable</span> data = <span style="COLOR: blue">new</span> 
+      StudentDataContext().JSONStudent.ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">var</span> ds = <span style="COLOR: blue">new</span> 
+      StudentDataContext().JSONStudent.ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">IOrderedEnumerable</span>&lt;MvcSampleBrowser.Models.Student&gt; 
+      orderedQuery = <span style="COLOR: blue">null</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (args.SortDescriptors != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; args.SortDescriptors.Count; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">string</span> sortColumnName = 
+      args.SortDescriptors[i].ColumnName;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">if</span> (i == 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (args.SortDescriptors[i].SortDirection 
+      == ListSortDirection.Ascending)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      orderedQuery = ds.OrderBy(c =&gt; c.Field(sortColumnName));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (args.SortDescriptors[i].SortDirection == 
+      ListSortDirection.Descending)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      orderedQuery = ds.OrderByDescending(c =&gt; 
+      c.Field(sortColumnName));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">     
+                     {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (args.SortDescriptors[i].SortDirection 
+      == ListSortDirection.Ascending)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      orderedQuery = orderedQuery.ThenBy(c =&gt; 
+      c.Field(sortColumnName));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                     
+         }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (args.SortDescriptors[i].SortDirection == 
+      ListSortDirection.Descending)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                            
+      orderedQuery = orderedQuery.ThenByDescending(c =&gt; 
+      c.Field(sortColumnName));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                 
+             }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (orderedQuery != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      data = orderedQuery.Skip(<span style="COLOR: #2b91af">Convert</span>.ToInt32(args.StartIndex)).Take(<span style="COLOR: #2b91af">Convert</span>.ToInt32(args.PageSize));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      data = ds.Skip(<span style="COLOR: #2b91af">Convert</span>.ToInt32(args.StartIndex)).Take(<span style="COLOR: #2b91af">Convert</span>.ToInt32(args.PageSize));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> Json(data);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="MsoNormal">Run the code. The following output is displayed.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_91.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 85: Grid with ActionMode="JSON"; Paging and Sorting 
+Enabled</p>
+<p class="MsoCaption"> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image58_6.jpg" alt="" />Note: Limitations—Essential Grid supports JSON 
+paging and JSON sorting functionalities alone. It does not provide support for 
+grouping, filtering, and editing.</p></div><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,443 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Conditional Formatting</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="52d6bd7e-03d8-4bb6-a473-cb1f701965cf" />
+    <meta name="Title" content="Conditional Formatting" />
+    <link rel="stylesheet" type="text/css" href="Theme/nav.css" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/grid8.css" />
+    <script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+      <div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+        <div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+          <p class="d2h_main_linknav" align="left">
+            <a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=9b3f1132-dff2-4620-8e0e-c79012593ef1"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=3c17a3a2-5d3d-4690-b7aa-d989ebd2f03d"></a></p>
+        </div>
+      </div>
+    </div>
+    <div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+      <div id="d2h_breadcrumbs" class="d2h_breadcrumbs">
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=fdf33dd8-62b2-47b9-ad7b-fc50e590bca5">Business 
+Intelligence Edition</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=41e3d586-d922-4a01-8272-679fe4ae7343">Essential BI 
+WPF</a>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <span class="d2h_breadcrumbsContentsOnly">Essential BI Grid</span>
+        <span class="d2h_breadcrumbsLinkSeparator"> &gt; </span>
+        <a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=ea758680-939d-4d65-8abe-8c3be198af29">Concepts and 
+Features</a>
+      </div>
+      <h2 style="tab-stops: 0pt">Conditional Formatting</h2>
+      <p class="MsoNormal">Conditional Formatting is the concept of applying custom 
+style to any object based on certain conditions. Conditional Formatting for 
+OlapGrid WPF allows you to format grid cells based on a certain condition. This 
+can be achieved by defining <b>OlapGridDataConditionalFormat</b> for the grid. 
+Using this class, you can specify the filter criteria for the cells and the 
+style to be applied for filtered cells. Once these specifications are defined, 
+the given styles are applied to only those cells that satisfy the condition 
+specified. Conditional Formatting can be specified through the 
+<b>OlapGrid.ConditionalFormats</b> property. This is an observable collection, 
+into which you can add required number of formatters of type 
+OlapGridDataConditionalFormat. </p>
+      <p class="MsoNormal">The filter criteria are specified by the 
+<b>OlapGridDataConditionalFormat.Conditions</b> property, which is a collection 
+of OlapGridDataCondition objects. </p>
+      <p class="MsoNormal">The style for each ConditionalFormat can be specified using 
+<b>OlapGridDataConditionalFormat.CellStyle </b>property which should be of type 
+OlapGridCellStyle.</p>
+      <p class="MsoNormal"> </p>
+      <p class="BodyTextHeading">Use Case Scenarios</p>
+      <p class="MsoNormal">Conditional Formatting can be used in Marketing scenarios, 
+where you can easily track the product sales rate of different regions.</p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+      <p class="BodyTextHeading">Adding Conditional Formatting </p>
+      <p class="MsoNormal">The following code snippets show how to create an OlapGrid 
+and to add Conditional Formats.</p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>[XAML]</b>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGrid</span>
+                <span style="COLOR: blue">&gt;</span>
+                <b>
+                  <span style="FONT-SIZE: 11pt"></span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue"> &lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGrid.ConditionalFormats</span>
+                <span style="COLOR: blue">&gt;</span>
+                <span style="COLOR: #a31515"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">   </span>
+                <span style="COLOR: green">&lt;!-- Adding Conditions --&gt;</span>
+                <span style="COLOR: #a31515">                       
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">   </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat</span>
+                <span style="COLOR: red"> Name</span>
+                <span style="COLOR: blue">="C1"&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">      </span>
+                <span style="COLOR: green">&lt;!-- Specifying Cell Style --&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">      </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515"> 
+      syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat.CellStyle</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">          
+      </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridCellStyle</span>
+                <span style="COLOR: red"> 
+      Background</span>
+                <span style="COLOR: blue">="Yellow" </span>
+                <span style="COLOR: red">FontFamily</span>
+                <span style="COLOR: blue">="Calibri"</span>
+                <span style="COLOR: red"> 
+      FontSize</span>
+                <span style="COLOR: blue">="12"/&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">          
+      </span>
+                <span style="COLOR: blue">&lt;/</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat.CellStyle</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">      </span>
+                <span style="COLOR: green">&lt;!-- Specfying Conditions --&gt;</span>
+                <span style="COLOR: #a31515"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">      </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat.Conditions</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">          
+      </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataCondition</span>
+                <span style="COLOR: red"> ConditionType</span>
+                <span style="COLOR: blue">="GreaterThan"</span>
+                <span style="COLOR: red"> 
+      Value</span>
+                <span style="COLOR: blue">="2000000"</span>
+                <span style="COLOR: red"> MeasureElement</span>
+                <span style="COLOR: blue">="Internet Sales Amount"</span>
+                <span style="COLOR: red"> PredicateType</span>
+                <span style="COLOR: blue">="Or"/&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">          
+      </span>
+                <span style="COLOR: blue">&lt;</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataCondition</span>
+                <span style="COLOR: red"> ConditionType</span>
+                <span style="COLOR: blue">="LessThan"</span>
+                <span style="COLOR: red"> 
+      Value</span>
+                <span style="COLOR: blue">="5000000"</span>
+                <span style="COLOR: red"> MeasureElement</span>
+                <span style="COLOR: blue">="Internet Sales Amount"</span>
+                <span style="COLOR: red"> PredicateType</span>
+                <span style="COLOR: blue">="And"/&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">          
+      </span>
+                <span style="COLOR: blue">&lt;/</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat.Conditions</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #a31515">   </span>
+                <span style="COLOR: blue">&lt;/</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGridDataConditionalFormat</span>
+                <span style="COLOR: blue">&gt;</span>
+                <span style="COLOR: #a31515">                        
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue"> &lt;/</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGrid.ConditionalFormats</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">&lt;/</span>
+                <span style="COLOR: #a31515">syncfusion</span>
+                <span style="COLOR: blue">:</span>
+                <span style="COLOR: #a31515">OlapGrid</span>
+                <span style="COLOR: blue">&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+        <span style="COLOR: #c00000"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>[C#]</b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #2b91af">OlapGrid</span> olapGrid1 = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapGrid</span>();</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Instantiating OlapDataManager with Connection string.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #2b91af">OlapDataManager</span> olapDataManager = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapDataManager</span>(connectionString);</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Set current report for OlapDataManager.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">olapDataManager.SetCurrentReport(olapReport());</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Specifying OlapDataManager to Grid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">olapGrid1.OlapDataManager = 
+      OlapDataManager;</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green"> // Specifying OlapGridData Conditional 
+      Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: #2b91af">OlapGridDataConditionalFormat</span> 
+      conditionalFormat = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapGridDataConditionalFormat</span>();</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Adding Conditions to OlapGridData Conditional Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.Conditions.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapGridDataCondition</span>() { </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      ConditionType= <span style="COLOR: #2b91af">OlapGridDataConditionType</span>.GreaterThan , </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      MeasureElement=<span style="COLOR: #a31515">"Internet Sales 
+      Amount"</span>,</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      Value=<span style="COLOR: #a31515">"2000000"</span>,</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      PredicateType = <span style="COLOR: #2b91af">PredicateType</span>.Or 
+      });</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.Conditions.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapGridDataCondition</span>() { </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      ConditionType= <span style="COLOR: #2b91af">OlapGridDataConditionType</span>.LessThan , </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      MeasureElement=<span style="COLOR: #a31515">"Internet Sales 
+      Amount"</span>,</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      Value=<span style="COLOR: #a31515">"5000000"</span>,</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">            
+      PredicateType = <span style="COLOR: #2b91af">PredicateType</span>.And 
+      });</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Specifying Cell Style to Conditional Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.CellStyle = 
+      <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">OlapGridCellStyle</span>() { Background= <span style="COLOR: #2b91af">Brushes</span>.Yellow, FontFamily = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">FontFamily</span>(<span style="COLOR: #a31515">"Calibri"</span>), FontSize=12 </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">};</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Adding Conditions to Grid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">this</span>.olapgrid1.ConditionalFormats.Add(conditionalFormat);</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">// 
+      Data Binding.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">this</span>.olapgrid1.DataBind();</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal">
+        <span style="COLOR: #c00000"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>[VB]</b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">Dim</span> olapGrid1 <span style="COLOR: blue">As</span> OlapGrid = <span style="COLOR: blue">New</span> OlapGrid()</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Instantiating OlapDataManager with Connection string.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">Dim</span> olapDataManager <span style="COLOR: blue">As</span> OlapDataManager = <span style="COLOR: blue">New</span> OlapDataManager(connectionString)</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Set current report for OlapDataManager.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">olapDataManager.SetCurrentReport(olapReport())</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Specifying OlapDataManager to Grid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">olapGrid1.OlapDataManager = 
+      OlapDataManager</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Specifying OlapGridData Conditional Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">Dim</span> conditionalFormat <span style="COLOR: blue">As</span> OlapGridDataConditionalFormat = <span style="COLOR: blue">New</span> OlapGridDataConditionalFormat()</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Adding Conditions to OlapGridData Conditional Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.Conditions.Add(<span style="COLOR: blue">New</span> OlapGridDataCondition() <span style="COLOR: blue">With</span> {.ConditionType= 
+      OlapGridDataConditionType.GreaterThan, .MeasureElement="Internet Sales 
+      Amount", .Value="2000000", .PredicateType = PredicateType.Or})</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.Conditions.Add(<span style="COLOR: blue">New</span> OlapGridDataCondition() <span style="COLOR: blue">With</span> {.ConditionType= 
+      OlapGridDataConditionType.LessThan, .MeasureElement="Internet Sales 
+      Amount", .Value="5000000", .PredicateType = PredicateType.And})</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Specifying Cell Style to Conditional Format.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">conditionalFormat.CellStyle = 
+      <span style="COLOR: blue">New</span> OlapGridCellStyle()</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">          
+      <span style="COLOR: blue">Dim</span> TempFontFamily <span style="COLOR: blue">As</span> FontFamily = <span style="COLOR: blue">New</span> FontFamily("Calibri"), FontSize=12</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">          
+      Brushes.Yellow, FontFamily = <span style="COLOR: blue">New</span> 
+      FontFamily("Calibri"), FontSize</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">          
+      Background= Brushes.Yellow, FontFamily</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Adding Conditions to Grid.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">Me</span>.olapgrid1.ConditionalFormats.Add(conditionalFormat)</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: green">' 
+      Data Binding.</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="COLOR: blue">Me</span>.olapgrid1.DataBind()</p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b></b> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal">
+        <span style="COLOR: #c00000"></span> </p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\dwarageshmb\Desktop\Vol 4 Docs\Images\OlapGridConditionalFormatting.png" src="ImagesExt/image44_17.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 13: Conditionally Formatted OlapGrid</p>
+      <p class="MsoNormal">
+        <b></b> </p>
+      <p class="BodyTextHeading">Sample Link</p>
+      <p class="MsoNormal">
+        <b>..\..\ 
+Syncfusion\BI\WPF\OlapGrid.WPF\Samples\Appearance\Conditional Formatting 
+Demo</b>
+      </p>
+      <p class="MsoNormal"> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Grid FilterBar</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="70e9951f-aaef-4362-b092-4b579138bbdd" />
+<meta name="Title" content="Grid FilterBar" />
+<meta name="Microsoft.Help.TocParent" content="ecfa9815-f049-4e03-b329-88068c98ee19" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid2.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Grid FilterBar</h4>
+<p class="BodyText1">Essential Grid supports FilterBar, which filters the records 
+with different expressions depending upon the Column type. FilterBar will be 
+displayed at the top of the Grid below the Header Row by setting  the 
+“ShowFilterBar” property to “True” in GridDataControl class. The filtering 
+tokens are tabulated in the <a><span style="COLOR: blue">Tokens to filter the 
+value</span></a> table.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="BodyText1">FilterBar can be used for applications, for which the user 
+wants to filter the Grid at run time. The following topic explains the 
+implementaion of the FilterBar Support. </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Adding FilterBar to an Application </p>
+<p class="BodyText1">This topic explains the implementation of the FilterBar in an 
+application. The following steps explain the implementation of FilterBar support 
+in  an application. </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Creating an 
+application</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a 
+Silverlight application and add GridDataControl to it. </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Setting the 
+FilterBar Property</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the FilterBar 
+property to “true” for the GridDataControl object.  The Filter status 
+message can be viewed at the bottom of the Grid by enabling the property 
+ShowFilterStatusMessage.  The filtering mode can be set to Immediate or 
+OnEnter by setting the Enum property GridDataFilterBarMode.  The following 
+code snippet explains the implementation of the FilterBar.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'; COLOR: #15428b"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">.dataGrid.ShowFilterBar 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.dataGrid.ShowFilterStatusMessage 
+      = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.dataGrid.FilterBarMode = 
+      <span style="COLOR: #2b91af">GridDataFilterBarMode</span>.Immediate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt">//</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.dataGrid.FilterBarMode = 
+      <span style="COLOR: #2b91af">GridDataFilterBarMode</span>.OnEnter;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Run the 
+application and use the filtering tokens in the FilterBar. The valid tokens are 
+listed in<span style="FONT-FAMILY: 'Calibri','sans-serif'"> </span><a><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: blue">Tokens to filter the 
+value</span></a><span style="FONT-FAMILY: 'Calibri','sans-serif'"> </span>table. 
+The following is a sample output of FilterBar implementation.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image61_196.png" alt="" /></p>
+<p class="MsoCaption">Figure 124: FilterBar with ShowFilterStatusMessage Property 
+set to true</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #002060; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Clearing the 
+Filter</p>
+<p style="MARGIN-LEFT: 27pt" class="BodyText1">The Current filter value with the 
+column name will be displayed at the bottom of the <b>GridDataControl </b>(just 
+like status bar). It contains the button (red color) called “Close”, which is 
+used to clear the entire filter and shows the default level records. </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p class="BodyTextHeading">Tables for Properties, Methods, and Events</p>
+<p class="BodyTextHeading">Properties</p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption">Table 17: FilterBar Support Table</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <thead>
+  <tr style="HEIGHT: 35.5pt">
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 90.9pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35.5pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="121">
+      <p class="TableHeading">Property</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 162pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35.5pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="216">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35.5pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableHeading">Data Type</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 63pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35.5pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableHeading">Default value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 35.5pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableHeading">Class Name</p></td></tr></thead>
+  <tbody>
+  <tr style="HEIGHT: 53.7pt">
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 90.9pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="121">
+      <p class="TableText">ShowFilterBar</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 162pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="216">
+      <p class="TableText">Shows FilterBar, if it is true.</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">Boolean </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 63pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">False</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridDataControl</p></td></tr>
+  <tr style="HEIGHT: 53.7pt">
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 90.9pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="121">
+      <p class="TableText">ShowFilterStatusMessage</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 162pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="216">
+      <p class="TableText">Shows the message at the bottom of the grid, which 
+      depends on the current Filter applied, if it is true.</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">Boolean </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 63pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">True</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridDataControl</p></td></tr>
+  <tr style="HEIGHT: 53.7pt">
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 90.9pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="121">
+      <p class="TableText">FilterBarMode</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 162pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="216">
+      <p class="TableText">Filter result will be shown immediately if 
+      "Immediately" is set and will be shown on pressing the Enter key  if 
+      "OnEnter" is set</p>
+      <p class="TableText"> </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">Enum </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 63pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">Immediate</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.7pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridDataControl</p>
+      <p class="TableText"> </p></td></tr>
+  <tr style="HEIGHT: 53.75pt">
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 90.9pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.75pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="121">
+      <p class="TableText">FilterBarMode</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 162pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.75pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="216">
+      <p class="TableText"> Filter result will be shown immediately if 
+      "Immediately" is set and will be shown on pressing the Enter key  if 
+      "OnEnter" is set</p>
+      <p class="TableText"> </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 58.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.75pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="78">
+      <p class="TableText">Enum </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 63pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.75pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="84">
+      <p class="TableText">Immediate</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.75pt; HEIGHT: 53.75pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" width="114">
+      <p class="TableText">GridDataVisibleColumn</p></td></tr></tbody></table>
+<p class="MsoNormal"><a name="_Tokens_to_filter" id="_Tokens_to_filter"></a><b></b> </p>
+<p class="BodyTextHeading"><a name="TokenstoFiltertheValue" id="TokenstoFiltertheValue">Tokens to Filter the 
+Value</a></p>
+<p class="BodyTextHeading"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableHeading">Filter Token</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableHeading">Examples</p>
+      <p class="TableHeading">(should be used as like below)</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 1pt solid; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableHeading">Used at</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" rowspan="2" width="157">
+      <p class="TableText">%</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">value%</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">StartsWith</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">AlphaNumeric</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">%value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">EndsWith</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">AlphaNumeric</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">#</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">#value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Contains</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">AlphaNumeric</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">&lt; </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&lt;value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">LessThan</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">&lt;=</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&lt;=value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">LessThanOrEqual</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">&gt; </p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&gt;value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">GreaterThan</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">&gt;=</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&gt;=value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">GreaterThanOrEqual</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">=</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">=value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Equals</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">!</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">!value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Not Equals</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">and</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&gt;value and &lt;=value</p>
+      <p class="TableText">&gt;value and &lt;value</p>
+      <p class="TableText">&gt;=value and &lt;value</p>
+      <p class="TableText">&gt;=value and &lt;=value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">between</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">or</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">&gt;value or &lt;=value</p>
+      <p class="TableText">&gt;value or &lt;value</p>
+      <p class="TableText">&gt;=value or &lt;value</p>
+      <p class="TableText">&gt;=value or &lt;=value</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">between</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Numeric &amp; DateTime</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">0</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">0</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Equals</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Boolean</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: black 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 117.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="157">
+      <p class="TableText">1</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.7pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">1</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 107.5pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="143">
+      <p class="TableText">Equals</p></td>
+    <td style="BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 126.9pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 1pt solid; PADDING-TOP: 0pt" valign="top" width="169">
+      <p class="TableText">Boolean</p></td></tr></tbody></table>
+<p class="TableText">*values can be entered in any format (not case sensitive)</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1">Refer to the sample in the shipped Sample Browser. </p>
+<p class="BodyText1">Go to Essential Studio Silverlight Sample Browser <span style="FONT-FAMILY: Wingdings">à</span> Grid <span style="FONT-FAMILY: Wingdings">à</span> GridDataControl-Advanced<span style="FONT-FAMILY: Wingdings">à</span>FilterBarDemo</p>
+<p class="BodyText1"> </p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=5e86f5df-7e63-4e42-b030-a9f8b3222e5a"><img border="0" alt="" align="absMiddle" src="button.gif" />Dropdown 
+FilterBar</a></p></span></div></body></html>

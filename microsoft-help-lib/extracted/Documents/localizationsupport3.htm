@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Localization Support</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="a930732c-9add-4fc6-9794-0a9833ccc512" />
+<meta name="Title" content="Localization Support" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4>Localization Support</h4>
+<p class="BodyText1">Localization is the process of providing controls in 
+different cultures, so that it will be easier for you to set their own culture. 
+The easiest way to accomplish is to use Resource (.resx) file. For each local or 
+culture that you wish to target, will need separate set of resources that match 
+that specific local or culture.<i></i></p>
+<p class="BodyTextHeading">Use Case Scenarios</p>
+<p class="BodyText1">This feature enables you to set your own culture for 
+tooltip.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 36pt; TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="BodyTextHeading">Adding Localization support to an Application </p>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">The following are the primary things to do for Localizing the 
+Syncfusion TileViewControl.</p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Add Resources 
+for different cultures</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Add Supported 
+Cultures</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Assign 
+Current UI Culture to the application</p>
+<p class="BodyTextHeading">Add Resources</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyText1">To localize Syncfusion Silverlight controls, you need to 
+create resource files for each culture. The following things are to be done when 
+localizing strings for any culture.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Add Resource 
+(resx) files in the Resources folder for different cultures. (Here, resx files 
+in different cultures or invariant cultures should be placed in 
+the <i>Resources</i> Folder of the project).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Resource files 
+should be named <i>AssemblyName.CultureName.resx</i><b> </b>and 
+AssemblyName.resx for invariant culture.</p>
+<p class="BodyText1">Where,</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>AssemblyName</b> – Syncfusion Silverlight Control Assembly 
+Name.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>CultureName</b> – Culture code of the resource that you want to 
+show in UI. If the conversion is only for invariant culture, the .resx file does 
+not need to contain a culture suffix.</p>
+<p class="BodyText1">For Example,</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Syncfusion.Shared.Silverlight.Ja.resx – Japanese resource for 
+Syncfusion.Shared.Silverlight assembly.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Syncfusion.Shared.Silverlight.resx – Invariant Culture resource for 
+Syncfusion.Shared.Silverlight assembly.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Add Resources</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"> </p>
+<p class="BodyText1">Add supported cultures for a project is very important to be 
+done in the sample application project before running the application.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   In the Solution 
+Explorer, right-click sample application project and choose <i>Unload 
+Project</i> from the Context menu. Then the project will be 
+unavailable.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Right-click the 
+project again, and select the <i>Edit 
+SampleProjectName.csproj</i> option.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In 
+the <i>.csproj</i> file, find 
+the <i>&lt;SupportedCultures&gt;&lt;/SupportedCultures&gt;</i> tags. 
+By default, the tags will be empty. So, add the cultures that you want to be 
+supported, separating each with a semicolon if many.</p>
+<p class="BodyText1"><b>For Example</b>: &lt;SupportedCultures&gt;Ja 
+&lt;/SupportedCultures&gt;</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Save the project 
+and right-click the SampleProjectName.csproj to reload it.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   
+Choose <i>Reload SampleProjectName.csproj</i>.</p>
+<p class="BodyText1">In the .resx file, change the following values:</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_773.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"> </p>
+<p class="MsoCaption">Figure 867: SampleProjectName.csproj after setting value in 
+Japanese culture</p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Assign Current UI Culture to the Application</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyText1">By Default, Current Culture will be “en-US”, you have to set 
+the Current Culture before<b> </b>IntializeComponent in the 
+StartUp page or you can do it in App.xaml.cs in 
+the Application_Startup event.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      public</span><span style="FONT-FAMILY: 'Courier New'"> 
+      MainPage()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      System.Threading.<span style="COLOR: #2b91af">Thread</span>.CurrentThread.CurrentUICulture = 
+      <span style="COLOR: blue">new</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">                                  
+      </span><span style="FONT-FAMILY: 'Courier New'"> System.Globalization.<span style="COLOR: #2b91af">CultureInfo</span>(<span style="COLOR: #a31515">"Ja"</span>); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      InitializeComponent();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_774.png" alt="" /></p>
+<p class="MsoCaption">Figure 868: ToolTip with Japanese culture</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1">To view samples: </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Select Start 
+-&gt; Programs -&gt; Syncfusion -&gt; Essential Studio x.x.xx -&gt; 
+Dashboard.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   
+Select   Run Locally Installed Samples in Silverlight Button.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Now expand the 
+DragAndDropManagerDemo tree-view item in the Sample Browser.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Choose any one of 
+the samples listed under it to launch. </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

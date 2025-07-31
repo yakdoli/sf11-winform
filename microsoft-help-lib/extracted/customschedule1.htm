@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Schedule</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="106fd2d8-64a5-4f1d-bb79-16384511f9f0" />
+<meta name="Title" content="Custom Schedule" />
+<meta name="Microsoft.Help.TocParent" content="b8172a4a-8718-4370-8781-8351a2959492" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/Gantt1.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=b32cab90-879f-49e3-8118-ef68f5c9eaa5"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=81701cc9-669b-4739-ac49-a732284e7c32"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=7f4f82c5-151c-4262-94d0-75c4626c77bc">Essential 
+WPF</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Gantt</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=b8172a4a-8718-4370-8781-8351a2959492">Concepts and 
+Features</a></div>
+<h2 style="tab-stops: 0pt">Custom Schedule</h2>
+<p class="BodyText1">Essential Gantt provides the custom schedule support that 
+allows you to define your own schedule for Gantt to track the progress of 
+projects. You can define the schedule for any measurement unit or for different 
+types of date time formats namely quarterly basis scale and so on, with this 
+feature.</p>
+<p class="BodyText1">This feature will get the information from the user and will 
+draw the Gantt schedule with that information. Custom schedule has been split 
+into two types namely: </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Custom 
+Numeric </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Custom 
+DateTime</p>
+<p class="BodyText1">These types are included in the existing SchduleType 
+enum.</p>
+<p class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Custom Numeric</p>
+<p class="BodyText1">Custom Numeric schedule is to define your own schedule with 
+any numeric measurement unit other than date time. With this schedule, you can 
+track the progress based on your own measurement and there is no need to depend 
+on Date Time. Two new API’s are added to the Mapping attributes to support this 
+schedule in GanttChart and GanttGrid.</p>
+<p class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Custom DateTime</p>
+<p class="BodyText1">Custom DateTime schedule is to define your own date time 
+schedule, which can match your current financial calendar. Suppose you need the 
+schedule on quarterly basis, you can use this schedule type to define the custom 
+schedule.</p>
+<p class="BodyText1">In both the custom schedules, Gantt will get the information 
+from the application to render the schedule. Gantt will accept the custom 
+schedule information in the form of a collection of “GanttScheduleRowInfo” 
+object, and process it to draw the schedule. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">GanttScheduleRowInfo class will have following fields:</p>
+<p class="BodyText1"><b>PixelsPerUnit</b>—Gets the information about the pixel 
+value equivalent to one unit in custom measurement.</p>
+<p class="BodyText1"><b>CellsPerUnit</b>—Gets the information about a cell size of 
+preceding row in the schedule based on the immediate next row. In CustomDateTime 
+Schedule, the CellsPerUnit will be used to customize the cell. For example, in 
+quarterly basis month cell, we need to draw a cell by consolidating three 
+months. For this, we need to define the CellsPerUnit of that corresponding row 
+as 3.</p>
+<p class="MsoNormal"><b></b> </p>
+<p class="BodyText1"><b>TimeUnit</b>—Gets the information about the type of row, 
+when the schedule type is CustomDateTime. The Time unit can be any one of the 
+following:</p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Minutes—represents the corresponding row as minute’s row.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Hours—represents the corresponding row as hour’s row.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Days—represents the corresponding row as day’s row</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Weeks—represents the corresponding row as week’s row</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Months—represents the corresponding row as month’s row</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Years—represents the corresponding row as year’s row</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Use Case Scenario</p>
+<p class="BodyText1"><span style="COLOR: black">This will be useful when users 
+like to define their own schedules with their own 
+measurements/calendars.</span></p>
+<p class="BodyText1"><b>Example 1: </b>The Research organizations may follow 
+different measurements to track their work progress and the measurement will 
+depend on their products. In this case, they can use CustomNumeric schedule to 
+define the schedule with their own measure.</p>
+<p class="BodyText1"><b>Example 2: </b>A very big construction project many have 
+the time period of many years or months. They need some customized way of date 
+time schedule to track their progress. In this scenario, they can use the 
+CustomDateTime schedule to form the custom schedule like the schedule that has 
+the time scale on quarterly basis to track their progress.</p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Properties</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 4.65pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 24.78%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="24%">
+      <p class="TableHeading">Property </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 21.88%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="21%">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 23.32%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="23%">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 30.02%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="30%">
+      <p class="TableHeading">Data Type </p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 24.78%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="24%">
+      <p class="TableText">CustomScheduleSource</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 21.88%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="21%">
+      <p class="TableText">Gets/Sets the custom schedule items Source of the 
+      Gantt.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 23.32%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="23%">
+      <p class="TableText">DependencyProperty </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 30.02%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="30%">
+      <p class="TableText">IList&lt;GanttScheduleRowInfo&gt;</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Events</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 22%; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="22%">
+      <p class="TableHeading">Event </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 28.48%; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="28%">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 31.64%; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="31%">
+      <p class="TableHeading">Arguments </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 17.88%; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="17%">
+      <p class="TableHeading">Type </p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 22%; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="22%">
+      <p class="TableText">ScheduleCellCreated </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 28.48%; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="28%">
+      <p class="TableText">Whenever a schedule cell is created, this event will be 
+      triggered. The handler of the event will have the newly created cell 
+      (GanttScheduleCell) in the argument.</p>
+      <p class="TableText">By handling this event, the user can customize the 
+      appearance of the cell. </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 31.64%; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="31%">
+      <p class="TableText">ScheduleCellCreated (object sender, 
+      ScheduleCellCreatedEventArgs args)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 17.88%; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="17%">
+      <p class="TableText">Routed Event </p></td></tr></thead>
+  <tbody></tbody></table></div>
+<p class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p class="BodyTextHeading">GanttScheduleCell Class</p>
+<p class="BodyText1">The properties of the GanttScheduleCell class are as 
+follows:</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 4.65pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.94%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p class="TableHeading">Property     </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 29.06%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="29%">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableHeading">Data Type </p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.94%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p class="TableText">CellDate</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 29.06%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="29%">
+      <p class="TableText">Gets/Sets the current schedule cell date in the 
+      datetime schedule. </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Dependency Property </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">DateTime</p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.94%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p class="TableText"> </p>
+      <p class="TableText">CellToolTip</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 29.06%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="29%">
+      <p class="TableText">Gets/Sets the current schedule cell tool tip.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Dependency Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Object</p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.94%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p class="TableText">CellTimeUnit</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 29.06%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="29%">
+      <p class="TableText">Gets/Sets the current schedule row time unit (like 
+      weeks, months and so on).</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Dependency Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">TimeUnit (Enum)</p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.94%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p class="TableText">Content</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 29.06%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="29%">
+      <p class="TableText">Gets/Sets the current schedule cell content</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Dependency Property</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p class="TableText">Object</p></td></tr></tbody></table></div>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Adding Custom Schedule to an Application</p>
+<p class="BodyText1"><span style="COLOR: black">To Add CustomNumeric Schedule to 
+an application:</span></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Define the 
+Mapping for StartPointMapping and FinishPointMapping in 
+TaskAttributeMapping.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Set the Gantt 
+Schedule type as CustomNumeric.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Bind the 
+GanttScheduleRowInfo collection to the CustomScheduleSource property of the 
+Gantt.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code illustrates this:</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 6.75pt; BORDER-TOP: medium none; MARGIN-RIGHT: 6.75pt; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" align="left">
+  <tbody>
+  <tr style="HEIGHT: 3.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; HEIGHT: 3.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515"></span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">   
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Grid.Row</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="1"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red">ScheduleType</span><span style="COLOR: blue">="CustomNumeric"</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">              
+      <span style="COLOR: red"> x</span><span style="COLOR: blue">:</span><span style="COLOR: red">Name</span><span style="COLOR: blue">="Gantt"</span><span style="COLOR: red"> 
+      VisualStyle</span><span style="COLOR: blue">="Office2010Black"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl.TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> TaskIdMapping</span><span style="COLOR: blue">="Id"</span>                                            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> TaskNameMapping</span><span style="COLOR: blue">="Name"</span>                                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> StartPointMapping</span><span style="COLOR: blue">="Start"</span>                                 
+                    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> FinishPointMapping</span><span style="COLOR: blue">="End"</span>                                            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> ChildMapping</span><span style="COLOR: blue">="ChildTask"</span>                                                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> ProgressMapping</span><span style="COLOR: blue">="Complete"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                       
+      <span style="COLOR: red"> ResourceInfoMapping</span><span style="COLOR: blue">="Resource"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl.TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  </span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">   
+      // Assigning the custom schedule Items Source</span><b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">   
+      this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.Gantt.CustomScheduleSource 
+      = <span style="COLOR: blue">this</span>.GetInfo();   </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   <span style="COLOR: gray">///</span><span style="COLOR: green"> Gets the Numeric 
+      Schedule Items Info</span>        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   <span style="COLOR: blue">private</span> <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt; 
+GetInfo()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Creating a new collection</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: #2b91af">ObservableCollection</span>&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt; RowInfo = <span style="COLOR: blue">new</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">                                         
+      ObservableCollection</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Defining the top most row of the schedule 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { CellsPerUnit = 3 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Defining the consecutive rows of the 
+      schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { CellsPerUnit = 2 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { CellsPerUnit = 5 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Defining the bottom most row of the 
+      schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Here we are setting the cell width in 
+      pixels</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { PixelsPerUnit = 30d 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: blue">return</span> RowInfo;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   }   
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515"></span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image80_28.jpg" alt="" /><b></b></p>
+<p class="MsoCaption">Figure 28</p>
+<p class="MsoCaption"><b></b> </p>
+<p class="BodyTextHeading">Samples Link</p>
+<p class="BodyText1">To view samples:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Select 
+<b>Start</b> -&gt; <b>Programs</b> -&gt; <b>Syncfusion</b> -&gt; <b>Essential 
+Studio x.x.xx</b> -&gt; <b>Dashboard</b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Click<span style="COLOR: black"> </span><b>Run Samples</b><span style="COLOR: black"> </span>for <b>WPF</b> under the <b>User Interface 
+Edition</b> panel.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Select<span style="COLOR: black"> </span><b>Gantt</b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Expand the 
+<b>Custom Schedule</b> item in the <b>Sample Browser</b>.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Choose the 
+<b>Custom Numeric Schedule</b> sample to launch.</p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="COLOR: black"></span> </p>
+<p class="BodyTextHeading">Adding CustomDateTime Schedule to an Application</p>
+<p class="BodyText1">To Add CustomDateTime Schedule to an application:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Define the 
+<b>Gantt Schedule</b> type as <b>CustomDateTime</b>.<b></b></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Bind the 
+<b>GanttScheduleRowInfo</b> collection to the <b>CustomScheduleSource</b> 
+property of the Gantt.<b></b></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"> </p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal">The following code illustrates 
+this:</p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 6.75pt; BORDER-TOP: medium none; MARGIN-RIGHT: 6.75pt; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" align="left">
+  <tbody>
+  <tr style="HEIGHT: 3.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; HEIGHT: 3.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515"></span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">   
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"> &lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Grid.Row</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="1"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">                
+      x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Gantt"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ScheduleType</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="CustomDateTime"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: red">                                                                                                              </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">                
+      VisualStyle</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Office2010Black"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">                
+      ItemsSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">Binding</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      GanttItemSource</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      ShowChartLines</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="False"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">               
+      </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> ShowNonWorkingHoursBackground</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="False"</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">               
+      </span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> ToolTipTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="{</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">StaticResource</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      toolTipTemplate</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">}"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl.TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      TaskIdMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="Id"</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> TaskNameMapping</span><span style="COLOR: blue">="Name"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> StartDateMapping</span><span style="COLOR: blue">="StDate"</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> ChildMapping</span><span style="COLOR: blue">="ChildTask"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> FinishDateMapping</span><span style="COLOR: blue">="EndDate"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> DurationMapping</span><span style="COLOR: blue">="Duration"</span>                                            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> ProgressMapping</span><span style="COLOR: blue">="Complete"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> ResourceInfoMapping</span><span style="COLOR: blue">="Resource"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: red"> PredecessorMapping</span><span style="COLOR: blue">="Predecessor"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                           
+      <span style="COLOR: blue"> &gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                    
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">                
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl.TaskAttributeMapping</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">            
+      </span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">sync</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">GanttControl</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  </span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">   
+      // Assigning the custom schedule Items Source.</span><b><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">   
+      this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.Gantt.CustomScheduleSource 
+      = <span style="COLOR: blue">this</span>.GetCustomScheduleSource();  
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">   
+      // Hooks the Schedulecell created event to customize the schedule cell 
+      appearance.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">   
+      this</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.Gantt.ScheduleCellCreated+=<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttControl</span>.<span style="COLOR: #2b91af">ScheduleCellCreatedEventHandler </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                                                        
+      (Gantt_ScheduleCellCreated);           
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">         
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   <span style="COLOR: gray">///</span><span style="COLOR: green"> Gets the Custom 
+      Schedule Items Info</span>        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">   
+      public</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">  
+      <span style="COLOR: #2b91af">IList</span>&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt; 
+      GetCustomScheduleSource()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: #2b91af">List</span>&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt; RowInfo = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">List</span>&lt;<span style="COLOR: #2b91af">GanttScheduleRowInfo</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Defining the top most row of the 
+      schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Here we need the Year Schedule in this row. 
+      So we are defining  the TimeUnit as years</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { TimeUnit = <span style="COLOR: #2b91af">TimeUnit</span>.Years, </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                  
+      CellsPerUnit = 1, HorizontalAlignment = <span style="COLOR: #2b91af">HorizontalAlignment</span>.Left });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Defining the bottom most row of the 
+      schedule</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      <span style="COLOR: green">// Here we need to display the three months in 
+      a cell so we are defining TimeUnit in months, and cells per Unit as 3 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">       
+      // Bottom Most row should consist information about the pixels per Unit, 
+      so we define the pixels per unit as 15 (here this is a one month 
+      width).</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      RowInfo.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GanttScheduleRowInfo</span>() { TimeUnit = <span style="COLOR: #2b91af">TimeUnit</span>.Months, </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                  
+      CellsPerUnit = 3, PixelsPerUnit = 15 });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span> RowInfo;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: gray; FONT-SIZE: 9.5pt">    
+      ///</span><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt"> Handles the 
+      Schedule cell Created Event of the Gantt</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">    
+      void</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      Gantt_ScheduleCellCreated(<span style="COLOR: blue">object</span> sender, 
+      <span style="COLOR: #2b91af">ScheduleCellCreatedEventArgs</span> 
+      args)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: #2b91af">DateTime</span> currentDate = 
+      args.CurrentCell.CellDate;                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">if</span> (args.CurrentCell.CellTimeUnit == 
+      <span style="COLOR: #2b91af">TimeUnit</span>.Months)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                 
+      args.CurrentCell.Foreground = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: green">// Quarter 1 dates contain months below 3 as we 
+      are checking the      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">                                     
+      cell date and changing the content of the cell.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">if</span> (currentDate.Month &lt;= 3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Content = <span style="COLOR: #a31515">"Q 
+      1"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.CellToolTip = <span style="COLOR: #a31515">"Quarter 
+      1"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Background = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.DarkGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: green">// Quarter 2 dates contain months between 4 – 6 
+      as we are checking</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">                                   
+      the cell dates and changing the content of the cell.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (currentDate.Month &gt; 3 &amp;&amp; currentDate.Month &lt;= 6)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Content = <span style="COLOR: #a31515">"Q 
+      2"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.CellToolTip = <span style="COLOR: #a31515">"Quarter 
+      2"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Background =<span style="COLOR: blue">new </span><span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+          }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: green">// Quarter 3 dates contains months between 6 - 
+      9 as we are checking</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">                                   
+      the cell date and changing the Content of the cell.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (currentDate.Month &gt; 6 &amp;&amp; currentDate.Month &lt;= 9)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Content = <span style="COLOR: #a31515">"Q 
+      3"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.CellToolTip = <span style="COLOR: #a31515">"Quarter 
+      3"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Background = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.DarkGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">             
+         <span style="COLOR: green">// Quarter 4 dates contains 
+      months between 9 - 12. So we are checking</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">                                   
+      the cell date and changing the content of the cell.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> 
+      (currentDate.Month &gt; 9 &amp;&amp; currentDate.Month &lt;= 
+12)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   
+                       args.CurrentCell.Content 
+      = <span style="COLOR: #a31515">"Q 4"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.CellToolTip = <span style="COLOR: #a31515">"Quarter 
+      4"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                    
+      args.CurrentCell.Background =<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.LightGray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #a31515"></span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\thanigaivelan\Desktop\UGImages\custom.png" src="ImagesExt/image80_29.jpg" /></p>
+<p class="MsoCaption">Figure 29<b></b></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p style="LINE-HEIGHT: 12pt; MARGIN-BOTTOM: 2pt" class="MsoNormal"><b><span style="COLOR: black">Samples Link</span></b></p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"><span style="COLOR: black">To view 
+samples:</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 36pt" class="MsoNormal"><span style="COLOR: black">1.   Select <b>Start</b> 
+-&gt; <b>Programs</b> -&gt; <b>Syncfusion</b> -&gt; <b>Essential Studio 
+x.x.xx</b> -&gt; <b>Dashboard</b>.</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 36pt" class="MsoNormal"><span style="COLOR: black">2.   Click <b>Run 
+Samples</b> for WPF under User Interface Edition panel.</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 36pt" class="MsoNormal"><span style="COLOR: black">3.   
+Select <b>Gantt</b>.</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 36pt" class="MsoNormal"><span style="COLOR: black">4.   Expand the <b>Custom 
+Schedule</b> item in the <b>Sample Browser</b>.</span></p>
+<p style="LINE-HEIGHT: 12pt; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 36pt" class="MsoNormal"><span style="COLOR: black">5.   Choose the 
+<b>Customized Schedule Appearance</b> sample to launch.</span></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">ScheduleCellCreatedEventArgs Class</p>
+<p class="BodyText1">The ScheduleCellCreatedEventArgs consists of the current 
+schedule cell in the name of CurrentCell. It is the GanttScheduleCell type. 
+</p><span id="related-topics"></span></div></body></html>

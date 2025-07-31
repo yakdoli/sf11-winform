@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Conditional Formatting</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="3136d529-4ee4-4644-b1b7-34a91e2bd54c" />
+<meta name="Title" content="Conditional Formatting" />
+<meta name="Microsoft.Help.TocParent" content="65bccd01-9fcb-41f3-9af2-76162b3609af" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Conditional Formatting</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; FONT-SIZE: 12pt"></span> </p>
+<p class="BodyText1">Conditional formatting is a feature by which the contents of 
+a cell are dynamically formatted, based on a value. It allows you to define and 
+apply formatting to some cells, text, and numbers, based on the criteria that is 
+set. For example, you can format a time sheet, to point out the overtime 
+obtained by the employee. You can also use it to track the best sales employees 
+in a company, by setting a quota that makes a cell range particular.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In MS Excel, Click the <b>Format</b> menu and then click 
+<b>Conditional Formatting</b>. You can use any criteria of your choice. The 
+formatting could be applied to cells' values or a particular formula.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_51.png" alt="" /></p>
+<p class="MsoCaption">Figure 46: Conditional Formatting option displayed in Format 
+Menu<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_52.png" alt="" /></p>
+<p class="MsoCaption">Figure 47: Using Conditional Formatting Feature in MS 
+Excel<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note">Note: Excel allows the 
+addition of a maximum of three conditions only, for the same cell in the Biff8 
+format. However, this restriction is overcome in Excel 2007 formats.</p></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Conditional Formatting in XlsIO</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO allows to create conditional formats by using 
+<b>IConditionFormats</b>,<b> </b>and various conditions can be set by using its 
+properties.<b> </b>It also provides support for applying more than  three 
+conditional formats in the same cell, in the<b> .xlsx</b> format.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">For more details, see <a href="http://www.syncfusion.com:91/products/xlsio/backoffice/Articles/conditional_formatting.aspx"><span class="UGHyperlink">http://www.syncfusion.com:91/products/xlsio/backoffice/Articles/conditional_formatting.aspx</span></a>.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following is the code snippet for creating and applying 
+various conditional formats in XlsIO.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Applying conditional 
+      formatting to "A1" for format type as CellValue(Between).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition = sheet.Range[<span style="COLOR: #a31515">"A1"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding formats to 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition1 = 
+      condition.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"A1"</span>].Text = <span style="COLOR: #a31515">"Enter a Number between 10 to 
+20"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FirstFormula = <span style="COLOR: #a31515">"10"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.SecondFormula = <span style="COLOR: #a31515">"20"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.Operator = <span style="COLOR: #2b91af">ExcelComparisonOperator</span>.Between;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FormatType = <span style="COLOR: #2b91af">ExcelCFType</span>.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.BackColor = <span style="COLOR: #2b91af">ExcelKnownColors</span>.Light_orange;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.IsBold = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.IsItalic = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Applying conditional 
+      formatting to "A3" for format type as CellValue(Equal).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition2 = sheet.Range[<span style="COLOR: #a31515">"A3"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition3 = 
+      condition2.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"A3"</span>].Text = <span style="COLOR: #a31515">"Enter the Number as 1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FormatType = <span style="COLOR: #2b91af">ExcelCFType</span>.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.Operator = <span style="COLOR: #2b91af">ExcelComparisonOperator</span>.Equal;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FirstFormula = <span style="COLOR: #a31515">"1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FontColor = <span style="COLOR: #2b91af">ExcelKnownColors</span>.Magenta;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Applying conditional 
+      formatting to "A5" for format type as CellValue (Not between).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition4 = sheet.Range[<span style="COLOR: #a31515">"A5"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition5 = 
+      condition4.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"A5"</span>].Text = <span style="COLOR: #a31515">"Enter a Number not between 100 to 
+      200"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FormatType = <span style="COLOR: #2b91af">ExcelCFType</span>.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.Operator = <span style="COLOR: #2b91af">ExcelComparisonOperator</span>.NotBetween;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FirstFormula = <span style="COLOR: #a31515">"100"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.SecondFormula = <span style="COLOR: #a31515">"200"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FillPattern = <span style="COLOR: #2b91af">ExcelPattern</span>.DarkVertical;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Applying conditional 
+      formatting to "A7" for format type as CellValue(LessOrEqual).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition6 = sheet.Range[<span style="COLOR: #a31515">"A7"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Adding formats to 
+      IConditionalFormats collection</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition7 = 
+      condition6.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"A7"</span>].Text = <span style="COLOR: #a31515">"Enter a Number which is less than or equal to 
+      1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.FormatType = <span style="COLOR: #2b91af">ExcelCFType</span>.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.Operator = <span style="COLOR: #2b91af">ExcelComparisonOperator</span>.LessOrEqual;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.FirstFormula = <span style="COLOR: #a31515">"1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.BackColor = <span style="COLOR: #2b91af">ExcelKnownColors</span>.Light_green;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Applying conditional 
+      formatting to "A9" for format type as CellValue(NotEqual).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition8 = sheet.Range[<span style="COLOR: #a31515">"A9"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition9 = 
+      condition8.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"A9"</span>].Text = <span style="COLOR: #a31515">"Enter a Number which is not equal to 
+      1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.FormatType = <span style="COLOR: #2b91af">ExcelCFType</span>.CellValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.Operator = <span style="COLOR: #2b91af">ExcelComparisonOperator</span>.NotEqual;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.FirstFormula = <span style="COLOR: #a31515">"1000"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.BackColor = <span style="COLOR: #2b91af">ExcelKnownColors</span>.Lime;  
+  </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Applying conditional 
+      formatting to "A1" for format type as CellValue(Between).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"A1"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition1 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range(<span style="COLOR: maroon">"A1"</span>).Text = <span style="COLOR: maroon">"Enter a Number between 10 to 20"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FirstFormula = <span style="COLOR: maroon">"10"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.SecondFormula = <span style="COLOR: maroon">"20"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.Operator = 
+      ExcelComparisonOperator.Between</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FormatType = 
+      ExcelCFType.CellValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.BackColor = 
+      ExcelKnownColors.Light_orange</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.IsBold = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.IsItalic = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Applying conditional 
+      formatting to "A3" for format type as CellValue(Equal).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition2 <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"A3"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition3 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition2.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range(<span style="COLOR: maroon">"A3"</span>).Text = <span style="COLOR: maroon">"Enter the Number as 1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FormatType = 
+      ExcelCFType.CellValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.Operator = 
+      ExcelComparisonOperator.Equal</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FirstFormula = <span style="COLOR: maroon">"1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition3.FontColor = 
+      ExcelKnownColors.Magenta</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Applying conditional 
+      formatting to "A5" for format type as CellValue(Not between).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition4 <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"A5"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition5 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition4.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range(<span style="COLOR: maroon">"A5"</span>).Text = <span style="COLOR: maroon">"Enter a Number not between 100 to 
+      200"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FormatType = 
+      ExcelCFType.CellValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.Operator = 
+      ExcelComparisonOperator.NotBetween</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FirstFormula = <span style="COLOR: maroon">"100"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.SecondFormula = <span style="COLOR: maroon">"200"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition5.FillPattern = 
+      ExcelPattern.DarkVertical</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Applying conditional 
+      formatting to "A7" for format type as CellValue(LessOrEqual).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition6 <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"A7"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition7 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition6.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range(<span style="COLOR: maroon">"A7"</span>).Text = <span style="COLOR: maroon">"Enter a Number which is less than or equal to 
+      1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.FormatType = 
+      ExcelCFType.CellValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.Operator = 
+      ExcelComparisonOperator.LessOrEqual</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.FirstFormula = <span style="COLOR: maroon">"1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition7.BackColor = 
+      ExcelKnownColors.Light_green</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Applying conditional 
+      formatting to "A9" for format type as CellValue(NotEqual).</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition8 <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"A9"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Adding formats to the 
+      IConditionalFormats collection.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition9 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition8.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range(<span style="COLOR: maroon">"A9"</span>).Text = <span style="COLOR: maroon">"Enter a Number which is not equal to 
+      1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting format 
+      properties.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.FormatType = 
+      ExcelCFType.CellValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.Operator = 
+      ExcelComparisonOperator.NotEqual</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.FirstFormula = <span style="COLOR: maroon">"1000"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition9.BackColor = 
+      ExcelKnownColors.Lime </span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_53.gif" alt="" /></p>
+<p class="MsoCaption">Figure 48: XlsIO with Conditional Formatting<b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></b></p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Reading Conditional Formats in XlsIO</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO also provides support for reading conditional formats. 
+Following code example illustrates this.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 69.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 69.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Read Conditional 
+      Formatting Settings. </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox1.Text = sheet.Range[<span style="COLOR: #a31515">"A1"</span>].ConditionalFormats[0].FormatType.ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox2.Text = sheet.Range[<span style="COLOR: #a31515">"A1"</span>].ConditionalFormats[0].Operator.ToString();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.textBox3.Text = sheet.Range[<span style="COLOR: #a31515">"A1"</span>].ConditionalFormats[0].BackColor.ToString(); 
+      </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Read Conditional 
+      Formatting Settings.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox1.Text = sheet.Range(<span style="COLOR: maroon">"A1"</span>).ConditionalFormats(0).FormatType.ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox2.Text = sheet.Range(<span style="COLOR: maroon">"A1"</span>).ConditionalFormats(0).Operator.ToString()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.textBox3.Text = sheet.Range(<span style="COLOR: maroon">"A1"</span>).ConditionalFormats(0).BackColor.ToString()</span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Removing Conditional Formats in MS-Excel</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">With Microsoft Excel, you can delete conditional formats from 
+the selected cells or from the entire sheet.</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">To remove the conditional formats in MS-Excel:</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Select the cell 
+that has the conditional format that you want to delete.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Click 
+<b>Conditional Formatting</b> on <b>Home</b> tab, and then select <b>Clear 
+Rules</b>. The Clear Rules property<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span>can be 
+applied to the selected cells or to the entire sheet.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_54.png" alt="" /></p>
+<p class="MsoCaption">Figure 49: Removing Conditional Format by using Excel</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Removing Conditional Formats in XlsIO</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO also provides support for removing the conditional 
+formats. Following are the methods for removing the conditional formats 
+associated with the IConditionalFormat interface. </p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Remove</b></p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>RemoveAt</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Removing Conditional Formats at specified range</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO removes the conditional formats at specified range by 
+using <b>Remove</b> Method. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following code example illustrates this.</p>
+<p class="BodyText1">            
+</p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 69.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 69.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Removing Conditional 
+      Format at the specified Range </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"E5"</span>].ConditionalFormats.Remove();</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Removing Conditional 
+      Format at the specified Range </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"E5"</span>].ConditionalFormats.Remove()</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Removing Conditional Formats at specified index 
+value</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO removes the conditional formats at specified index 
+value by using <b>RemoveAt </b>Method </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following code example illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 69.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 69.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Removing Conditional 
+      Format at the specified Range </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"E5"</span>].ConditionalFormats.RemoveAt(0);</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Removing Conditional 
+      Format at the specified Range </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Range[<span style="COLOR: #a31515">"E5"</span>].ConditionalFormats.RemoveAt(0)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Removing Conditional Formats from entire sheet</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO also provides support for removing conditional formats 
+from the entire sheet. Following code example illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 69.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 69.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Removing Conditional 
+      Formatting Settings From Entire Sheet. </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.UsedRange.Clear(<span style="COLOR: #2b91af">ExcelClearOptions</span>.ClearConditionalFormats);</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Removing Conditional 
+      Formatting Settings From Entire Sheet. </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.UsedRange.Clear(<span style="COLOR: #2b91af">ExcelClearOptions</span>.ClearConditionalFormats)</span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p></td></tr></tbody></table>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Using FormulaR1C1 property in Conditional Formats</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO returns or sets the formula for the conditional format 
+by using R1C1-style notation. Following code example illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 69.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 69.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Using FormulaR1C1 
+      property in Conditional Formatting </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormats</span><span style="FONT-FAMILY: 'Courier New'"> condition = worksheet.Range[<span style="COLOR: #a31515">"E5:E18"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IConditionalFormat</span><span style="FONT-FAMILY: 'Courier New'"> condition1 = 
+      condition.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FirstFormulaR1C1 = <span style="COLOR: #a31515">"=R[1]C[0]" </span>;<span style="COLOR: #a31515"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.SecondFormulaR1C1 = <span style="COLOR: #a31515">"=R[1]C[1]" </span>;<span style="COLOR: #a31515"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b><span style="FONT-FAMILY: 'Times New Roman','serif'"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Using FormulaR1C1 
+      property in Conditional Formatting</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: maroon">"</span><span style="COLOR: #a31515">E5:E18</span><span style="COLOR: maroon">"</span>).ConditionalFormats</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> condition1 <span style="COLOR: blue">As</span> IConditionalFormat = 
+      condition.AddCondition()           
+      </span><span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.FirstFormulaR1C1 = <span style="COLOR: #a31515">"=R[1]C[0]" </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">condition1.SecondFormulaR1C1 = <span style="COLOR: #a31515">"=R[1]C[1]" </span></span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><a href="">Advanced Conditional Formatting</a></p>
+<p class="BodyTextHeading">See Also </p>
+<p class="BodyTextHeading"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a href="ms-xhelp:///?Id=e3e17bbe-6827-4671-baed-5aa5f4620ffb"><span class="UGHyperlink">Cell</span><u><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: blue; FONT-SIZE: 9pt"> 
+Styles</span></u></a><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></p>
+<p class="BodyText1"><a name="p48" id="p48"></a> </p>
+<h6 style="tab-stops: 0pt"><a name="_Advanced_Conditional_Formatting" id="_Advanced_Conditional_Formatting"></a>4.1.1.6.2.1 Advanced Conditional 
+Formatting</h6>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel 2007 introduces a new formatting that highlights cells 
+once it meets respective constraints. Three new visualizations such as 
+<b>Data</b> <b>Bars</b>, <b>Color Scales</b>, and <b>Icon Sets</b> help you to 
+explore large datasets, identify trends and exceptions, and quickly compare 
+data.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Data Bars</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Data Bars give you an opportunity to create visual effects in 
+your data that help you see how the value of a cell compares with other 
+cells.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel compares the values in each of the selected cells, and 
+draws a data bar in each cell representing the value of that cell relative to 
+the other cells in the selected range. This bar provides a clear visual cue for 
+users, making it easier to pick out larger and smaller values in a range.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_55.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 50: Data Bars<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">MS Excel enables to set these formats through the 
+<b>Conditional Formatting</b> menu. It also allows to set the criteria through 
+the <b>New Formatting Rule</b> dialog box shown below.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_56.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 51: New Formatting Rule Dialog for setting Data 
+Bar<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Color Scales</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">Color Scales let you create visual effects in your data, to 
+see how the value of a cell compares with the values in a range of cells. A 
+color scale uses cell shading, as opposed to bars, to communicate relative 
+values. This is especially useful when you want to communicate more about your 
+data, beyond the relative size of the value of a cell.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_57.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 52: Color Scales<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><span style="FONT-SIZE: 9pt">You can customize the criteria 
+through the New Formatting Rule dialog box in MS Excel.</span></p>
+<p class="BodyText1"><span style="FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"><img border="0" src="ImagesExt/image47_58.jpg" alt="" /></span></p>
+<p class="MsoCaption">Figure 53: New Formatting Dialog Box for setting Color 
+Scales<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Icon Sets</b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyText1">Icon Sets give you an opportunity to create visual effects in 
+your data, to see how the value of a cell compares with other cells. Excel 2007 
+offers several choices of icon sets. You can choose the icons that are most 
+appropriate for the data you are using. Icon sets come in three sizes, so as you 
+increase or decrease the font size, the icon becomes larger or smaller, 
+appropriately.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_59.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 54: Icon Sets<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It is possible to hide the value of the cell and just draw 
+the icon, while applying a conditional formatting rule for icon sets, by using 
+the <b>New Formatting Rule</b> dialog box.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_60.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 55: New Formatting Rule for setting Icon Sets<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Visualizations in XlsIO</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO also provides support for these visualizations through 
+<b>IDataBar</b>, <b>IconSet</b> and <b>IColorScale</b> interfaces. You can also 
+customize these visualizations by specifying the criteria, by using XlsIO. 
+Following code example illustrates how to apply and customize various 
+visualizations.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 36pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 36pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Add 
+      condition for the range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">IConditionalFormats</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> conditionalFormats = 
+      worksheet.Range[<span style="COLOR: #a31515">"C7:C46"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">IConditionalFormat</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> conditionalFormat = 
+      conditionalFormats.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Set Data 
+      bar and icon set for the same cell</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Set the 
+      conditionalFormat type</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat.FormatType 
+      = <span style="COLOR: #2b91af">ExcelCFType</span>.DataBar;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">IDataBar</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> dataBar = 
+      conditionalFormat.DataBar;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Set the 
+      constraint</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MinPoint.Type = 
+      <span style="COLOR: #2b91af">ConditionValueType</span>.LowestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MinPoint.Value = 
+      <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MaxPoint.Type = 
+      <span style="COLOR: #2b91af">ConditionValueType</span>.HighestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MaxPoint.Value = 
+      <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Set color 
+      for Bar</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.BarColor = <span style="COLOR: #2b91af">Color</span>.FromArgb(156, 208, 243);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Hide the 
+      value in data bar</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.ShowValue = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dataBar.MaxPoint = <span style="COLOR: blue">new</span> <span style="COLOR: teal">ConditionValue</span>(<span style="COLOR: teal">ConditionValueType</span>.HighestValue, <span style="COLOR: maroon">"0"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dataBar.BarColor = <span style="COLOR: teal">Color</span>.Red;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">dataBar.ShowValue = <span style="COLOR: blue">false</span>;<span style="COLOR: green"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Add 
+      another condition in the same range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat = 
+      conditionalFormats.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Set Icon 
+      conditionalFormat type</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat.FormatType 
+      = <span style="COLOR: #2b91af">ExcelCFType</span>.IconSet;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">IIconSet</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> iconSet = 
+      conditionalFormat.IconSet;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconSet = <span style="COLOR: #2b91af">ExcelIconSetType</span>.FourRating;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[0].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.LowestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[0].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[1].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.HighestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[1].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.ShowIconOnly = 
+      <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Sets Icon 
+      sets for another range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormats = 
+      worksheet.Range[<span style="COLOR: #a31515">"E7:E46"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat = 
+      conditionalFormats.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat.FormatType 
+      = <span style="COLOR: #2b91af">ExcelCFType</span>.IconSet;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet = 
+      conditionalFormat.IconSet;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconSet = <span style="COLOR: #2b91af">ExcelIconSetType</span>.ThreeSymbols;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[0].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.LowestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[0].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[1].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.HighestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria[1].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.ShowIconOnly = 
+      <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Sets Color 
+      scale conditional format type</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormats = 
+      worksheet.Range[<span style="COLOR: #a31515">"D7:D46"</span>].ConditionalFormats;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat = 
+      conditionalFormats.AddCondition();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">conditionalFormat.FormatType 
+      = <span style="COLOR: #2b91af">ExcelCFType</span>.ColorScale;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt">IColorScale</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> colorScale = 
+      conditionalFormat.ColorScale;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">//Sets 3 - 
+      color scale.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.SetConditionCount(3);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[0].FormatColorRGB 
+      = <span style="COLOR: #2b91af">Color</span>.FromArgb(230, 197, 
+      218);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[0].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.LowestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[0].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[1].FormatColorRGB 
+      = <span style="COLOR: #2b91af">Color</span>.FromArgb(244, 210, 
+      178);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[1].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.Percentile;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[1].Value 
+      = <span style="COLOR: #a31515">"50"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[2].FormatColorRGB 
+      = <span style="COLOR: #2b91af">Color</span>.FromArgb(245, 247, 
+      171);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[2].Type 
+      = <span style="COLOR: #2b91af">ConditionValueType</span>.HighestValue;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria[2].Value 
+      = <span style="COLOR: #a31515">"0"</span>;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Add 
+      condition for the range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Dim</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> formats <span style="COLOR: blue">As</span> IConditionalFormats = sheet.Range(<span style="COLOR: #a31515">"C7:C46"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Dim</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> format <span style="COLOR: blue">As</span> IConditionalFormat = 
+      formats.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Set Data 
+      bar and icon set for the same cell</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Set the 
+      format type</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format.FormatType = 
+      ExcelCFType.DataBar</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Dim</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> dataBar <span style="COLOR: blue">As</span> IDataBar = format.DataBar</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Set the 
+      constraint</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MinPoint.Type = 
+      ConditionValueType.LowestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MinPoint.Value = 
+      <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MaxPoint.Type = 
+      ConditionValueType.HighestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.MaxPoint.Value = 
+      <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Set color 
+      for Bar</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.BarColor = 
+      System.Drawing.<span style="COLOR: #2b91af">Color</span>.FromArgb(156, 
+      208, 243)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Hide the 
+      value in data bar</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">dataBar.ShowValue = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Add another 
+      condition in the same range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format = 
+      formats.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Set Icon 
+      format type</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format.FormatType = 
+      ExcelCFType.IconSet</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Dim</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> iconSet <span style="COLOR: blue">As</span> IIconSet = format.IconSet</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconSet = 
+      ExcelIconSetType.FourRating</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(0).Type 
+      = ConditionValueType.LowestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(0).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(1).Type 
+      = ConditionValueType.HighestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(1).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.ShowIconOnly = 
+      <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Sets Icon 
+      sets for another range</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">formats = 
+      sheet.Range(<span style="COLOR: #a31515">"E7:E46"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format = 
+      formats.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format.FormatType = 
+      ExcelCFType.IconSet</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet = 
+      format.IconSet</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconSet = 
+      ExcelIconSetType.ThreeSymbols</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(0).Type 
+      = ConditionValueType.LowestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(0).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(1).Type 
+      = ConditionValueType.HighestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.IconCriteria(1).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">iconSet.ShowIconOnly = 
+      <span style="COLOR: blue">True</span></span></p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Sets Color 
+      Scale conditional format type</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">formats = 
+      sheet.Range(<span style="COLOR: #a31515">"D7:D46"</span>).ConditionalFormats</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format = 
+      formats.AddCondition()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">format.FormatType = 
+      ExcelCFType.ColorScale</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">Dim</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> colorScale <span style="COLOR: blue">As</span> IColorScale = format.ColorScale</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">'Sets 3 - 
+      color scale.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.SetConditionCount(3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(0).FormatColorRGB 
+      = System.Drawing.<span style="COLOR: #2b91af">Color</span>.FromArgb(230, 
+      197, 218)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(0).Type 
+      = ConditionValueType.LowestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(0).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(1).FormatColorRGB 
+      = System.Drawing.<span style="COLOR: #2b91af">Color</span>.FromArgb(244, 
+      210, 178)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(1).Type 
+      = ConditionValueType.Percentile</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(1).Value 
+      = <span style="COLOR: #a31515">"50"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(2).FormatColorRGB 
+      = System.Drawing.<span style="COLOR: #2b91af">Color</span>.FromArgb(245, 
+      247, 171)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(2).Type 
+      = ConditionValueType.HighestValue</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">colorScale.Criteria(2).Value 
+      = <span style="COLOR: #a31515">"0"</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\mahajothir\Desktop\CFImage\sshot-2.png" src="ImagesExt/image47_61.jpg" /></p>
+<p class="MsoCaption">Figure 56: XlsIO Visualization<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"> Note: XlsIO 
+visualization has been enhanced with backward compatibility for Advanced 
+Conditional Formatting.</p></div>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

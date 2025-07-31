@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to add the header and footer to an exported Grid in PDF or Word format?</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="b10fcd59-d676-4ca3-985d-db05d2a1234a" />
+<meta name="Title" content="How to add the header and footer to an exported Grid in PDF or Word format?" />
+<meta name="Microsoft.Help.TocParent" content="0939c4a0-bcc8-45e8-beb4-a628243a70f3" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">How to add the header and footer to an exported Grid 
+in PDF or Word format?</h4>
+<p class="MsoNormal">To add Header and Footer to a Grid that was exported to Word 
+and (or) PDF, use the constructors and properties as shown in the below code 
+snippets.</p>
+<p class="MsoNormal">You can use either code in C# or VB for this purpose, as 
+shown below:</p>
+<p class="BodyTextHeading">For PDF</p>
+<p class="MsoNormal"><b>Using C#</b></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: #2b91af">[C#]</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridPdfExport</span><span style="FONT-FAMILY: 'Courier New'"> pdf = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPdfExport</span>(<span style="COLOR: blue">this</span>.GridGroupingControl1, <span style="COLOR: #a31515">"PdfExport.pdf"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All , <span style="COLOR: blue">true</span>, <span style="COLOR: blue">true</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">(or)</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridPdfExport</span><span style="FONT-FAMILY: 'Courier New'"> pdf = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPdfExport</span>(<span style="COLOR: blue">this</span>.GridGroupingControl1, <span style="COLOR: #a31515">"PdfExport.pdf"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.ShowHeader=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.ShowFooter=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.DrawPDFHeader += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DrawPDFHeaderFooterEventHandler</span>(pdf_DrawPDFHeader);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.DrawPDFFooter += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DrawPDFHeaderFooterEventHandler</span>(pdf_DrawPDFFooter);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.Export();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> pdf_DrawPDFHeader(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">PDFHeaderFooterEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPageTemplateElement</span><span style="FONT-FAMILY: 'Courier New'"> header = 
+      e.HeaderFooterTemplate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfFont</span><span style="FONT-FAMILY: 'Courier New'"> font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 24);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">float</span><span style="FONT-FAMILY: 'Courier New'"> doubleHeight = font.Height * 
+      2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Color</span><span style="FONT-FAMILY: 'Courier New'"> activeColor = <span style="COLOR: #2b91af">Color</span>.FromArgb(44, 71, 120);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SizeF</span><span style="FONT-FAMILY: 'Courier New'"> imageSize = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SizeF</span>(110f, 35f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Locating the logo on 
+      the right corner of the Drawing Surface</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PointF</span><span style="FONT-FAMILY: 'Courier New'"> imageLocation = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PointF</span>(e.HeaderFooterTemplate.Width - 
+      imageSize.Width - 20, 5);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfSolidBrush</span><span style="FONT-FAMILY: 'Courier New'"> brush = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(activeColor);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPen</span><span style="FONT-FAMILY: 'Courier New'"> pen = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 3f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 16, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Set formattings for the 
+      text</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfStringFormat</span><span style="FONT-FAMILY: 'Courier New'"> format = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStringFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Center;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Middle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Draw title</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawString(<span style="COLOR: #a31515">"Syncfusion Essential Grid"</span>, font, brush, 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RectangleF</span>(0, 0, header.Width, 
+      header.Height), format);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">brush = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(<span style="COLOR: #2b91af">Color</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 6, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStringFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Left;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Bottom;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Draw some lines in the 
+      header</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 0.7f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 0, 
+      header.Width, 0);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 2f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 03, 
+      header.Width + 3, 03);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 2f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 
+      header.Height - 3, header.Width, header.Height - 3);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 
+      header.Height, header.Width, header.Height);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> pdf_DrawPDFFooter(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">PDFHeaderFooterEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPageTemplateElement</span><span style="FONT-FAMILY: 'Courier New'"> footer = 
+      e.HeaderFooterTemplate;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfFont</span><span style="FONT-FAMILY: 'Courier New'"> font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 8);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfSolidBrush</span><span style="FONT-FAMILY: 'Courier New'"> brush = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(<span style="COLOR: #2b91af">Color</span>.Gray);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPen</span><span style="FONT-FAMILY: 'Courier New'"> pen = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 3f);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 6, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfStringFormat</span><span style="FONT-FAMILY: 'Courier New'"> format = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStringFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Center;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Middle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">footer.Graphics.DrawString(<span style="COLOR: #a31515">"@Copyright 2011"</span>, font, brush, <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RectangleF</span>(0, footer.Height - 40, 
+      footer.Width, footer.Height), format);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfStringFormat</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Right;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Bottom;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Create page number 
+      field</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPageNumberField</span><span style="FONT-FAMILY: 'Courier New'"> pageNumber = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPageNumberField</span>(font, brush);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Create page count 
+      field</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfPageCountField</span><span style="FONT-FAMILY: 'Courier New'"> count = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfPageCountField</span>(font, brush);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">PdfCompositeField</span><span style="FONT-FAMILY: 'Courier New'"> compositeField = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PdfCompositeField</span>(font, brush, <span style="COLOR: #a31515">"Page {0} of {1}"</span>, pageNumber, 
+      count);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Bounds = 
+      footer.Bounds;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Draw(footer.Graphics, 
+      <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">PointF</span>(470, footer.Height - 10));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Using VB</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">[VB]</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pdf <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">GridPdfExport</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">GridPdfExport</span>(<span style="COLOR: blue">Me</span>.GridGroupingControl1, <span style="COLOR: #a31515">"PdfExport.pdf"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All, <span style="COLOR: blue">true</span>, <span style="COLOR: blue">true</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">(or)</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim </span><span style="FONT-FAMILY: 'Courier New'">pdf <span style="COLOR: blue">As</span> 
+      GridPdfExport = <span style="COLOR: blue">New</span> GridPdfExport(<span style="COLOR: blue">Me</span>.GridGroupingControl1, "PdfExport.pdf", 
+      ConverterOptionsExt.All)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.ShowHeader= <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.ShowFooter= <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'"> pdf.DrawPDFHeader, <span style="COLOR: blue">AddressOf</span> pdf_DrawPDFHeader</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">AddHandler</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9.5pt"> pdf.DrawPDFFooter, 
+      <span style="COLOR: blue">AddressOf</span> pdf_DrawPDFFooter</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pdf.Export()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      pdf_DrawPDFFooter(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PDFHeaderFooterEventArgs</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> footer <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPageTemplateElement</span> = 
+      e.HeaderFooterTemplate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> font <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfFont</span> 
+      = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 8)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> brush <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfSolidBrush</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(<span style="COLOR: #2b91af">Color</span>.Gray)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pen <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPen</span> = 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 3.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 6, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> format <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfStringFormat</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStringFormat</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Center</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Middle</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">footer.Graphics.DrawString(<span style="COLOR: #a31515">"@Copyright 2011"</span>, font, brush, <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">RectangleF</span>(0, footer.Height - 40, 
+      footer.Width, footer.Height), format)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStringFormat</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Right</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Bottom</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Create page number 
+      field</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pageNumber <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPageNumberField</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPageNumberField</span>(font, brush)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Create page count 
+      field</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> count <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPageCountField</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPageCountField</span>(font, brush)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> compositeField <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfCompositeField</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfCompositeField</span>(font, brush, <span style="COLOR: #a31515">"Page {0} of {1}"</span>, pageNumber, 
+      count)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Bounds = 
+      footer.Bounds</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">compositeField.Draw(footer.Graphics, 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PointF</span>(470, footer.Height - 10))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      pdf_DrawPDFHeader(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PDFHeaderFooterEventArgs</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> header <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPageTemplateElement</span> = 
+      e.HeaderFooterTemplate</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> font <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfFont</span> 
+      = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 24)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doubleHeight <span style="COLOR: blue">As</span> <span style="COLOR: blue">Single</span> = 
+      font.Height * 2</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> activeColor <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">Color</span> = 
+      <span style="COLOR: #2b91af">Color</span>.FromArgb(44, 71, 120)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> imageSize <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">SizeF</span> = 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">SizeF</span>(110.0F, 35.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Locating the logo on the 
+      right corner of the Drawing Surface</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> imageLocation <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PointF</span> = 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PointF</span>(e.HeaderFooterTemplate.Width - 
+      imageSize.Width - 20, 5)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> brush <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfSolidBrush</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(activeColor)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> pen <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfPen</span> = 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 3.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 16, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Set formattings for the 
+      text</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> format <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">PdfStringFormat</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStringFormat</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Center</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Middle</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Draw title</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawString(<span style="COLOR: #a31515">"Syncfusion Essential Grid"</span>, font, brush, 
+      <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">RectangleF</span>(0, 0, header.Width, 
+      header.Height), format)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">brush = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfSolidBrush</span>(<span style="COLOR: #2b91af">Color</span>.Gray)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">font = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStandardFont</span>(<span style="COLOR: #2b91af">PdfFontFamily</span>.Helvetica, 6, <span style="COLOR: #2b91af">PdfFontStyle</span>.Bold)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfStringFormat</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.Alignment = <span style="COLOR: #2b91af">PdfTextAlignment</span>.Left</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">format.LineAlignment = <span style="COLOR: #2b91af">PdfVerticalAlignment</span>.Bottom</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Draw some lines in the 
+      header</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 0.7F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 0, 
+      header.Width, 0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 2.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 3, 
+      header.Width + 3, 3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">pen = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">PdfPen</span>(<span style="COLOR: #2b91af">Color</span>.DarkBlue, 2.0F)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 
+      header.Height - 3, header.Width, header.Height - 3)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">header.Graphics.DrawLine(pen, 0, 
+      header.Height, header.Width, header.Height)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">For Word</p>
+<p class="MsoNormal"><b>Using C#</b></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridWordExport</span><span style="FONT-FAMILY: 'Courier New'"> word = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridWordExport</span>(<span style="COLOR: blue">this</span>.GridGroupingControl1, <span style="COLOR: #a31515">"WordDoc.docx"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All, <span style="COLOR: blue">true</span>, <span style="COLOR: blue">true</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">(or)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridWordExport</span><span style="FONT-FAMILY: 'Courier New'"> word = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridWordExport</span>(<span style="COLOR: blue">this</span>.GridGroupingControl1, <span style="COLOR: #a31515">"WordDoc.docx"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.ShowHeader=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.ShowFooter=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.DrawHeader += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DrawDocHeaderFooterEventHandler</span>(word_DrawHeader);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.DrawFooter += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DrawDocHeaderFooterEventHandler</span>(word_DrawFooter);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.Export();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> word_DrawFooter(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">DocHeaderFooterEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWTextRange</span><span style="FONT-FAMILY: 'Courier New'"> txt = 
+      e.Footer.AddParagraph().AppendText(<span style="COLOR: #a31515">"\t\t\t\t\t\tCopyright Syncfusion Inc. 2001 - 
+      20011"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">txt.CharacterFormat.Font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Font</span>(<span style="COLOR: #a31515">"verdana"</span>, 12f, <span style="COLOR: #2b91af">FontStyle</span>.Bold);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> word_DrawHeader(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">DocHeaderFooterEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IWTextRange</span><span style="FONT-FAMILY: 'Courier New'"> txt = 
+      e.Header.AddParagraph().AppendText(<span style="COLOR: #a31515">"\t\t\t\t\t\t\tEssential 
+Grid\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">txt.CharacterFormat.Font = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Font</span>(<span style="COLOR: #a31515">"verdana"</span>, 12f, <span style="COLOR: #2b91af">FontStyle</span>.Bold);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>Using VB</b></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">[VB]</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> word <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">GridWordExport</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">GridWordExport</span>(<span style="COLOR: blue">Me</span>.GridGroupingControl1, <span style="COLOR: #a31515">"WordDoc.docx"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All, <span style="COLOR: blue">True</span>, <span style="COLOR: blue">True</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">(Or)</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> word <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">GridWordExport</span> = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">GridWordExport</span>(<span style="COLOR: blue">Me</span>.GridGroupingControl1, <span style="COLOR: #a31515">"WordDoc.docx"</span>, <span style="COLOR: #2b91af">ConverterOptionsExt</span>.All)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.ShowHeader=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.ShowFooter=<span style="COLOR: blue"> true;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> word.DrawHeader += New 
+      DrawDocHeaderFooterEventHandler(AddressOf word_DrawHeader)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> word.DrawFooter += New 
+      DrawDocHeaderFooterEventHandler(AddressOf word_DrawFooter)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">word.Export()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      word_DrawFooter(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">DocHeaderFooterEventArgs</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> txt <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWTextRange</span> = 
+      e.Footer.AddParagraph().AppendText(<span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab &amp; <span style="COLOR: #a31515">"Copyright Syncfusion Inc. 2001 - 
+      20011"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">txt.CharacterFormat.Font = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">Font</span>(<span style="COLOR: #a31515">"verdana"</span>, 12.0F, <span style="COLOR: #2b91af">FontStyle</span>.Bold)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      word_DrawHeader(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">DocHeaderFooterEventArgs</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> txt <span style="COLOR: blue">As</span> <span style="COLOR: #2b91af">IWTextRange</span> = 
+      e.Header.AddParagraph().AppendText(<span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab + <span style="COLOR: #2b91af">Constants</span>.vbTab &amp; <span style="COLOR: #a31515">"Essential Grid"</span> &amp; <span style="COLOR: #2b91af">Constants</span>.vbLf)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">txt.CharacterFormat.Font = <span style="COLOR: blue">New</span> <span style="COLOR: #2b91af">Font</span>(<span style="COLOR: #a31515">"verdana"</span>, 12.0F, <span style="COLOR: #2b91af">FontStyle</span>.Bold)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

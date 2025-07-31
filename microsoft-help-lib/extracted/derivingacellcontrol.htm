@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Deriving a Cell Control</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="6fa0b3aa-cbe1-4750-b125-4a8a033d7ac7" />
+<meta name="Title" content="Deriving a Cell Control" />
+<meta name="Microsoft.Help.TocParent" content="49fbf1ec-e3dd-4311-85f7-966be7cc35d3" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Deriving a Cell Control</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Derived cell controls can be used to add cells that have a 
+special functionality. You can employ such controls to produce special behavior 
+like a masked edit control, a draggable button or a tree node within a grid 
+cell. Being able to extend a cell behavior through the derived cell controls 
+makes Essential Grid very adaptable. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">There are two classes involved in defining the cell 
+architecture within Essential Grid. <b>GridCellModelBase</b> serves as the base 
+class for the first class which is involved in the cell model. 
+<b>GridCellRendererBase</b> is the base class for the second class which is 
+involved in defining a cell control, the cell renderer. For example, the Static 
+cell control is defined in the <b>GridStaticCellModel</b> and 
+<b>GridStaticCellRenderer</b> classes which are derived from these base classes. 
+So, whether the cell control is a text box, a combo box or a NumericUpDown cell, 
+the behavior is accomplished through these two classes which are derived from 
+GridCellModelBase and GridCellRendererBase.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In the next sections, you will learn how to derive a cell 
+control from the </p>
+<p class="BodyText1"><b><i>C:\Syncfusion\EssentialStudio\VersionNumber\Windows\Grid.Windows\Samples\[Version 
+Number]\CustomCellTypes\DerivedCellControlTutorial</i></b>  sample.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Also, 
+ <b><i>C:\Syncfusion\EssentialStudio\VersionNumber\Windows\Grid.Windows\Samples\[Version 
+Number]\CustomCellTypes\DropDownFormAndUserControlSample</i></b>  sample 
+illustrates how to add your own cell controls. It has two derived cell controls, 
+one drops a modal form when a cell button is pressed, and the other is displays 
+a pop up UserControl when a cell button is pressed.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Among the samples shipped with Grid control, there are 
+several that provide custom cell types. The following table lists some of the 
+samples.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableHeading">Sample</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">ExcelSelectionMarker</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Has a derived <b>celltype</b> that displays in a cell a 
+      BMP that is stored in the <b>GridStyleInfo.Tag</b> for that cell. 
+  </p></td></tr>
+  <tr style="HEIGHT: 6.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 6.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">GridDataBoundImageCell</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 6.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Has two cell-derived cell types. Both display picture 
+      data stored in a database in a grid cell. One displays the picture 
+      directly in the grid cell with several choices regarding how the image is 
+      fit to the cell. The second celltype is a drop-down cell that displays a 
+      picture box when you click the cell.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">VirtTreeGrid</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Has an expandable tree node cell with an indentation 
+      property. This celltype is used in this example to make the grid have 
+      collapsible rows, and generally functions as a multicolumn tree 
+      control.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   
+      LinkLabelCells</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p style="tab-stops: 25.2pt" class="NumberedList">4.   Has a 
+      <b>LinkLabel</b>-derived cell type. This cell type allows you to place a 
+      link in a <b>GridCell</b>, and then launch the link in a browser window by 
+      clicking the link.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">CellButtons</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Shows two different types of derived cell controls with 
+      buttons. The first is an ellipsis cell that displays further information 
+      when you click the button. This particular cell uses a bitmap button to 
+      display the ellipsis. The second custom cell type in this sample is a bar 
+      of three buttons that display different drag effects as you mouse down and 
+      drag.</p></td></tr>
+  <tr style="HEIGHT: 20.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 20.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">Drop-down grid</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 20.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Shows how you can drop a new grid in a cell. This 
+      sample is useful as it shows how to pass keystrokes onto the control that 
+      is embedded in the grid. For example, you may want the dropped grid to 
+      handle the ARROW keys, but not have the ARROW keys move to another cell in 
+      the parent grid.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">CalendarCells</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Shows how you can drop a Windows Forms 
+      <b>DateTimePicker</b> in a cell.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">SliderCells</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Shows how you can drop a Windows Forms Slider Control 
+      in a cell.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">RepeaterUserControl</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Shows how you can use a derived cell control in a grid 
+      to create a repeater control used to edit 
+DataTables.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p90" id="p90"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=e86a23cc-d72b-484a-9628-f752649a6ef8"><img border="0" alt="" align="absMiddle" src="button.gif" />GridCellModelBase</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=96e4c32e-a0f5-48a1-91c9-0db84749ce57"><img border="0" alt="" align="absMiddle" src="button.gif" />GridCellRendererBase</a></p></span></div></body></html>

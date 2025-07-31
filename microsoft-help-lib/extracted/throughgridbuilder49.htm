@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Through GridBuilder</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="4e67d16e-9792-42c7-9853-ee3a7dbf7e77" />
+<meta name="Title" content="Through GridBuilder" />
+<meta name="Microsoft.Help.TocParent" content="21687ebf-9ee0-4092-94d0-ce105c735384" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Through GridBuilder</h4>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To enable the <b>ToggleSelection</b> feature you need to 
+perform the following.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><u><span style="COLOR: blue">How to&gt;Strongly Typed 
+View</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the view you 
+can use its <b>Model </b>property in <b>Datasource()</b> to bind the data 
+source.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 359.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; HEIGHT: 359.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                         
+      .Datasource((<span style="COLOR: #2b91af">IEnumerable</span>&lt;<span style="COLOR: #2b91af">Order</span>&gt;)ViewData[<span style="COLOR: #a31515">"ToggleGrid"</span>])</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      .Column(column =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>).Format(<span style="COLOR: #a31515">"{OrderDate:MM/dd/yyyy}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.Freight).HeaderText(<span style="COLOR: #a31515">"Freight"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      })                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .EnablePaging()                                                        
+                                                  </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .RowsSelectionMode(<span style="COLOR: #2b91af">RowsSelectionMode</span>.Toggle)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 359.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; HEIGHT: 359.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  <span style="BACKGROUND: yellow">@{</span><span style="COLOR: blue"> 
+      </span>Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                         
+      .Datasource((<span style="COLOR: #2b91af">IEnumerable</span>&lt;<span style="COLOR: #2b91af">Order</span>&gt;)ViewData[<span style="COLOR: #a31515">"ToggleGrid"</span>])</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      .Caption(<span style="COLOR: #a31515">"Orders"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      .Column(column =&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.OrderID).HeaderText(<span style="COLOR: #a31515">"Order ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.EmployeeID).HeaderText(<span style="COLOR: #a31515">"Employee ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.CustomerID).HeaderText(<span style="COLOR: #a31515">"Customer ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.OrderDate).HeaderText(<span style="COLOR: #a31515">"Order Date"</span>).Format(<span style="COLOR: #a31515">"{OrderDate:MM/dd/yyyy}"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      column.Add(p =&gt; p.Freight).HeaderText(<span style="COLOR: #a31515">"Freight"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                             
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                         
+      })                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .EnablePaging()                                                                                                    
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)                        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .RowsSelectionMode(<span style="COLOR: #2b91af">RowsSelectionMode</span>.Toggle)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      .Render();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">}</span></span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the data 
+source in the action and render the view.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> Used for 
+      rendering the grid initially.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;/summary&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: gray">///</span><span style="COLOR: green"> 
+      </span><span style="COLOR: gray">&lt;returns&gt;</span><span style="COLOR: green">View page; it displays the grid.</span><span style="COLOR: gray">&lt;/returns&gt;</span><span style="COLOR: green">        
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ViewData[<span style="COLOR: #a31515">"ToggleGrid"</span>] = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.ToList();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Run the 
+application and select any row in the grid. The grid will appear as shown 
+below.</p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_210.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 234: Grid with Row Selected</p>
+<p class="Figure"><i></i> </p>
+<p class="MsoNormal">If you click on the selected row, the selected row will be 
+unselected as shown in the following screenshot.</p>
+<p class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_211.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 235: Grid with Row Unselected</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

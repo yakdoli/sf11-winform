@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>MVVM Pattern Compatibility</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e363f3af-e65c-4cfe-9bc8-8ac6ab3bf9a9" />
+<meta name="Title" content="MVVM Pattern Compatibility" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5>MVVM Pattern Compatibility</h5>
+<p class="BodyText1">Model-View-ViewModel (MVVM) is a pattern to use with 
+Silverlight / WPF controls. Now the Syncfusion Tools Silverlight controls are 
+provided with the support of MVVM.</p>
+<h6><span style="Z-INDEX: 251786240; POSITION: absolute; MARGIN-TOP: 164px; WIDTH: 160px; HEIGHT: 43px; MARGIN-LEFT: 196px"><img alt="Rounded Rectangle: View Model" src="../ImagesExt/image261_562.png" width="160" height="43" /></span><span style="Z-INDEX: 251789312; POSITION: absolute; MARGIN-TOP: 182px; WIDTH: 131px; HEIGHT: 2px; MARGIN-LEFT: 350px"><img src="../ImagesExt/image261_563.png" width="131" height="2" alt="" /></span><span style="Z-INDEX: 251788288; POSITION: absolute; MARGIN-TOP: 103px; WIDTH: 3px; HEIGHT: 63px; MARGIN-LEFT: 273px"><img src="../ImagesExt/image261_564.png" width="3" height="63" alt="" /></span>MVVM Design Pattern</h6>
+<p class="MsoNormal">
+</p><table cellspacing="0" cellpadding="0" align="left">
+  <tbody>
+  <tr>
+    <td height="16" width="180"></td>
+    <td width="204"></td>
+    <td width="96"></td>
+    <td width="132"></td></tr>
+  <tr>
+    <td height="77"></td>
+    <td valign="top" align="left"><img src="../ImagesExt/image261_565.png" width="204" height="77" alt="" /></td></tr>
+  <tr>
+    <td height="13"></td></tr>
+  <tr>
+    <td height="51"></td>
+    <td colspan="2"></td>
+    <td valign="top" align="left"><img src="../ImagesExt/image261_566.png" width="132" height="51" alt="" /></td></tr></tbody></table><span style="FONT-FAMILY: 'Calibri','sans-serif'"> </span>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p><br clear="all" />
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #4f81bd">Figure 140: MVVM 
+Pattern</span></b><i><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span></i></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Most of the Syncfusion Silverlight controls support Command 
+Binding to make it easier for users. The users can have their user defined 
+logics and custom commands in their view model. </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal">The following code explains a 
+typical view model for the Ribbon control:</p>
+<h6>ViewModel</h6>
+<p class="BodyText1">Here is a ViewModel class, which contains Command properties 
+to connect View with the Model. ViewModel is used as Data Context for the Main 
+View.</p>
+<p class="BodyText1">Silverlight does not have built-in delegate commands. So we 
+need to create a delegate command. Here, this is named as a Ribbon Command. </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 509.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="679">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">C#</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">RibbonCommand</span> : <span style="COLOR: #2b91af">ICommand</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">event</span> 
+      <span style="COLOR: #2b91af">EventHandler</span> 
+      CanExecuteChanged;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">readonly</span> <span style="COLOR: #2b91af">Predicate</span>&lt;<span style="COLOR: #2b91af">Object</span>&gt; _canExecute = <span style="COLOR: blue">null</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">readonly</span> <span style="COLOR: #2b91af">Action</span>&lt;<span style="COLOR: #2b91af">Object</span>&gt; _executeAction = <span style="COLOR: blue">null</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> RibbonCommand(<span style="COLOR: #2b91af">Action</span>&lt;<span style="COLOR: blue">object</span>&gt; executeAction, <span style="COLOR: #2b91af">Predicate</span>&lt;<span style="COLOR: #2b91af">Object</span>&gt; canExecute)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      _executeAction = executeAction;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      _canExecute = canExecute;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> RibbonCommand(<span style="COLOR: #2b91af">Action</span>&lt;<span style="COLOR: blue">object</span>&gt; executeAction)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      : <span style="COLOR: blue">this</span>(executeAction, <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      _executeAction = executeAction;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> 
+      UpdateCanExecute()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (CanExecuteChanged != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      CanExecuteChanged(<span style="COLOR: blue">this</span>, <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">EventArgs</span>());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">bool</span> 
+      CanExecute(<span style="COLOR: blue">object</span> parameter)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> _canExecute == <span style="COLOR: blue">null</span> || _canExecute(parameter);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> 
+      Execute(<span style="COLOR: blue">object</span> parameter)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (_executeAction != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      _executeAction(parameter);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      UpdateCanExecute();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal">For a sample ribbon control 
+application, there are three Ribbon Commands (Cut, Copy and Paste) created and 
+bound with View (Ribbon Control).</p>
+<p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 509.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="679">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">C#<span style="COLOR: blue"> 
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      <span style="COLOR: #2b91af">SyncfusionViewModel</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> SyncfusionViewModel()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">RibbonEditor</span> editor = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonEditor</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">RibbonEditor</span> Editor</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">get</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> editor; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      } </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">RibbonCommand</span> cut;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">RibbonCommand</span> Cut</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">get</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (cut == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      cut = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonCommand</span>(param =&gt; 
+      OnCutExecute());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> cut;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">RibbonCommand</span> copy;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">RibbonCommand</span> Copy</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">get</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (copy == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      copy = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonCommand</span>(param =&gt; 
+      OnCopyExecute());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> copy;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">RibbonCommand</span> paste;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">RibbonCommand</span> Paste</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">get</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (paste == <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      paste = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RibbonCommand</span>(param =&gt; OnPasteExecute(), 
+      param =&gt; OnPasteCanExecute());</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> paste;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> 
+      OnCutExecute()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (Editor != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">Clipboard</span>.SetText(Editor.Selection.Text);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MessageBox</span>.Show(<span style="COLOR: #a31515">"Cut Command Executing For"</span> + <span style="COLOR: #a31515">"\n \""</span> + Editor.Selection.Text + <span style="COLOR: #a31515">"\""</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Editor.Selection.Text = <span style="COLOR: #a31515">""</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> 
+      OnCopyExecute()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (Editor != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">Clipboard</span>.SetText(Editor.Selection.Text);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> 
+      OnPasteExecute()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">if</span> (Editor != <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Editor.Selection.Text = <span style="COLOR: #2b91af">Clipboard</span>.GetText();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MessageBox</span>.Show(<span style="COLOR: #a31515">"Paste Command Executing For"</span> + <span style="COLOR: #a31515">"\n \""</span> + <span style="COLOR: #2b91af">Clipboard</span>.GetText() + <span style="COLOR: #a31515">"\""</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">public</span> <span style="COLOR: blue">bool</span> 
+      OnPasteCanExecute()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">return</span> <span style="COLOR: #2b91af">Clipboard</span>.ContainsText();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<h6>View</h6>
+<p class="BodyText1">Here, Ribbon control and Rich Textbox are the two views, 
+which are connected by the ViewModel.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 509.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="679">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">XAML</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="_Cut"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Command</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Cut</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Cut"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Cut16.png" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="_Copy"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Command</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Copy</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Copy"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Copy16.png" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">RibbonSplitButton</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="_Paste"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Command</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Binding</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Paste</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">}"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SizeMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Small"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Label</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Paste"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> SmallIcon</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Paste16.png" 
+      /&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_567.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 649: Views</p>
+<p class="BodyText1">The Cut command will be executed whenever the user clicks the 
+Cut button.</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_568.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 650: Cut Command Executed</p>
+<p class="BodyText1">The Paste command will be executed whenever the user clicks 
+the Paste button.</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_569.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 651: Paste Command Executed</p><span id="related-topics"></span></div></body></html>

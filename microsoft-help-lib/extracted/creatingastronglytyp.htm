@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating a Strongly-Typed View Manually</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="6746596b-faa6-4d9f-8a3a-03a11aa084dd" />
+<meta name="Title" content="Creating a Strongly-Typed View  Manually" />
+<meta name="Microsoft.Help.TocParent" content="3eaaa5fc-4834-4f4b-8d4c-01c39fbeec69" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram1.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=cad66249-b9b0-4d1a-83a7-1aa0bf2a7151"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=4f47d21a-e28e-4f82-8e4d-635f05b4f69e"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=4b14e7d1-65c4-4f67-b1aa-2c37709905a5">Essential ASP.NET 
+MVC</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Diagram</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=d217e351-1033-4004-81d7-d400a51e195d">How do I</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=3eaaa5fc-4834-4f4b-8d4c-01c39fbeec69">Create a Strongly 
+Typed View</a></div>
+<h3 style="tab-stops: 0pt">Creating a Strongly-Typed View  Manually</h3>
+<p class="BodyText10">When a view is created, the <b>Inherits</b> attribute will 
+be of type System.Web.Mvc.ViewPage by default. To change this into a strongly 
+typed view, please set this <b>Inherits</b> attribute as 
+<b>System.Web.Mvc.ViewPage&lt;YourNamespace.YourClass&gt;</b>.</p>
+<p class="BodyText10">Here our model is 
+<b>TestBedSample.Models.DiagramDataBinding</b>. Therefore, update the 
+<b>Index</b> page as given below: </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">View</span></b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></p>
+      <p class="MsoNormal"><span class="MsoIntenseEmphasis"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></span> </p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; FONT-SIZE: 11pt">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">@</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: maroon">Page</span> <span style="COLOR: red">Language</span><span style="COLOR: blue">="C#"</span> 
+      <span style="COLOR: red">MasterPageFile</span><span style="COLOR: blue">="~/Views/Shared/Site.Master"</span> <span style="COLOR: red">Inherits</span><span style="COLOR: blue">="System.Web.Mvc.ViewPage</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt"> 
+      &lt;IEnumerable&lt;TestBedSample.Models.DiagramDataBinding&gt;&gt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt"></span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="MARGIN-TOP: 0pt"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image70_147.png" alt="" /></p>
+<p class="MsoCaption">Figure 150: Default Index View</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                                
+</span></p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\maithiliyk\Desktop\Capture.PNG" src="ImagesExt/image70_148.png" /></p>
+<p class="MsoCaption">Figure 151: Strongly Typed Index View</p>
+<p style="MARGIN-BOTTOM: 0pt" class="MsoSubtitle"><span class="MsoSubtleEmphasis"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black; FONT-SIZE: 11pt"></span></span> </p><span id="related-topics"></span></div></body></html>

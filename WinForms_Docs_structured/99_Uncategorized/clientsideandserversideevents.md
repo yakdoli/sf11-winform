@@ -1,0 +1,37 @@
+---
+title: clientsideandserversideevents.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\clientsideandserversideevents.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+### [][]{#p60}Client-Side and Server-Side Events[] {#client-side-and-server-side-events style="tab-stops: 0pt"}
+
+ 
+
+[]{#p61}This section discusses the various client-side and server-side events of Diagram Web control.
+
+More:
+
+
+
+
+
+
+

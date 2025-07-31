@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Print a Chart in Multiple Pages</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="755a1dae-d724-4241-9a59-ca0e79064bb9" />
+<meta name="Title" content="How to Print a Chart in Multiple Pages" />
+<meta name="Microsoft.Help.TocParent" content="ef47b647-7df5-4b78-871d-ce0ee88e8d72" />
+<meta name="Microsoft.Help.TocOrder" content="16" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=4dedb5c5-58e9-436e-8e10-5c4a3f71df00"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=2bcace6f-176c-4938-b6d9-3ef64ef90230"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Chart</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=ef47b647-7df5-4b78-871d-ce0ee88e8d72">Frequently Asked 
+Questions</a></div>
+<h2 style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 115%; tab-stops: 0pt">How 
+to Print a Chart in Multiple Pages </h2>
+<p class="BodyText1">To print a Chart in multiple page, use the <i>PrintPage</i> 
+event to specify the range of X and Y axis. Specify the minium and maxium value 
+in the <i>Range</i> property of the axis you want to divide. Set the 
+<i>HasMorePages </i>property to true in the events before specifying the range 
+values  and set this to false after chart default maxium value. The 
+following code illustrates this: </p>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 2.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; HEIGHT: 15pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <b>[C#]</b></span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.PrintDocument.PrintPage 
+      += <span style="COLOR: blue">new</span> System.Drawing.Printing.<span style="COLOR: #2b91af">PrintPageEventHandler</span>(PrintDocument_PrintPage);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//PrintPage 
+      Event</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #92d050"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> PrintDocument_PrintPage(<span style="COLOR: blue">object</span> sender, System.Drawing.Printing.<span style="COLOR: #2b91af">PrintPageEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (textBox1.Text == <span style="COLOR: #a31515">""</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">textBox1.Text = <span style="COLOR: #a31515">"20"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Set the HasMorePages 
+      property to true for dividing the chart into Multiple pages</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.HasMorePages = <span style="COLOR: blue">true</span>;<span style="COLOR: #00b050">   
+      </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.PrimaryXAxis.LabelIntersectAction 
+      = <span style="COLOR: #2b91af">ChartLabelIntersectAction</span>.Wrap;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (mx == 0.0 &amp;&amp; mi == 
+      0.0)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = <span style="COLOR: #2b91af">Convert</span>.ToDouble(textBox1.Text);  <span style="COLOR: #00b050">//Initializing max and min range</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Get the Color 
+      mode</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">bool</span><span style="FONT-FAMILY: 'Courier New'"> grayScale = <span style="COLOR: blue">this</span>.chartControl1.PrintDocument.ColorMode == 
+      <span style="COLOR: #2b91af">ChartPrintColorMode</span>.GrayScale;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">bool</span><span style="FONT-FAMILY: 'Courier New'"> toolBatVisibility = <span style="COLOR: blue">this</span>.chartControl1.ShowToolbar;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (!<span style="COLOR: blue">this</span>.chartControl1.PrintDocument.PrintToolBar)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ShowToolbar = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (m_currectAction.Value == <span style="COLOR: #2b91af">PrintAction</span>.PrintToPrinter</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      &amp;&amp; <span style="COLOR: blue">this</span>.chartControl1.PrintDocument.ColorMode == 
+      <span style="COLOR: #2b91af">ChartPrintColorMode</span>.CheckPrinter)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">grayScale = <span style="COLOR: blue">this</span>.chartControl1.PrintDocument.PrinterSettings.SupportsColor;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Check the color mode 
+      of print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (!grayScale)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Assigning the initial 
+      values of max and min to chartcontrol’s maximum and minimum 
+      values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = mi;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = mx;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = (<span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      - <span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Min) 
+      / <span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.NumberOfIntervals;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Modifying the maximum 
+      and minimum values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = mx;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = mx + <span style="COLOR: #2b91af">Convert</span>.ToDouble(textBox1.Text);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GraphicsContainer</span><span style="FONT-FAMILY: 'Courier New'"> container = 
+      BeginTransform(e.Graphics);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Graphics.ResetTransform();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Call the Draw method 
+      to draw the chart</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Draw(e.Graphics, 
+      e.MarginBounds);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">EndTransform(e.Graphics, 
+      container);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//For Grayscale mode of 
+      print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">else</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">if</span> 
+      (grayScale)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ChartStyleInfo</span><span style="FONT-FAMILY: 'Courier New'">[] tempStyles = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ChartStyleInfo</span>[<span style="COLOR: blue">this</span>.chartControl1.Series.Count];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Array</span><span style="FONT-FAMILY: 'Courier New'"> ps = System.<span style="COLOR: #2b91af">Enum</span>.GetValues(<span style="COLOR: blue">typeof</span>(<span style="COLOR: #2b91af">PatternStyle</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Array</span><span style="FONT-FAMILY: 'Courier New'"> ds = System.<span style="COLOR: #2b91af">Enum</span>.GetValues(<span style="COLOR: blue">typeof</span>(<span style="COLOR: #2b91af">DashStyle</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; <span style="COLOR: blue">this</span>.chartControl1.Series.Count; 
+i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">tempStyles[i] = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ChartStyleInfo</span>();                
+      tempStyles[i].CopyFrom(<span style="COLOR: blue">this</span>.chartControl1.Series[i].StylesImpl.Style);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Interior 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BrushInfo</span>((<span style="COLOR: #2b91af">PatternStyle</span>)ps.GetValue(i % ps.Length), 
+      <span style="COLOR: #2b91af">Color</span>.Black, <span style="COLOR: #2b91af">Color</span>.White);                  
+      <span style="COLOR: blue">this</span>.chartControl1.Series[i].Style.Border.MakeCopy(tempStyles[i], 
+      <span style="COLOR: blue">this</span>.chartControl1.Series[i].Style.Border.Sip);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Border.Color 
+      = <span style="COLOR: #2b91af">Color</span>.Black;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Border.DashStyle 
+      = (<span style="COLOR: #2b91af">DashStyle</span>)ds.GetValue(i % 
+      ds.Length);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Checking the 
+      charttype</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">this</span>.chartControl1.Series[i].Type == <span style="COLOR: #2b91af">ChartSeriesType</span>.Line || <span style="COLOR: blue">this</span>.chartControl1.Series[i].Type == <span style="COLOR: #2b91af">ChartSeriesType</span>.Spline || <span style="COLOR: blue">this</span>.chartControl1.Series[i].Type == <span style="COLOR: #2b91af">ChartSeriesType</span>.StepLine || <span style="COLOR: blue">this</span>.chartControl1.Series[i].Type == <span style="COLOR: #2b91af">ChartSeriesType</span>.RotatedSpline)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Interior 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BrushInfo</span>((<span style="COLOR: #2b91af">PatternStyle</span>)ps.GetValue(i % ps.Length), 
+      <span style="COLOR: #2b91af">Color</span>.White, <span style="COLOR: #2b91af">Color</span>.Black);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">this</span>.chartControl1.Series3D || <span style="COLOR: blue">this</span>.chartControl1.ChartInterior.BackColor == 
+      <span style="COLOR: #2b91af">Color</span>.Black)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Interior 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BrushInfo</span>((<span style="COLOR: #2b91af">PatternStyle</span>)ps.GetValue(i % ps.Length), 
+      <span style="COLOR: #2b91af">Color</span>.Black, <span style="COLOR: #2b91af">Color</span>.White);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series[i].Style.Border.Color 
+      = <span style="COLOR: #2b91af">Color</span>.Black;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GraphicsContainer</span><span style="FONT-FAMILY: 'Courier New'"> container = 
+      BeginTransform(e.Graphics);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Graphics.ResetTransform();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: #2b91af">Image</span> img = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Bitmap</span>(e.MarginBounds.Width, 
+      e.MarginBounds.Height))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: #2b91af">Graphics</span> g = <span style="COLOR: #2b91af">Graphics</span>.FromImage(img))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Assigning the initial 
+      values of max and min to chartcontrol maximum and minimum 
+values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = mi;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = mx;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = (<span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      - <span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Min) 
+      / <span style="COLOR: blue">this</span>.chartControl1.ChartArea.PrimaryXAxis.Range.NumberOfIntervals;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Modifying the maximum 
+      and minimum values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = mx;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = mx + <span style="COLOR: #2b91af">Convert</span>.ToDouble(textBox1.Text);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IntPtr</span><span style="FONT-FAMILY: 'Courier New'"> <b>hdc = g.GetHdc();</b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Stream</span></b><b><span style="FONT-FAMILY: 'Courier New'"> stream = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MemoryStream</span>();</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Metafile</span></b><b><span style="FONT-FAMILY: 'Courier New'"> mf = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Metafile</span>(stream, hdc);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Call</span></b><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050"> the Draw method to 
+      draw the chart</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Draw(mf, 
+      img.Size);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">DrawingUtils</span><span style="FONT-FAMILY: 'Courier New'">.DrawGrayedImage(e.Graphics, mf, 
+      e.MarginBounds, <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Rectangle</span>(<span style="COLOR: #2b91af">Point</span>.Empty, img.Size));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">g.ReleaseHdc(hdc);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">g.Dispose();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mf.Dispose();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">EndTransform(e.Graphics, 
+      container);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'"> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; <span style="COLOR: blue">this</span>.chartControl1.Series.Count; 
+i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{          
+             <span style="COLOR: blue">this</span>.chartControl1.Series[i].StylesImpl.Style.ResetInterior();                 
+      <span style="COLOR: blue">this</span>.chartControl1.Series[i].StylesImpl.Style.ResetBorder();                   
+      <span style="COLOR: blue">this</span>.chartControl1.Series[i].StylesImpl.Style.CopyFrom(tempStyles[i]);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Checking Toolbar 
+      functionality of print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (!<span style="COLOR: blue">this</span>.chartControl1.PrintDocument.PrintToolBar)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ShowToolbar = 
+      toolBatVisibility;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">// Redraws the chart 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Redraw(<span style="COLOR: blue">true</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Maximum exceeds the 
+      default range means reset the HasMorePages property.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'"> (mx &gt; end)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.HasMorePages = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Finally resets the 
+      maximum and minimum value for default chartcontrol</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = start;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = end;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = Intervel;</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 15pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 473pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 15pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="631">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span><b><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.PrintDocument.PrintPage 
+      += <span style="COLOR: blue">New</span> 
+      System.Drawing.Printing.PrintPageEventHandler(PrintDocument_PrintPage)<span style="COLOR: blue"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/ PrintPage 
+      Event</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      PrintDocument_PrintPage(<span style="COLOR: blue">ByVal</span> sender 
+      <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      e <span style="COLOR: blue">As</span> 
+      System.Drawing.Printing.PrintPageEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> textBox1.Text = <span style="COLOR: #a31515">""</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">textBox1.Text = <span style="COLOR: #a31515">"20"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/ Set the 
+      HasMorePages property to true for dividing the chart into Multiple 
+      pages</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.HasMorePages = <span style="COLOR: blue">True  </span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.PrimaryXAxis.LabelIntersectAction 
+      = ChartLabelIntersectAction.Wrap</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> mx = 0.0 <span style="COLOR: blue">AndAlso</span> mi = 0.0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Initializing max 
+      and min range values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = 
+      Convert.ToDouble(textBox1.Text)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = 0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Get the Color 
+      mode</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> grayScale <span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span> = 
+      <span style="COLOR: blue">Me</span>.chartControl1.PrintDocument.ColorMode 
+      = ChartPrintColorMode.GrayScale</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> toolBatVisibility <span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span> = 
+      <span style="COLOR: blue">Me</span>.chartControl1.ShowToolbar</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Not</span> 
+      <span style="COLOR: blue">Me</span>.chartControl1.PrintDocument.PrintToolBar 
+      <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ShowToolbar = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> m_currectAction.Value = 
+      PrintAction.PrintToPrinter <span style="COLOR: blue">AndAlso</span> <span style="COLOR: blue">Me</span>.chartControl1.PrintDocument.ColorMode = 
+      ChartPrintColorMode.CheckPrinter <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">grayScale = <span style="COLOR: blue">Me</span>.chartControl1.PrintDocument.PrinterSettings.SupportsColor</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Check the color 
+      mode of print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Not</span> 
+      grayScale <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Assigning the 
+      initial values of max and min to chartcontrol maximum and ‘’’/minimum 
+      values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = mi</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = mx</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = (<span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      - <span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Min) 
+      / <span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.NumberOfIntervals</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Modifying the 
+      maximum and minimum values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = mx</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = mx + 
+      Convert.ToDouble(textBox1.Text)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> container <span style="COLOR: blue">As</span> GraphicsContainer = 
+      BeginTransform(e.Graphics)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Graphics.ResetTransform()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Call the Draw 
+      method to draw the chart</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Draw(e.Graphics, 
+      e.MarginBounds)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">EndTransform(e.Graphics, 
+      container)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’/For Grayscale mode 
+      of print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ElseIf</span><span style="FONT-FAMILY: 'Courier New'"> grayScale <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> tempStyles <span style="COLOR: blue">As</span> ChartStyleInfo() = <span style="COLOR: blue">New</span> ChartStyleInfo(<span style="COLOR: blue">Me</span>.chartControl1.Series.Count - 1) 
+{}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> ps <span style="COLOR: blue">As</span> 
+      Array = System.[Enum].GetValues(<span style="COLOR: blue">GetType</span>(PatternStyle))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> ds <span style="COLOR: blue">As</span> 
+      Array = System.[Enum].GetValues(<span style="COLOR: blue">GetType</span>(DashStyle))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0 <span style="COLOR: blue">To</span> <span style="COLOR: blue">Me</span>.chartControl1.Series.Count - 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      tempStyles(i) = <span style="COLOR: blue">New</span> 
+      ChartStyleInfo()              
+      tempStyles(i).CopyFrom(<span style="COLOR: blue">Me</span>.chartControl1.Series(i).StylesImpl.Style)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Interior 
+      = <span style="COLOR: blue">New</span> BrushInfo(<span style="COLOR: blue">DirectCast</span>(ps.GetValue(i <span style="COLOR: blue">Mod</span> ps.Length), PatternStyle), Color.Black, 
+      Color.White)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Border.MakeCopy(tempStyles(i), 
+      <span style="COLOR: blue">Me</span>.chartControl1.Series(i).Style.Border.Sip)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Border.Color 
+      = Color.Black</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Border.DashStyle 
+      = <span style="COLOR: blue">DirectCast</span>(ds.GetValue(i <span style="COLOR: blue">Mod</span> ds.Length), DashStyle)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Checking the 
+      charttype</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.chartControl1.Series(i).Type = 
+      ChartSeriesType.Line <span style="COLOR: blue">OrElse</span> <span style="COLOR: blue">Me</span>.chartControl1.Series(i).Type = 
+      ChartSeriesType.Spline <span style="COLOR: blue">OrElse</span> <span style="COLOR: blue">Me</span>.chartControl1.Series(i).Type = 
+      ChartSeriesType.StepLine <span style="COLOR: blue">OrElse</span> <span style="COLOR: blue">Me</span>.chartControl1.Series(i).Type = 
+      ChartSeriesType.RotatedSpline <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Interior 
+      = <span style="COLOR: blue">New</span> BrushInfo(<span style="COLOR: blue">DirectCast</span>(ps.GetValue(i <span style="COLOR: blue">Mod</span> ps.Length), PatternStyle), Color.White, 
+      Color.Black)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Me</span>.chartControl1.Series3D <span style="COLOR: blue">OrElse</span> <span style="COLOR: blue">Me</span>.chartControl1.ChartInterior.BackColor = 
+      Color.Black <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Interior 
+      = <span style="COLOR: blue">New</span> BrushInfo(<span style="COLOR: blue">DirectCast</span>(ps.GetValue(i <span style="COLOR: blue">Mod</span> ps.Length), PatternStyle), Color.Black, 
+      Color.White)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Series(i).Style.Border.Color 
+      = Color.Black</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> container <span style="COLOR: blue">As</span> GraphicsContainer = 
+      BeginTransform(e.Graphics)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.Graphics.ResetTransform()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Using</span><span style="FONT-FAMILY: 'Courier New'"> img <span style="COLOR: blue">As</span> Image = <span style="COLOR: blue">New</span> 
+      Bitmap(e.MarginBounds.Width, e.MarginBounds.Height)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Using</span><span style="FONT-FAMILY: 'Courier New'"> g <span style="COLOR: blue">As</span> 
+      Graphics = Graphics.FromImage(img)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Assigning the 
+      initial values of max and min to chartcontrol maximum and ‘’’/minimum 
+      values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = mi</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = mx</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = (<span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      - <span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.Min) 
+      / <span style="COLOR: blue">Me</span>.chartControl1.ChartArea.PrimaryXAxis.Range.NumberOfIntervals</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Modifying the 
+      maximum and minimum values</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mi = mx</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mx = mx + 
+      Convert.ToDouble(textBox1.Text)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> hdc <span style="COLOR: blue">As</span> IntPtr = g.GetHdc()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> stream <span style="COLOR: blue">As</span> Stream = <span style="COLOR: blue">New</span> MemoryStream()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> mf <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">New</span> Metafile(stream, hdc)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Call the Draw 
+      method to draw the chart</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Draw(mf, 
+      img.Size)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">DrawingUtils.DrawGrayedImage(e.Graphics, 
+      mf, e.MarginBounds, <span style="COLOR: blue">New</span> 
+      Rectangle(Point.Empty, img.Size))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">g.ReleaseHdc(hdc)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">g.Dispose()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">mf.Dispose()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Using</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Using</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">EndTransform(e.Graphics, 
+      container)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> i <span style="COLOR: blue">As</span> 
+      <span style="COLOR: blue">Integer</span> = 0 <span style="COLOR: blue">To</span> <span style="COLOR: blue">Me</span>.chartControl1.Series.Count - 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">Me</span>.chartControl1.Series(i).StylesImpl.Style.ResetInterior()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">Me</span>.chartControl1.Series(i).StylesImpl.Style.ResetBorder()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+          <span style="COLOR: blue">Me</span>.chartControl1.Series(i).StylesImpl.Style.CopyFrom(tempStyles(i))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Checking Toolbar 
+      functionality of print</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Not</span> 
+      <span style="COLOR: blue">Me</span>.chartControl1.PrintDocument.PrintToolBar 
+      <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ShowToolbar = 
+      toolBatVisibility</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">‘’’/Redraws the chart 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.Redraw(<span style="COLOR: blue">True</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">/Reset the HasMorePages 
+      property to false when it exceeds the charts default maximum.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">If</span><span style="FONT-FAMILY: 'Courier New'"> mx &gt; [end] <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">e.HasMorePages = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">//Finally resets the 
+      maximum and minimum value for default chartcontrol</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Min 
+      = start</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Max 
+      = [end]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.chartControl1.ChartArea.PrimaryXAxis.Range.Interval 
+      = Intervel</span></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="LINE-HEIGHT: normal; MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image84_1.jpg" alt="" />Notes: The initial page 
+will be printed based on the specified minium and maxium value. In further pages 
+minum value will be the maxium value of previous page and maxium will be the sum 
+of current page minum value and the specified maxium value in the 
+Range.</p></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Events</p>
+<p class="MsoCaption">Table 5: Event Table</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 76.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="102">
+      <p class="TableHeading">Event </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 140.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="187">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 72pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="96">
+      <p class="TableHeading">Arguments </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableHeading">Reference links </p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 76.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="102">
+      <p class="TableText">PrintPage </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 140.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="187">
+      <p class="TableText">This event will be triggered when the chart is 
+      printed.  </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 72pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="96">
+      <p class="TableText">PrintPageEventArgs</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableText">Server side </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">NA</p></td></tr></thead>
+  <tbody></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyTextHeading"><span style="FONT-WEIGHT: normal">To view a 
+sample:</span></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="COLOR: #c00000"></span> </p>
+<p style="LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 10pt 36pt; tab-stops: 36.0pt" class="MsoNormal">1.  Open the <b>Syncfusion Dashboard.</b></p>
+<p style="LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 10pt 36pt; tab-stops: 36.0pt" class="MsoNormal">2.  Click the <b>Windows Forms</b> drop-down list and 
+select <b>Run Locally Installed Samples.</b></p>
+<p style="LINE-HEIGHT: 115%; TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 10pt 36pt; tab-stops: 36.0pt" class="MsoNormal">3.  Navigate to <b>Chart Samples --&gt;Print --&gt;Multiple 
+Page Printing. </b></p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 48.0pt" class="MsoNormal">             
+</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

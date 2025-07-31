@@ -1,0 +1,382 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>LOAD</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="4e8f6474-55a7-428b-95ac-257d6351e001" />
+    <meta name="Title" content="LOAD" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/PDF%20Viewer3.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">LOAD</h5>
+      <p class="BodyTextHeading"> </p>
+      <p class="BodyText1">PdfViewer load propery gets the pdf file path as string</p>
+      <p class="BodyTextHeading"> </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt" class="MsoNormal">
+        <b>
+          <span style="BACKGROUND: white; COLOR: black"></span>
+        </b> </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Using 
+Builder:</span>
+      </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt" class="MsoNormal">
+        <b>
+          <span style="BACKGROUND: white; COLOR: black"></span>
+        </b> </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Step 1:</span>
+      </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Controller:</span>
+      </p>
+      <p class="BodyText1">
+        <span style="BACKGROUND: white">Add the code displayed below 
+in the HomeController.cs file. <b>PdfViewerParams</b> class is used to 
+get the post parameter values for the PdfViewer. Hence, it is used as a 
+parameter in the post action. Then, it is passed to the view through the 
+ViewData.</span>
+      </p>
+      <p class="BodyText1">
+        <span style="BACKGROUND: white"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f2f2f2; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> System;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      System.Collections.Generic;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> System.Linq;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> System.Web;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+System.Web.Mvc;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">using</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      Syncfusion.PdfViewer.Mvc;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">namespace</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      MvcPdfViewerApplication.Controllers</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">{</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">public</span><span style="COLOR: blue">class</span><span style="COLOR: #2b91af">HomeController</span> : <span style="COLOR: #2b91af">Controller</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      {       </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span><span style="COLOR: #2b91af">ActionResult</span> Index()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {            
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span> View();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span><span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PdfViewerParams </span>param)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span>
+              </p>
+              <p style="MARGIN-TOP: 2pt; TEXT-INDENT: 36pt; BACKGROUND: #f0f0f0" class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">      
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: green">//Passing 
+      the chart post parameter values to the view</span>
+                <span style="BACKGROUND: #f0f0f0; COLOR: black"></span>
+              </p>
+              <p style="MARGIN-TOP: 2pt; BACKGROUND: #f0f0f0" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black">            
+      ViewData[</span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: #a31515">"PdfViewerParamsData"</span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black">] = 
+      param;</span>
+                <span style="BACKGROUND: #f0f0f0; COLOR: black"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span></span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black">PartialView(</span>
+                </span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: #a31515">"PartialView"</span>
+                </span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black">,</span>
+                </span>
+                <span class="apple-converted-space">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black"> </span>
+                </span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: blue">this</span>
+                </span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: black">.ViewData);</span>
+                </span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">}</span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+                <span style="BACKGROUND: white; COLOR: black"></span> </p>
+              <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+                <span style="BACKGROUND: white; COLOR: black"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Step 2:</span>
+      </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">View:</span>
+      </p>
+      <p class="BodyText1">
+        <span style="BACKGROUND: white">Add the code displayed below 
+in the Index.aspx file.</span>
+      </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f2f2f2; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">&lt;%</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">@</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">
+                  <span style="COLOR: maroon">Page</span>
+                  <span style="COLOR: red">Title</span>
+                  <span style="COLOR: blue">=""</span>
+                  <span style="COLOR: red">Language</span>
+                  <span style="COLOR: blue">="C#"</span>
+                  <span style="COLOR: red">MasterPageFile</span>
+                  <span style="COLOR: blue">="~/Views/Shared/Site.Master"</span>
+                  <span style="COLOR: red">Inherits</span>
+                  <span style="COLOR: blue">="System.Web.Mvc.ViewPage"</span>
+                  <span style="BACKGROUND: yellow">%&gt;</span>
+                </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">asp</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">Content</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">
+                  <span style="COLOR: red">ID</span>
+                  <span style="COLOR: blue">="Content1"</span>
+                  <span style="COLOR: red">ContentPlaceHolderID</span>
+                  <span style="COLOR: blue">="TitleContent"</span>
+                  <span style="COLOR: red">runat</span>
+                  <span style="COLOR: blue">="server"&gt;</span>
+                </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">       
+      PdfIndex</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">asp</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">Content</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">asp</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">Content</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">
+                  <span style="COLOR: red">ID</span>
+                  <span style="COLOR: blue">="Content2"</span>
+                  <span style="COLOR: red">ContentPlaceHolderID</span>
+                  <span style="COLOR: blue">="MainContent"</span>
+                  <span style="COLOR: red">runat</span>
+                  <span style="COLOR: blue">="server"&gt;</span>
+                </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">   <span style="BACKGROUND: yellow">&lt;%</span>Html.RenderPartial(<span style="COLOR: #a31515">"</span></span>
+                <span class="apple-style-span">
+                  <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: #a31515">PartialView</span>
+                </span>
+                <span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">"</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;/</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">asp</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: maroon; FONT-SIZE: 9.5pt">Content</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&gt;</span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+                <span style="BACKGROUND: white; COLOR: black"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Step 3:</span>
+      </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">PartialView:</span>
+      </p>
+      <p class="BodyText1">
+        <span style="BACKGROUND: white">Create a Partial View 
+named <b>“PartialView.ascx”</b>, and add the code displayed below, in 
+it.</span>
+      </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f2f2f2; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">&lt;%</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">@</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">
+                  <span style="COLOR: maroon">Control</span>
+                  <span style="COLOR: red">Language</span>
+                  <span style="COLOR: blue">="C#"</span>
+                  <span style="COLOR: red">Inherits</span>
+                  <span style="COLOR: blue">="System.Web.Mvc.ViewUserControl"</span>
+                  <span style="BACKGROUND: yellow">%&gt;</span>
+                </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().PdfViewer(<span style="COLOR: #a31515">"PdfViewer"</span>).Load(<span style="COLOR: #a31515">"</span></span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: #a31515">Pdf 
+      file Path</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt"> 
+      "</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> ).(<span style="COLOR: #2b91af">PdfViewerModel</span>)ViewData[<span style="COLOR: #a31515">"</span></span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: #f0f0f0; COLOR: #a31515">PdfViewerParamsData</span>
+                <span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt"> 
+      "</span>
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">])<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+                <span style="BACKGROUND: white; COLOR: black"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p class="BodyTextHeading">
+        <span style="BACKGROUND: white">Step 4:</span>
+      </p>
+      <p class="BodyText1">
+        <span style="BACKGROUND: white">Run the code, to get the 
+following output.</span>
+      </p>
+      <p class="Figure">
+        <img border="0" src="ImagesExt/image104_4.jpg" alt="" />
+        <span style="BACKGROUND: white; COLOR: black"></span>
+      </p>
+      <p style="LINE-HEIGHT: 12pt; MARGIN: 2pt 0pt 6pt" class="MsoNormal">
+        <span style="BACKGROUND: white; COLOR: black"></span> </p>
+      <p class="MsoCaption">Figure 8: Output</p>
+      <p class="BodyTextHeading"> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

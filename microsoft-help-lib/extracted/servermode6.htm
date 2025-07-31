@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Server Mode</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="fcca5819-3714-4e76-ad37-4e0e8198288e" />
+<meta name="Title" content="Server Mode" />
+<meta name="Microsoft.Help.TocParent" content="bf4b59aa-2b2b-44fd-8a8b-b4c130dd3c63" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Server Mode</h5>
+<h6 style="tab-stops: 0pt"><span style="FONT-WEIGHT: normal">5.9.2.1.1.1  
+</span>Using GridBuilder<span style="FONT-WEIGHT: normal"></span></h6>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><u><span style="COLOR: blue">How to&gt;Strongly Typed 
+View</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In the view, you 
+can use its <b>Model </b>property in <b>Datasource()</b> to bind the data 
+source.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 13pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 13pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Product</span>&gt;(<span style="COLOR: #a31515">"CustomGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      .Datasource(Model)</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Caption(<span style="COLOR: #a31515">"Products"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Column(column =&gt;{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ProductID).HeaderText(<span style="COLOR: #a31515">"Product ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ProductName).HeaderText(<span style="COLOR: #a31515">"Product Name"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.SupplierID).HeaderText(<span style="COLOR: #a31515">"Supplier ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitPrice).HeaderText(<span style="COLOR: #a31515">"Unit Price"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitsInStock).HeaderText(<span style="COLOR: #a31515">"Units In Stock"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitsOnOrder).HeaderText(<span style="COLOR: #a31515">"Units On Order"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ReorderLevel).HeaderText(<span style="COLOR: #a31515">"Reorder Level"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }) </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 13pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 13pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Product</span>&gt;(<span style="COLOR: #a31515">"CustomGrid"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      .Datasource(Model)</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Caption(<span style="COLOR: #a31515">"Products"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .ShowRowHeader(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)      
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Column(column =&gt;{</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ProductID).HeaderText(<span style="COLOR: #a31515">"Product ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ProductName).HeaderText(<span style="COLOR: #a31515">"Product Name"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.SupplierID).HeaderText(<span style="COLOR: #a31515">"Supplier ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitPrice).HeaderText(<span style="COLOR: #a31515">"Unit Price"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitsInStock).HeaderText(<span style="COLOR: #a31515">"Units In Stock"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.UnitsOnOrder).HeaderText(<span style="COLOR: #a31515">"Units On Order"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      column.Add(c =&gt; c.ReorderLevel).HeaderText(<span style="COLOR: #a31515">"Reorder Level"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }).Render();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Configure the 
+<b>QueryCellInfo()</b> action as shown below to perform custom formatting at the 
+cell level.</p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 27pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 195.1pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468.75pt; PADDING-RIGHT: 5.4pt; HEIGHT: 195.1pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="625">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [ASPX]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;Product&gt;("CustomGrid")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Caption("Products")            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <b>.QueryCellInfo( cell =&gt; </b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">if</span> (cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.RecordFieldCell || 
+      cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.AlternateRecordFieldCell)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"UnitsInStock"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">         
+                         <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt;= 
+      30)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                                
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:Blue;background-color:Chocolate;"</span>;                                
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      }</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"ReorderLevel"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                            
+      <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt; 
+      25)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                                
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:#ac0c0c;background-color:Bisque;"</span>;</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      }               
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">   
+          })</span></b><span style="FONT-FAMILY: 'Courier New'">     </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> <span style="BACKGROUND: yellow">%&gt;</span><b></b></span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 13pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 13pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View 
+      [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;Product&gt;("CustomGrid")</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Datasource(Model)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      .Caption("Products")            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <b>.QueryCellInfo( cell =&gt; </b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">if</span> (cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.RecordFieldCell || 
+      cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.AlternateRecordFieldCell)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"UnitsInStock"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                            
+      <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt;= 
+      30)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                                
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:Blue;background-color:Chocolate;"</span>;                                
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">               
+               }</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"ReorderLevel"</span>)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      {</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                            
+      <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt; 
+      25)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                                
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:#ac0c0c;background-color:Bisque;"</span>;</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                        
+      }     </span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">             
+          })</span></b><span style="FONT-FAMILY: 'Courier New'">.Render();</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">}</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Run the 
+application. The grid will appear as shown below.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_193.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 207: Dynamic Formatting Applied to the Grid using 
+QueryCellInfo</p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center" class="MsoNormal" align="center"><b><span style="COLOR: black"></span></b> </p>
+<h6 style="tab-stops: 0pt"><span style="FONT-WEIGHT: normal">5.9.2.1.1.2  
+</span>Using GridPropertiesModel<span style="FONT-WEIGHT: normal"></span></h6>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Add the following 
+code in the <b>Index.aspx</b> file to create the Grid control in the view.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 130.2pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 130.2pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">View 
+      [ASPX]</span></b><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Product</span>&gt;(<span style="COLOR: #a31515">"Orders_Grid"</span>,<span style="COLOR: #a31515">"GridModel"</span>, column=&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ProductID).HeaderText(<span style="COLOR: #a31515">"Product ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ProductName).HeaderText(<span style="COLOR: #a31515">"Product Name"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.SupplierID).HeaderText(<span style="COLOR: #a31515">"Supplier ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitPrice).HeaderText(<span style="COLOR: #a31515">"Unit Price"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitsInStock).HeaderText(<span style="COLOR: #a31515">"Units In Stock"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitsOnOrder).HeaderText(<span style="COLOR: #a31515">"Units On Order"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ReorderLevel).HeaderText(<span style="COLOR: #a31515">"Reorder Level"</span>);    })<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify" class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 96.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 96.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [cshtml]</span></b></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">@(</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">new</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: #2b91af">HtmlString</span>(</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Product</span>&gt;(<span style="COLOR: #a31515">"Orders_Grid"</span>,<span style="COLOR: #a31515">"GridModel"</span>, column=&gt; {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ProductID).HeaderText(<span style="COLOR: #a31515">"Product ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ProductName).HeaderText(<span style="COLOR: #a31515">"Product Name"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.SupplierID).HeaderText(<span style="COLOR: #a31515">"Supplier ID"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitPrice).HeaderText(<span style="COLOR: #a31515">"Unit Price"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitsInStock).HeaderText(<span style="COLOR: #a31515">"Units In Stock"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 59.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.UnitsOnOrder).HeaderText(<span style="COLOR: #a31515">"Units On Order"</span>);</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      column.Add(c =&gt; c.ReorderLevel).HeaderText(<span style="COLOR: #a31515">"Reorder Level"</span>);    
+      }).</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">ToString())<span style="BACKGROUND: yellow">)</span>    </span><span style="FONT-FAMILY: 'Courier New'">    </span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt; tab-stops: 155.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'">                                                                     
+</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">  
+</span><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 72pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Create a 
+<b>GridPropertiesModel</b> in the <b>Index</b> method. Assign grid properties in 
+this model and pass the model from the controller to the view using the 
+<b>ViewData</b> class as shown below.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 94.8pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 94.8pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: green">// Create a model and assign a data 
+      source.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: #2b91af">GridPropertiesModel</span> model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPropertiesModel</span>()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: ; MARGIN-LEFT: 23.4pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  
+      DataSource=<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataClassesDataContext</span>().Products,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Caption=<span style="COLOR: #a31515">"Product"</span> ,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      AutoFormat=<span style="COLOR: #2b91af">Skins</span>.Sandune</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      };</span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Create an action 
+for the <b>QueryCellInfo()</b> action as shown below to perform custom 
+formatting in cell level.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f2f2f2; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 53.5pt">
+    <td style="BORDER-BOTTOM: #d9d9d9 1pt solid; BORDER-LEFT: #d9d9d9 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.5pt; BORDER-TOP: #d9d9d9 1pt solid; BORDER-RIGHT: #d9d9d9 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      [<span style="COLOR: #2b91af">ChildActionOnly</span>]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: blue">void</span> QueryAction(<span style="COLOR: #2b91af">GridTableCell</span>&lt;<span style="COLOR: #2b91af">Product</span>&gt; cell)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// TableCellType is validation. Check for 
+      Record field cells.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.RecordFieldCell || 
+      cell.TableCellType == <span style="COLOR: #2b91af">GridTableCellType</span>.AlternateRecordFieldCell)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"UnitsInStock"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt;= 
+      30)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: green">// Apply background color and font style for 
+      the record field cell.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:Blue;background-color:Chocolate;"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: blue">if</span> (cell.Column.MappingName == <span style="COLOR: #a31515">"ReorderLevel"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      <span style="COLOR: blue">if</span> (cell.Data.UnitsInStock &lt; 
+      25)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: green">// Apply background color and font style for 
+      the record field cell.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      cell.HtmlAttributes[<span style="COLOR: #a31515">"style"</span>] = <span style="COLOR: #a31515">"color:#ac0c0c;background-color:Bisque;"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }<i></i></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Bind the action 
+to <b>GridPropertiesModel</b> and pass the model to the view using the <b>View 
+Data</b> method as given below:</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">           
+      GridPropertiesModel</span><span style="FONT-FAMILY: 'Courier New'">&lt;<span style="COLOR: #2b91af">Product</span>&gt; model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPropertiesModel</span>&lt;<span style="COLOR: #2b91af">Product</span>&gt;()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      DataSource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Products.Take(20).ToList(),</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Caption = <span style="COLOR: #a31515">"Product"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      AutoFormat = <span style="COLOR: #2b91af">Skins</span>.Sandune</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      model.QueryCellInfo = QueryAction;</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ViewData[<span style="COLOR: #a31515">"GridModel"</span>] = 
+      model;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Run the 
+application. The grid will appear as shown below.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" src="ImagesExt/image58_82.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 208: Dynamic Formatting Applied to Grid Using 
+QueryCellInfo</p>
+<p class="MsoCaption"> </p><span id="related-topics"></span></div></body></html>

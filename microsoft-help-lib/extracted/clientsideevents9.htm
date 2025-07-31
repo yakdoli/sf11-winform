@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Client-Side Events</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="cf34982d-1899-4147-b7b5-764a8f34d0de" />
+<meta name="Title" content="Client-Side Events" />
+<meta name="Microsoft.Help.TocParent" content="5de02ee2-07f0-4cd1-9005-3e30e4b6cb02" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Client-Side Events</h5>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="MsoNormal">To raise and process client side events when the node is 
+selected, renamed, expanded or check state changed, follow the steps given 
+below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="MARGIN-LEFT: 43.2pt; tab-stops: 43.2pt" class="NumberedList">1.   The TreeView control and a span tag with id 
+'eventDisplay<span style="FONT-FAMILY: 'Verdana','sans-serif'; COLOR: black; FONT-SIZE: 8pt">' 
+</span>are added to the Web project.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">57.  In HTML view add the 
+following content.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="660">
+  <tbody>
+  <tr style="HEIGHT: 506.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 495pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 506.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="660">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">script</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">language</span><span style="COLOR: blue">="javascript"</span> <span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeSelected(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Selected '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeRenamed(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Renamed '"</span>+node.OldText+<span style="COLOR: maroon">"' to '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeMoved(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Moving '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeDropped(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Dropped '" </span>+ node.SourceNode.Text + <span style="COLOR: maroon">"under'" </span>+ node.TargetNode.Text;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeExpanded(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Expanded '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeCollapsed(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Collapsed '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">function</span> nodeChecked(node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">if</span>(node.Checked)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"Checked '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">else</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      document.getElementById(<span style="COLOR: maroon">'eventDisplay'</span>).innerHTML=<span style="COLOR: maroon">"UnChecked '"</span>+node.Text+<span style="COLOR: maroon">"'"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">script</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">treeview</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">id </span><span style="COLOR: blue">= 
+      "TreeView1"</span> <span style="COLOR: red">runat </span><span style="COLOR: blue">= "server"</span> <span style="COLOR: red">ClientSideOnNodeMove </span><span style="COLOR: blue">= 
+      "nodeMoved(this)"</span> <span style="COLOR: red">DragAndDropEnabled 
+      </span><span style="COLOR: blue">= "True"</span> <span style="COLOR: red">ClientSideOnNodeDrop </span><span style="COLOR: blue">= 
+      "nodeDropped(this)"</span> <span style="COLOR: red">ClientSideOnNodeRename 
+      </span><span style="COLOR: blue">= "nodeRenamed(this)"</span> <span style="COLOR: red">ClientSideOnNodeSelect</span><span style="COLOR: blue">= "nodeSelected(this)"</span> <span style="COLOR: red">ClientSideOnNodeCheckChanged </span><span style="COLOR: blue">= "nodeChecked(this)"</span> <span style="COLOR: red">ClientSideOnNodeCollapse </span><span style="COLOR: blue">= "nodeCollapsed(this)"</span> <span style="COLOR: red">ClientSideOnNodeExpand </span><span style="COLOR: blue">= "nodeExpanded(this)"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Mailbox"</span> <span style="COLOR: red">ImagePath</span><span style="COLOR: blue">="root.gif"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Calendar"</span> 
+      <span style="COLOR: red">ImagePath</span><span style="COLOR: blue">="calendar.gif"&gt;&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Outbox"</span> 
+      <span style="COLOR: red">ImagePath</span><span style="COLOR: blue">="outbox.gif"&gt;&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Local 
+      Server"</span> <span style="COLOR: red">ImagePath</span><span style="COLOR: blue">="folders.gif"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="True"</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Junk 
+      E-mail"</span> <span style="COLOR: red">ImagePath</span><span style="COLOR: blue">="junk.gif"&gt;&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">treeview</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">span</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">class</span><span style="COLOR: blue">="lblCss"</span> 
+      <span style="COLOR: red">id</span><span style="COLOR: blue">="eventDisplay"&gt;&lt;/</span><span style="COLOR: maroon">span</span><span style="COLOR: blue">&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Code Analysis</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeSelect</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In the above example, the <b>ClientSideOnNodeSelect</b> 
+property is set to the 'nodeSelected' client-side javascript function. This will 
+get executed whenever a node is selected and passes the selected node as a 
+parameter to the <b>NodeSelected</b> event. </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If <b>Selectable</b> property of the node is set to 
+<b>False</b>, ClientSideOnNodeSelect event won't get triggered.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeRename</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In the above example, <b>ClientSideOnNodeRename</b> property 
+is set to the 'nodeRenamed' client-side javascript function. This will get 
+executed whenever a node is renamed and passes the renamed node as parameters to 
+the <b>NodeRenamed</b> event. Make sure that the <b>EditNode</b> property is set 
+to <b>True</b>, to allow  node to be edited. You can get the nodes old text 
+using the renamed node which is passed as a parameter to the NodeRenamed 
+event.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeMove</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">In the above example, <b>ClientSideOnNodeMove</b> property is 
+set to the 'nodeMoved' client-side javascript function. This will get executed 
+whenever a node is dropped and passes the dropped node as parameter to the 
+<b>NodeMoved</b> event. Make sure that the <b>DragAndDropEnabled</b> property is 
+set to <b>True</b>, to allow nodes to be moved.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeDrop</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">In the above example, <b>ClientSideOnNodeDrop</b> property is 
+set to the 'nodeDropped' client-side javascript function. This will get executed 
+whenever a node is dropped and passes the dropped node as parameters to the 
+<b>NodeDropped</b> event. Make sure that the <b>DragAndDropEnabled</b> property 
+is set to <b>True</b>, to allow node to be dropped.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><b>node.SourceNode.Text</b> and <b>node.TartgetNode.Text 
+</b>can be used to obtain the source and the target nodes of the dropped 
+node.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeExpand</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In the above example, the <b>ClientSideOnNodeExpand</b> 
+property is set to the 'nodeExpanded' client-side javascript function. This will 
+get executed whenever a node gets expanded and passes the expanded node as a 
+parameter to the <b>NodeExpanded</b> event. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeCollapse</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In the above example, the <b>ClientSideOnNodeCollapse</b> 
+property is set to the 'nodeCollapsed' client-side javascript function. This 
+will get executed whenever a node gets collapsed and passes the collapsed node 
+as a parameter to the <b>NodeCollapsed</b> event.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">ClientSideOnNodeCheckChanged</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In the above example,<b> ClientSideOnNodeCheckChanged</b> 
+property is set to the 'nodeChecked' client-side javascript function. This will 
+get executed whenever a node in the checkbox is checked / unchecked. Here 
+<b>Checked</b> attribute gives the status of the checkbox, whether it is checked 
+/ unchecked.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a><span class="UGHyperlink">Client side Event Data</span></a><span class="UGHyperlink">, 
+</span><a><span class="UGHyperlink">AJAX support</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="_Client-Side_Event_Data" id="_Client-Side_Event_Data"></a>5.3.1.3.2.1 
+Client-Side Event Data</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">When a client event is raised and an object is passed to that 
+event, the various properties of the treeview object that can be accessed are 
+listed below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="TableHeading">Parameter</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="TableHeading">Description</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="TableHeading">Return Type</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Event</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">object</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">The event object of the browser.</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">ID</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the client side item identifier.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Text</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the item text.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">OldText</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the item text before change.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Value</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies optional internal string value of this 
+      node.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Tooltip</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the help message that showing when user moves 
+      mouse over TreeView item.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Disabled</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether item is disabled.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Checked</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether item is checked.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Level</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies item's level.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">int</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">NavigateUrl</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the item's target URL.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Expanded</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether item is expanded.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">HasSubNodes</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether item has child nodes.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Selectable</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether item is selectable.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">DraggingEnabled</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether allow dragging item.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">DroppingEnabled</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies whether allow dropping item.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">bool</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">ParentNode</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents item's parent node.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">TreeViewItem</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Nodes</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents item's child nodes.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">Array of objects</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">ValuePath</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies path to item.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">TreeViewElement</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents root HTML TreeView element.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">HTMLElement</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">RootNodes</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents root nodes.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">Array of objects</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">HtmlID</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Specifies the client side TreeView identifier.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">string</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">Element</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents HTML item element.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">HTMLElement</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 97.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="130">
+      <p class="MsoNormal">ClientSideObject</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 207.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="277">
+      <p class="MsoNormal">Represents TreeView client-side object.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 155.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="207">
+      <p class="MsoNormal">object</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><span style="COLOR: black"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 141pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="188">
+      <p class="TableHeading">Method</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="TableHeading">Parameter</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 181.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="242">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 141pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="188">
+      <p class="MsoNormal">Check</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="MsoNormal">-</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 181.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="242">
+      <p class="MsoNormal">Checking item.</p></td></tr>
+  <tr style="HEIGHT: 4.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 141pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="188">
+      <p class="MsoNormal">UnCheck</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="MsoNormal">-</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 181.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 4.5pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="242">
+      <p class="MsoNormal">Unchecking item.</p></td></tr>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 141pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="188">
+      <p class="MsoNormal">SetValue</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 138pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="184">
+      <p class="MsoNormal">string</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 181.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="242">
+      <p class="MsoNormal">Set the item value.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeDrop</b> event data object has following 
+properties.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>SourceNode</b>: dropping TreeView node object</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>TargetNode</b>: target TreeView node object for dropping item</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Event 
+</b>– browser event object</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a href=""><span class="UGHyperlink">Client side Events</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="p307" id="p307"></a>5.3.1.3.2.2 ClientSideOnContextMenu 
+Event</h6>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnContextMenu</b> is fired on right-clicking the 
+node. Parameter of this event is <b>ClientEventData</b>.</p>
+<p class="MsoNormal">Following sample demonstrates how to override default browser 
+context menu for TreeView node.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> <span style="COLOR: red">EditNode</span><span style="COLOR: blue">="False"</span> <span style="COLOR: red">Width</span><span style="COLOR: blue">="192px"</span> 
+      <span style="COLOR: red">Height</span><span style="COLOR: blue">="288px"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: red">ClientSideOnContextMenu</span><span style="COLOR: blue">="NodeOnContextMenu(this)"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Calendar"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Contacts"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Inbox"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Node with 
+      browser's context menu"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="MenuCalendar"</span> <span style="COLOR: red">ClientObjectId</span><span style="COLOR: blue">="_sfMenuCalendar"</span>  <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: red">ContextMenu</span><span style="COLOR: blue">="Custom"</span> <span style="COLOR: red">Layout</span><span style="COLOR: blue">="Vertical"</span> <span style="COLOR: red">ClientSideOnItemSelect</span><span style="COLOR: blue">="OnMenuItemSelect( this )"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Menu 
+      Calendar"&gt;</span>                   
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span><span style="COLOR: blue">&gt;</span>                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="MenuContacts"</span> <span style="COLOR: red">ClientObjectId</span><span style="COLOR: blue">="_sfMenuContacts"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: red">ContextMenu</span><span style="COLOR: blue">="Custom"</span> <span style="COLOR: red">Layout</span><span style="COLOR: blue">="Vertical"</span> <span style="COLOR: red">ClientSideOnItemSelect</span><span style="COLOR: blue">="OnMenuItemSelect( this )"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Menu 
+      Contacts"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span><span style="COLOR: blue">&gt;</span>                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="MenuInbox"</span> 
+      <span style="COLOR: red">ClientObjectId</span><span style="COLOR: blue">="_sfMenuInbox"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> 
+      <span style="COLOR: red">ContextMenu</span><span style="COLOR: blue">="Custom"</span> <span style="COLOR: red">Layout</span><span style="COLOR: blue">="Vertical"</span> <span style="COLOR: red">ClientSideOnItemSelect</span><span style="COLOR: blue">="OnMenuItemSelect( this )"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Menu 
+      Inbox"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">MenuItem</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Menu</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnContextMenu( 
+      oNodeEventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">var</span> bShowMenu = <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">switch</span>( oNodeEventData.Text )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">case</span> <span style="COLOR: maroon">'Calendar'</span>: </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      _sfMenuCalendar.ShowContextMenu( <span style="COLOR: blue">null</span>, 
+      <span style="COLOR: blue">null</span>, oNodeEventData.Event, 
+      oNodeEventData );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">break</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">case</span> <span style="COLOR: maroon">'Contacts'</span>: </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      _sfMenuContacts.ShowContextMenu( <span style="COLOR: blue">null</span>, 
+      <span style="COLOR: blue">null</span>, oNodeEventData.Event, 
+      oNodeEventData ); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">break</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">case</span> <span style="COLOR: maroon">'Inbox'</span>: </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      _sfMenuInbox.ShowContextMenu( <span style="COLOR: blue">null</span>, <span style="COLOR: blue">null</span>, oNodeEventData.Event, oNodeEventData ); 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">break</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">default</span>: 
+                  
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+          <span style="COLOR: green">//In other case return 
+      <b>true</b> to show default browser's context menu.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+          bShowMenu = <span style="COLOR: blue">true</span>; 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">              
+      <span style="COLOR: blue">break</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: green">//Return <b>false</b> to cancel showing default 
+      browser's default context menu.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">return</span> bShowMenu;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> OnMenuItemSelect( 
+      oMenuItemData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">var</span> oContextDataNode = 
+      oMenuItemData.ParentMenu.ContextData; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">var</span> feedback = <span style="COLOR: maroon">'\"'</span> + oMenuItemData.Text + <span style="COLOR: maroon">'\" command was issued on the \"'</span> + 
+      oContextDataNode.Text + <span style="COLOR: maroon">'\"'</span>; 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      alert( feedback );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">       
+      <span style="COLOR: blue">return</span> <span style="COLOR: blue">false</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.3 ClientSideOnNodeCollapse / 
+ClientSideOnNodeExpand Events</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeCollapse</b> event is fired on node is 
+collapsed. <b>ClientSideOnNodeExpand</b> event is fired on node is expanded. 
+Parameter of this event is <b>ClientSideData</b> object.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <span style="COLOR: red">ClientSideOnNodeExpand</span><span style="COLOR: blue">="NodeOnExpand(this)"</span> <span style="COLOR: red">ClientSideOnNodeCollapse</span><span style="COLOR: blue">="NodeOnCollapse(this)"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">span</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">id</span><span style="COLOR: blue">="spanEvent"&gt;&lt;/</span><span style="COLOR: maroon">span</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnExpand( 
+      EventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById( <span style="COLOR: maroon">"spanEvent"</span> 
+      ).innerHTML = EventData.Text + <span style="COLOR: maroon">" 
+      expanded"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnCollapse( 
+      EventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      document.getElementById( <span style="COLOR: maroon">"spanEvent"</span> 
+      ).innerHTML = EventData.Text + <span style="COLOR: maroon">" 
+      collapsed"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="_ClientSideOnNodeCheckChange_Event" id="_ClientSideOnNodeCheckChange_Event"></a>5.3.1.3.2.4 
+ClientSideOnNodeCheckChange Event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeCheckChange</b> event is fired on node 
+check change. Parameter of this event is <b>ClientSideData</b> object.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Properties</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Checked</b>: indicates whether the node is checked or not</p>
+<p class="MsoNormal">This is client-side property of Tree node object.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Methods</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">The following are the methods of the TreeView client side 
+object.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Check / 
+UnCheck</b>: checks / unchecks the node</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">These are methods of Tree node client side object.</p>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>SetAutoCheckNodes(bool) / GetAutoCheckNodes</b>: sets / gets value 
+indicating whether the child nodes are automatically checked or unchecked on 
+parent node check change</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <b><span style="COLOR: red">ClientSideOnNodeCheckChanged</span><span style="COLOR: blue">="NodeOnCheckChange(this)"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">Checked</span><span style="COLOR: blue">="true"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">          
+        <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">ShowCheckBox</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnCheckChange( 
+      EventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      alert(<span style="COLOR: maroon">"You have checked "</span> + 
+      EventData.Text + <span style="COLOR: maroon">" which is now "</span> + 
+      EventData.<b>Checked</b>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.5 ClientSideOnNodeDragStart Event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeDragStart </b>event is fired on node start 
+drag. Parameter of this event is <b>ClientSideData</b> object.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Make sure that the <b>DragDropEnabled</b> property is set to 
+<b>True</b>, to allow nodes to be moved. This event can be canceled by simply 
+returning false from the event handler. For more details see example below.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">asp</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">CheckBox</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="checkAllowDrag"</span> <span style="COLOR: red">Checked</span><span style="COLOR: blue">="true"</span> 
+      <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Allow node 
+      dragging"</span> <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <b><span style="COLOR: red">ClientSideOnNodeDragStart</span><span style="COLOR: blue">="NodeOnDragStart(this)"</span></b> <b><span style="COLOR: red">DragAndDropEnabled</span><span style="COLOR: blue">="true"</span></b><span style="COLOR: blue"> 
+      </span><span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnDragStart( 
+      EventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">var</span> bRes = document.getElementById( <span style="COLOR: maroon">"checkAllowDrag"</span> ).checked;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">return</span> bRes;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.6 ClientSideOnNodeDrop event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeDrop</b> event is fired on node drop. 
+Parameter of this event contains the following properties.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>SourceNode</b>: dropping client side Treeview node object</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>TargetNode</b>: target client side Treeview node object for dropping 
+item</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Event</b>: 
+browser event object</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">Make sure that the <b>DragDropEnabled</b> property is set to 
+<b>True</b> to allow nodes to be moved. <b>DroppingAccrossTreesEnabled</b> is 
+set <b>True</b> to allow nodes to be dropped from another Treeview, 
+<b>DropSiblingEnabled</b> property indicates whether to allow dropping to create 
+siblings (drop between nodes). This event can be canceled by simply returning 
+False from the event handler and node dropping will be canceled.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">This example demonstrates how allow drag and drop nodes only 
+across TreeViews.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <b><span style="COLOR: red">ClientSideOnNodeDrop</span><span style="COLOR: blue">="NodeOnDrop(this)</span></b><span style="COLOR: blue">"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span>        
+      <b><span style="COLOR: red">DragAndDropEnabled</span><span style="COLOR: blue">="True"</span> <span style="COLOR: red">DraggingAcrossTreesEnabled</span><span style="COLOR: blue">="True"</span> <span style="COLOR: red">DropSiblingEnabled</span><span style="COLOR: blue">="True"</span></b><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">       
+      </span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">...</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView2"</span> 
+      <b><span style="COLOR: red">ClientSideOnNodeDrop</span><span style="COLOR: blue">="NodeOnDrop(this)</span></b><span style="COLOR: blue">"</span> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span>        
+      <span style="COLOR: red">DragAndDropEnabled</span><span style="COLOR: blue">="True"</span> <span style="COLOR: red">DraggingAcrossTreesEnabled</span><span style="COLOR: blue">="True"</span> <span style="COLOR: red">DropSiblingEnabled</span><span style="COLOR: blue">="True"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">       
+      </span><b><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">...</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[javascript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnDrop( EventData 
+      )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">var</span> bRes = 
+      (EventData.SourceNode.TreeViewElement.id != 
+      EventData.TargetNode.TreeViewElement.id );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">return</span> bRes;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.7 ClientSideOnNodeMove event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeMove</b> event is fired on node is moved. 
+Make sure that the <b>DragDropEnabled</b> property is set to <b>True</b> to 
+allow nodes to be moved and <b>DraggingAccrossTreesEnabled</b> is set 
+<b>True</b> to allow nodes to be dragged to another Treeview. Parameter of this 
+event is <b>ClientSideData</b> object.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="_ClientSideNodeRename_event" id="_ClientSideNodeRename_event"></a>5.3.1.3.2.8 
+ClientSideNodeRename event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideNodeRename</b> event is fired on node rename. 
+Parameter of this event is <b>ClientEventData</b> object. Also this event data 
+has <b>OldText</b> property which is used to get the text of the node before 
+editing. This event can be canceled by simply returning False from the event 
+handler and node renaming will be canceled.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <b><span style="COLOR: red">EditNode</span><span style="COLOR: blue">="true"</span> <span style="COLOR: red">ClientSideOnNodeRename</span><span style="COLOR: blue">="NodeOnRename(this)"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+               <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnRename( 
+      oNodeEventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">var</span> sText = <span style="COLOR: maroon">"Do you want rename "</span> + 
+      oNodeEventData.<b>OldText</b> + <span style="COLOR: maroon">" to "</span> 
+      + oNodeEventData.<b>Text</b>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">var</span> bRes = confirm( sText );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: green">//Return <b>false</b> to cancel node 
+      renaming.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">return</span> bRes;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.9 ClientSideOnNodeSelect event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>ClientSideOnNodeSelect</b> event is fired when a node is 
+selected by the user. Parameter of this event is <b>ClientSideData</b> 
+object.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[ASPX]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <b><span style="COLOR: red">ClientSideOnNodeSelect</span><span style="COLOR: blue">="NodeOnSelect(this)"</span></b> <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">      
+            <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Expanded</span><span style="COLOR: blue">="True"</span> 
+      <span style="COLOR: red">Text</span><span style="COLOR: blue">="Root 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span>  <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node1"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+          <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span> <span style="COLOR: red">Text</span><span style="COLOR: blue">="Child 
+      Node2"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">            
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">cc1</span><span style="COLOR: blue">:</span><span style="COLOR: maroon">TreeViewNode</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Items</span><span style="COLOR: blue">&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[JavaScript]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">function</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> NodeOnSelect( 
+      EventData )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+      alert(<span style="COLOR: maroon">"You have selected "</span> + 
+      EventData.Text + <span style="COLOR: maroon">" node"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> }</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.2.10        
+Other Client-side events</h6>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="673">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableHeading">Event <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableHeading">Description <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableHeading">Arguments <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableHeading">Type <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 11.25pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableHeading">Reference links <span style="FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnNodeDoubleClick<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event is triggered on double-clicking the 
+      tree-view nodes. <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="COLOR: #c00000; FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnKeyPressing<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event is triggered when you focus on a tree-view 
+      and press any key.<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnNodeClicking<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event is triggered before the 
+      ClientSideOnNodeSelect event, when you click on a node.<br />You can cancel 
+      the ClientSideOnNodeSelect event using this event, by <i>return false</i> 
+      <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnNodeRenameStart<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event is triggered when the edit box appears when 
+      you click on a node twice. <span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnNodeRenaming<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event is triggered before the 
+      ClientSideOnNodeRename event.<br />You can cancel the ClientSideOnNodeRename 
+      event using this event, by <b>return false</b><i>.</i><span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="FONT-SIZE: 11pt"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 64.15pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 153.9pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="205">
+      <p class="TableText">ClientSideOnLoad<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 108pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="144">
+      <p class="TableText">This event will trigger when the Tree-view is 
+      loaded<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 90pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="120">
+      <p class="TableText">args<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 67.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="90">
+      <p class="TableText">Client-side<span style="FONT-SIZE: 11pt"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 85.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 64.15pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="114">
+      <p class="TableText">NA<span style="FONT-SIZE: 11pt"></span></p></td></tr></thead>
+  <tbody></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">script</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnKeyPressing(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnKeyPressing\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnLoad(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnLoad\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnNodeDoubleClick(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnNodeDoubleClick\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnNodeRenameStart(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnNodeRenameStart\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnNodeRenaming(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnNodeRenaming\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnNodeClicking(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnNodeClicking\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">function</span> OnNodeDropping(data) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      alert(<span style="COLOR: maroon">"ClientSideOnNodeDropping\n"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">script</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">TreeView</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ID</span><span style="COLOR: blue">="TreeView1"</span> 
+      <span style="COLOR: red">runat</span><span style="COLOR: blue">="server"</span> <span style="COLOR: red">ClientSideOnKeyPressing</span><span style="COLOR: blue">="ClientSideOnKeyPressing"</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">ClientSideOnLoad</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ClientSideOnLoad"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">ClientSideOnNodeDoubleClick</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ClientSideOnNodeDoubleClick"</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">ClientSideOnNodeClicking</span><span style="COLOR: blue">="ClientSideOnNodeClicking"</span> <span style="COLOR: red">ClientSideOnNodeRenameStart</span><span style="COLOR: blue">="ClientSideOnNodeRenameStart"</span> <span style="COLOR: red">ClientSideOnNodeRenaming</span><span style="COLOR: blue">="ClientSideOnNodeRenaming"&gt;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">...</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">...</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">...</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.TreeView1.ClientSideOnKeyPressing=<span style="COLOR: #a31515">"OnKeyPressing"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.TreeView1.ClientSideOnLoad=<span style="COLOR: #a31515">"OnLoad"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.TreeView1.ClientSideOnNodeDoubleClick=<span style="COLOR: #a31515">"OnNodeDoubleClick"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.TreeView1.ClientSideOnNodeClicking=<span style="COLOR: #a31515">"OnNodeClicking"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.TreeView1.ClientSideOnNodeRenameStart=<span style="COLOR: #a31515">"OnNodeRenameStart"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">this</span>.TreeView1.ClientSideOnNodeRenaming = 
+      <span style="COLOR: #a31515">"OnNodeRenaming"</span>;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

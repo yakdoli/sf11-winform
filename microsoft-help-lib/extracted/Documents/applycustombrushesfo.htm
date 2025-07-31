@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Apply Custom Brushes for Silverlight Controls.</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="078cfe4f-afbb-4f1e-b3b2-f86ad364f1a1" />
+<meta name="Title" content="Apply Custom Brushes for Silverlight Controls." /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4>Apply Custom Brushes for Silverlight Controls.</h4>
+<p class="BodyText1">You can customize the brushes used in the built-in skins for 
+the Microsoft controls. </p>
+<p class="BodyText1">The following steps explain how to apply the custom brushes 
+for the Silverlight controls.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a new 
+ResourceDictionary in the sample. Define the brushes in the newly created 
+ResourceDictionary. Each brush should have a unique key. Keys in the new 
+ResourceDictionary and the keys defined in the Syncfusion ResourceDictionary 
+must be same.</p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormal"> </p>
+<p class="BodyText1">      Key name for each control is 
+available in the following location.</p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormalCxSpFirst"> </p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormalCxSpMiddle"><a href="http://www.syncfusion.com/uploads/redirect.aspx?&amp;team=support&amp;file=SL_KeyFile579216365.zip"><span class="UGHyperlink">http://www.syncfusion.com/uploads/redirect.aspx?&amp;team=support&amp;file=SL_KeyFile579216365.zip</span></a><span class="UGHyperlink"></span></p>
+<p style="MARGIN-LEFT: 54pt" class="MsoNormalCxSpLast"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Enable the custom 
+brush before setting the custom brushes. This can be set by using the 
+<b>SetIsCustomBrushEnabled</b> property.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Set the custom 
+brushes using the <b>SetCustomBrushDictionary</b> method. This method has two 
+arguments.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>First 
+argument specifies the name of the control.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Second one 
+specifies the 
+ResourceDictionary.                                                       
+</p>
+<p class="BodyText1">The below code snippet illustrates how to set the custom 
+brushes to the control.</p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Set the VisualStyle.</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SkinManager</span><span style="FONT-FAMILY: 'Courier New'">.SetVisualStyle(button, <span style="COLOR: #2b91af">VisualStyle</span>.Office2007Blue);</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Enable the Custom Brush.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SkinManager</span><span style="FONT-FAMILY: 'Courier New'">.SetIsCustomBrushEnabled(button, <span style="COLOR: blue">true</span>);</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Define the ResourceDictionary.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ResourceDictionary</span><span style="FONT-FAMILY: 'Courier New'"> resource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ResourceDictionary</span>();</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Load the ResourceDictionary source.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">r.Source = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Uri</span>(<span style="COLOR: #a31515">@"/checksample;Component/Brushes.xaml"</span>,<span style="COLOR: #2b91af">UriKind</span>.RelativeOrAbsolute);</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      Set Custom Brush.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SkinManager</span><span style="FONT-FAMILY: 'Courier New'">.SetCustomBrushDictionary(button, 
+      resource);</span></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyText1">The output is as shown below.</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_1052.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 1161: Button with Custom Brushes</p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"> </p><span id="related-topics"></span></div></body></html>

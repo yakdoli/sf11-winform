@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Sorting</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="bd1ec64e-4c7a-4913-af4e-021844e93978" />
+<meta name="Title" content="Custom Sorting" />
+<meta name="Microsoft.Help.TocParent" content="b8861b6e-5756-4e2c-8146-c83966c8c1e7" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Custom Sorting</h5>
+<p class="BodyText1">Custom sorting helps you to sort the records of the selected 
+field values depending on your needs.  It also allows you to sort the data 
+against one or more columns in the GridDataControl.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The custom sorting sorts the values using custom sorting 
+logic. To perform the custom sorting, you need to hook the 
+<i>SortColumnChanging</i> or <i>SortColumnChangingCommand</i> event and pass the 
+custom sorting logic to the <i>CustomComparer</i>.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To create a custom comparer to implement the custom sorting 
+logic, you need to derive the logic from <i>IComparer&lt;object&gt;</i> and 
+<i>ISortDirection</i>. The custom sorting is performed by comparing the values 
+of particular columns. When grouping is applied, the custom sorting can be 
+performed by comparing the Group keys.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Example Scenario</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">The following code examples illustrate how to perform the 
+custom sorting for the names in the <b>Company Name</b> column according to the 
+string length of the names.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">To enable the custom sorting, hook the 
+<i>SortColumnsChanging</i> event.</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 12pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624"><pre><b>[C#]</b></pre><pre><span style="COLOR: blue"> </span></pre><pre><span style="COLOR: blue">this</span>.dataGrid.Model.Table.SortColumnsChanging += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridDataSortColumnsChan</span></pre><pre><span style="COLOR: #2b91af">gingEventHandler</span>(Table_SortColumnsChanging);</pre><pre> </pre></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 12pt"></span></b> </p>
+<p class="BodyText1">Set the comparer for the column on which the data needs to be 
+sorted using the custom sorting logic. Here, the comparer is assigned to 
+CompanyName.</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 12pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p><pre><span style="COLOR: green">//This method will be hooked when clicking the header </span></pre><pre><br />
+  <span style="COLOR: blue">void</span> Table_SortColumnsChanging(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">GridDataSortColumnsChangingEve</span></pre><pre><span style="COLOR: #2b91af">ntArgs</span> args)<br />
+{<br />
+    <span style="COLOR: blue">if</span> (args != <span style="COLOR: blue">null</span>)<br />
+    {<br />
+        <span style="COLOR: blue">foreach</span> (<span style="COLOR: blue">var</span> item <span style="COLOR: blue">in</span> args.AddedItems)<br />
+        {<br />
+           <span style="COLOR: green">//Choosing the column to be sorted</span></pre><pre><br />
+           <span style="COLOR: blue">if</span> (item.ColumnName.Equals(<span style="COLOR: #a31515">"CompanyName"</span>))<br />
+           {</pre><pre>               <span style="COLOR: green">//Passing the custom sort logic to CustomComparer</span></pre><pre><br />
+               item.CustomComparer = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">CustomerInfo</span>();<br />
+           }<br />
+        }<br />
+    }<br />
+}</pre></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify" class="MsoNormal"> </p>
+<p class="BodyText1">Check the direction of the sorting by using the 
+<i>SortDirection</i> property of the <i>ListSortDirection</i> class. The 
+<i>Compare</i> method of the <i>IComparer</i> interface uses two parameters to 
+compare the length of the string.</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Cambria','serif'; FONT-SIZE: 12pt"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> <span style="COLOR: #2b91af">CustomerInfo</span> : <span style="COLOR: #2b91af">IComparer</span>&lt;<span style="COLOR: #2b91af">Object</span>&gt;, <span style="COLOR: #2b91af">ISortDirection</span><br />    {<br />        <span style="COLOR: green">//Implementation of ICompare method</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />        <span style="COLOR: blue">public</span> <span style="COLOR: blue">int</span> Compare(<span style="COLOR: blue">object</span> x, <span style="COLOR: blue">object</span> y)<br />        {<br />            <span style="COLOR: blue">int</span> namX;<br />            <span style="COLOR: blue">int</span> namY;<br />            
+      <span style="COLOR: green">//For Normal case</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            <span style="COLOR: blue">if</span> (x.GetType() == <span style="COLOR: blue">typeof</span>(<span style="COLOR: #2b91af">Customers</span>))<br />            {<br />                <span style="COLOR: green">//Calculating the length if the object is of Customers type</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />                namX = ((<span style="COLOR: #2b91af">Customers</span>)x).CompanyName.Length;<br />                namY = ((<span style="COLOR: #2b91af">Customers</span>)y).CompanyName.Length;<br />            }</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">//While Grouping</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />            <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> (x.GetType() == <span style="COLOR: blue">typeof</span>(<span style="COLOR: #2b91af">Group</span>))<br />            {<br />                <span style="COLOR: green">//Calculating the length if the object is of Group type</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />                namX = ((<span style="COLOR: #2b91af">Group</span>)x).Key.ToString().Length;<br />                namY = ((<span style="COLOR: #2b91af">Group</span>)y).Key.ToString().Length;<br />            }<br />            <span style="COLOR: blue">else</span><br />            {<br />                namX = x.ToString().Length;<br />                namY = y.ToString().Length;<br />            }<br />            <span style="COLOR: green">//Object is passed through the Compare method 
+      and gets the</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"> SortDirection.</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />            <span style="COLOR: blue">if</span> (namX.CompareTo(namY) &gt; 0)<br />                <span style="COLOR: blue">return</span> SortDirection == <span style="COLOR: #2b91af">ListSortDirection</span>.Ascending ? 1 : -1;<br />            <span style="COLOR: blue">else</span> <span style="COLOR: blue">if</span> (namX.CompareTo(namY) == -1)<br />                <span style="COLOR: blue">return</span> SortDirection == <span style="COLOR: #2b91af">ListSortDirection</span>.Ascending ? -1 : 1;<br />            <span style="COLOR: blue">else</span><br />                <span style="COLOR: blue">return</span> 0;<br />        }<br /> <br />        <span style="COLOR: green">//gets or sets the SortDirection</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />        <span style="COLOR: blue">private</span> <span style="COLOR: #2b91af">ListSortDirection</span> _SortDirection;<br />        <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ListSortDirection</span> SortDirection<br />        {<br />            <span style="COLOR: blue">get</span><br />            {<br />                <span style="COLOR: blue">return</span> _SortDirection;<br />            }<br />            <span style="COLOR: blue">set</span><br />            {<br />                _SortDirection = <span style="COLOR: blue">value</span>;<br />            }<br />        }<br />    }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">The following screenshot displays the <b>Company Name</b> 
+column with the sorted names according to their length.</p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: D:\Document\CustomSorting\1.jpg" src="ImagesExt/image28_246.jpg" /></p>
+<p class="MsoCaption">Figure 171. Custom Sorting by “Company Name” header 
+according to the string length</p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

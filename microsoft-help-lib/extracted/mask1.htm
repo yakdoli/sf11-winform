@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Mask</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="546c2e1c-f6e5-4412-afe8-0b7e2bb36c4a" />
+<meta name="Title" content="Mask" />
+<meta name="Microsoft.Help.TocParent" content="7005ffb6-1ede-425d-9238-890148b1ca7e" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Mask</h4>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">MaskedTextBox has a Mask property 
+by using which you can specify the following input without writing any custom 
+validation logic in your application:</p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Required 
+input characters. </p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Optional 
+input characters. </p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>The type of 
+input expected at a given position in the mask; for example, a digit or an 
+alphabetic or alphanumeric character. </p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Mask literals 
+or characters that should appear directly in the MaskedTextBox; for example, the 
+hyphens (-) in a phone number or the currency symbol in a price. </p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Special 
+processing for input characters; for example, to convert alphabetic characters 
+to uppercase. </p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 54pt" class="BulletedList"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">When a MaskedTextBox control is 
+displayed at run time, it represents the mask as a series of prompt characters 
+and optional literal characters. Each editable mask position, representing a 
+required or optional input, is shown with a single prompt character. For 
+example, the number sign (#) is often used as a placeholder for a numeric 
+character input. You can use the PromptChar property to specify a custom prompt 
+character.</p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">Mask must be a string composed of 
+one or more of the masking elements, as shown in the following table:</p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableHeading">Masking Element</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">0</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Digit, required. This element will accept any single 
+      digit between 0 and 9.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">9</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Digit or space, optional. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">#</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Digit or space, optional. If this position is blank in 
+      the mask, it will be rendered as a space. Plus (+) and minus (-) signs are 
+      allowed.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">L</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Letter, required. Restricts input to the ASCII letters 
+      a-z and A-Z. This mask element is equivalent to [a-z A-Z] in regular 
+      expressions. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">?</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Letter, optional. Restricts input to the ASCII letters 
+      a-z and A-Z. This mask element is equivalent to [a-z A-Z]? in regular 
+      expressions. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">C</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Character, optional. Any non-control character. 
+  </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">A</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Alphanumeric, required.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">a</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Alphanumeric, optional. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Decimal placeholder. Determined by the Culture and 
+      DecimalSeparator property.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">,</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Thousands placeholder. Determined by the Culture and 
+      NumberGroupSeparator.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">:</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Time separator. Determined by the Culture and 
+      TimeSeparator property.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">/</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Date separator. Determined by the Culture and 
+      DateSeparator property.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">$</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Currency symbol. Determined by the Culture 
+    property.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">&lt; </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Shift down. Converts all the characters that follow to 
+      lowercase. </p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">&gt; </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Shift up. Converts all the characters that follow to 
+      uppercase.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p style="TEXT-ALIGN: center" class="TableText" align="center">|</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Disable a previous shift up or shift down.</p></td></tr>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">All other characters</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top">
+      <p class="TableText">Literals. All non-mask elements will appear as 
+      themselves within the MaskedTextBox. Literals always occupy a static 
+      position in the mask at run time and cannot be moved or deleted by the 
+      user.</p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 442.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="590">
+      <p class="MsoNormalCxSpMiddle">XAML</p>
+      <p class="MsoNormalCxSpMiddle"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">&lt;</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">syncfusion</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: #a31515; FONT-SIZE: 9.5pt">MaskedTextBox</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> x</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">:</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">Name</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="maskedTextBox"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Height</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="25"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Width</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="150"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> </span></p>
+      <p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt">                          
+      Mask</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="00/00/0000"</span><span style="FONT-FAMILY: Consolas; COLOR: red; FONT-SIZE: 9.5pt"> 
+      Value</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">="07/02/2010"/&gt;</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 442.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="590">
+      <p class="MsoNormalCxSpMiddle">C#</p>
+      <p class="MsoNormalCxSpMiddle"> </p>
+      <p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">maskedTextBox.Value = 
+      <span style="COLOR: #a31515">"07/02/2010"</span>;</span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 18pt" class="MsoNormal" align="center"> </p>
+<p style="MARGIN-LEFT: 18pt" class="Figure"><img border="0" src="ImagesExt/image30_594.png" alt="" /></p>
+<p style="MARGIN-LEFT: 18pt" class="Figure"> </p>
+<p style="MARGIN-LEFT: 18pt" class="MsoCaption">Figure 682: MaskedTextBox</p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 18pt" class="MsoNormal" align="center"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyTextHeading">See Also</p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"><a href="ms-xhelp:///?Id=cfa01c43-25af-48d9-9013-a11e6e80a72e"><span class="UGHyperlink">ValidationString</span></a><span class="UGHyperlink"></span></p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"><a href="ms-xhelp:///?Id=9c97fcae-cf4f-4d48-a121-7bfe8dc9e2e1"><span class="UGHyperlink">PromptChar</span></a><span class="UGHyperlink"></span></p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"><a href="ms-xhelp:///?Id=879c70d5-f43e-4fde-b711-73ca9bb6606c"><span class="UGHyperlink">MaskCompleted</span></a><span class="UGHyperlink"></span></p>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

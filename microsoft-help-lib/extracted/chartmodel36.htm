@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ChartModel</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="21a97b46-9efd-4921-bc5b-2b3762b4f717" />
+<meta name="Title" content="ChartModel" />
+<meta name="Microsoft.Help.TocParent" content="ad4f0304-b28a-471d-93c2-39e7ac5be11c" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/chart1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">ChartModel</h5>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">To create a Bubble chart with BubbleType through 
+ChartModel:</p>
+<p style="MARGIN-LEFT: 27pt; tab-stops: 27.0pt" class="NumberedList">1.   In Controller, create an instance of 
+MVCChartModel.<i></i></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create an 
+instance of ChartSeries, and set the SeriesType to Bubble.<i></i></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Set the 
+ChartSeries, ChartArea, and ChartModel properties.<i></i></p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Return view to 
+the corresponding View page after setting the ChartModel to the 
+ViewData.<i></i></p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p style="tab-stops: 72.0pt" class="MsoNormal">[C#]             
+      </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">string</span> accessFileLocation = 
+      Server.MapPath(<span style="COLOR: #a31515">"."</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      accessFileLocation += <span style="COLOR: #a31515">@"\Content\Bubble.png"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      System.Drawing.<span style="COLOR: #2b91af">Bitmap</span> flower = <span style="COLOR: blue">new</span> System.Drawing.<span style="COLOR: #2b91af">Bitmap</span>(accessFileLocation);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">MVCChartModel</span> chartModel = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MVCChartModel</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// Create chart series and add data points to 
+      it.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//--------- Add the 
+      Series and set the styling properties that you want------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">ChartSeries</span> series3 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ChartSeries</span>(<span style="COLOR: #a31515">"Technology CCC"</span>, <span style="COLOR: #2b91af">ChartSeriesType</span>.Bubble);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.Points.Add(500, 250, 5);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.Points.Add(1000, 391, 2);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.Points.Add(1500, 282, 4);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.Points.Add(2000, 387, 2);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.Points.Add(2500, 251, 4);</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series3.ScatterConnectType = <span style="COLOR: #2b91af">ScatterConnectType</span>.None;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      series3.ScatterSplineTension = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      series3.ConfigItems.BubbleItem.BubbleType = <span style="COLOR: #2b91af">ChartBubbleType</span>.Image;</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green">// Adding Chart Series to the Chart 
+      Model</span></span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      chartModel.Series.Add(series3);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      chartModel.Series[2].Style.Images = <span style="COLOR: blue">new</span> 
+      <span style="COLOR: #2b91af">ChartImageCollection</span>();</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      chartModel.Series[2].Style.Images.Add(flower);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//---------Set the 
+      ChartModel and ChartArea properties that you want------</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      ViewData.Model = chartModel;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 18pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   In the View page, 
+invoke the ChartBuilder by using the control ID as the first argument, and 
+convert the ViewData to <b>MVCChartModel</b> and set it as the second 
+argument.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 622.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="830">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">View [ASPX]</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'"> Html.Chart(<span style="COLOR: #a31515">"SimpleChart"</span>,(<span style="COLOR: #2b91af">MVCChartModel</span>)ViewData.Model) <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 460.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="614">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal">View [cshtml]</p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">  <span style="BACKGROUND: yellow">@(</span><span style="COLOR: blue">new</span> 
+      <span style="COLOR: #2b91af">HtmlString</span>(</span><span style="FONT-FAMILY: 'Courier New'">Html.Chart(<span style="COLOR: #a31515">"SimpleChart"</span>,(<span style="COLOR: #2b91af">MVCChartModel</span>)ViewData.Model)</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">.ToString())<span style="BACKGROUND: yellow">)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p></td></tr></tbody></table>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Build and run the 
+application, to get the following output:</p>
+<p class="Figure"><img border="0" src="ImagesExt/image69_150.png" alt="" /></p>
+<p class="MsoCaption">Figure 206: Chart displaying Bubble chart Series</p>
+<p class="BodyTextHeading">See also</p>
+<p class="BodyText1"><a><span style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none">BubbleChart</span></a></p><span id="related-topics"></span></div></body></html>

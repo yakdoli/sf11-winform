@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Using Properties Model</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="dbdfa9d8-6763-4ae8-9aa4-38602f1e602a" />
+<meta name="Title" content="Using Properties Model" />
+<meta name="Microsoft.Help.TocParent" content="4cc907d5-dfc0-48b2-8dea-635559cc3891" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Using Properties Model</h4>
+<p class="BodyText10">The following steps explain how to set the drag preview mode 
+support for nodes through the properties model.</p>
+<p style="TEXT-ALIGN: left; tab-stops: 18.0pt" class="NumberedList" align="left">1.   In the <b>controller</b>, create an object for 
+the <b>DiagramPropertiesModel</b> class. Assign this model class to 
+<b>view data</b>. </p>
+<p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 25.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">Controller</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DiagramPropertiesModel</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramPropertiesModel</span>();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">public</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> <span style="COLOR: #2b91af">ActionResult</span> FlatDiagram()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">    
+      Node</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> 
+      node1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">              
+      Name = "Node1",</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">             
+      Label = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Node1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">,      </span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">             
+      Shape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">Shapes</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Rectangle</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">       
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">    
+      Node</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> 
+      node2 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>()</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">             
+      Name = "Node2"<span style="COLOR: black"> ,</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">            
+      Label = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Node2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">,      </span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">           
+       Shape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">Shapes</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Rectangle</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">       
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">    
+      Node</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> 
+      node3 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>()</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">             
+      Name = "Node3", </span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+       <span style="COLOR: black">Label = </span><span style="COLOR: #a31515">"Node3"</span><span style="COLOR: black">,      </span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">     
+             Shape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">Shapes</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Rectangle</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">       
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      <span style="COLOR: #2b91af">LineConnector</span><span style="COLOR: black"> line1 = </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: #2b91af">LineConnector</span><span style="COLOR: black">()</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  Name=</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Line1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  HeadNode = node1,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  TailNode = node2,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  HeadDecoratorShape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DecoratorShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Arrow,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  TailDecoratorShape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DecoratorShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Arrow,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  ConnectorType = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">ConnectorType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Orthogonal,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  Label=</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Line1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt"></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">    
+      };</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">LineConnector</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt"> line2 = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 11pt">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">LineConnector</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">()</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">    
+      {</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  Name = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Line2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  HeadNode = node1,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  TailNode = node3,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  HeadDecoratorShape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DecoratorShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Arrow,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  TailDecoratorShape = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DecoratorShape</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Arrow,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  ConnectorType = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">ConnectorType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Orthogonal,</span></p>
+      <p style="MARGIN-LEFT: 45.8pt; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">  Label = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">"Line2"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt"></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">      
+      };</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      model.Nodes 
+      = <span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: #2b91af">NodesCollection</span><span style="COLOR: black">()</span>{ node1, node2, node3 };</span></p><pre><span style="COLOR: black; FONT-SIZE: 11pt">      model.Connectors =  </span><span style="COLOR: blue; FONT-SIZE: 11pt">new</span><span style="COLOR: black; FONT-SIZE: 11pt"> </span><span style="COLOR: #2b91af; FONT-SIZE: 11pt">LinesCollection</span><span style="COLOR: black; FONT-SIZE: 11pt">(){ line1, line2 };</span><span style="FONT-SIZE: 11pt"></span></pre>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      model.Width 
+      = 900;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      model.Height 
+      = 500;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">      
+      model.DiagramMode = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DiagramMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.SVG;</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">      
+      model.AutoFormat = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DiagramSkins</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.Vista;</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">      
+      model.NodeDraggingMode = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af; FONT-SIZE: 11pt">DraggingType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 11pt">.PreviewMode;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      ViewData[<span style="COLOR: #a31515">"FlatDiagram"</span>] = model;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      <span style="COLOR: blue">return</span> View();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> } </span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-ALIGN: left; tab-stops: 18.0pt" class="NumberedList" align="left">2.   In the <b>view</b>, invoke the <b>Diagram</b> helper 
+with the <b>view data key</b> as the control ID.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">View</span></b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"> </span></p><pre style="BACKGROUND: #f2f2f2"><span style="BACKGROUND: yellow; COLOR: black; FONT-SIZE: 11pt">&lt;%</span><span style="COLOR: black; FONT-SIZE: 11pt">{</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black; FONT-SIZE: 11pt">      Html.Syncfusion().Diagram(</span><span style="COLOR: #a31515; FONT-SIZE: 11pt">"FlatDiagram"</span><span style="COLOR: black; FONT-SIZE: 11pt">)</span></pre>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">          
+      .Render();</span></p><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black; FONT-SIZE: 11pt">  }</span></pre>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black; FONT-SIZE: 11pt">%&gt;</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></p></td></tr></tbody></table>
+<p style="MARGIN-LEFT: 25.2pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-ALIGN: left; tab-stops: 18.0pt" class="NumberedList" align="left">3.   Build and run the application.</p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\maithiliyk\Desktop\Capture.PNG" src="ImagesExt/image70_117.png" />                                
+<img border="0" alt="Description: C:\Users\maithiliyk\Desktop\Capture.PNG" src="ImagesExt/image70_118.png" /></p>
+<p class="MsoCaption">Figure 114: Before 
+Dragging                                                   
+Figure 115: After Drag Start</p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\maithiliyk\Desktop\Capture.PNG" src="ImagesExt/image70_119.png" /></p>
+<p class="MsoCaption">Figure 116: After Drag End</p><span id="related-topics"></span></div></body></html>

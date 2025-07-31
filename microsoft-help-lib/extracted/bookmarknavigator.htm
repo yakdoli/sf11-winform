@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Bookmark Navigator</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="bc08b6c9-37fd-43c1-991b-d5b3b652608c" />
+<meta name="Title" content="Bookmark Navigator" />
+<meta name="Microsoft.Help.TocParent" content="04fa0a51-9b81-4f2b-adcc-8d8b3502f038" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/DocIo.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Bookmark Navigator</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b></b> </p>
+<p class="BodyText1"><b>BookmarkNavigator </b>is used for navigation between 
+bookmarks in the Word document.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+navigate to a bookmark by using the <b>MoveToBookmark</b> method. There are two 
+overloads for this method.</p>
+<p style="TEXT-INDENT: 0pt" class="BulletedList"> </p>
+<p style="MARGIN-LEFT: 72pt; tab-stops: 72.0pt" class="BulletedList"><span style="FONT-FAMILY: 'Courier New'">o  </span><b>MoveToBookmark(string 
+bookmarkName, bool isStart, bool isAfter)</b>, which moves to the bookmark with 
+the specified name</p>
+<p style="MARGIN-LEFT: 72pt; tab-stops: 72.0pt" class="BulletedList"><span style="FONT-FAMILY: 'Courier New'">o  </span>The <b>isStart</b> parameter 
+defines whether to move to the bookmark start or bookmark end and the 
+<b>isAfter</b> parameter defines whether to set virtual "cursor" after or before 
+the bookmark start or end.</p>
+<p style="MARGIN-LEFT: 72pt; tab-stops: 72.0pt" class="BulletedList"><span style="FONT-FAMILY: 'Courier New'">o  </span><b>MoveToBookmark(string 
+bookmarkName)</b>, which moves to the bookmark start with the specified name, 
+and sets the "cursor" before the bookmark start.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+insert text between bookmark start and bookmark end by using the 
+<b>InsertText</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+insert a table between the bookmark start and bookmark end by using the 
+<b>InsertTable</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+insert a paragraph between the bookmark start and bookmark end by using the 
+<b>InsertParagraph</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+insert the text body part between the bookmark start and bookmark end by using 
+the <b>InsertTextBodyPart</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+insert paragraph items between the bookmark start and bookmark end by using the 
+<b>InsertParagraphItem</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+delete content between the bookmark start and bookmark end by using the 
+<b>DeleteBookmarkContent</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can 
+replace content between the bookmark start and bookmark end by using the 
+<b>ReplaceBookmarkContent</b> method.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>You can get 
+the content between the bookmark start and bookmark end by using the 
+<b>GetBookmarkContent</b> method.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="BodyText1">The following are the restrictions on the GetBookmarkContent 
+method.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Case 1: The bookmark start is positioned in the text and 
+bookmark end is positioned inside the table or vice versa.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image24_55.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 58: GetBookmarkContent method - Restriction 1</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i></i> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="BodyText1">Case 2: The bookmark start and bookmark end are positioned 
+inside different tables.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image24_56.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 59: GetBookmarkContent method - Restriction 2</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"> </p>
+<p class="BodyText1">Case 3: The bookmark start and bookmark end are positioned 
+inside different cells.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image24_57.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 60: GetBookmarkContent method - Restriction 3</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i></i> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="BodyText1">The following exception is raised by the 
+<b>GetBookmarkContent</b> method for all the preceding cases: "Bookmark Start 
+and Bookmark End located inside different contents".</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image24_58.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 61: GetBookmarkContent method - Restriction 4</p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note"><img border="0" src="ImagesExt/image24_1.jpg" alt="" />Note: GetBookmarkContent method works fine for 
+tables, if they are located between the bookmark start and bookmark 
+end.</p></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Public Constructor</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 21pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 21pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">BookmarkNavigator.BookmarkNavigator 
+    (IWordDocument)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 21pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Initializes a new instance of the BookmarkNavigator 
+      class. </p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<p class="BodyTextHeading">Public Properties</p>
+<p class="BodyTextHeading"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 8.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">CurrentBookmark</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 8.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Gets the current bookmark.  </p></td></tr>
+  <tr style="HEIGHT: 21pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 21pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">Document</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 21pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Gets or sets Document that this object is attached 
+      to. </p></td></tr></tbody></table></div>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Public Methods</p>
+<p class="BodyTextHeading"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableHeading">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">DeleteBookmarkContent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Deletes the bookmark content. </p></td></tr>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 8.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">GetBookmarkContent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 8.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Gets the bookmark content2.  </p></td></tr>
+  <tr style="HEIGHT: 9pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">InsertParagraphItem</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Inserts the paragraph item to current position. 
+       </p></td></tr>
+  <tr style="HEIGHT: 9pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">InsertTable</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Inserts the table.  </p></td></tr>
+  <tr style="HEIGHT: 5.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 5.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">InsertText</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 5.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Inserts the text.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">MoveToBookmark</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Moves to bookmark.</p></td></tr>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">ReplaceBookmarkContent</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Replaces bookmark content.</p></td></tr>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">InsertParagraph</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Inserts the paragraph.</p></td></tr>
+  <tr style="HEIGHT: 11.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 227.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="303">
+      <p class="TableText">InsertTextBodyPart</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 228.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 11.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="305">
+      <p class="TableText">Inserts the body part of the 
+text.</p></td></tr></tbody></table></div>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following example illustrates how to use the 
+BookmarkNavigator class.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 43.5pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 43.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">IWordDocument</span><span style="FONT-FAMILY: 'Courier New'"> doc = <span style="COLOR: blue">new</span> <span style="COLOR: teal">WordDocument</span>( <span style="COLOR: teal">Path</span> + <span style="COLOR: maroon">"BookmarkNavigator.doc"</span> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">BookmarksNavigator</span><span style="FONT-FAMILY: 'Courier New'"> bn = <span style="COLOR: blue">new</span> <span style="COLOR: teal">BookmarksNavigator</span>( doc );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.MoveToBookmark( <span style="COLOR: maroon">"bm_bodypart"</span> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">TextBodyPart</span><span style="FONT-FAMILY: 'Courier New'"> part = 
+      bn.GetBookmarkContent();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.MoveToBookmark( <span style="COLOR: maroon">"bm_empty"</span> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.ReplaceBookmarkContent( part 
+      );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">TextSelection</span><span style="FONT-FAMILY: 'Courier New'"> sel =(doc <span style="COLOR: blue">as</span> <span style="COLOR: teal">WordDocument</span>).Find( <span style="COLOR: maroon">"11"</span> , <span style="COLOR: blue">false</span>, <span style="COLOR: blue">false</span> 
+      );</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 28.5pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 28.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> doc <span style="COLOR: blue">As</span> IWordDocument = <span style="COLOR: blue">New</span> WordDocument(Path &amp; <span style="COLOR: maroon">"BookmarkNavigator.doc"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> bn <span style="COLOR: blue">As</span> 
+      BookmarksNavigator = <span style="COLOR: blue">New</span> 
+      BookmarksNavigator(doc)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.MoveToBookmark(<span style="COLOR: maroon">"bm_bodypart"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> part <span style="COLOR: blue">As</span> TextBodyPart = 
+      bn.GetBookmarkContent()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.MoveToBookmark(<span style="COLOR: maroon">"bm_empty"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bn.ReplaceBookmarkContent(part)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> sel <span style="COLOR: blue">As</span> TextSelection = (<span style="COLOR: blue">CType</span>(IIf(<span style="COLOR: blue">TypeOf</span> doc <span style="COLOR: blue">Is</span> 
+      WordDocument, doc, <span style="COLOR: blue">Nothing</span>), 
+      WordDocument)).Find(<span style="COLOR: maroon">"11"</span>, <span style="COLOR: blue">False</span>, <span style="COLOR: blue">False</span>)</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can also preserve the formatting in the template (target) 
+document while inserting or replacing the bookmark with a string, by deleting 
+the content of the bookmark without deleting its format. The following code 
+illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 72.75pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 72.75pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Move to the 
+      Essential_DocIO bookmark.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.MoveToBookmark(<span style="COLOR: maroon">"Essential_DocIO"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Delete bookmark 
+      content without deleting the format in the target document.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.DeleteBookmarkContent(<span style="COLOR: blue">false</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Insert Text</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.InsertText(<span style="COLOR: maroon">"Essential XlsIO is a Non UI component that can be 
+      used in both ASP.NET and windows forms applications. The usage is common 
+      for both environments except for the part where the created spreadsheet is 
+      saved to disk or stream in the case of a windows forms application and 
+      streamed to the client browser in the case of asp.net 
+      applications."</span>);    </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 45pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; HEIGHT: 45pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Move to the 
+      Essential_DocIO bookmark.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.MoveToBookmark(<span style="COLOR: maroon">"Essential_DocIO"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Delete bookmark content 
+      without deleting the format in the target document.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.DeleteBookmarkContent(<span style="COLOR: blue">false</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Insert text.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">bk.InsertText(<span style="COLOR: maroon">"Essential XlsIO is a Non UI component that can be 
+      used in both ASP.NET and windows forms applications. The usage is common 
+      for both environments except for the part where the created spreadsheet is 
+      saved to disk or stream in the case of a windows forms application and 
+      streamed to the client browser in the case of asp.net 
+      applications."</span>)     
+</span></p></td></tr></tbody></table><span id="related-topics"></span></div></body></html>

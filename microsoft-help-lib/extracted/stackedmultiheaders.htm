@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Stacked MultiHeaders</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="663344ef-51f1-4245-a880-b9ce1685b2cb" />
+<meta name="Title" content="Stacked MultiHeaders" />
+<meta name="Microsoft.Help.TocParent" content="badb3c1e-fc4c-4379-985a-7cd2e5d4d40a" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Stacked MultiHeaders</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Essential Grouping Grid Control offers in built support for 
+Stacked MultiHeaders. This feature allows you to create additional unbound 
+header rows called <b>StackedHeaderRows</b> that span across visible grid 
+columns. You can group some columns under each header row. It also supports Drag 
+/ Drop of these header rows. Grouped columns will also be rearranged along with 
+the header.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>The StackedHeaderRows Collection</b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyText1">Stacked Header rows for a given Grid Table are gathered under 
+<b>TableDescriptor.StackedHeaderRows</b> collection. This contains the property 
+definitions that controls the behavior and appearance of the Stacked Headers. A 
+StackedHeaderRow collection can be viewed as a set of stacked header rows in 
+which each header row contains a collection of stacked headers that span across 
+multiple columns. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Every header in a Stacked Header Row is defined by a 
+<b>GridStackedHeaderDescriptor</b>. All the headers for a given stacked header 
+row is managed by <b>GridStackedHeaderRowDescriptor</b>. 
+<b>GridStackedHeaderRowDescriptorCollection, </b>which is returned by 
+TableDescriptor.StackedHeaderRows property, manages the collection of 
+GridStackedHeaderRowDescriptors for a given table. It is the 
+<b>GridStackedHeaderVisibleColumnDescriptor</b> that binds a Column or ColumnSet 
+to the StackedHeaderCell. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The order in which the StackedHeaders will appear is 
+determined by the VisibleColumns collection.When the layout of the 
+GridStackedHeaderRow is calculated the grid will loop through the VisibleColumns 
+collection and find the StackedHeader Descriptor that references the 
+VisibleColumn. If the same StackedHeader references multiple neighboring 
+VisibleColumns then the header for these columns will be drawn as one cell. If 
+there are no visible columns specified for a StackedHeader, then it will span 
+across all the visible columns similar to a Caption.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You could be able to rearrange the columns by dragging the 
+stacked headers. While doing so, it is the Visible Columns collection that is 
+being affected. Since the order of stacked headers is dependent on Visible 
+Columns, the GridStackedHeaderCollections itself does not need to be 
+modified.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It is possible to add Stacked Headers for nested tables and 
+groups too. You can enable the display of the StackedHeaders by setting the 
+<b>ShowStackedHeaders</b> property to true.<br /><br /></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>TopLevelGroupOptions.ShowStackedHeaders - </b>Toggles the display of 
+StackedHeaders for top most group.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ChildGroupOptions.ShowStackedHeaders - </b>Toggles the display of 
+StackedHeaders for child groups.</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>NestedTableGroupOptions.ShowStackedHeaders - </b>Toggles the display 
+of StackedHeaders for child table and its groups.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="BodyTextHeading">Through Designer</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Creating Stacked Headers is a two-step process. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   As a first step, 
+you must define the Stacked Header Rows by accessing the 
+TableDescriptor.StackedHeaderRows property. This will open the 
+GridStackedHeaderRowDescriptor Collection Editor wherein you can add as many 
+header rows as you want, by specifying the different attributes like HeaderText, 
+VisibleColumns, Appearance, and so on, for each header in the header row.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_398.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure 
+</span></i><i><span style="FONT-SIZE: 9pt">340</span></i><i></i><i><span style="FONT-SIZE: 9pt">: Adding Stacked Headers by using the StackedHeaderRows 
+Property</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">Property Definitions</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: black"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableHeading">Property Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">Name</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Specifies the name of the descriptor.</p></td></tr>
+  <tr style="HEIGHT: 3.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">HeaderText</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Specifies the text to be displayed in the 
+      StackedHeaderCell.</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">VisibleColumns</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">The collection of columns that should be combined under 
+      the Stacked Header.</p></td></tr>
+  <tr style="HEIGHT: 12pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 226.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="302">
+      <p class="TableText">Appearance</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 229.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 12pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="306">
+      <p class="TableText">Controls the appearance of the 
+  StackedHeaderCell.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   The second step 
+is to enable the display of StackedHeaders for the given table and group by 
+setting the ShowStackedHeaders property to true.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_399.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure 
+</span></i><i><span style="FONT-SIZE: 9pt">341</span></i><i></i><i><span style="FONT-SIZE: 9pt">: Setting ShowStackedHeaders property to 
+True</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #4a5c8c; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Output</p>
+<p class="BodyText1"><span style="FONT-FAMILY: 'Verdana','sans-serif'; COLOR: #4a5c8c; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Here are the screen shots showing the Grouping Grid with two 
+Stacked Header Rows. It illustrates the effect of doing Drag / Drop on 
+StackedHeaders. You could notice that the order of the Visible columns gets 
+affected automatically while rearranging the StackedHeaders.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_400.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">342</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Grouping Grid with StackedHeaders</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_401.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">343</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Rearranging StackedHeaders by dragging and dropping Header2</span></i></p>
+<p style="TEXT-ALIGN: right; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="right"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_402.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">344</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+VisibleColumns rearranged as a result of the above Drag / Drop</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="BodyTextHeading">StackedHeaders for NestedGroups</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Stacked Headers can be enabled for Child Group by setting 
+ChildGroupOptions.ShowStackedHeaders to true. The grouping grid in the below 
+image displays the stacked headers for the nested groups.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_403.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure 
+</span></i><i><span style="FONT-SIZE: 9pt">345</span></i><i></i><i><span style="FONT-SIZE: 9pt">: Stacked Headers for Nested Groups</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-SIZE: 8pt"></span></b> </p>
+<p class="BodyTextHeading">Appearance</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">A couple of ways are there to control the appearance of the 
+StackedHeaders. By one way you can access Appearance.StackedHeaderCell property 
+to enter the appearance definitions. Appearance set this way will be applied to 
+all the stacked header cells. An alternate way is to specify the appearance 
+settings through the GridStackedHeaderRow Descriptor. In this way, you can have 
+different settings for individual stacked headers in each StackedHeaderRow.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Here is the property window with 
+GridStackedHeaderRowDescriptor Collection Editor showing the appearance settings 
+of Stacked Headers defined.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_404.png" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure 
+</span></i><i><span style="FONT-SIZE: 9pt">346</span></i><i></i><i><span style="FONT-SIZE: 9pt">: Appearance Settings for Stacked Headers</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">Output</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Here is the effect of the above settings.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image91_405.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><b><i><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></i></b> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure 
+</span></i><i><span style="FONT-SIZE: 9pt">347</span></i><i></i><i><span style="FONT-SIZE: 9pt">: Stacked Headers created for the Grid Grouping 
+Control</span></i></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="BodyTextHeading">Programmatically</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can add the Stacked Header Rows at run time too. To 
+achieve this, first you must define a required number of 
+GridStackedHeaderDescriptors by specifying the VisibleColumns for each. Next, 
+create a StackedHeaderRow by instantiating GridStackedHeaderRowDescriptor and 
+add the above defined stacked headers into it. Finally, add this header row into 
+the TableDescriptor.StackedHeaderRows collection. The following code example 
+illustrates this process.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridStackedHeaderDescriptor</span><span style="FONT-FAMILY: 'Courier New'"> shd = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridStackedHeaderDescriptor</span>(<span style="COLOR: #a31515">"header1"</span>, <span style="COLOR: #a31515">"StackedHeader1"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">shd.VisibleColumns.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridStackedHeaderVisibleColumnDescriptor</span>(<span style="COLOR: #a31515">"CustomerName"</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">shd.VisibleColumns.Add(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridStackedHeaderVisibleColumnDescriptor</span>(<span style="COLOR: #a31515">"CompanyName"</span>));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridStackedHeaderRowDescriptor</span><span style="FONT-FAMILY: 'Courier New'"> shrd = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridStackedHeaderRowDescriptor</span>(<span style="COLOR: #a31515">"Row1"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">GridStackedHeaderDescriptor</span>[] { shd 
+      });</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.TableDescriptor.StackedHeaderRows.Add(shrd);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Customize the 
+      Appearance.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Appearance.StackedHeaderCell.BackColor 
+      = <span style="COLOR: #2b91af">Color</span>.Teal;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> shd <span style="COLOR: blue">As</span> GridStackedHeaderDescriptor = <span style="COLOR: blue">New</span> GridStackedHeaderDescriptor(<span style="COLOR: #a31515">"header1"</span>, <span style="COLOR: #a31515">"StackedHeader1"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">shd.VisibleColumns.Add(<span style="COLOR: blue">New</span> 
+      GridStackedHeaderVisibleColumnDescriptor(<span style="COLOR: #a31515">"CustomerName"</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">shd.VisibleColumns.Add(<span style="COLOR: blue">New</span> 
+      GridStackedHeaderVisibleColumnDescriptor(<span style="COLOR: #a31515">"CompanyName"</span>))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> shrd <span style="COLOR: blue">As</span> GridStackedHeaderRowDescriptor = <span style="COLOR: blue">New</span> GridStackedHeaderRowDescriptor(<span style="COLOR: #a31515">"Row1"</span>, </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">New</span><span style="FONT-FAMILY: 'Courier New'"> GridStackedHeaderDescriptor() { shd 
+      })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.TableDescriptor.StackedHeaderRows.Add(shrd)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Customize the 
+      Appearance.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Me</span><span style="FONT-FAMILY: 'Courier New'">.gridGroupingControl1.Appearance.StackedHeaderCell.BackColor 
+      = Color.Teal</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"><img border="0" src="ImagesExt/image91_1.jpg" alt="" />Note: For more details, refer the following 
+browser sample:</p>
+<p class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note">&lt;Install 
+Location&gt;\Syncfusion\EssentialStudio\[Version 
+Number]\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping Grid Layout\Stacked 
+Multi Headers Demo</p></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p459" id="p459"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

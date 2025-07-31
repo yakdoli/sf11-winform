@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Business Objects</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="66235b65-df60-4b65-a8bc-ab8690d64914" />
+<meta name="Title" content="Business Objects" />
+<meta name="Microsoft.Help.TocParent" content="3aa3e71e-b03c-49ea-b035-808f819b3262" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Business Objects</h4>
+<p class="BodyText1">The grid can be bound to user-defined collections that let 
+you store arbitrary objects in a structured fashion.  The data binding is 
+based on a set of interfaces that differ in the context of accessing and 
+navigating through data and of course manipulating the data. These interfaces 
+set up a two-way communication between the bound grid and the objects collection 
+used by the same grid. Such object collections are called as custom business 
+collections.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The data binding interfaces will allow you to create 
+collection of custom objects where you want to present those collection of 
+objects together, through the grid. You can also navigate through the objects to 
+view them through the same grid and interact with them. Some of these interfaces 
+are IList, IBindingList, and so on. For ease of use, .NET provides built-in, 
+ready-to-use collection classes that internally implements these collection 
+interfaces. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Some of the collection classes are as follows:</p>
+<p class="BodyText1"> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>List that 
+implements IList <b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>BindingList 
+that implements IBindingList <b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>ObservableCollection.<b></b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Of the above classes, the ObservableCollection is widely 
+preferred as it is more user-friendly to use in a WPF application, and can be 
+easily created  using XAML.  </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Let us see an example usage of this collection class with our 
+GridData control.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Example</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Defining Observable Collection</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      Customer : ObservableCollection&lt;Customers&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Northwind 
+      northWind;        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> 
+      Customer()        </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> connectionString = <span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">@"Data Source = {0}"</span>, <span style="COLOR: #a31515">Northwind.sdf"</span>);            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">northWind = <span style="COLOR: blue">new</span> 
+      Northwind(connectionString);            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">var customer = 
+      northWind.Customers.Skip(0).Take(100).ToList();            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">foreach</span><span style="FONT-FAMILY: 'Courier New'"> (var o <span style="COLOR: blue">in</span> 
+      customer)            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{                
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Add(o);            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Binding the Above Collection to GDC</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ObjectDataProvider</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">x:Key</span><span style="COLOR: blue">="customer"</span> <span style="COLOR: red">ObjectType</span><span style="COLOR: blue">="{x:Type 
+      local:Customer}"</span> <span style="COLOR: blue">/&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion:GridDataControl</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">x:Name</span><span style="COLOR: blue">="grid"</span>  <span style="COLOR: red">AutoPopulateColumns</span><span style="COLOR: blue">="True"</span>    <span style="COLOR: red">AutoPopulateRelations</span><span style="COLOR: blue">="False"</span> <span style="COLOR: red">ItemsSource</span><span style="COLOR: blue">="{StaticResource 
+      customer}"&gt;</span>            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion:GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following image shows a Grid bound with an Observable 
+collection.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_219.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 143: GDC bound to the ObservableCollection</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><b><i><span style="COLOR: #15428b"></span></i></b> </p>
+<p class="BodyText1">The GDC is bound with a data source provided by Observable 
+Collection.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Collection View Source</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The CollectionViewSource[CVS] serves as a wrapper for the 
+custom collections. It acts as a filter between the source collection 
+(ObservableCollection or List or BindingList) and the grid. Once your grid is 
+bound to CollectionViewSource-driven source list, the CVS will manage all the 
+data related operations such as grouping, sorting, filtering and so on. This 
+relieves you of writing custom code for  these operations. CVS does this by 
+internally implementing the ICollectionView interface that  understands the 
+source type and manages the data operations. It also implements 
+INotifyCollectionChanged interface. This means that if CVS is linked to a source 
+collection (ObservableCollection), then all the updates to the source list will 
+be transmitted to the grid.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Example</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Let us see an example usage of this Collection View Source 
+with our GDC.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 28.5pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 28.5pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'">        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">ObjectDataProvider</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">x:Key</span><span style="COLOR: blue">="customer"</span> <span style="COLOR: red">ObjectType</span><span style="COLOR: blue">="{x:Type 
+      local:Customer}"</span> <span style="COLOR: blue">/&gt;</span>        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">CollectionViewSource</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">x:Key</span><span style="COLOR: blue">="customerSource"</span> <span style="COLOR: red">Source</span><span style="COLOR: blue">="{StaticResource customer}"</span> <span style="COLOR: blue">&gt;</span>        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">CollectionViewSource</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'">    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Window.Resources</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion:GridDataControl</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red">x:Name</span><span style="COLOR: blue">="grid"</span>  <span style="COLOR: red">AutoPopulateColumns</span><span style="COLOR: blue">="True"</span>    <span style="COLOR: red">AutoPopulateRelations</span><span style="COLOR: blue">="False"</span> <span style="COLOR: red">ItemsSource</span><span style="COLOR: blue">="{StaticResource 
+      customerSource}"&gt;</span>            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion:GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Defining the Source Collection</p>
+<p class="BodyText1"><b></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 123.75pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 123.75pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">class</span> 
+      Customer : ObservableCollection&lt;Customers&gt;    
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">Northwind 
+      northWind;        </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> 
+      Customer()        </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> connectionString = <span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">@"Data Source = {0}"</span>, <span style="COLOR: #a31515">"Northwind.sdf"</span>);            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">northWind = <span style="COLOR: blue">new</span> 
+      Northwind(connectionString);            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">var customer = 
+      northWind.Customers.Skip(0).Take(100).ToList();            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">foreach</span><span style="FONT-FAMILY: 'Courier New'"> (var o <span style="COLOR: blue">in</span> 
+      customer)            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{                
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 54pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.Add(o);            
+      </span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}        
+      </span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}    </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following image shows the output of the above given 
+code:</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_219.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 144: Collection View Source with GDC</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><b><i><span style="COLOR: #15428b"></span></i></b> </p>
+<p class="BodyText1">The GDC is bound with a data source provided by Collection 
+View Source.<b></b></p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Entity Collection</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">GridDataControl confirms that it is an EntityFramework-aware 
+control by providing support to EF-driven data sources. The EF model offers 
+several architectural benefits that can be experienced in the networking 
+applications.<b></b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyText1">To bind your grid to an EF-driven data source, use the below 
+code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'"> connectionString = <span style="COLOR: blue">string</span>.Format(<span style="COLOR: #a31515">@"Data Source = {0}"</span>, <span style="COLOR: teal">LayoutControl</span>.FindFile(<span style="COLOR: #a31515">"NorthwindGrid.sdf"</span>));            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">EntityConnectionStringBuilder 
+      entityBuilder = <span style="COLOR: blue">new</span> 
+      EntityConnectionStringBuilder();            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">entityBuilder.Metadata = <span style="COLOR: #a31515">"res://*/NorthWind.csdl|res://*/NorthWind.ssdl|res://*/NorthWind.msl"</span>;            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">entityBuilder.Provider = <span style="COLOR: #a31515">"System.Data.SqlServerCe.3.5"</span>;            
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">entityBuilder.ProviderConnectionString 
+      = connectionString;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">NorthWind</span><span style="FONT-FAMILY: 'Courier New'"> northwind = <span style="COLOR: blue">new</span> <span style="COLOR: teal">NorthWind</span>(entityBuilder.ToString());      
+            </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.gridDataControl1.ItemsSource = 
+      northwind.Orders;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_220.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 145: Grid Control bound to an EntityFramework-driven 
+Data Source</p><span id="related-topics"></span></div></body></html>

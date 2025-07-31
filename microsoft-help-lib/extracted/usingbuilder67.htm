@@ -1,0 +1,173 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using Builder</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="628369d0-c8fe-43d6-b7c1-e66c1fee80db" />
+    <meta name="Title" content="Using Builder" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h4 style="tab-stops: 0pt">Using Builder<i></i></h4>
+      <p class="bodytext11">
+        <span style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">The following steps 
+explain the addition of a date picker to an application using 
+Builder.</span>
+      </p>
+      <p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">1.  <span style="FONT-FAMILY: 'Arial','sans-serif'">In the 
+<b>view</b>, invoke the <b>DatePicker</b> helper with the control ID as the 
+first argument.</span></p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'">{=Html.MobSyncfusion().DatePicker(<span style="COLOR: #a31515">"DatePicker"</span>)}<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">Style 
+      Manager:</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'">{</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">     
+      Html.MobSyncfusion().StyleManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      stylesheets.Add(<span style="COLOR: #2b91af">MobComponentType</span>.DatePicker)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                 
+      .Theme(<span style="COLOR: #2b91af">MobSkins</span>.DarkNight);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">}<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">View [Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@</span>
+                <span style="FONT-FAMILY: 'Courier New'">{ Html.MobSyncfusion().DatePicker(<span style="COLOR: #a31515">"DatePicker"</span>).Render();<span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">Style 
+      Manager:</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">     
+      Html.MobSyncfusion().StyleManager()</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">          
+      .Register(stylesheets =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      stylesheets.Add(<span style="COLOR: #2b91af">MobComponentType</span>.DatePicker)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                                 
+      .Theme(<span style="COLOR: #2b91af">MobSkins</span>.DarkNight);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoListParagraph">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 36pt; tab-stops: 36.0pt" class="MsoNormal">2.  <span style="FONT-FAMILY: 'Arial','sans-serif'">Build 
+and run the application. The output is shown in the following 
+screenshot.</span></p>
+      <p class="MsoListParagraph">
+        <span style="FONT-FAMILY: 'Arial','sans-serif'"></span> </p>
+      <p class="Figure">
+        <img border="0" src="ImagesExt/image103_104.jpg" alt="" />
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+      </p>
+      <p class="MsoCaption">Figure 176: DatePicker Input</p>
+      <p class="MsoListParagraph">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

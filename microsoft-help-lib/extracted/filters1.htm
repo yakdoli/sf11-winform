@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Filters</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="1a3280f4-6d39-43ef-abdb-9267095161ee" />
+<meta name="Title" content="Filters" />
+<meta name="Microsoft.Help.TocParent" content="8c33a32c-f616-4733-b345-77fcff34986e" />
+<meta name="Microsoft.Help.TocOrder" content="2" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Filters</h4>
+<p class="BodyText1">Essential Grid allows you to restrict the display of records 
+using a mechanism called Filters. A filter lets you to extract a subset of 
+records that meet certain filter criteria. Filters can be applied to one or more 
+columns.<b></b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="BodyTextHeading">Functions</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Apply 
+Filters<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span>Enable/Disable Filters<b></b></p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>Filters 
+Collection<b></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyText1">Now, let us see these functionalities one-by-one in 
+detail.<b></b></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p class="BodyTextHeading">Apply Filters</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">When this feature is enabled, every column header displays a 
+filter icon. Clicking this icon opens a drop-down list, which is actually a 
+Checked List Box control that holds the possible values for the column clicked. 
+To filter the data by a specific value, just select the check box that prefixes 
+the desired value. This will then reload the grid with only those records, which 
+has the selected value on the particular column. The filter drop-down also 
+provides a SelectAll option either to select or deselect all the values at 
+once.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Enable/Disable Filters</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">It is possible to turn on and turn off the filters in 
+specific column or in all the columns as a whole. To enable filters in all the 
+columns, the Grid.ShowFilters must be set to true. To turn on the filters for 
+specific column, simply set its AllowFilter property to true.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following are the code snippets that illustrate this 
+property:</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Enable Filter for the Whole Grid</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="dataGrid"</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red"> AutoPopulateColumns</span><span style="COLOR: blue">="True"</span>   <span style="COLOR: red"> AutoPopulateRelations</span><span style="COLOR: blue">="False"</span> <span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">StaticResource</span><span style="COLOR: red"> 
+      customerSource</span><span style="COLOR: blue">}" </span><span style="COLOR: red">ShowFilters</span><span style="COLOR: blue">="True" 
+      /&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyTextHeading">Enable Filter for Single Column</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 44.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 44.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="dataGrid"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      AutoPopulateColumns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      AutoPopulateRelations</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False"</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">StaticResource</span><span style="COLOR: red"> 
+      customerSource</span><span style="COLOR: blue">}"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl.VisibleColumns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MappingName</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="CustomerID"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> HeaderText</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="CustomerID"/&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MappingName</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="CompanyName"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> HeaderText</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="CompanyName"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> AllowFilter</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True" /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MappingName</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContactTitle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> HeaderText</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContactTitle" 
+      /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">   
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl.VisibleColumns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following image shows a GridData control with filter 
+feature enabled for "CompanyName" column:<b></b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_247.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 172: Grid Displaying the filter drop-down of a 
+column</p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: " class="MsoNormal" align="center"><b><i><span style="COLOR: #15428b"></span></i></b> </p>
+<p class="BodyText1">CompanyName in GridData control is now enabled with filtering 
+feature.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Here is an example code that enables filter on all the 
+columns:</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 44.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 44.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="dataGrid"</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: red"> AutoPopulateColumns</span><span style="COLOR: blue">="True"</span>   <span style="COLOR: red"> AutoPopulateRelations</span><span style="COLOR: blue">="False"</span> <span style="COLOR: red"> ItemsSource</span><span style="COLOR: blue">="{</span><span style="COLOR: #a31515">StaticResource</span><span style="COLOR: red"> 
+      customerSource</span><span style="COLOR: blue">}"</span></span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">ShowFilters</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="True" 
+  /&gt;</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following image illustrates the columns, filtered against 
+the criteria ContactTitle=’Accounting Manager'.<b></b></p>
+<p class="BodyText1"><b></b> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image28_248.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 173: Selective enabling of filters</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p class="BodyTextHeading">Filters Collection</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">All the filters for a particular column are managed by 
+VisibleColumn.Filters property. You can apply or  clear any number of 
+filters by adding or removing the appropriate entries from this collection.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code illustrates the addition of a filter to 
+the column 'ContactTitle'.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 44.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 44.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[XAML]<b></b></span></p>
+      <p style="TEXT-ALIGN: justify; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> MappingName</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContactTitle"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> HeaderText</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="ContactTitle"&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn.Filters</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515">                            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataFilterPredicate</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> FilterType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="StartsWith"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> FilterValue</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Sales"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      IsCaseSensitive</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="False" /&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; COLOR: #a31515">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn.Filters</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">GridDataVisibleColumn&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><a name="p277" id="p277"></a> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

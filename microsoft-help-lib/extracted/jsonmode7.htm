@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>JSON Mode</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="8f42e228-7bc5-42ef-9018-8f4fde8ce837" />
+<meta name="Title" content="JSON Mode" />
+<meta name="Microsoft.Help.TocParent" content="1294a33d-de1b-47f0-8173-c46899258ae6" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">JSON Mode</h5>
+<p class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.9.2.2.2.1 Through GridBuilder</h6>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Create a strongly 
+typed view (Refer to <a><u><span style="COLOR: blue">How to&gt;Strongly Typed 
+View</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Create the Grid 
+control in the view and configure its properties.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the JSON 
+action mode using the <b>ActionMode</b> method.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Set the 
+<b>RowDataBound</b> handler name using the <b>RowDataBound </b>method.</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 96.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 96.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas"> </span><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      .ActionMode(ActionMode.JSON)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <b>.ClientSideEvents(events =&gt; {</b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">               
+      events.RowDataBound(<span style="COLOR: #a31515">"RowDataBoundHandler"</span>);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      })</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />       <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      </span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 96.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 96.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [cshtml]</span></b></p>
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas"> </span><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> </span><span style="FONT-FAMILY: 'Courier New'">Html.Syncfusion().Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>)<br />       .Caption(<span style="COLOR: #a31515">"Orders"</span>)<br />       .AutoFormat(<span style="COLOR: #2b91af">Skins</span>.Sandune)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      .ActionMode(ActionMode.JSON)</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <b>.ClientSideEvents(events =&gt; {</b></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">               
+      events.RowDataBound(<span style="COLOR: #a31515">"RowDataBoundHandler"</span>);</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">       
+      }).</span></b><span style="FONT-FAMILY: 'Courier New'">Render();<b></b></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />       <span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      </span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   Render the 
+view.</p>
+<table style="WIDTH: 468pt; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="624">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      {</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      <span style="COLOR: blue">return</span> View();</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      }</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">7.   In order to work 
+with JSON mode actions, create a <b>Post</b> method for <b>Index</b> actions 
+and bind the data source to the grid as given in the following code 
+sample.<span style="FONT-FAMILY: 'Times New Roman','serif'"></span></p>
+<p style="tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<table style="WIDTH: 468pt; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="624">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">  </span><span style="FONT-FAMILY: 'Courier New'">     [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PagingParams</span> args)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">IEnumerable</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.ToList();</span></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> data.GridJSONActions&lt;<span style="COLOR: #2b91af">Order</span>&gt;();</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">8.   Format the Grid 
+cell using QueryCellInfoHandler.<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span></p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="WIDTH: 468pt; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="624">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">JavaScript</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">function</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      RowDataBoundHAndler(sender, args) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">if</span> (args.Data != <span style="COLOR: blue">null</span>) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">if</span> (args.Data.OrderID == <span style="COLOR: maroon">“10584”)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      $(args.Element).css(<span style="COLOR: maroon">'color'</span>, <span style="COLOR: maroon">'green'</span>).css(<span style="COLOR: maroon">'font-weight'</span>, <span style="COLOR: maroon">'bolder'</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> }</span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt 25.2pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">9.   Run the 
+application. The grid will appear as shown below.</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image58_196.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">213</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Grid with OrderID 10584 Row Formatted</span></i></p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt"></span></i> </p>
+<h6 style="tab-stops: 0pt">5.9.2.2.2.2 Through GridPropertiesModel</h6>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Create a model in 
+the application (Refer to <a><u><span style="COLOR: blue">Getting 
+Started&gt;Adding a Model to the Application</span></u></a>).</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Add the following 
+code in the <b>Index.aspx</b> file to create the Grid control in the view.</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 96.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 96.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [ASPX]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: gray">        
+      </span><span style="FONT-FAMILY: Consolas"> </span><span style="FONT-FAMILY: 'Courier New'">   <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>,<span style="COLOR: #a31515">"GridModel"</span>, columns =&gt; {<br />            columns.Add(p =&gt; p.OrderID) 
+      <br />            
+      columns.Add(p =&gt; p.CustomerID) 
+      <br />            
+      columns.Add(p =&gt; p.EmployeeID);  <br />            
+      columns.Add(P =&gt; P.ShipCountry);</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      columns.Add(p =&gt; p.OrderDate).Format(<span style="COLOR: #a31515">"{0:dd-MM-yyyy}"</span>);</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+           })<span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   
+      </span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 91.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 474.3pt; PADDING-RIGHT: 5.4pt; HEIGHT: 91.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="632">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">View [cshtml]</span></b></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt">@(</span><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">new</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> <span style="COLOR: #2b91af">HtmlString</span>(</span><span style="FONT-FAMILY: 'Courier New'">Html.Grid&lt;<span style="COLOR: #2b91af">Order</span>&gt;(<span style="COLOR: #a31515">"Grid1"</span>,<span style="COLOR: #a31515">"GridModel"</span>, columns =&gt; {<br />            columns.Add(p =&gt; p.OrderID) 
+      <br />            
+      columns.Add(p =&gt; p.CustomerID) 
+      <br />            
+      columns.Add(p =&gt; p.EmployeeID);  <br />            
+      columns.Add(P =&gt; P.ShipCountry);</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      columns.Add(p =&gt; p.OrderDate).Format(<span style="COLOR: #a31515">"{0:dd-MM-yyyy}"</span>);</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+           })</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">ToString())<span style="BACKGROUND: yellow">)</span> </span><span style="FONT-FAMILY: 'Courier New'"></span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt 25.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Create a 
+<b>GridPropertiesModel</b> in the <b>Index</b> method. Use the <b>ActionMode</b> 
+property to set the JSON mode.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Set the 
+<b>RowDataBound</b> handler name using the <b>QueryCellInfo</b> property.</p>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 96.3pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 96.3pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index()<br />   {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas">            
+      <span style="COLOR: #2b91af">ClientSideEvents</span> eve = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ClientSideEvents</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas">            
+      eve.RowDataBound = <span style="COLOR: #a31515">"RowDataBoundHandler"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />      </span><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: #2b91af">GridPropertiesModel</span>&lt;<span style="COLOR: #2b91af">Order</span>&gt; gridModel = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">GridPropertiesModel</span>&lt;<span style="COLOR: #2b91af">Order</span>&gt;()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      Caption = <span style="COLOR: #a31515">"Orders"</span>,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">               
+      AutoFormat = Syncfusion.Mvc.Shared.<span style="COLOR: #2b91af">Skins</span>.Sandune,</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">               
+      ActionMode = ActionMode.JSON,</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">               
+      ClientSideEvents = eve</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">                
+      </span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      };</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"><br />        
+      ViewData[<span style="COLOR: #a31515">"GridModel"</span>] = gridModel;<br />        <span style="COLOR: blue">return</span> View();<br />   }</span><span style="FONT-FAMILY: 'Courier New'">   
+</span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Format the grid 
+cell using <b>QueryCellInfoHandler</b>.<span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span></p>
+<p style="tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span> </p>
+<table style="WIDTH: 468pt; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="624">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">JavaScript</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt">function</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> 
+      RowDataBoundHAndler(sender, args) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    <span style="COLOR: blue">if</span> (args.Data != <span style="COLOR: blue">null</span>) {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">        
+      <span style="COLOR: blue">if</span> (args.Data.OrderID == <span style="COLOR: maroon">“10584”)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">            
+      $(args.Element).css(<span style="COLOR: maroon">'color'</span>, <span style="COLOR: maroon">'green'</span>).css(<span style="COLOR: maroon">'font-weight'</span>, <span style="COLOR: maroon">'bolder'</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"> }</span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">6.   In order to work 
+with JSON mode, create a <b>Post</b> method for <b>Index</b> actions 
+and bind the data source to the grid as given in the following code.<span style="FONT-FAMILY: 'Times New Roman','serif'"> </span></p>
+<p style="tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Times New Roman','serif'"></span> </p>
+<table style="WIDTH: 468pt; BORDER-COLLAPSE: collapse" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="624">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">Controller</span></b><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: gray">  </span><span style="FONT-FAMILY: 'Courier New'">     [<span style="COLOR: #2b91af">AcceptVerbs</span>(<span style="COLOR: #2b91af">HttpVerbs</span>.Post)]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> Index(<span style="COLOR: #2b91af">PagingParams</span> args)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: #2b91af">IEnumerable</span> data = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">NorthwindDataContext</span>().Orders.ToList();</span></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> data.GridJSONActions&lt;<span style="COLOR: #2b91af">Order</span>&gt;();</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"></span></p></td></tr></tbody></table>
+<p style="TEXT-ALIGN: justify; MARGIN: 6pt 0pt 2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span> </p>
+<p style="TEXT-ALIGN: justify; LINE-HEIGHT: normal; MARGIN-TOP: 6pt; tab-stops: 25.2pt" class="NumberedList">7.   Run the application. The Grid will appear as 
+shown below.<span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span></p>
+<p class="Figure"><img border="0" src="ImagesExt/image58_197.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt">Figure </span></i><i><span style="FONT-SIZE: 9pt">214</span></i><i></i><i><span style="FONT-SIZE: 9pt">: 
+Grid with OrderID 10584 Row Formatted</span></i></p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="FONT-SIZE: 9pt"></span></i> </p>
+<h6 style="tab-stops: 0pt">5.9.2.2.2.3 Tables for properties, methods, and 
+events</h6>
+<p class="BodyTextHeading">Properties</p>
+<p style="TEXT-ALIGN: center; LINE-HEIGHT: 115%; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="LINE-HEIGHT: 115%; FONT-SIZE: 9pt"></span></i> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 4.65pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="TEXT-ALIGN: justify; LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Property </b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="TEXT-ALIGN: justify; LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Description </b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="TEXT-ALIGN: justify; LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Type </b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="TEXT-ALIGN: justify; LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Data type </b></p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><span style="COLOR: black">ActionMode</span><span style="COLOR: #c00000"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">Gets or sets 
+      the ActionMode for the Grid.<br /><b>Possible Values:</b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.JSON</p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.Server</p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Default 
+      value:</b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.Server</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Server 
+      side</b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 25%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="25%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode<span style="COLOR: #c00000"></span></p></td></tr></tbody></table></div>
+<p style="TEXT-ALIGN: center; LINE-HEIGHT: 115%; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="LINE-HEIGHT: 115%; FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black; FONT-SIZE: 9pt"></span></i> </p>
+<p class="BodyTextHeading">Methods</p>
+<p style="TEXT-ALIGN: center; LINE-HEIGHT: 115%; PAGE-BREAK-AFTER: avoid; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><i><span style="LINE-HEIGHT: 115%; FONT-SIZE: 9pt"></span></i> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 10.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20%; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="COLOR: black">Method </span></b><span style="COLOR: black"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20%; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="COLOR: black">Description </span></b><span style="COLOR: black"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 22.34%; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="22%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="COLOR: black">Parameters </span></b><span style="COLOR: black"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 17.16%; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="17%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="COLOR: black">Type </span></b><span style="COLOR: black"></span></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.5%; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"><b><span style="COLOR: black">Return type </span></b><span style="COLOR: black"></span></p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20%; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><span style="COLOR: black">ActionMode</span> </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20%; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">Gets the 
+      ActionMode for the Grid.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 22.34%; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="22%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">(ActionMode 
+      mode) </p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Possible 
+      Values:</b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.JSON</p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.Server</p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Default 
+      value:</b></p>
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">ActionMode.Server</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 17.16%; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="17%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><b>Server-side</b></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 20.5%; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="20%">
+      <p style="LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal">Void 
+  </p></td></tr></thead>
+  <tbody></tbody></table></div>
+<p style="TEXT-ALIGN: justify; LINE-HEIGHT: 115%; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span> </p><span id="related-topics"></span></div></body></html>

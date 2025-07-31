@@ -1,0 +1,69 @@
+---
+title: whataretheeventsfiredwhentherecordsareselected.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\whataretheeventsfiredwhentherecordsareselected.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+#### What are the events fired when the records are selected? {#what-are-the-events-fired-when-the-records-are-selected style="tab-stops: 0pt"}
+
+[] 
+
+Following are the events fired when the records are selected.
+
+[] 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                                            |
+| []                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                            |
+| [//SelectionChanging Event.]                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                                            |
+| [this][.gridGroupingControl1.SelectedRecordsChanging += [new] Syncfusion.Grouping.SelectedRecordsChangedEventHandler([this].gridGroupingControl1_SelectedRecordsChanging);] |
+|                                                                                                                                                                                                                                                                                                            |
+| []                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                            |
+| [//SelectionChanged Event.]                                                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                                                                                            |
+| [this][.gridGroupingControl1.SelectedRecordsChanged += [new] Syncfusion.Grouping.SelectedRecordsChangedEventHandler([this].gridGroupingControl1_SelectedRecordsChanged);]   |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB\]]**                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| []                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [\'SelectionChanging Event]                                                                                                                                                                                                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [Private][ [Sub] gridGroupingControl1_SelectedRecordsChanging([ByVal] sender [As] [Object], [ByVal] e [As] Syncfusion.Grouping.SelectedRecordsChangedEventArgs) [Handles] gridGroupingControl1.SelectedRecordsChanging] |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [    System.Diagnostics.Trace.WriteLine([\"Action in SelectedRecordsChanging\--\>\"] + e.Action)]                                                                                                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [End][ [Sub]]                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| []                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [\'SelectionChanged Event]                                                                                                                                                                                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [Private][ [Sub] gridGroupingControl1_SelectedRecordsChanged([ByVal] sender [As] [Object], [ByVal] e [As] Syncfusion.Grouping.SelectedRecordsChangedEventArgs) [Handles] gridGroupingControl1.SelectedRecordsChanged]   |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [    System.Diagnostics.Trace.WriteLine([\"Action in SelectedRecordsChanged\--\>\"] + e.Action)]                                                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [End][ [Sub]]                                                                                                                                                                                                                                                                                                                                         |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
+[]{#p693} 
+
+ 
+
+[]{#related-topics}
+

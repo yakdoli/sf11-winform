@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Sparklines</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="6fa82f73-c146-4e64-b951-263d26dc2993" />
+<meta name="Title" content="Sparklines" />
+<meta name="Microsoft.Help.TocParent" content="46be3c35-dfbe-49c7-857b-fe3a5d4f6727" />
+<meta name="Microsoft.Help.TocOrder" content="3" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Sparklines</h4>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Sparklines Creation Using MS Excel 2010:</p>
+<p class="BodyText1">In MS Excel 2010, the Sparklines can be inserted by selecting 
+any of the sparklines type from the Insert menu. </p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">In MS Excel 2010, click Insert Menu. Select any of the 
+Sparklines type.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_85.png" alt="" /></p>
+<p class="MsoCaption">Figure 79: Create Sparklines Dialog Box</p>
+<p class="MsoNormal"> </p>
+<p class="BodyText1">MS Excel 2010 allows you to select the range of data for the 
+Sparklines creation. It also allows you to to choose where the sparklines can be 
+placed.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><a name="Figure2" id="Figure2"><img border="0" src="ImagesExt/image47_86.png" alt="" /></a></p>
+<p class="MsoCaption">Figure 80: Sparklines Tool</p>
+<p class="BodyText1">The Sparklines appear once you select the data range and the 
+location range. Now you can customize the apperance of Sparklines in terms of 
+color, style etc. A group of Sparkline tools are available on the ribbon to 
+change the high point, low point, color, edit the sparkline data etc.</p>
+<p class="BodyText1"><b>Sparkline Creation Using XlsIO:</b></p>
+<p class="BodyText1">XlsIO provides support for creation of Sparklines by using 
+simple APIs. </p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ISparklineGroups</b> interface caches the SparklineGroup that needs to 
+be added to the Spreadsheet. </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ISparklineGroup</b> represents Sparklines in object, and has 
+properties that allows  to customize it. </p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ISparklines</b> interface returns the collection of Sparkline present 
+in a Worksheet.<b> </b></p>
+<p style="tab-stops: 40.5pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ISparkline</b> represents a sparkline in the Sparklines. Currently, 
+XlsIO supports all the three types of sparklines- Line, Column, Win/Loss which 
+are supported in Excel 2010.</p>
+<p class="BodyText1">Following code example illustrates how to create Sparklines 
+by using XlsIO.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ISparklineGroup</span><span style="FONT-FAMILY: 'Courier New'"> sparklineGroup = 
+      sheet.SparklineGroups.Add();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.SparklineType = <span style="COLOR: #2b91af">SparklineType</span>.Line;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ISparklines</span><span style="FONT-FAMILY: 'Courier New'"> sparklines = 
+      sparklineGroup.Add();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: green"></span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> dataRange = sheet.Range[<span style="COLOR: #a31515">"D6:G17"</span>];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> referenceRange = sheet.Range[<span style="COLOR: #a31515">"H6:H17"</span>];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: green"></span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklines.Add(dataRange,referenceRange); 
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> sparklineGroup <span style="COLOR: blue">As</span> ISparklineGroup = 
+      sheet.SparklineGroups.Add()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.SparklineType = 
+      SparklineType.Line</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> sparklines <span style="COLOR: blue">As</span> ISparklines = 
+sparklineGroup.Add()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> dataRange <span style="COLOR: blue">As</span> IRange = sheet.Range(<span style="COLOR: #a31515">"D6:G17"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> referenceRange <span style="COLOR: blue">As</span> IRange = sheet.Range(<span style="COLOR: #a31515">"H6:H17"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklines.Add(dataRange,referenceRange)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d"></span></b> </p>
+<p class="BodyTextHeading">Sparklines Options by XlsIO:</p>
+<p class="BodyText1">MS Excel 2010 provides various options through Sparklines 
+tool ribbon in order to customize the appearance of Sparklines.See <a href="#Figure2"><span class="UGHyperlink">figure 2</span></a><b></b></p>
+<p class="BodyTextHeading">Type:</p>
+<p class="BodyText1">In MS Excel 2010, click Design and then Type in order to 
+customize the Sparkline type for the current Sparklines. XlsIO provides an 
+equivalent API to perform this with simple properties as follows.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.SparklineType = 
+      SparklineType.Line</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Show:</p>
+<p class="BodyText1">In MS Excel 2010, click Design and then Show in order to 
+customize the view of the Sparklines with high point, low point, first point, 
+last point, negative point, markers. XlsIO provides an equivalent API to perform 
+this with simple properties as follows.</p>
+<p class="BodyText1"><i>Known Limitations: The Markers can be applied only for the 
+line sparkline type.</i></p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowFirstPoint = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowLastPoint = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowHighPoint = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowLowPoint = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowMarkers = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.ShowNegativePoint = 
+      <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p class="BodyTextHeading">Sparkline Color:</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">The appearance of the Sparklines can be customized by 
+applying colors.  Click Design and then select Style. Choose the Sparkline 
+color option in order to customize the Sparklines. XlsIO provides an equivalent 
+API to perform this with simple property as follows.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.SparklineColor = <span style="COLOR: #2b91af">Color</span>.Blue;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyTextHeading">Marker Color:</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">The apperance of points in the sparklines can be customized 
+by applying colors to it. Click Design and then select Style. Choose the Marker 
+Color option to customize the appearance of points in the Sparklines. XlsIO 
+provides an equivalent API to perform this with simple properties as 
+follows.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.FirstPointColor = <span style="COLOR: #2b91af">Color</span>.Green;            
+      sparklineGroup.LastPointColor = <span style="COLOR: #2b91af">Color</span>.DarkOrange;            
+      sparklineGroup.HighPointColor = <span style="COLOR: #2b91af">Color</span>.DarkBlue;            
+      sparklineGroup.LowPointColor = <span style="COLOR: #2b91af">Color</span>.DarkViolet;            
+      sparklineGroup.MarkersColor = <span style="COLOR: #2b91af">Color</span>.Black;            
+      <span style="COLOR: black"></span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: black"></span></b> </p>
+<p class="BodyTextHeading">Edit Group Data and Location:</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">MS Excel provides an option to edit the location and group 
+data of an exsisting Sparklines, by which you can assign a new location or group 
+data for an exsisting sparklines. XlsIO provides an equivalent API to perform 
+this funtionality.</p>
+<p class="BodyText1"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklines.RefreshRanges(dataRange, 
+      referenceRange);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p class="BodyTextHeading">Line Weight:</p>
+<p class="BodyText1">MS Excel 2010 provides an exclusive option to customize  
+the Line Weight of the Line Sparkline type. XlsIO provides an API to perform 
+this functionality.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.LineWeight = 
+      1.0;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><i><span style="FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #f79646"></span></i> </p>
+<p class="BodyText1">Known Limitations: The Line weight can be applied only for 
+the line sparkline type.</p>
+<p class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Hidden and Empty Cell Settings:</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Normally,  in a sparkline group data there is a 
+possibility of an empty cell or an hidden cell. MS Excel 2010 provides a dialog 
+box to</p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_87.png" alt="" /></p>
+<p class="MsoCaption">Figure 81: Hidden and Empty cells Settings</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO provides a simple API to implement the above 
+functionality.This is illustrated in the following code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.DisplayEmptyCellsAs = 
+      <span style="COLOR: #2b91af">SparklineEmptyCells</span>.Gaps;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.DisplayHiddenRC = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyTextHeading">Display Axis:</p>
+<p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">MS Excel 2010 provides an option to display the axis for the 
+sparklines types.This is illustrated in the following code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.DisplayAxis = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p class="BodyTextHeading">Plot Right to Left:</p>
+<p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">The plotting of Sparklines is done from left to right by 
+default. There is an option available in the Sparkline tools to customize the 
+plotting nature from right to left. XlsIO provides a simple API to perform this 
+functionality.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklineGroup.PlotRightToLeft = <span style="COLOR: blue">true</span>;</span></p></td></tr></tbody></table>
+<p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p class="BodyTextHeading">Clear:</p>
+<p class="BodyText1">XlsIO provides an API to clear the selected Sparklines within 
+the sparkline groups and also the selected sparklinegroup within the excel 
+spreadsheet.This is illustrated in the following code.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Clears the sparkline 
+      group from the sheet.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.SparklineGroups.Remove(sparklineGroup);</span></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Clears the Sparkline 
+      from the sparklines.</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sparklines.Remove(sparkline);</span></p>
+      <p style="tab-stops: 84.25pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

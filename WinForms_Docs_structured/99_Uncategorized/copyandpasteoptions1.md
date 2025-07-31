@@ -1,0 +1,25 @@
+---
+title: copyandpasteoptions1.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\copyandpasteoptions1.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+#### Copy and Paste Options {#copy-and-paste-options style="TEXT-ALIGN: justify; tab-stops: 0pt"}
+
+1.  [Normal copy paste]
+
+2.  [Relative reference copy and paste]
+
+More:
+
+
+
+
+
+
+

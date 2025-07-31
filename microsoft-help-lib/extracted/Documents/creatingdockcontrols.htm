@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating Dock Controls Using DockingManager through XAML</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="e65068ff-6bfb-4c9d-96ec-2d1dd12be1c4" />
+<meta name="Title" content="Creating Dock Controls Using DockingManager through XAML" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4><a name="_Creating_Dock_Controls" id="_Creating_Dock_Controls"></a>Creating Dock Controls Using 
+DockingManager through XAML</h4>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="BodyText1">This topic gives the step by step procedure to dock a control 
+using DockingManager through XAML.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   To dock a control 
+using DockingManager, you need to add following Syncfusion assemblies as 
+reference:</p>
+<p style="MARGIN-LEFT: 27pt" class="BodyText1">Syncfusion.DockingManager.Silverlight</p>
+<p style="TEXT-INDENT: 27pt" class="BodyText1">Syncfusion.Shared.Silverlight</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Now include the 
+namespace in the XAML file:</p>
+<p class="MsoNormalCxSpFirst"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormalCxSpMiddle"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.DockingManager.Silverlight"</span><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 14pt"></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 14pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Now to dock a 
+control, you have to create an instance for DockingManager and add the controls 
+to its collection. You have to specify the DockState, position of the control 
+using <b>SideInDockedMode</b> property and the Caption text for the docked 
+window using <b>Header </b>property.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst"><span style="FONT-SIZE: 14pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Sample.MainPage"</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: red"> xmlns</span><span style="COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: red"> xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">x</span><span style="COLOR: blue">="http://schemas.microsoft.com/winfx/2006/xaml"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: red"> xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">d</span><span style="COLOR: blue">="http://schemas.microsoft.com/expression/blend/2008"</span><span style="COLOR: red"> xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">mc</span><span style="COLOR: blue">="http://schemas.openxmlformats.org/markup-compatibility/2006"</span><span style="COLOR: red"> xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">syncfusion</span><span style="COLOR: blue">="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.DockingManager.Silverlight"</span> 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: red"> xmlns</span><span style="COLOR: blue">:</span><span style="COLOR: red">system</span><span style="COLOR: blue">="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">   <span style="COLOR: red"> mc</span><span style="COLOR: blue">:</span><span style="COLOR: red">Ignorable</span><span style="COLOR: blue">="d"</span><span style="COLOR: red"> d</span><span style="COLOR: blue">:</span><span style="COLOR: red">DesignWidth</span><span style="COLOR: blue">="640"</span><span style="COLOR: red"> d</span><span style="COLOR: blue">:</span><span style="COLOR: red">DesignHeight</span><span style="COLOR: blue">="480"&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> x</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="LayoutRoot"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> Name</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="dockingManager"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">            
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">system</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">DockingManager.Header</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Solution 
+      Explorer"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> 
+      syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">DockingManager.SideInDockedMode</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Right"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red"> syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">DockingManager.DockState</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="Dock"&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">system</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">TreeView</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">DockingManager</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">    
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">Grid</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">UserControl</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 14pt"></span> </p>
+<p class="BodyText1">Output for the above code will be displayed as follows</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_80.png" alt="" /></p>
+<p class="MsoCaption">Figure 80: Docked Window</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 14pt"></span> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating MenuAdv by Using C#</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="b97a03b0-2aeb-4345-8757-bc62e429e1b7" />
+<meta name="Title" content="Creating MenuAdv by Using C#" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4>Creating MenuAdv by Using C#</h4>
+<p class="BodyText1">Open Visual Studio.</p>
+<p class="BodyText1"> On the File menu, select New, and then select Project. 
+The New Project dialog box is displayed.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 25.2pt; tab-stops: list 25.2pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Documents and Settings\labuser\My Documents\SL tools correct image.png" src="../ImagesExt/image261_45.png" /></p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormal" align="center"><b></b> </p>
+<p class="MsoCaption">Figure 914:  Creating a New Silverlight Project</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="BodyText1">In the <b>New Project</b> dialog window, select 
+<b>Silverlight Application</b>, in the <b>Name</b> field, type the name of the 
+project, and then click <b>OK</b>.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_46.png" alt="" /></p>
+<p class="MsoCaption">Figure 915: Creating a New Silverlight Application<span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span></p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt"></span> </p>
+<p class="BodyText1">In the <b>Solution Explorer</b>, right-click the 
+<b>References</b> folder, and click <b>Add Reference</b>. </p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 25.2pt; tab-stops: list 25.2pt" class="MsoNormal">Add the <b>Syncfusion.Shared.Silverlight </b>assembly to the 
+project References folder.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast">          
+</p>
+<p class="Figure"><img border="0" src="../ImagesExt/image261_47.png" alt="" /></p>
+<p class="MsoCaption">Figure 916: Adding Reference to the Project</p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormal" align="center"><b></b> </p>
+<p class="BodyText1">Add the <b>Syncfusion.Shared.Silverlight</b> reference in 
+XAML and C#,  as shown in the following code snippets.<b> </b></p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst" align="center"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 92.7%; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 7.75pt; BACKGROUND: #f0f0f0; MARGIN-LEFT: 6.75pt; BORDER-TOP: medium none; MARGIN-RIGHT: 6.75pt; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="92%" align="left">
+  <tbody>
+  <tr style="HEIGHT: 44.5pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; HEIGHT: 44.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="clr-namespace:</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.Silverlight</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">"</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 92.74%; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 7.75pt; BACKGROUND: #f0f0f0; MARGIN-LEFT: 6.75pt; BORDER-TOP: medium none; MARGIN-RIGHT: 6.75pt; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="92%" align="left">
+  <tbody>
+  <tr style="HEIGHT: 41.6pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; HEIGHT: 41.6pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'"> 
+    Syncfusion.Windows.Shared;</span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN: 6pt 0pt 0pt 18pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="BodyText1">Click and open C# file and add MenuAdv to application.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN: 0pt 0pt 2pt 25.2pt; tab-stops: list 25.2pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 92.16%; BORDER-COLLAPSE: collapse; MARGIN-BOTTOM: 7.75pt; BACKGROUND: #f0f0f0; MARGIN-LEFT: 6.75pt; BORDER-TOP: medium none; MARGIN-RIGHT: 6.75pt; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="92%" align="left">
+  <tbody>
+  <tr style="HEIGHT: 47pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 100%; PADDING-RIGHT: 5.4pt; HEIGHT: 47pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="100%">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[C#]</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuAdv</span><span style="FONT-FAMILY: 'Courier New'"> menu = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">LayoutRoot.Children.Add(menu);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuItemAdv</span><span style="FONT-FAMILY: 'Courier New'"> file = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuItemAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">file.Header = <span style="COLOR: #a31515">"File"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuItemAdv</span><span style="FONT-FAMILY: 'Courier New'"> edit = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuItemAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">edit.Header = <span style="COLOR: #a31515">"Edit"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuItemAdv</span><span style="FONT-FAMILY: 'Courier New'"> newfile = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuItemAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">newfile.Header = <span style="COLOR: #a31515">"New"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">BitmapImage</span><span style="FONT-FAMILY: 'Courier New'"> img1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BitmapImage</span>(<span style="COLOR: blue">new 
+      </span><span style="COLOR: #2b91af">Uri</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">(<span style="COLOR: #a31515">@"/MenuControlDemo;component/Images/NewIcon.jpg"</span>,<span style="COLOR: #2b91af">UriKind</span>.Relative));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Image</span><span style="FONT-FAMILY: 'Courier New'"> newImg = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Image</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">newImg.Source = img1;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">newfile.Icon = newImg;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">file.Items.Add(newfile);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuItemAdv</span><span style="FONT-FAMILY: 'Courier New'"> copyfile = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuItemAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">copyfile.Header = <span style="COLOR: #a31515">"Copy"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">BitmapImage</span><span style="FONT-FAMILY: 'Courier New'"> img2 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BitmapImage</span>(<span style="COLOR: blue">new 
+      </span><span style="COLOR: #2b91af">Uri</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">(<span style="COLOR: #a31515">@"/MenuControlDemo;component/Images/CopyIcon.jpg",</span><span style="COLOR: #2b91af">UriKind</span>.Relative));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Image</span><span style="FONT-FAMILY: 'Courier New'"> copyImg = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Image</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">copyImg.Source = img2;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">copyfile.Icon = copyImg;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">file.Items.Add(copyfile);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MenuItemAdv</span><span style="FONT-FAMILY: 'Courier New'"> cutfile = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">MenuItemAdv</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">cutfile.Header = <span style="COLOR: #a31515">"Cut"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">BitmapImage</span><span style="FONT-FAMILY: 'Courier New'"> img3 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">BitmapImage</span>(<span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Uri</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">(<span style="COLOR: #a31515">@"/MenuControlDemo;component/Images/CutIcon.jpg"</span>, 
+      <span style="COLOR: #2b91af">UriKind</span>.Relative));</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Image</span><span style="FONT-FAMILY: 'Courier New'"> cutImg = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Image</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">cutImg.Source = img3;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">cutfile.Icon = cutImg;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">file.Items.Add(cutfile);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">menu.Items.Add(file);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">menu.Items.Add(edit);</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"><img border="0" alt="Description: Description: Createusingc#" src="../ImagesExt/image261_812.png" /></span></b><b><span style="COLOR: black"></span></b></p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast" align="center"><b><span style="COLOR: black"></span></b> </p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption"> Figure 917: MenuAdv Created Using C#</p>
+<p class="MsoCaption"> </p><span id="related-topics"></span></div></body></html>

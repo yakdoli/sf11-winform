@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Server-Side Events</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="b2f6ee0f-1bc4-4f7f-9fd5-f861c8505967" />
+<meta name="Title" content="Server-Side Events" />
+<meta name="Microsoft.Help.TocParent" content="5de02ee2-07f0-4cd1-9005-3e30e4b6cb02" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Server-Side Events</h5>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="MsoNormal">To raise and process the server side events when the node is 
+selected, expanded, renamed, dropped or check state changed.</p>
+<p class="MsoNormal"> </p>
+<p style="MARGIN-LEFT: 43.2pt; tab-stops: 43.2pt" class="NumberedList">1.   A <b>TreeView</b> control and a label called 
+<i><span style="FONT-SIZE: 9pt">lblActionPerformed</span></i> is added to a web 
+page.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">54.  The html view with 
+some properties that have been set is shown below.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="636">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 477pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="636">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1:treeview</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">id 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "TreeView1"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">runat 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "server"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeSelect 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">CssClass 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "TreeView" </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeRename 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeCheckChanged 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">NodeEditCssClass 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "NodeEdit"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Height 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= "275px" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">Width 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "200px"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeExpand 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeDrop 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">AutoPostBackOnNodeCollapse 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= "True" 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">CustomCSS 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "css/TreeStyle.css"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">DragAndDropEnabled 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "True"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">DropChildCssClass 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">= 
+      "DropChildCss"&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">ItemLooks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1:TreeViewItemLook</span><span style="FONT-FAMILY: 'Courier New'; COLOR: fuchsia; FONT-SIZE: 9pt"> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: red; FONT-SIZE: 9pt">ID</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">="Look1"&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">      
+      &lt;!--Add the required item looks!--&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">    
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1:TreeViewItemLook</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">ItemLooks</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Items</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 9pt">    
+      &lt;!--Add the required tree nodes!--&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">  
+      &lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">Items</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&lt;/</span><span style="FONT-FAMILY: 'Courier New'; COLOR: maroon; FONT-SIZE: 9pt">cc1:treeview</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">&gt;</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">55.  The event handlers 
+should be added inside the <b>PageLoad</b> event.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="636">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 477pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="636">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> InitializeComponent()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeCheckChanged 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeCheckChanged);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeDropped 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeDroppedEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeDropped);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeCollapsed 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeCollapsed);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeSelected 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeSelected);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeExpanded 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeExpanded);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">this</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeRenamed 
+      += <span style="COLOR: blue">new</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeRenamedEventHandler(<span style="COLOR: blue">this</span>.TreeView1_NodeRenamed);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="636">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 477pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="636">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> InitializeComponent()</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeCheckChanged 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeCheckChanged);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeDropped 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeDroppedEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeDropped);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeCollapsed 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeCollapsed);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeSelected 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeSelected);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeExpanded 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeExpanded);</span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Me</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.TreeView1.NodeRenamed 
+      += <span style="COLOR: blue">New</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeView.TreeViewNodeRenamedEventHandler(<span style="COLOR: blue">Me</span>.TreeView1_NodeRenamed);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">56.  The code behind file 
+for the various server side events are as follows.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">NodeSelected</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To trigger NodeSelected event, set the 
+AutoPostBackOnNodeSelect property to True. This property posts back as well 
+triggers the NodeSelected event. We can avoid triggering this event for any 
+individual nodes by setting AutoPostBackOnNodeSelect property of the 
+TreeViewNode as False.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">If<span style="FONT-SIZE: 8pt"> </span>Selectable<span style="FONT-SIZE: 8pt"> </span>property of the node is set to False, the 
+NodeSelected event won't get triggered.</p>
+<p class="MsoNormal"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 114pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="152">
+      <p class="TableHeading">Member</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 342pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="456">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 114pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="152">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 342pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="456">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node 
+member.</p></td></tr></tbody></table></div>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeSelected(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs e)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+      lblActionPerformed.Text = <span style="COLOR: maroon">"Node selected: 
+      &lt;b&gt;"</span> + e.Node.Text + <span style="COLOR: maroon">"&lt;/b&gt;"</span>; </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeSelected(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+      lblActionPerformed.Text = <span style="COLOR: maroon">"Node selected: 
+      &lt;b&gt;"</span> &amp; e.Node.Text &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The NodeSelected event passes the TreeViewNodeEventArgs 
+object which contains a reference to that selected node. Using this object we 
+can access all the properties of the selected node. In the above example, we are 
+assigning e.Node.Text value to the lblActionPerformed label.</p>
+<p class="MsoNormal"><span style="COLOR: #4a5c8c; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">NodeDropped</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">To trigger NodeDropped event, make sure that 
+AutoPostBackOnNodeDrop and DragAndDropEnabled properties are set to True.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">AutoPostBackOnNodeDrop property posts back the page as well 
+triggers the NodeDropped event.</p>
+<p class="MsoNormal">By setting AutoPostBackOnNodeDrop property to individual 
+nodes, we can optionally trigger NodeDropped event only for certain nodes.</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 122.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="163">
+      <p class="TableHeading">Member</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 333.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="445">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 122.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="163">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 333.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="445">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node member.</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 122.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="163">
+      <p class="MsoNormal">OldParentNode</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 333.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="445">
+      <p class="MsoNormal">Returns the parent of the node that was 
+  dragged.</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 122.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="163">
+      <p class="MsoNormal">OldTreeView</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 333.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="445">
+      <p class="MsoNormal">Returns the treeview from where the node was 
+      dragged.</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><span style="FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeDropped(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeDroppedEventArgs 
+      e)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+      lblActionPerformed.Text = "Node dropped: &lt;b&gt;" + e.Node.Text + 
+      "&lt;/b&gt;"; </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeDropped(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeDroppedEventArgs)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">   
+       lblActionPerformed.Text = <span style="COLOR: maroon">"Node dropped: 
+      &lt;b&gt;"</span> &amp; e.Node.Text &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">The NodeDropped event passes TreeViewNodeEventArgs object 
+which contains a reference to the dropped node. Using this object we can access 
+all the properties of the expanded node. In the above example, we are assigning 
+e.Node.Text value to lblActionPerformed label.</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">By using e.OldParentNode and e.OldTreeview, the previous 
+parent node and the previous treeview name can be obtained respectively.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">NodeExpanded</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To trigger the NodeExpanded event, make sure that 
+AutoPostBackOnNodeExpand property is set to True.</p>
+<p class="MsoNormal"><s><span style="COLOR: black; FONT-SIZE: 9pt"><span style="TEXT-DECORATION: none"></span></span></s> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 109.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="146">
+      <p class="TableHeading">Member</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 346.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="462">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 109.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="146">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 346.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="462">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node 
+member.</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><s><span style="COLOR: black; FONT-SIZE: 9pt"><span style="TEXT-DECORATION: none"></span></span></s> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeExpanded(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs e)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      </span>lblActionPerformed<span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.Text = <span style="COLOR: maroon">"Node Expanded: &lt;b&gt;"</span> + e.Node.Text + 
+      <span style="COLOR: maroon">"&lt;/b&gt;"</span>; </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeExpanded(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      lblActionPerformed.Text = <span style="COLOR: maroon">"Node Expanded: 
+      &lt;b&gt;"</span> &amp; e.Node.Text &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">The NodeExpanded event passes TreeViewNodeEventArgs object 
+which contains a reference to the expanded node. Using this object we can access 
+all the properties of the expanded node. In the above example, we are assigning 
+e.Node.Text value to lblActionPerformed label.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">By setting, ExpandMode=ServerSide, you can optionally trigger 
+the expanded event by setting the AutopostbackOnSelect=false of the treeview and 
+Expandmode=Serverside of the treeview node.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">NodeCollapsed</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">To trigger NodeCollapsed event, make sure that 
+AutoPostBackOnNodeCollapse property is set to True.</p>
+<p class="MsoNormal"><s><span style="COLOR: #339966; FONT-SIZE: 8pt"><span style="TEXT-DECORATION: none"></span></span></s> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 102pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="136">
+      <p class="TableHeading">Member</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 354pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="472">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 102pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="136">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 354pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="472">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node 
+member.</p></td></tr></tbody></table></div>
+<p class="MsoNormal"><s><span style="COLOR: #339966; FONT-SIZE: 8pt"><span style="TEXT-DECORATION: none"></span></span></s> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeCollapsed(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs e)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+      lblActionPerformed.Text = "Node collapsed: &lt;b&gt;" + e.Node.Text + 
+      "&lt;/b&gt;"; </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="COLOR: #339966; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 463.5pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="618">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeCollapsed(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">  
+      lblActionPerformed.Text = <span style="COLOR: maroon">"Node collapsed: 
+      &lt;b&gt;"</span> &amp; e.Node.Text &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<p class="MsoNormal">The NodeCollapsed event passes TreeViewNodeEventArgs object 
+which contains a reference to the collapsed node. Using this object we can 
+access all the properties of the expanded node. In the above example, we are 
+assigning e.Node.Text value to lblActionPerformed label.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">See Also</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"><a><span class="UGHyperlink">AJAX support</span></a><span class="UGHyperlink"></span></p>
+<h6 style="tab-stops: 0pt"><a name="_NodeCheckChanged_Event" id="_NodeCheckChanged_Event"></a>5.3.1.3.1.1 
+NodeCheckChanged Event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">The event that fires, when node checked state has been 
+changed.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 110.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="147">
+      <p class="TableHeading"> </p>
+      <p class="TableHeading">Parameter</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 345.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="461">
+      <p class="TableHeading"> </p>
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 110.25pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="147">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 345.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="461">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node 
+member.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">To trigger NodeChecked event, set 
+<b>AutoPostBackOnNodeCheckChanged</b> property to <b>True</b>. If we set this 
+property to True, it posts back the page and this event gets fired when the 
+checkbox is checked / unchecked. By setting <b>AutoPostBackOnCheckChanged</b> 
+property to individual nodes, we can optionally trigger <b>NodeCheckChanged</b> 
+event only for certain nodes.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyTextHeading">Properties</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>AutoPostBackOnNodeCheckChanged (TreeView)</b>: indicates whether to 
+postback the page, when the checkboxes is checked / unchecked</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>AutoCheckChildNodes (TreeView)</b>: allows to automatically 
+check/uncheck child nodes on check / uncheck parent node</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>ShowCheckBox (TreeViewNode)</b>: indicates whether to show the 
+checkbox in the node</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      
+</span><b>Checked</b> <b>(TreeViewNode)</b>: if the checkbox mode is turned on, 
+this property shows whether the node is checked or not</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeCheckChanged(<span style="COLOR: blue">object</span> sender,  
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">string</span> status = <span style="COLOR: maroon">"Unchecked"</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">if</span> (e.Node.Checked) </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      status = <span style="COLOR: maroon">"Checked"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      lblActionPerformed.Text = status + <span style="COLOR: maroon">" 
+      &lt;b&gt;"</span> + e.Node.Text + <span style="COLOR: maroon">"&lt;/b&gt;"</span>; </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeCheckChanged(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As 
+      </span>Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">Dim</span> status <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: maroon">"Unchecked"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">If</span> e.Node.Checked <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      status = <span style="COLOR: maroon">"Checked"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      lblActionPerformed.Text = status &amp; <span style="COLOR: maroon">" 
+      &lt;b&gt;"</span> &amp; e.Node.Text &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">The NodeCheckedChanged event passes the 
+<b>TreeViewNodeEventArgs</b> object which contains a reference to the node in 
+which the check status was changed. Using this object we can access all the 
+properties of the checked node. In the above example, we are checking the 
+checkbox status and assigning <b>e.Node.Text</b> to <b>lblActionPerformed</b> 
+label.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">In treeview, select / rename / expand the node to trigger the 
+server side events.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a name="p303" id="p303"></a> </p>
+<h6 style="tab-stops: 0pt"><a name="_NodeRenamed_Event" id="_NodeRenamed_Event"></a>5.3.1.3.1.2 
+NodeRenamed Event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">To trigger NodeRenamed event, make sure that 
+<b>AutoPostBackOnNodeRename</b> property and <b>EditNode</b> property is set to 
+<b>True</b>. Only if EditNode property is set to True, it will allow the user to 
+edit the node text on clicking the selected node and AutoPostBackOnNodeRename 
+property posts back the page, as well triggers the <b>NodeRenamed</b> event.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">We can avoid editing any individual nodes by setting EditNode 
+property of the TreeViewNode as False.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 121.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="162">
+      <p class="TableHeading">Member</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 334.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="446">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 121.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="162">
+      <p class="MsoNormal">Node</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 334.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="446">
+      <p class="MsoNormal">Indicates the current tree node. All the node's 
+      properties can be accessed using Node member.</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 121.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="162">
+      <p class="MsoNormal">OldText</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 334.5pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="446">
+      <p class="MsoNormal">Returns the old text name before changing to the new 
+      value.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-SIZE: 8pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeRenamed(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeRenamedEventArgs 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      </span><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt">lblActionPerformed</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">.Text = <span style="COLOR: maroon">"Renamed &lt;b&gt;"</span> + e.OldText + <span style="COLOR: maroon">"&lt;/b&gt; to &lt;b&gt;"</span> + e.Node.Text + 
+      <span style="COLOR: maroon">"&lt;/b&gt;"</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Private</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeRenamed(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeRenamedEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      lblActionPerformed.Text = <span style="COLOR: maroon">"Renamed 
+      &lt;b&gt;"</span> &amp; e.OldText &amp; <span style="COLOR: maroon">"&lt;/b&gt; to &lt;b&gt;"</span> &amp; e.Node.Text 
+      &amp; <span style="COLOR: maroon">"&lt;/b&gt;"</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">The event passes <b>TreeViewNodeRenamedEventArgs </b>object 
+which contains a reference to the renamed node as well it passes the 
+<b>OldText</b> which is the node text before renaming.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">See Also</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a><span class="UGHyperlink">Node Editing</span></a><span class="UGHyperlink"></span></p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">5.3.1.3.1.3 NodeSelected Event</h6>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal"><b>NodeSelectedEvent</b> is handled, when the node gets 
+selected. Nodes can be selected in either of the following ways.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>By clicking 
+the Right Mouse button - context menu</p>
+<p style="tab-stops: 36.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span>By clicking 
+the Left Mouse button - to select a node and other normal use</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="MsoNormal">Additional feature is added, to find out the mouse button 
+that is pressed, to select the node. Please refer the below code snippet which 
+illustrates this.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">protected</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">void</span> TreeView1_NodeSelected(<span style="COLOR: blue">object</span> sender, 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeSelectEventArgs 
+      e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">if</span> (e.MouseButtonPressed.Left)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: maroon">"Do something....."</span>;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">Protected</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span> TreeView1_NodeSelected(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> 
+      Syncfusion.Web.UI.WebControls.Tools.TreeViewNodeSelectEventArgs)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">If</span> e.MouseButtonPressed.Left <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">        
+      <span style="COLOR: maroon">"Do something....."</span> </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt">    
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 9pt">End</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 9pt"> <span style="COLOR: blue">Sub</span></span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,99 @@
+---
+title: prerequisitesandcompatibility9.md
+original_path: c:/workspace/sf11-winform/WinForms_Docs\99_Uncategorized\prerequisitesandcompatibility9.md
+created_at: 2025-07-03
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+## Prerequisites and compatibility {#prerequisites-and-compatibility style="MARGIN-TOP: 0pt; tab-stops: 0pt"}
+
+This section covers the requirements that are mandatory for using Schedule control. It also lists operating systems and browsers compatible with the product.
+
+[] 
+
+[]{#_Documentation}Prerequisites
+
+The prerequisites details are listed below:
+
+ 
+
+Table 1: Prerequisites
+
+
++-----------------------------------+--------------------------------------------+
+| Development Environments          | Visual Studio 2010                         |
+|                                   |                                            |
+|                                   | Visual Studio Team System 2008             |
+|                                   |                                            |
+|                                   | Visual Studio 2008 Professional Edition    |
+|                                   |                                            |
+|                                   | Visual Studio 2008 Standard Edition        |
+|                                   |                                            |
+|                                   | Visual Web Developer® 2008 Express Edition |
++-----------------------------------+--------------------------------------------+
+| .NET Framework versions           | .NET 4.0                                   |
+|                                   |                                            |
+|                                   | .NET 3.5                                   |
++-----------------------------------+--------------------------------------------+
+| ASP.NET MVC Framework versions    | ASP.NET MVC 2.0                            |
++===================================+============================================+
+
+
+ 
+
+Compatibility
+
+The compatibility details are listed below:
+
+ 
+
+Table 2: Compatibility
+
+
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Operating Systems                 | Windows Server 2008 (32 bit and 64 bit)                                                                                           |
+|                                   |                                                                                                                                   |
+|                                   | Windows Server 2003 (32 bit and 64 bit)                                                                                           |
+|                                   |                                                                                                                                   |
+|                                   | Windows 7 (32 bit and 64 bit)                                                                                                     |
+|                                   |                                                                                                                                   |
+|                                   | Windows Vista (32 bit and 64 bit)                                                                                                 |
+|                                   |                                                                                                                                   |
+|                                   | Windows XP                                                                                                                        |
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Web Servers                       | IIS 6.0+                                                                                                                          |
+|                                   |                                                                                                                                   |
+|                                   | Visual Studio built-in Web server for development                                                                                 |
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Browser Support                   | Internet Explorer 7+ |
+|                                   |                                                                                                                                   |
+|                                   | Mozilla 2.0+    |
+|                                   |                                                                                                                                   |
+|                                   | Safari 3.0+      |
+|                                   |                                                                                                                                   |
+|                                   | Opera 9+          |
+|                                   |                                                                                                                                   |
+|                                   | Chrome 1+ |
++-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+
+
+[] 
+
+[]{#related-topics}
+

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Custom Text</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="baf3c65a-1948-40e2-8c66-ea80d0500e3a" />
+<meta name="Title" content="Custom Text" />
+<meta name="Microsoft.Help.TocParent" content="1cc0b5f6-68c2-47a2-81ec-2646310339e0" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Custom Text</h4>
+<p class="MsoNormal">You can set the custom text that will display when the 
+progress bar shows different levels of progress, using the following 
+code.<br />There are two ways in which you can set the orientation of the Progress 
+bar, both of which use properties from the <a><span style="FONT-FAMILY: 'Arial','sans-serif'">properties table</span></a>.</p>
+<p class="BodyTextHeading">Using Builder</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   In <b>View</b>, 
+invoke the ProgressBar helper with the control ID as an argument, followed by 
+the Custom text method, with the desired text as an argument.</p>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">[ASPX]</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      Html.Syncfusion().ProgressBar(<span style="COLOR: #a31515">"Progress"</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .AllowCustomText(<span style="COLOR: blue">true</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .ClientSideOnCustomTextRendering(<span style="COLOR: #a31515">"onCustomText"</span>)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      .Render();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">  } <span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="BACKGROUND: yellow; COLOR: black">[Razor]</span></p>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="BACKGROUND: yellow; COLOR: black"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    Html.Syncfusion().ProgressBar(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"Progress"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Height(22)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Width(700)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Value(50)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .AllowCustomText(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Orientation(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">ProgressBarOrientation</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.Horizontal)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Minimum(10)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Maximum(100)    </span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .ClientSideOnCustomTextRendering(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"onCustomText"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">    .Render();</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">}</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In Javascript, 
+define the handler as shown below:</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal"> </p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal">[Javascript]</p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal">&lt;<span style="COLOR: maroon">script</span> <span style="COLOR: red">type</span>="text/javascript"&gt;<span style="COLOR: blue"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: blue">function</span><span style="COLOR: black"> onCustomText(progressBar, currentValue) {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">     </span><span style="COLOR: blue">var</span><span style="COLOR: black"> context = currentValue._Context;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (progressBar == </span><span style="COLOR: blue">null</span><span style="COLOR: black">)</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        progressBar = $find(controlId);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">/// adding the custom text with the progressbar value  </span><span style="COLOR: black"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    text = currentValue._Value + </span><span style="COLOR: maroon">"% of 100GB Completed"</span><span style="COLOR: black">;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text_width = context.measureText(text).width;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">/// we must set this angle then only the text is aligned properly when we set the Orientation as Vertical</span><span style="COLOR: black"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">///The user must define the font size</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: darkgreen">   /// This is 
+      the simple example for how to calculate the width, text_x 
+      value.</span><span style="COLOR: black"> </span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> ang = 270;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> fontsize = 22;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (progressOrientation == </span><span style="COLOR: blue">null</span><span style="COLOR: black">)</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        progressOrientation = </span><span style="COLOR: maroon">"horizontal"</span><span style="COLOR: black">;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    context.save();</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (progressOrientation == </span><span style="COLOR: maroon">"horizontal"</span><span style="COLOR: black">) {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text_x = currentValue._OffsetX + currentValue._Width / 2 - text_width / 2;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        context.fillText(text, text_x, currentValue._Height / 2 + currentValue._OffsetY + currentValue._Radius / 2);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    }</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">else</span><span style="COLOR: black"> {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text_x = currentValue._Width / 2 - currentValue._Radius / 2 + currentValue._OffsetX;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        context.fillText(text, fontsize, text_x, currentValue._OffsetX + currentValue._Height / 2, </span><span style="COLOR: maroon">""</span><span style="COLOR: black"> + ang);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    }</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    context.restore();</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black"> }  </span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">&lt;/<span style="COLOR: maroon">script&gt;</span><span style="COLOR: black">      
+                  
+      </span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Build and run the 
+application.</p>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Using PropertiesModel</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   In the 
+controller, create an instance of the ProgressBarPropertiesModel.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Define the Custom 
+text property and pass the instance through the view-specific data to the 
+view.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">[controller]</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> ActionResult Index()</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'">{ 
+       </span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      </span><span style="FONT-FAMILY: 'Courier New'">ProgressBarPropertiesModel<span style="COLOR: black"> model = </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span>ProgressBarPropertiesModel<span style="COLOR: black">();</span></span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'">model.AllowCustomText = <span style="COLOR: blue">true</span>;</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'">model.ClientSideOnCustomTextRendering = <span style="COLOR: #a31515">" onCustomText "</span>;</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'">            
+      ViewData[<span style="COLOR: #a31515">"Progress"</span>] = <span style="COLOR: black">model</span>;</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"><span style="FONT-FAMILY: 'Courier New'"> }</span></p>
+      <p style="TEXT-INDENT: 0pt; MARGIN-LEFT: 7.2pt; tab-stops: 36.0pt" class="NumberedList"> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   In View, invoke 
+the ProgressBar helper with the view data key as the control ID.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[View]</span></b></p>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="COLOR: black">    <span style="BACKGROUND: yellow">&lt;%</span>{ Html.Syncfusion().ProgressBar(</span><span style="COLOR: #a31515">"Progress"</span><span style="COLOR: black">).Render(); } <span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"><b></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="BACKGROUND: yellow; COLOR: black">[Razor]</span></p>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="BACKGROUND: yellow; COLOR: black"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">@{</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="COLOR: black">      </span><span style="COLOR: black; FONT-SIZE: 12pt">Html.Syncfusion().ProgressBar(</span><span style="COLOR: #a31515; FONT-SIZE: 12pt">"Progress"</span><span style="COLOR: black; FONT-SIZE: 12pt">)</span></p>
+      <p style="BACKGROUND: #f2f2f2" class="MsoNormal"><span style="COLOR: black; FONT-SIZE: 12pt">     
+      .Render();</span></p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">}</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   In Javascript, 
+define the handler as shown below:</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal"> </p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal">[Javascript]</p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal">&lt;<span style="COLOR: maroon">script</span> <span style="COLOR: red">type</span>="text/javascript"&gt;<span style="COLOR: blue"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: blue">function</span><span style="COLOR: black"> onCustomText(progressBar, currentValue) {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">     </span><span style="COLOR: blue">var</span><span style="COLOR: black"> context = currentValue._Context;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (progressBar == </span><span style="COLOR: blue">null</span><span style="COLOR: black">)</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        progressBar = $find(controlId);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">/// adding the custom text with the progressbar value  </span><span style="COLOR: black"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    text = currentValue._Value + </span><span style="COLOR: maroon">"% of 100GB Completed"</span><span style="COLOR: black">;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text_width = context.measureText(text).width;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">/// we must set this angle then only the text is aligned properly when we set the Orientation as Vertical</span><span style="COLOR: black"></span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: darkgreen">///The user must define the font size</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: darkgreen">   /// This is 
+      the simple example for how to calculate the width, text_x 
+      value.</span><span style="COLOR: black"> </span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> ang = 270;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> fontsize = 22;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (progressOrientation == </span><span style="COLOR: blue">null</span><span style="COLOR: black">)</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        progressOrientation = </span><span style="COLOR: maroon">"horizontal"</span><span style="COLOR: black">;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    context.save();</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal"><span style="COLOR: blue">       if</span><span style="COLOR: black"> (progressOrientation == </span><span style="COLOR: maroon">"horizontal"</span><span style="COLOR: black">) {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2" class="MsoNormal"><span style="COLOR: blue">         
+      var</span><span style="COLOR: black"> text_x = currentValue._OffsetX + currentValue._Width / 2 -          
+      text_width / 2;          
+      context.fillText(text, text_x, currentValue._Height / 2 + currentValue._OffsetY + currentValue._Radius / 2);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    }</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    </span><span style="COLOR: blue">else</span><span style="COLOR: black"> {</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        </span><span style="COLOR: blue">var</span><span style="COLOR: black"> text_x = currentValue._Width / 2 -        
+      currentValue._Radius / 2 + currentValue._OffsetX;</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">        context.fillText(text, fontsize, text_x, currentValue._OffsetX + currentValue._Height / 2, </span><span style="COLOR: maroon">""</span><span style="COLOR: black"> + ang);</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    }</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black">    context.restore();</span></p>
+      <p style="LINE-HEIGHT: 200%; BACKGROUND: #f2f2f2; MARGIN-LEFT: 18pt" class="MsoNormal"><span style="COLOR: black"> }  </span></p>
+      <p style="MARGIN-LEFT: 18pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">&lt;/<span style="COLOR: maroon">script&gt;</span><span style="COLOR: black">                  
+      </span></span></p></td></tr></tbody></table>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p class="MsoNormal"><span style="FONT-SIZE: 12pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Build and run the 
+application, the output will be as follows:</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image56_185.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 174<b></b>: Custom Text in Progress Bar<b><span style="FONT-STYLE: normal"></span></b></p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Styles Architecture</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="f8d0fb63-3251-47cb-b956-94bbfc0f08b3" />
+<meta name="Title" content="Styles Architecture" />
+<meta name="Microsoft.Help.TocParent" content="3bfe63dc-78eb-4bad-aeb8-32ef96e667ce" />
+<meta name="Microsoft.Help.TocOrder" content="5" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools3.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt">Styles Architecture</h4>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">The tree control employs an 
+extensive Styles Architecture, that let users specify node styles globally, 
+specifically for a class of nodes. This is possible by using a style information 
+instance for each class of nodes, represented by a <b>TreeNodeAdvStyleInfo</b>. 
+Users will notice that for some of these classes of nodes, the style needs to be 
+declared with a name at the tree level and stored in the tree's BaseStyles hatch 
+table. </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">As illustrated below, implicit 
+style inheritance is enforced by the framework while explicit style inheritance 
+can be setup by the programmer. For all styles, explicit inheritance precedes 
+implicit inheritance.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 27pt" class="Figure"><img border="0" src="ImagesExt/image76_1129.jpg" alt="" /></p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="MsoCaption">Figure 1153: Implicit and Explicit 
+Style Inheritance</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><b><span style="COLOR: #15428b"></span></b> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyTextHeading">Implicit Style 
+Inheritance</p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">When a style is not set in a style 
+info object, it inherits the style from the previous level and so on until it 
+reaches the default global style on top of the hierarchy. This is called 
+implicit style inheritance and is illustrated below.</p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">The different levels in the above 
+hierarchy are,</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol; COLOR: black">·      
+</span><b>Node Specific Style</b>: At the bottom of the hierarchy is the node 
+specific style which lets users specify a style directly on a TreeNodeAdv. Refer 
+Node specific Style.<span style="COLOR: black"></span></p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol; COLOR: black">·      
+</span><b>Node's Child Style</b>: Each node also exposes a <b>ChildStyle</b> 
+property where you can specify the style for the immediate children of that 
+node. Refer Child Style<span style="COLOR: black"> </span>for setting style of 
+children nodes<span style="COLOR: black">.</span></p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Node Level 
+Styles</b>: The framework also lets you specify a style for all nodes at a 
+particular level in the tree hierarchy, the top-most level being 1. Refer Node 
+Level Style<span style="COLOR: black"> </span>for setting node level style 
+settings.</p>
+<p style="MARGIN-LEFT: 54pt; tab-stops: 54.0pt" class="BulletedList"><span style="FONT-FAMILY: Symbol">·      </span><b>Standard 
+Style or Global Style</b>: A standard, global style is exposed by the 
+TreeViewAdv control to be applied on all the nodes in the tree. Refer Standard 
+Style<span style="COLOR: black"> </span>for setting style in a Tree level.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyTextHeading">Explicit Style 
+Inheritance</p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1"> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">Any StyleInfo instance can also 
+inherit explicitly from a specific named StyleInfo object. This can be done 
+using the BaseStyle property of the TreeNodeAdvStyleInfo type. As noted 
+previously, such named styles should be available in the tree control's 
+BaseStyles Collection Editor. You can also add custom styles using this 
+editor.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 7.5pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 231.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="309">
+      <p style="MARGIN-LEFT: 27pt" class="TableHeading">TreeViewAdv 
+    Properties</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 234pt; PADDING-RIGHT: 1.5pt; HEIGHT: 7.5pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="312">
+      <p style="MARGIN-LEFT: 27pt" class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 9.75pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 231.75pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="309">
+      <p style="MARGIN-LEFT: 18pt" class="TableText">BaseStyle</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 234pt; PADDING-RIGHT: 1.5pt; HEIGHT: 9.75pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="312">
+      <p style="MARGIN-LEFT: 18pt" class="TableText">Indicates the base style of 
+      the nodes.</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="BodyText1">StandardStyle is the default style 
+for the nodes. It can be edited using <b>StandardStyle</b> property. It can also 
+be edited through BaseStyles Collection Editor dialog.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 27pt" class="Figure"><img border="0" src="ImagesExt/image76_1130.jpg" alt="" /></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 27pt" class="MsoNormal" align="center"><span style="COLOR: #15428b"></span> </p>
+<p style="MARGIN-LEFT: 18pt" class="MsoCaption">Figure 1154: BaseStyles Collection 
+Editor</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 18pt" class="MsoNormal"> </p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=554306f2-0415-4ab4-b1d0-0b4775baee40"><img border="0" alt="" align="absMiddle" src="button.gif" />Standard Style</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=5f778a01-b063-468b-86e2-344d9a92a097"><img border="0" alt="" align="absMiddle" src="button.gif" />Node Specific Style</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=b9562f7c-4147-4f1c-8344-e4a5cf420a35"><img border="0" alt="" align="absMiddle" src="button.gif" />Child Style</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=09027846-56bc-451a-9690-423ad773330b"><img border="0" alt="" align="absMiddle" src="button.gif" />Node Level 
+Style</a></p></span></div></body></html>

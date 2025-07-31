@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Table Layout for selected Nodes</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="bbcd8107-8dc3-48b7-8729-cdc7cba432e1" />
+<meta name="Title" content="Adding Table Layout for selected Nodes" />
+<meta name="Microsoft.Help.TocParent" content="39233bee-1f12-4938-b405-81d5426d68e5" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Adding Table Layout for selected Nodes </h5>
+<p class="BodyText1"><span style="BACKGROUND: white">To apply a table layout to 
+the selected nodes, assign the selected nodes to the <i>OrderNodes</i> property 
+of the <i>DiagramModel</i>. You can also assign your own collection of IShape to 
+the <i>OrderNodes</i> property. Then create an instance of the 
+<i>TableLayout</i> and call the <i>RefreshLayout</i> method for this 
+instance.</span><b></b></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="BACKGROUND: white; COLOR: black">The following code illustrates this: 
+</span></p>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="BACKGROUND: white; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">       
+      // Assigning selected node to the OrderedNodes property.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      diagramModel.OrderedNodes= diagramView.SelectionList.OfType&lt;<span style="COLOR: #2b91af">IShape</span>&gt;().ToList(); </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; COLOR: green; FONT-SIZE: 9.5pt">       
+      // Create an instance of TableLayout and refresh it.</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      <span style="COLOR: #2b91af">TableLayout</span> table = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">TableLayout</span>(diagramModel, 
+      diagramView);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">          
+      table.RefreshLayout();</span></p>
+      <p style="LINE-HEIGHT: 115%; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="BACKGROUND: white; COLOR: black"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+         <span style="COLOR: green">'Assigning selected node to the 
+      OrderedNodes property.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+        diagramModel.OrderedNodes= diagramView.SelectionList.OfType(<span style="COLOR: blue">Of</span> IShape)().ToList()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+         <span style="COLOR: green">'Create an instance of TableLayout 
+      and refresh it.</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+        <span style="COLOR: blue">Dim</span> table <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+      TableLayout(diagramModel, diagramView)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+        table.RefreshLayout()</span></p>
+      <p style="LINE-HEIGHT: 115%; TEXT-AUTOSPACE: ; MARGIN-LEFT: 36pt" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="BACKGROUND: white; COLOR: black"></span> </p>
+<p class="BodyText1"><span style="BACKGROUND: white">When the code runs, the table 
+layout will be applied to the specified node collection.  
+</span><b></b></p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt" class="Note"><span style="BACKGROUND: white"><img border="0" src="ImagesExt/image82_8.jpg" alt="" /></span><span style="BACKGROUND: white">Note: If 
+</span><span style="BACKGROUND: white; COLOR: black">the OrderNodes property 
+</span><span style="BACKGROUND: white"> is set to null, then the table 
+layout will be applied to the entire diagram.</span></p></div>
+<p class="BodyText1"><b></b> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\labuser\Desktop\selection.PNG" src="ImagesExt/image82_29.png" /></p>
+<p class="MsoCaption">Figure 24: Table Layout Applied for Specified 
+Nodes<b></b></p><span id="related-topics"></span></div></body></html>

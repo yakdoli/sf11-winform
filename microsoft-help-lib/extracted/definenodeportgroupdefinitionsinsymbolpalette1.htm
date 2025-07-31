@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Define Node, Port, Group definitions in SymbolPalette</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="3cc8b344-3be4-42a2-af20-18e1b001d993" />
+<meta name="Title" content="Define Node, Port, Group definitions in SymbolPalette" />
+<meta name="Microsoft.Help.TocParent" content="378b16e9-6e42-4ccd-b305-6e452b607778" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram4.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Define Node, Port, Group definitions in 
+SymbolPalette</h4>
+<p class="BodyText1">The following steps demonstrate how to specify a Node or Node 
+with Ports in SymbolPaletteItem:</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   To add more than 
+one port, a node is created.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Then several 
+ports are added to it.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Create a 
+SymbolPaletteItem and add the node as content for the SymbolPaletteItem.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p class="BodyText1">At runtime, Nodes that are added in SymbolPalette can be 
+dragged and dropped on the page. All the ports, and their properties will be 
+cloned and a new copy of the node will be created.</p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" alt="Description: C:\Users\riaj\Desktop\Ports.PNG" src="ImagesExt/image82_202.png" /></p>
+<p class="MsoCaption">Figure 197: Node with several Ports</p>
+<p class="BodyTextHeading">To Create a new Node</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 2.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Node</span><span style="FONT-FAMILY: 'Courier New'"> node = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      node.Width = 100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      node.Height = 100;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      node.OffsetX = 200;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      node.OffsetY = 200;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      node.Background = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">SolidColorBrush</span>(<span style="COLOR: #2b91af">Colors</span>.Aqua);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      AddMorePorts(node);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">To add more Ports</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 2.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      AddMorePorts(<span style="COLOR: #2b91af">Node</span> node)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Left=10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      Top=10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">for</span> (<span style="COLOR: blue">int</span> 
+      i = 0; i &lt; 4; i++)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      <span style="COLOR: #2b91af">ConnectionPort</span> port = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">ConnectionPort</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      port.Left = Left;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      port.Top = Top;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      port.Node = node;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      node.Ports.Add(port);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Left += 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      Top += 10;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Creating Groups and SymbolPaletteItems</p>
+<table style="BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 2.25pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteGroup</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> group 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteGroup</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">group.Label 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"Custom"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPalette</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.SetFilterIndexes(group, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">List</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'">&gt;<span style="COLOR: black">(</span>)<span style="COLOR: black">[] { 0, 6 
+      }));</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">dc.SymbolPalette.SymbolGroups.Add(group);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> item 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">();</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">// Node added as 
+      SymbolPaletteItem's Content</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">item.Content 
+      =</span><span style="FONT-FAMILY: 'Courier New'"> node<span style="COLOR: black"> ;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">group.Items.Add(item);</span></p>
+      <p class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">Define Group definition in SymbolPalette</p>
+<p class="BodyText1">The groups can be given as SymbolPaletteItem’s content. At 
+runtime, they can be Dragged and Dropped to create a clone of the group and its 
+children will be added on the page.</p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" alt="Description: C:\Users\riaj\Desktop\image10_91.png" src="ImagesExt/image82_203.png" /></p>
+<p class="MsoCaption">Figure 198: To Drag and Drop Groups</p>
+<p class="BodyTextHeading">To create new Node and Groups</p>
+<table style="BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 2.25pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">DiagramControl</span> Control;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">DiagramModel</span> Model;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">DiagramView</span> View;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span><span style="FONT-FAMILY: 'Courier New'"> Window1 ()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">{</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Control = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramControl</span> ();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramModel</span> ();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    View = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramView</span> ();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Control.View = 
+      View;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    Control.Model = 
+      Model;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    View.Bounds 
+      = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Thickness</span>(0, 0, 1000, 1000);</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">Node</span> n = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>(<span style="COLOR: #2b91af">Guid</span>.NewGuid(), <span style="COLOR: #a31515">"Start"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.Shape = <span style="COLOR: #2b91af">Shapes</span>.FlowChart_Card;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.Level = 
+      1;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.OffsetX = 
+      150;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.OffsetY = 
+      25;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.Width = 
+      150;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n.Height = 
+      75;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">Node</span> n1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>(<span style="COLOR: #2b91af">Guid</span>.NewGuid(), <span style="COLOR: #a31515">"End"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.Shape 
+      = <span style="COLOR: #2b91af">Shapes</span>.RoundedRectangle;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.Level = 
+      1;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.OffsetX = 
+      350;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.OffsetY = 
+      325;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.Width = 
+      100;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    n1.Height = 
+      75;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      Model.Nodes.Add(n);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      Model.Nodes.Add(n1);</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: #2b91af">Group</span> g = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Group</span>(<span style="COLOR: #2b91af">Guid</span>.NewGuid(), <span style="COLOR: #a31515">"group1"</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      g.AddChild(n);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      g.AddChild(n1);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    
+      Model.Nodes.Add(g);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">}</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="BodyTextHeading">To create new SymbolPalette Group and Item</p>
+<table style="BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 2.25pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 468pt; PADDING-RIGHT: 1.5pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteGroup</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> group 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteGroup</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">group.Label 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515">"Custom"</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPalette</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.SetFilterIndexes(group, </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">List</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">&lt;</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'">&gt;<span style="COLOR: black"> ()[] { 
+      0, 6 }));</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">dc.SymbolPalette.SymbolGroups.Add(group);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> item 
+      = </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">new</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">SymbolPaletteItem</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">();</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"> </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #00b050">// Group added as 
+      SymbolPaletteItem's Content</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">item.Content 
+      =</span><span style="FONT-FAMILY: 'Courier New'"> g<span style="COLOR: black"> ;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">group.Items.Add(item);</span></p>
+      <p class="MsoNormal"> </p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">Refer to <a href="ms-xhelp:///?Id=18757426-5b22-4b31-bdc1-0a8acb9645ac"><u><span style="FONT-FAMILY: 'Arial','sans-serif'">4.1.1.1           
+Adding Through SymbolPalette</span></u></a><u></u></p><span id="related-topics"></span></div></body></html>

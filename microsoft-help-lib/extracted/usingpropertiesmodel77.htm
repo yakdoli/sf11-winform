@@ -1,0 +1,190 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using PropertiesModel</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="6e4edab5-e103-4d85-9144-54c736d88422" />
+    <meta name="Title" content="Using PropertiesModel" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">Using PropertiesModel</h5>
+      <p style="tab-stops: 25.2pt" class="NumberedList">1.   In the 
+controller, create an instance of the <b>MobProgressBarPropertiesModel</b></p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   Define the 
+<b>Maximum, Minimum, StepValue and Value</b> property and pass the instance 
+through the view-specific data to the view.</p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black">[CONTROLLER]</span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black"> </span>
+                <span style="COLOR: blue">public</span>
+                <span style="COLOR: black"> </span>
+                <span style="COLOR: #2b91af">ActionResult</span>
+                <span style="COLOR: black"> Index()</span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black"> {</span>
+              </pre>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black">            </span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">MobProgressBarPropertiesModel</span>
+                <span style="FONT-FAMILY: 'Courier New'"> pBar = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">MobProgressBarPropertiesModel</span>();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      pBar.Value = 30;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">            
+      pBar.Width = 500;</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                         
+      pBar.Height = 22;</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">            
+      </span>
+                </b>
+                <span style="FONT-FAMILY: 'Courier New'">pBar.Maximum = 
+      100;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      pBar.Minimum = 10;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      pBar.Value = 20;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 7.2pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      pBar.StepValue = 10;</span>
+              </p>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black">       ViewData[</span>
+                <span style="COLOR: #a31515">"progressBar "</span>
+                <span style="COLOR: black">] = </span>pBar<span style="COLOR: black">;</span></pre>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black">       </span>
+                <span style="COLOR: blue">return</span>
+                <span style="COLOR: black"> View();</span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt">
+                <span style="COLOR: black">}</span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2; MARGIN-LEFT: 7.2pt"> </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-SIZE: 12pt"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   In View, invoke 
+the ProgressBar helper with the control id and view data key as arguments.</p>
+      <p class="MsoNormal">
+        <b></b> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black">[ASPX]  </span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">=</span>
+                <span style="FONT-FAMILY: 'Courier New'"> Html.MobSyncfusion().ProgressBar(<span style="COLOR: #a31515">"pBar"</span>, <span style="COLOR: #a31515">"progressBar"</span>)<span style="BACKGROUND: yellow">%&gt;</span><b></b></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <b></b> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="BACKGROUND: #f2f2f2" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <pre style="BACKGROUND: #f2f2f2">
+                <span style="BACKGROUND: yellow; COLOR: black"> </span>
+              </pre>
+              <pre style="BACKGROUND: #f2f2f2">
+                <span style="BACKGROUND: yellow; COLOR: black"> </span>
+              </pre>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black">               
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'">Html.MobSyncfusion().ProgressBar(<span style="COLOR: #a31515">"pBar"</span>, <span style="COLOR: #a31515">"progressBar"</span>)<span style="COLOR: black">.Render(); </span></span>
+              </p>
+              <p style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; COLOR: black">}</span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-SIZE: 12pt"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">4.   Build and run the 
+application, the output will be as follows.</p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="MsoNormal"> </p>
+      <p class="Figure">
+        <img border="0" alt="Description: C:\Users\krishnarajd\Desktop\prange.png" src="ImagesExt/image103_174.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 88<b></b>: ProgressBar with range set</p>
+      <p class="MsoCaption">
+        <b>
+          <span style="FONT-STYLE: normal"></span>
+        </b> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Lesson 4: Virtual Grid Tutorial</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="769a98e8-510b-4fea-981c-a95525188efb" />
+<meta name="Title" content="Lesson 4: Virtual Grid Tutorial" />
+<meta name="Microsoft.Help.TocParent" content="ec37d422-c102-40ce-8e79-23d6c564cae7" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=9dfef0ae-c8dd-4098-a3b6-8fac403c6941"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=0bcfb5bb-c849-4421-8ca9-29ee06f099fb"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c52dd0c5-bab1-416e-8b27-3f2be113aa2c">Getting 
+Started</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=ec37d422-c102-40ce-8e79-23d6c564cae7">Tutorials</a></div>
+<h3 style="tab-stops: 0pt">Lesson 4: Virtual Grid Tutorial</h3>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">A virtual grid is one where the grid does not hold any data. 
+All the data that is displayed by the grid is provided on demand from some 
+external data source to the grid when it needs it. Virtual grids are ideal for 
+displaying large amounts of data which are already stored in some manner. This 
+data is not moved from its original location or stored in <b>GridStyleInfo</b> 
+objects. Instead, GridInfoStyle objects are created on the fly, to temporarily 
+hold only the necessary data and are discarded when they are no longer needed. 
+There is no data stored in the grid.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Implementing a virtual grid is straight forward. Depending 
+upon the functionality that you need, you can implement a virtual grid with as 
+few as three events. To implement a virtual grid, you must tell the grid how 
+many rows and columns your data source has, and provide the grid the data from 
+your data source. You must do these things in real time, only when the grid 
+requests these data elements. When the grid needs to know the number of rows in 
+the grid, it will fire the <b>QueryRowCount</b> event. When it needs to know the 
+number of columns in the grid, it will fire the <b>QueryColCount</b> event. When 
+it needs to know a GridStyleInfo object for a particular cell, it will fire the 
+<b>QueryCellInfo</b> event. By handling these events and setting appropriate 
+members of the <b>EventArgs</b>, you are providing the information that the grid 
+needs at the time when it needs it. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In this section, you will learn how to set up an external 
+data source, and then display it by using a virtual grid. The first iteration 
+will allow the display of the external data source; a second iteration will add 
+code that will allow you to edit the displayed data in the virtual grid, pushing 
+the changes back to your data source. </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">In this lesson, you will learn about the following 
+topics.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p20" id="p20"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p class="RelatedHead">More:</p><span id="related-topics">
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=16d6f1cb-481e-43ae-a83d-dfdd369270a1"><img border="0" alt="" align="absMiddle" src="button.gif" />Creating the Project and Data Source</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=d342912c-f131-489e-a6d6-1f190717ee5a"><img border="0" alt="" align="absMiddle" src="button.gif" />Adding Virtual Grid</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=c2394825-6ccf-4561-9c48-ed0d8ba3b530"><img border="0" alt="" align="absMiddle" src="button.gif" />Initializing the Virtual Grid</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=5c5a4e23-b128-413f-9e48-af5b0ac6142b"><img border="0" alt="" align="absMiddle" src="button.gif" />Style Properties</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=290a216b-19a0-49af-a1e2-383ef8a71968"><img border="0" alt="" align="absMiddle" src="button.gif" />Handling Events to Retrieve Data for Virtual 
+Grid</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=e0bd1ff9-06da-4e6b-90d6-e472e26e5188"><img border="0" alt="" align="absMiddle" src="button.gif" />Saving Edited Values</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=2690cbd1-4d4d-4ea1-928d-49c02bc67d02"><img border="0" alt="" align="absMiddle" src="button.gif" />Setting Properties in a Virtual Grid</a></p>
+<p class="MsoNormal"><a style="TEXT-DECORATION: none" href="ms-xhelp:///?Id=6db33ebb-36f7-4803-b2b7-a7746b4fcee0"><img border="0" alt="" align="absMiddle" src="button.gif" />Type 
+Conversions</a></p></span></div></body></html>

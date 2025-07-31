@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Creating AutoComplete using C#</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="d55609b3-b2d3-4e9d-9d8d-68b428a532a2" />
+<meta name="Title" content="Creating AutoComplete using C#" />
+<meta name="Microsoft.Help.TocParent" content="4f209333-a89f-4969-a753-4bfdebba7db6" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools5.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Creating AutoComplete using C#</h4>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   Open Visual 
+Studio, On the <b>File</b> menu click New -&gt; Project. This opens the New 
+Project Dialog box.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Documents and Settings\labuser\My Documents\WPF Tools correct Image.png" src="ImagesExt/image30_13.png" /></p>
+<p class="MsoCaption">Figure 9: Creating New Project </p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   In the Project 
+Dialog window, select WPF application and, in the Name field type the name of 
+the project. Click OK.</p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_14.png" alt="" /></p>
+<p class="MsoCaption">Figure 10: Creating New WPF Application </p>
+<p style="TEXT-ALIGN: center; MARGIN-LEFT: 36pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">3.   Go to Solution 
+Explorer. Right-click <b>References</b> folder and click Add Reference. Add the 
+<b>Syncfusion.Tools.WPF.dll </b>assembly to the project References folder.</p>
+<p style="tab-stops: 36.0pt" class="NumberedList"> </p>
+<p style="TEXT-ALIGN: center; PAGE-BREAK-AFTER: avoid; MARGIN-LEFT: 36pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Users\Dhileep\Desktop\Vol4-Documentation\ScreenShots\WPF-AC\Addingreference.png" src="ImagesExt/image30_15.png" /></p>
+<p class="MsoCaption">Figure 11: Adding Reference </p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 59.75pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 59.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[XAML]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: red">xmlns</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">:</span><span style="FONT-FAMILY: 'Courier New'; COLOR: red">syncfusion</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">="clr-namespace:</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Tools.Wpf"</span></p></td></tr></tbody></table>
+<p style="MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormalCxSpLast"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">4.   Add 
+Syncfusion.Tools.WPF reference in XAML and C# code as follows.</p>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 47pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">using</span><span style="FONT-FAMILY: 'Courier New'"> 
+      Syncfusion.Windows.Tools.Controls;</span></p></td></tr></tbody></table>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">5.   Click and open 
+the C# file. Add AutoComplete to the application.</p>
+<p style="MARGIN: 6pt 0pt 0pt 36pt" class="MsoNormalCxSpFirst"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 47pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; HEIGHT: 47pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p style="MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">AutoComplete</span><span style="FONT-FAMILY: 'Courier New'"> AutoComplete1 = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">AutoComplete</span>();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">List</span><span style="FONT-FAMILY: 'Courier New'">&lt;<span style="COLOR: #2b91af">String</span>&gt; ProductSource = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">List</span>&lt;<span style="COLOR: #2b91af">String</span>&gt;();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"WPF"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Chart"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"GridView"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"WF"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Xlsio"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Business Intelligence"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Tools"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Silverlight"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Schedule"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Mvc"</span>);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">customSource.Add(<span style="COLOR: #a31515">"Pdf"</span>);</span></p>
+      <p style="MARGIN-TOP: 6pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">this</span><span style="FONT-FAMILY: 'Courier New'">.AutoComplete1.CustomSource = 
+      ProductSource;</span></p></td></tr></tbody></table>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image30_16.png" alt="" /></p>
+<p class="MsoCaption">Figure 12: AutoComplete Created Using C# </p>
+<p style="TEXT-ALIGN: center; MARGIN-TOP: 6pt" class="MsoNormal" align="center"><b><span style="FONT-FAMILY: 'Myriad Pro','sans-serif'"></span></b> </p><span id="related-topics"></span></div></body></html>

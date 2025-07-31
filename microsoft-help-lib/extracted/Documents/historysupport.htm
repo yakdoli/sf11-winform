@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>History Support</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="94597973-dccc-4437-ad33-85768badfaa7" />
+<meta name="Title" content="History Support" /><link rel="stylesheet" type="text/css" href="../Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="../Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="../LinksExt/tools2.css" />
+<script id="d2h_main_script" language="JavaScript" src="../DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="../">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4>History Support</h4>
+<p class="BodyText1">History support in AutoComplete means, reusage of the items 
+which are already used in the AutoComplete textbox. AutoComplete allows you to 
+enable this history support by setting the value of the <b>IsHistory</b> 
+property as True. AutoComplete guides you to select an item from the list of 
+items which are added to the history, by using the drop-down button to open the 
+drop-down list.</p>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Adding History Support to an Application </p>
+<p class="BodyText1">Items can be added to the history using the 
+<b>AddToHistory(String str)</b> and <b>AddToHistory(Object obj)</b> methods, 
+only if that items are present in the data source used with the AutoComplete. 
+Also, it supports to save the history while closing the application and to load 
+the history while opening the application using the <b>SaveHistory() </b>and 
+<b>LoadHistory()</b> methods. </p>
+<p class="BodyText1">The below mentioned code snippet can be used to attain these 
+functionalities.</p>
+<p style="MARGIN-TOP: 6pt" class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: teal">AutoComplete</span><span style="FONT-FAMILY: 'Courier New'"> autoComplete1 = <span style="COLOR: blue">new</span> <span style="COLOR: teal">AutoComplete</span>();</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.Loaded += <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RoutedEventHandler</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">(</span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">_Loaded);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">void</span><span style="FONT-FAMILY: 'Courier New'"> </span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">_Loaded(<span style="COLOR: blue">object</span> sender, <span style="COLOR: #2b91af">RoutedEventArgs</span> e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">if</span> (</span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">!= <span style="COLOR: blue">null</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                
+      </span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.LoadHistory();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.SelectionChanged +=</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">   
+      new</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: #2b91af">SelectionChangedEventHandler</span>(</span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">_SelectionChanged);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">void</span> 
+      </span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">_SelectionChanged(<span style="COLOR: blue">object</span> sender, </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                             
+      <span style="COLOR: #2b91af">SelectionChangedEventArgs</span> 
+e)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">     
+      </span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.AddHistory(</span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.SelectedItem);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">     
+      </span><span style="FONT-FAMILY: 'Courier New'">autoComplete1</span><span style="FONT-FAMILY: 'Courier New'">.SaveHistory();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      }</span><span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"></span></p></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Tables for properties, and methods, </p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Properties</p>
+<p class="MsoCaption">Table 11: Property Table for History support</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="616">
+  <tbody>
+  <tr style="HEIGHT: 4.65pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableHeading">Property </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 103.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="138">
+      <p class="TableHeading">Data Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.2pt; PADDING-RIGHT: 5.4pt; HEIGHT: 4.65pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108">
+      <p class="TableHeading">Reference links </p></td></tr>
+  <tr style="HEIGHT: 44.35pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableText">IsHistory</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableText">Gets or sets the value of IsHistory of the 
+      AutoComplete.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.45pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableText">DependencyProperty</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 103.7pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="138">
+      <p class="TableText">bool(true)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 81.2pt; PADDING-RIGHT: 5.4pt; HEIGHT: 44.35pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="108"></td></tr></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Methods</p>
+<p class="MsoCaption">Table 12: MethodsTable for History</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="613">
+  <thead>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 10.7pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableHeading">Method </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableHeading">Description </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableHeading">Parameters </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableHeading">Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableHeading">Return Type </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 10.7pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86">
+      <p class="TableHeading">Reference links </p></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">AddHistory()</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableText">It should be called to add an item to the history.</p>
+      <p class="TableText">It can be called at any time.</p>
+      <p class="TableText">This method will add an input string to the history 
+      list if IsHistoryEnabled property is set as Ture and these items will only 
+      be displayed in the History list which can be opened using the drop-down 
+      button. </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableText">(String str)</p>
+      <p class="TableText"> </p>
+      <p class="TableText">The input string must be there in linked Custom 
+      Source.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableText">NA.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableText">Void</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86"></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">AddHistory()</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableText">It should be called to add an item to the history.</p>
+      <p class="TableText">It can be called at any time.</p>
+      <p class="TableText">This method will add the input object to the history 
+      list if IsHistoryEnabled property is set as Ture. These items will only be 
+      displayed in the History list which can be opened using the drop-down 
+      button. </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123">
+      <p class="TableText">(Object obj)</p>
+      <p class="TableText"> </p>
+      <p class="TableText">The input object must be there in linked Custom 
+      Source.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableText">NA.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableText">Void</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86"></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">SaveHistory()</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableText">It should be called if you want to save the history 
+      before closing the application.</p>
+      <p class="TableText">It can be called while closing the application.</p>
+      <p class="TableText">This method will save the History list in an isolated 
+      storage. </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123"></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableText">NA</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableText">Void</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86"></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">LoadHistory()</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableText">It should be called if you want to load the history 
+      while loading the application which is already saved.</p>
+      <p class="TableText">It can be called while loading the application.</p>
+      <p class="TableText">This method will load the history list from an isolated 
+      storage to be used in the application.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123"></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableText">NA</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableText">Void</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86"></td></tr>
+  <tr style="PAGE-BREAK-INSIDE: avoid; HEIGHT: 61.05pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 68.15pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="91">
+      <p class="TableText">ClearAllHistory()</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 128.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="172">
+      <p class="TableText">This should be called if you want to clear all the 
+      saved history.</p>
+      <p class="TableText">It can be called at any time.</p>
+      <p class="TableText">This method will clear the entire history list loaded 
+      from an isolated storage.</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 92.1pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="123"></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 42.55pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="57">
+      <p class="TableText">NA</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 63.8pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="85">
+      <p class="TableText">Void</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 64.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 61.05pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="86"></td></tr></thead>
+  <tbody></tbody></table>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal"><b></b> </p>
+<p class="BodyTextHeading">Sample Link</p>
+<p class="BodyText1">SilverlightSampleBrowser-&gt; Tools -&gt; Editors -&gt; 
+AutoComplete Demo</p><span id="related-topics"></span></div></body></html>

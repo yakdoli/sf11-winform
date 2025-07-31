@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Fill Settings</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="4b6a352a-a560-4c1c-8601-fa32614acb39" />
+<meta name="Title" content="Fill Settings" />
+<meta name="Microsoft.Help.TocParent" content="6f5e3b42-b1ca-42dc-a84b-b9ea2f240a11" />
+<meta name="Microsoft.Help.TocOrder" content="4" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="tab-stops: 0pt">Fill Settings</h4>
+<p class="BodyText1"> </p>
+<p class="BodyText1">This section illustrates the fill settings available in 
+Excel.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Color</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">MS Excel provides support to format its cells, rows, and 
+columns with various colors and patterns. This can be done by using the <b>Fill 
+Color</b> button and an associated palette.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_47.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 42: Format Cells Dialog Box<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">A color is a 4-byte number of the format 00BBGGRR, where RR, 
+GG, and BB values are the Red, Green, and Blue values, each of which is between 
+0 and 255 (&amp;HFF). If all component values are 0, the RGB color is 0, which 
+is black. If all component values are 255 (&amp;HFF), the RGB color is 16,777, 
+215 (&amp;H00FFFFF), or white. All other color combinations of values for the 
+red, green, and blue components.</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Color Pallet</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">Excel supports colors for fonts and background fills through 
+what is called the <b>Color Pallet</b>. The Pallet is an array or series of 56 
+RGB colors. The value of each of those 56 colors may be any of the 16 million 
+available colors, but the Pallet, and thus the number of distinct colors in a 
+workbook, is limited to 56 colors. The RGB values in the Pallet are accessed by 
+the <b>ColorIndex</b> property. The ColorIndex is an offset or index in the 
+Pallet, and thus has a value between 1 and 56. In the default, unmodified 
+Pallet, the 3rd element in the Pallet is the RGB value 255 (&amp;HFF), which is 
+red.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">When you format a cell's background to red, for example, you 
+are actually assigning to the <b>ColorIndex</b> property of the Interior a value 
+of 3. Excel reads the 3 in the ColorIndex property, and goes to the 3rd element 
+of the Pallet to get the actual RGB color. If you modify the Pallet, say by 
+changing the 3rd element from red (255 = &amp;HFF) to blue (16,711,680 = 
+&amp;HFF0000), all items that were once red are changed to blue. This is because 
+the value of the 3rd element in the Pallet has been changed from red to blue, 
+while the ColorIndex property remains equal to 3.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">You can change the values in the default pallet by modifying 
+the Colors array of the workbook. You can also get the colors in the palette by 
+using the <b>Palette </b>property.</p>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Colors in XlsIO</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO provides support for adding new colors to the color 
+palette that are not available in the standard MS Excel color palette, by using 
+the <b>SetPaletteColor </b>method. If you have modified as workbook's Pallet, 
+you can reset the pallet back to the default values, by using the 
+<b>ResetPalette</b> method.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">The following code example illustrates how to set the color 
+palette.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Creating color 
+      palette.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[] known = Enum.GetNames( 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">typeof</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( KnownColor ) 
+      );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">Color[] palette = 
+      workbook.Palette;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> i = ( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      )ExcelKnownColors.Custom0; i &lt; palette.Length; i++ )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      KnownColor </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> = ( KnownColor 
+      )Enum.Parse( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">typeof</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( KnownColor ), known[i] 
+      );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      workbook.SetPaletteColor( i, Color.FromKnownColor( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">value</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> ) );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">palette = 
+      workbook.Palette;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> pos = 0;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> j=1; j&lt;100; j++ 
+      )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">for</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">int</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> i=1; i&lt;=3; i++ 
+      )</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: black"> {</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      ExcelKnownColors knownEnm = (ExcelKnownColors)pos;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      sheet.Range[ j, i ].CellStyle.ColorIndex = knownEnm;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+                sheet.Range[ 
+      j, i ].Text = palette[ pos ].Name + ", " +</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">string</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.Format( 
+      "R{0}:G{1}:B{2}:A{3}", palette[ pos ].R, </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">palette[ pos 
+      ].G, palette[ pos ].B, palette[ pos ].A );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">                
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">pos++;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">     
+                 </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( pos &gt;= 
+      palette.Length ) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">break</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">if</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">( pos &gt;= 
+      palette.Length ) </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">break</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">} 
+  </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Creating color 
+      palette.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> known </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">() = 
+      System.Enum.GetNames(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">GetType</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">(KnownColor))</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> palette </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Color() = 
+      workbook.Palette</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: black">i</span> 
+      <span style="COLOR: blue">As Integer</span><span style="COLOR: black"> = 
+      </span><span style="COLOR: blue">CInt</span><span style="COLOR: black">(ExcelKnownColors.Custom0)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Do While </span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">i &lt; 
+      palette.Length</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">Dim</span> <span style="COLOR: black">value</span> <span style="COLOR: blue">As</span> 
+      <span style="COLOR: black">KnownColor</span> = <span style="COLOR: blue">CType</span><span style="COLOR: black">(System.Enum.Parse(</span><span style="COLOR: blue">GetType</span><span style="COLOR: black">(KnownColor), 
+      known(i)), KnownColor)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: black"> workbook.SetPaletteColor(i, 
+      Color.FromKnownColor(value))</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      i += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Loop</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">palette = 
+      workbook.Palette</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Dim</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: black">pos</span> 
+      <span style="COLOR: blue">As Integer</span> <span style="COLOR: black">= 
+      0</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">For</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: black">j</span> 
+      <span style="COLOR: black">As Integer</span> <span style="COLOR: black">= 
+      1</span> <span style="COLOR: blue">To</span> <span style="COLOR: blue">99</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">For</span> <span style="COLOR: blue">i = 1</span> 
+      <span style="COLOR: blue">To</span> <span style="COLOR: black">3</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: black"> </span><span style="COLOR: blue">Dim</span><span style="COLOR: black"> knownEnm 
+      </span><span style="COLOR: blue">As</span><span style="COLOR: black"> 
+      ExcelKnownColors = </span><span style="COLOR: blue">CType</span><span style="COLOR: black">(pos, ExcelKnownColors)</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      sheet.Range(j, i).CellStyle.ColorIndex = knownEnm</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      sheet.Range(j, i).Text = palette(pos).Name &amp; ", " &amp; </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">String</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.Format("R{0}:G{1}:B{2}:A{3}", 
+      palette(pos).R, palette(pos).G, palette(pos).B, palette(pos).A)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      pos += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">If</span> <span style="COLOR: black">pos &gt;= 
+      palette.Length</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">           
+      <span style="COLOR: blue"> Exit For</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">        
+      End If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">   
+       Next</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: black">i</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">If</span><span style="COLOR: black"> pos &gt;= 
+      palette.Length</span> <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">       
+      <span style="COLOR: blue"> Exit For</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">    End 
+      If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Next</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">j</span> 
+      </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span></b> </p>
+<p class="BodyText1">XlsIO also enables to get or set the closest RGB color in the 
+pallet by using the <b>SetColorOrGetNearest</b> method. It returns the 
+ColorIndex value of the color in the Pallet, that is closest to a given RGBLong 
+color value. The method used here considers every RGB color to be a spatial 
+location in a 3-dimensional space, where the axes are Red, Green, and Blue 
+components of an RGB Long value. "Closest" is taken in the geometrical sense, 
+the distance between two colors in a 3-dimensional space with axes of Red, 
+Green, and Blue values, that is, a color is identified spatially by the values 
+of the Red, Green, and Blue components. The distances between the spatial 
+location of RGBLong and each Color of the pallet is computed and the ColorIndex 
+that minimizes this distance is returned. The distance between RGBLong and each 
+Color(ColorIndex) value is computed by the simple Pythagorean distance (without 
+Square root):</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Dist = ( (R1-R2)^2  + (G1-G2)^2 + (B1-B2)^2 )</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">where R1, G1, and B1 are the components of RGBLong and R2, 
+G2, and B2 are the components of each Color(ColorIndex) value.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1"><b>Pattern</b></p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel provides various pattern styles for highlighting cells. 
+These can be applied through the <b>Pattern</b> tab in the <b>Format Cells</b> 
+dialog box.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO includes APIs to specify the above <b>background</b> 
+pattern for a cell. The following code example illustrates this.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting the Pattern 
+      Types.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range["A2"].CellStyle.FillPattern 
+      = ExcelPattern.Angle;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range["A4"].CellStyle.FillPattern 
+      = ExcelPattern.DarkDownwardDiagonal;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Setting the Pattern 
+      Color.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range["A2"].CellStyle.FillBackground 
+      = ExcelKnownColors.Aqua;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range["A4"].CellStyle.FillBackground 
+      = ExcelKnownColors.Pale_blue;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 3.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting the Pattern 
+      Types.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range("A2").CellStyle.FillPattern 
+      = ExcelPattern.Angle</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range("A4").CellStyle.FillPattern 
+      = ExcelPattern.DarkDownwardDiagonal</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Setting the Pattern 
+      Color.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range("A2").CellStyle.FillBackground 
+      = ExcelKnownColors.Aqua</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.Range("A4").CellStyle.FillBackground 
+      = ExcelKnownColors.Pale_blue</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_48.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 43: Excel with Different Fill Patterns<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

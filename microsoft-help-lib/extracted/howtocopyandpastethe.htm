@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Copy and Paste the Displayed Text</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="6e77c91f-d3aa-4ab4-8fad-5fdd7a4f0f81" />
+<meta name="Title" content="How to Copy and Paste the Displayed Text" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/spreadsheet2.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h4 style="TEXT-ALIGN: justify; tab-stops: 0pt">How to Copy and Paste the 
+Displayed Text</h4>
+<p style="LINE-HEIGHT: 115%" class="BodyText11">By default, when you copy and 
+paste the formula cell, the Spreadsheet control will the copy and paste the 
+formula from the particular cell. To copy and paste the display text you have to 
+handle the <b>ClipboardCopy</b> event of the underlying grid control. You can 
+get all the Grid controls in the <b>WorkBookLoaded</b> event of the spreadsheet 
+control.</p>
+<p style="LINE-HEIGHT: 115%" class="BodyText11">The following code is used to copy 
+and paste only the display text.</p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: blue">void</span><span style="COLOR: black"> spreadsheetControl_WorkBookLoaded(</span><span style="COLOR: blue">object</span><span style="COLOR: black"> sender, </span><span style="COLOR: #2b91af">WorkbookLoadedEventArgs</span><span style="COLOR: black"> args)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">{</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: blue">foreach</span><span style="COLOR: black"> (</span><span style="COLOR: blue">var</span><span style="COLOR: black"> grid </span><span style="COLOR: blue">in</span><span style="COLOR: black"> args.GridCollection)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">        grid.Model.GridCopyPaste = </span><span style="COLOR: blue">null</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">        grid.Model.ClipboardCopy += </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: #2b91af">GridCutPasteEventHandler</span><span style="COLOR: black">(Model_ClipboardCopy);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">}</span></pre>
+      <p style="LINE-HEIGHT: 115%; BACKGROUND: #f2f2f2" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: blue">void</span><span style="COLOR: black"> Model_ClipboardCopy(</span><span style="COLOR: blue">object</span><span style="COLOR: black"> sender, </span><span style="COLOR: #2b91af">GridCutPasteEventArgs</span><span style="COLOR: black"> e)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">{</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: #2b91af">GridRangeInfoList</span><span style="COLOR: black"> rowRanges = e.RangeList.GetRowRanges(</span><span style="COLOR: #2b91af">GridRangeInfoType</span><span style="COLOR: black">.Cells | </span><span style="COLOR: #2b91af">GridRangeInfoType</span><span style="COLOR: black">.Rows);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: #2b91af">GridRangeInfoList</span><span style="COLOR: black"> colRanges = e.RangeList.GetColRanges(</span><span style="COLOR: #2b91af">GridRangeInfoType</span><span style="COLOR: black">.Cells | </span><span style="COLOR: #2b91af">GridRangeInfoType</span><span style="COLOR: black">.Cols);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: blue">var</span><span style="COLOR: black"> sb = </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: #2b91af">StringBuilder</span><span style="COLOR: black">();</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: blue">int</span><span style="COLOR: black"> nrowsdone = 0; </span><span style="COLOR: blue">int</span><span style="COLOR: black"> ncolsdone = 0;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: blue">string</span><span style="COLOR: black"> tabDelim = </span><span style="COLOR: #a31515">"\t"</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> rowindex = 0; rowindex &lt; rowRanges.Count; rowindex++)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">        </span><span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> nrow = rowRanges[rowindex].Top; nrow &lt;= rowRanges[rowindex].Bottom; nrow++)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">        {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (nrowsdone &gt; 0)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                sb.Append(</span><span style="COLOR: #2b91af">Environment</span><span style="COLOR: black">.NewLine);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            ncolsdone = 0;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            </span><span style="COLOR: blue">bool</span><span style="COLOR: black"> firstCol;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            firstCol = </span><span style="COLOR: blue">true</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            </span><span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> colindex = 0; colindex &lt; colRanges.Count; colindex++)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                </span><span style="COLOR: blue">for</span><span style="COLOR: black"> (</span><span style="COLOR: blue">int</span><span style="COLOR: black"> ncol = colRanges[colindex].Left; ncol &lt;= colRanges[colindex].Right; ncol++)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (!firstCol)</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                        sb.Append(tabDelim);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    </span><span style="COLOR: blue">string</span><span style="COLOR: black"> text = </span><span style="COLOR: blue">this</span><span style="COLOR: black">.spreadsheetControl.GridProperties.CurrentExcelGridModel[nrow, ncol].FormattedText;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    </span><span style="COLOR: blue">if</span><span style="COLOR: black"> (!e.RangeList.AnyRangeContains(</span><span style="COLOR: #2b91af">GridRangeInfo</span><span style="COLOR: black">.Cell(nrow, ncol)))</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    {</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                        ncolsdone++;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                        </span><span style="COLOR: blue">continue</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    text = </span><span style="COLOR: blue">new</span><span style="COLOR: black"> </span><span style="COLOR: #2b91af">StringBuilder</span><span style="COLOR: black">(text).ToString().Trim();</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    </span><span style="COLOR: green">// Append the Cell value to buffer text</span><span style="COLOR: black"></span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    sb.Append(text);</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    firstCol = </span><span style="COLOR: blue">false</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                    ncolsdone++;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">                }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">            nrowsdone++;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">        }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    }</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    </span><span style="COLOR: #2b91af">Clipboard</span><span style="COLOR: black">.SetText(sb.ToString());</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    e.DataObject = </span><span style="COLOR: blue">null</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">    e.Handled = </span><span style="COLOR: blue">true</span><span style="COLOR: black">;</span></pre><pre style="BACKGROUND: #f2f2f2"><span style="COLOR: black">}</span><span style="FONT-FAMILY: Consolas; COLOR: black"></span></pre>
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"> </p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><i></i></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      spreadsheetControl_WorkBookLoaded(<span style="COLOR: blue">ByVal</span> 
+      sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span> 
+      args <span style="COLOR: blue">As</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">WorkbookLoadedEventArgs</span><span style="FONT-FAMILY: 'Courier New'">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">For</span> <span style="COLOR: blue">Each</span> <span style="COLOR: blue">Dim</span> grid <span style="COLOR: blue">In</span> 
+      args.GridCollection</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      grid.Model.GridCopyPaste = <span style="COLOR: blue">Nothing</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">AddHandler</span> grid.Model.ClipboardCopy, 
+      <span style="COLOR: blue">AddressOf</span> Model_ClipboardCopy</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Next</span> grid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Private</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span> 
+      Model_ClipboardCopy(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span> <span style="COLOR: blue">Object</span>, 
+      <span style="COLOR: blue">ByVal</span> e <span style="COLOR: blue">As</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridCutPasteEventArgs</span><span style="FONT-FAMILY: 'Courier New'">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> rowRanges <span style="COLOR: blue">As</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoList</span><span style="FONT-FAMILY: 'Courier New'"> = 
+      e.RangeList.GetRowRanges(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoType</span><span style="FONT-FAMILY: 'Courier New'">.Cells <span style="COLOR: blue">Or</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoType</span><span style="FONT-FAMILY: 'Courier New'">.Rows)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> colRanges <span style="COLOR: blue">As</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoList</span><span style="FONT-FAMILY: 'Courier New'"> = 
+      e.RangeList.GetColRanges(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoType</span><span style="FONT-FAMILY: 'Courier New'">.Cells <span style="COLOR: blue">Or</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">GridRangeInfoType</span><span style="FONT-FAMILY: 'Courier New'">.Cols)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> sb = <span style="COLOR: blue">New</span> 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">StringBuilder</span><span style="FONT-FAMILY: 'Courier New'">()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> nrowsdone <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> ncolsdone <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Dim</span> tabDelim <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      Constants.vbTab</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">For</span> rowindex <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 0 
+      <span style="COLOR: blue">To</span> rowRanges.Count - 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">For</span> nrow <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      rowRanges(rowindex).Top <span style="COLOR: blue">To</span> 
+      rowRanges(rowindex).Bottom</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">If</span> nrowsdone &gt; 0 <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      sb.Append(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Environment</span><span style="FONT-FAMILY: 'Courier New'">.NewLine)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      ncolsdone = 0</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Dim</span> firstCol <span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      firstCol = <span style="COLOR: blue">True</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">For</span> colindex <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 0 
+      <span style="COLOR: blue">To</span> colRanges.Count - 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">For</span> ncol <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span> = 
+      colRanges(colindex).Left <span style="COLOR: blue">To</span> 
+      colRanges(colindex).Right</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">If</span> (<span style="COLOR: blue">Not</span> 
+      firstCol) <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                    
+      sb.Append(tabDelim)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">Dim</span> text <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span> = 
+      <span style="COLOR: blue">Me</span>.spreadsheetControl.GridProperties.CurrentExcelGridModel(nrow, 
+      ncol).FormattedText</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">If</span> (<span style="COLOR: blue">Not</span> 
+      e.RangeList.AnyRangeContains(GridRangeInfo.Cell(nrow, ncol))) <span style="COLOR: blue">Then</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                    
+      ncolsdone += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                                    
+      <span style="COLOR: blue">Continue</span> <span style="COLOR: blue">For</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      text = <span style="COLOR: blue">New</span> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">StringBuilder</span><span style="FONT-FAMILY: 'Courier New'">(text).ToString().Trim()</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      <span style="COLOR: green">' Append the Cell value to buffer 
+      text</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      sb.Append(text)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      firstCol = <span style="COLOR: blue">False</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                              
+      ncolsdone += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                        
+      <span style="COLOR: blue">Next</span> ncol</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      <span style="COLOR: blue">Next</span> colindex</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">                  
+      nrowsdone += 1</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: blue">Next</span> nrow</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      <span style="COLOR: blue">Next</span> rowindex</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">Clipboard</span><span style="FONT-FAMILY: 'Courier New'">.SetText(sb.ToString())</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      e.DataObject = <span style="COLOR: blue">Nothing</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">      
+      e.Handled = <span style="COLOR: blue">True</span></span></p>
+      <p style="LINE-HEIGHT: 115%" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End</span><span style="FONT-FAMILY: 'Courier New'"> <span style="COLOR: blue">Sub</span></span><b><span style="FONT-FAMILY: 'Courier New'"></span></b></p></td></tr></tbody></table>
+<p style="LINE-HEIGHT: 115%; MARGIN-BOTTOM: 10pt" class="MsoNormal"> </p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

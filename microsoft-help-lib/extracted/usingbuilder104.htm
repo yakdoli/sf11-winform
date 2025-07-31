@@ -1,0 +1,437 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using Builder</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="dd40ad7e-9d80-4a68-9fcf-e8828965dc42" />
+    <meta name="Title" content="Using Builder" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/Tools6.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h5 style="tab-stops: 0pt">Using Builder</h5>
+      <p class="BodyText1">The following steps guide in handling client side events 
+through Builder:</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">1.   In <b>View</b>, 
+invoke the menu helper with menu ID as the first argument and enable the 
+<b>ClientSideOnCreate</b>, <b>ClientSideOnClick, ClientSideOnMouseDown, 
+ClientSideOnMouseUp, ClientSideOnMouseHover</b> and <b>ClientSideOnMouseOut 
+</b>with the respective handlers as:</p>
+      <p class="MsoNormalCxSpFirst"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 1.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 473.05pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+              <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.MobSyncfusion().Menu(<span style="COLOR: #a31515">"EventsMenu"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      .ClientSideEvents(events=&gt;events</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      .ClientSideOnCreate(<span style="COLOR: #a31515">"onCreate"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      .ClientSideOnClick(<span style="COLOR: #a31515">"onClick"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      .Items(items =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"FaceBook"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/Facebook.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">  
+                                   child.Add().Text(<span style="COLOR: #a31515">"Home Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Log on"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"Twitter"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/twitter.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Home 
+      Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"Google"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/Google.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                           
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Home 
+      Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Gmail"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Orkut"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"Maps"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                               
+      child.Add().Text(<span style="COLOR: #a31515">"News"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+       });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"YouTube"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/youtube.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"Books"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/book.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      items.Add().Text(<span style="COLOR: #a31515">"Games"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/game.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                   
+      })<span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+              <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+        <b></b> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 1.25pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 473.05pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+              <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">   <span style="BACKGROUND: yellow">@{</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      Html.MobSyncfusion().Menu(<span style="COLOR: #a31515">"EventsMenu"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">           
+      .ClientSideEvents(events =&gt; events</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      .ClientSideOnCreate(<span style="COLOR: #a31515">"onCreate"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      .ClientSideOnClick(<span style="COLOR: #a31515">"onClick"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                       
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      .Items(items =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"FaceBook"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/Facebook.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Home 
+      Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Log on"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"Twitter"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/twitter.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">      
+                    {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Home 
+      Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"Google"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/Google.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      .Children(child =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Home 
+      Page"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Gmail"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Orkut"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"Maps"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      child.Add().Text(<span style="COLOR: #a31515">"News"</span>);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                    
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"YouTube"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/youtube.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"Books"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/book.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                
+      items.Add().Text(<span style="COLOR: #a31515">"Games"</span>).ImageUrl(<span style="COLOR: #a31515">"~/Content/Menu/Images/game.png"</span>).ImageAttributes(<span style="COLOR: blue">new</span> { @class = <span style="COLOR: #a31515">"menu-img"</span> });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">             
+         .Render();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+        <b></b> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   Define the call 
+back methods in the script to handle the specified events.<b></b></p>
+      <p class="MsoNormalCxSpFirst">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+        </b> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 473.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 0.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 473.05pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="631">
+              <p style="MARGIN-LEFT: 36pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Javascript]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">script</span><span style="COLOR: red">type</span><span style="COLOR: blue">="text/javascript"&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">function</span> onCreate(inst) {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//inst - menu object</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      <span style="COLOR: blue">function</span> onClick(inst, args) {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//inst - instance of menu 
+      object</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//args :    
+      args.element   - current menu item </span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//          
+      args.value            
+      - menu id</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+      <span style="COLOR: darkgreen">//          
+      args.text          - text of 
+      the current menu item </span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">        
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">script</span><span style="COLOR: blue">&gt;</span></span>
+              </p>
+              <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast">
+        <b>
+          <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span>
+        </b> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   Run the 
+application.<b></b></p>
+      <p class="MsoNormal">
+        <b>
+          <span style="FONT-SIZE: 12pt"></span>
+        </b> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>

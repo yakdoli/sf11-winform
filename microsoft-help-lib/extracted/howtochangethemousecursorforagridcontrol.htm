@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>How to Change the Mouse Cursor for a GridControl</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="7a624028-799a-4168-bb0f-e0035bb9a49b" />
+<meta name="Title" content="How to Change the Mouse Cursor for a GridControl" />
+<meta name="Microsoft.Help.TocParent" content="d7132129-5014-47d6-9419-88a1e83d196a" />
+<meta name="Microsoft.Help.TocOrder" content="5" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/grid3.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=197230b0-d026-42aa-8347-89bcf8ef169a"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=2b5ad8af-2393-4d02-9022-a134a801f33e"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e60759d8-47a4-4570-9d7a-16a68d63f2ea">Essential 
+Windows</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Grid</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=28ff22ed-2523-4bf9-8f6c-4d94f7bcabcc">Frequently Asked 
+Questions</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=d7132129-5014-47d6-9419-88a1e83d196a">Common to 
+GridControl, GridDataBoundGrid and GridGrouping</a></div>
+<h3 style="tab-stops: 0pt">How to Change the Mouse Cursor for a GridControl</h3>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Introduction</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">The simplest way is to derive the grid and override the 
+<b>OnSetCursor</b>. You can add additional checks to narrow down where to set 
+the cursor.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyTextHeading">Example</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr style="HEIGHT: 8.25pt">
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; HEIGHT: 8.25pt; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// 
+      GridDataBoundGrid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">  public 
+      class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      MyGridControl : GridControl </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">  {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">        
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> protected override 
+      void</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      OnSetCursor(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ref</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Message m)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">         
+      {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">              
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">base</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.OnSetCursor(ref 
+      m);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">          
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">    // 
+      Always set the cursor to a cross.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">              
+      Cursor.Current = Cursors.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">     // 
+      or</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // Put special cursor over cell 2,2.</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // Point pt = this.PointToClient(Control.MousePosition);</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // int row, col;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // if(this.PointToRowCol(pt, out row, out col, -1)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      //        &amp;&amp; row == 2 
+      &amp;&amp; col == 2)</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // {</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      //        Cursor.Current = 
+      Cursors.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">              
+      // }</span></p>
+      <p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 12pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">          
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">}</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 465.75pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="621">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; COLOR: black">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">   Public 
+      Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      MyGridControl</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">       
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">Inherits</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> GridControl 
+      'GridDataBoundGrid</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> Protected Overrides 
+      Sub</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+      OnSetCursor(</span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">ByRef</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> m </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">As</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> Message)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">           
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">MyBase</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">.OnSetCursor(m)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">         
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: green">  ' Always set 
+      the cursor to a cross.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      Cursor.Current = Cursors.Cross</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      ' OR</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      ' Put special cursor over cell 2,2.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      ' Point pt = this.PointToClient(Control.MousePosition);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      ' int row, col;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">   
+              ' If Me.PointToRowCol(pt, 
+      row, col, -1) AndAlso row = 2 AndAlso col = 2 Then</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      '        Cursor.Current = 
+      Cursors.Cross;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">           
+      ' End If</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">      
+      ' OnSetCursor </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">      
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"> End Sub 
+      </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">   ' 
+      MyGridControl </span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">End Class</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><a name="p612" id="p612"></a> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

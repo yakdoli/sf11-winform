@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Cell Visibility</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="5b6007b8-0c94-41a9-8c7c-eb042e42c356" />
+<meta name="Title" content="Cell Visibility" />
+<meta name="Microsoft.Help.TocParent" content="ce58e815-1bc5-4b7c-85f7-37c55c481f57" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/XlsIO.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Cell Visibility</h5>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">Controlling the visibility of a cell is one of the most 
+useful features in MS Excel. It allows to show/hide the rows and columns 
+according to the needs of the user, and produce fairly readable content, when 
+there is large data in the worksheet.</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Following section explains the support provided by XlsIO to 
+hide/unhide sheets and rows/columns.</p>
+<p class="BodyText1"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt"><a name="p60" id="p60"></a>4.1.3.3.2.1 Hide/Unhide Rows and 
+Columns</h6>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel allows to hide a row/column by using the Hide command, 
+but a row or column also becomes hidden when you change its row height or column 
+width to zero. Also, you can show a hidden row/column by using the Unhide 
+command.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_70.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 65: Hiding a row<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Hiding and Unhiding Rows in XlsIO</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO provides support for hiding/unhiding rows and columns. 
+This can be done by using <b>ShowRow</b> and <b>ShowColumn</b> methods.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hiding the First 
+      Column and Second Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 1, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hiding the Fifth 
+      Column and Fifth Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Unhiding the Fifth 
+      Column and Second Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> 
+  );</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Hiding the First Column 
+      and Second Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(1, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Hiding the Fifth Column 
+      and Fifth Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">' Unhiding the Fifth 
+      Column and Second Row.</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_71.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 66: Worksheet with a hidden row</p>
+<p class="BodyText1"> </p>
+<p class="BodyText1">XlsIO also provides options to provide focus to a particular 
+row/column, when it is opened by using the <b>TopVisibleRow</b> and<b> 
+LeftVisibleColumn</b> properties respectively.</p>
+<p class="BodyText1"> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Scrolls to 40th 
+      row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.TopVisibleRow = 40;</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Scrolls to 7 column 
+      when opening</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.LeftVisibleColumn = 7;  
+      </span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Scrolls to 40th 
+      row</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.TopVisibleRow = 40</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Scrolls to 7 column when 
+      opening</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.LeftVisibleColumn = 
+    7</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyText1">This is especially useful, when the spreadsheet has large 
+number of records, and the user wants to view a particular row/column that has 
+some details, without scrolling to that row/column after opening it. Note that 
+these row and column indexes are "one based<b>"</b>.</p>
+<p class="BodyText1"> </p>
+<h6 style="tab-stops: 0pt"><a name="p61" id="p61"></a>4.1.3.3.2.2 Hide/Unhide 
+Worksheet</h6>
+<p class="BodyText1"> </p>
+<p class="BodyText1">Excel has the sheet tab bar that appears at the bottom of the 
+screen with tab scrolling buttons displayed on the left side. Excel provides an 
+option to show/hide a sheet from the user view. This is done by selecting the 
+"Hide" item in the context menu of the sheet.</p>
+<p class="BodyText1"> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_72.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 67: Hiding a Worksheet<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyTextHeading">Hiding and Unhiding a Worksheet in XlsIO</p>
+<p class="BodyTextHeading"> </p>
+<p class="BodyText1">XlsIO also allows to hide/unhide worksheets by using the 
+<b>Visibility</b> property. Following APIs are used to hide/unhide 
+worksheets.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Visibility = <span style="COLOR: teal">WorksheetVisibility</span>.Hidden;</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Visibility = <span style="COLOR: teal">WorksheetVisibility</span>.Hidden</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="Figure"><img border="0" src="ImagesExt/image47_73.jpg" alt="" /></p>
+<p class="MsoCaption">Figure 68: Hidden Worksheet<span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b"></span></p>
+<p style="TEXT-ALIGN: center; TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal" align="center"><span style="FONT-FAMILY: 'Courier New'; COLOR: black; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">You can also hide all the tabs in the worksheet by using the 
+<b>DisplayWorkbookTabs</b> option in the IWorkbook.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<p class="BodyText1">XlsIO also provides an option to activate a worksheet, while 
+opening it in the workbook, which is equivalent to clicking a worksheet in MS 
+Excel. This is done by using the <b>Activate</b> method.</p>
+<p style="TEXT-AUTOSPACE: ; MARGIN-LEFT: 9pt" class="MsoNormal"><b><span style="COLOR: black"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Activate();</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"></span> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.Activate()</span></p></td></tr></tbody></table>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<h6 style="tab-stops: 0pt">4.1.3.3.2.3 Adding Feature to show or hide a 
+particular range of rows/columns </h6>
+<p style="LINE-HEIGHT: 12pt; MARGIN-BOTTOM: 2pt" class="MsoNormal"><b></b> </p>
+<p style="LINE-HEIGHT: 12pt; MARGIN-BOTTOM: 2pt" class="MsoNormal"><b>Hiding and 
+Unhiding Rows in XlsIO</b></p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal">XlsIO provides support for 
+hiding/unhiding rows and columns. This can be done by using <b>ShowRow</b>, 
+<b>ShowColumn and ShowRange</b> methods as shown in the following code 
+snippet:</p>
+<p style="LINE-HEIGHT: 12pt" class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[C#]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hiding the First 
+      Column and Second Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 1, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Hiding the Fifth 
+      Column and Fifth Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">false</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">// Unhiding the Fifth 
+      Column and Second Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn( 5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow( 2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">true</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black"> );</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> range = sheet[1, 4];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Hiding the first to 
+      thrid row and first to thrid column</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.ShowRange(range, <span style="COLOR: blue">false</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> firstRange = ws[1, 1,3,3];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> secondRange = ws[5, 5, 7, 
+      7];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">RangesCollection</span><span style="FONT-FAMILY: 'Courier New'"> rangeCollection = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RangesCollection</span>(app, ws);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rangCollection.Add(firstRange);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rangeCollection.Add(secondRange);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Hiding the collection 
+      of ranges</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ws.ShowRange(rangeCollection, <span style="COLOR: blue">false</span>);</span></p></td></tr></tbody></table>
+<p class="MsoNormal"> </p>
+<table style="BORDER-COLLAPSE: collapse; MARGIN-LEFT: 3.75pt" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 3pt; PADDING-LEFT: 3pt; WIDTH: 468pt; PADDING-RIGHT: 3pt; BACKGROUND: #efefef; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 3pt" valign="top" width="624">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'">[VB.NET]</span></b></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Hiding the First Column 
+      and Second Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(1, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Hiding the Fifth Column 
+      and Fifth Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">False</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"> </p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">'Unhiding the Fifth 
+      Column and Second Row.</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowColumn(5, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black">sheet.ShowRow(2, 
+      </span><span style="FONT-FAMILY: 'Courier New'; COLOR: blue">True</span><span style="FONT-FAMILY: 'Courier New'; COLOR: black">)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: black"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> range = sheet[1, 4];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Hiding the first to 
+      thrid row and first to thrid column</span><span style="FONT-FAMILY: 'Courier New'"></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">sheet.ShowRange(range, <span style="COLOR: blue">false</span>);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'"></span> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> firstRange = ws[1, 1,3,3];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">IRange</span><span style="FONT-FAMILY: 'Courier New'"> secondRange = ws[5, 5, 7, 
+      7];</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af">RangesCollection</span><span style="FONT-FAMILY: 'Courier New'"> rangeCollection = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">RangesCollection</span>(app, ws);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rangCollection.Add(firstRange);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">rangeCollection.Add(secondRange);</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; COLOR: green">//Hiding the collection 
+      of ranges</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">ws.ShowRange(rangeCollection, <span style="COLOR: blue">false</span>);</span></p></td></tr></tbody></table>
+<p class="BodyText1"> </p>
+<p class="BodyTextHeading">Methods</p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 130.5pt; PADDING-RIGHT: 5.4pt; BACKGROUND: white; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="174">
+      <p class="TableHeading">Prototype<i></i></p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 225pt; PADDING-RIGHT: 5.4pt; BACKGROUND: white; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="300">
+      <p class="TableHeading">Description</p></td></tr>
+  <tr style="HEIGHT: 35.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 130.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="174">
+      <p class="TableText">ShowRange (IRange, bool) </p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 225pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="300">
+      <p class="TableText">Shows or hides a particular range</p>
+      <p class="TableText"> </p></td></tr>
+  <tr style="HEIGHT: 35.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 130.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="174">
+      <p class="TableText">ShowRange(IRange[], bool)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 225pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="300">
+      <p class="TableText">Shows or hides a particular array of ranges</p></td></tr>
+  <tr style="HEIGHT: 35.25pt">
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 130.5pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="174">
+      <p class="TableText">ShowRange( RasngesCollection, bool)</p></td>
+    <td style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 225pt; PADDING-RIGHT: 5.4pt; HEIGHT: 35.25pt; BORDER-TOP: medium none; BORDER-RIGHT: windowtext 1pt solid; PADDING-TOP: 0pt" valign="top" width="300">
+      <p class="TableText">Shows or hides a particular collection of 
+  ranges</p></td></tr></tbody></table></div>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"> </p><span id="related-topics"></span></div></body></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Adding Client Side Validator to a MVC application</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="ca051c27-f160-4980-8770-1cf21234c0dc" />
+<meta name="Title" content="Adding Client Side Validator to a MVC application" />
+<meta name="Microsoft.Help.TocParent" content="e056d763-792d-4827-a0f0-5db760516c25" />
+<meta name="Microsoft.Help.TocOrder" content="0" /><link rel="stylesheet" type="text/css" href="Theme/nav.css" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/tools1.css" />
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+var _needIndentation = true;
+
+
+
+
+//]]></script>
+
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitMainThemeHandlers != "undefined")
+
+    d2hInitMainThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px" id="nsbanner" class="d2h_main_nsbanner">
+<div style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px" id="TitleRow" class="d2h_main_titlerow">
+<div style="DISPLAY: none" id="ienav" class="d2h_main_ienav">
+<p class="d2h_main_linknav" align="left"><a id="D2HPrevious" class="D2HPreviousEnabled" href="ms-xhelp:///?Id=e056d763-792d-4827-a0f0-5db760516c25"></a>  <a id="D2HNext" class="D2HNextEnabled" href="ms-xhelp:///?Id=5c092432-28fd-45c0-96c5-5edec286ca68"></a></p></div></div></div>
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" id="nstext" class="d2h_main_nstext" hasuserbackground="true" valign="bottom">
+<div id="d2h_breadcrumbs" class="d2h_breadcrumbs"><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030">Essential Studio 
+User Guide Documentation</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; 
+</span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669">User Interface 
+Edition</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=4b14e7d1-65c4-4f67-b1aa-2c37709905a5">Essential ASP.NET 
+MVC</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><span class="d2h_breadcrumbsContentsOnly">Essential Tools</span><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=f0af2fff-6f00-4ca4-85a6-54e41ac5dc96">Controls and 
+Components</a><span class="d2h_breadcrumbsLinkSeparator"> &gt; </span><a class="d2h_breadcrumbsNormal" href="ms-xhelp:///?Id=e056d763-792d-4827-a0f0-5db760516c25">Client-Side 
+Validator</a></div>
+<h3 style="tab-stops: 0pt">Adding Client Side Validator to a MVC 
+application</h3>
+<p class="MsoNormal">Refer to the <a><span class="UGHyperlink">Getting 
+Started</span></a> section to know the pre-requisites before stepping in to add 
+a client side validator control to a MVC application.</p>
+<p class="MsoNormal">The following steps explain the addition of a client side 
+validator to an application.</p>
+<p style="tab-stops: 25.2pt" class="NumberedList">1.   In <b>View</b>, 
+create an input field (which is to be validated) and invoke the validator helper 
+with the id of the input field as the first argument.</p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedListCxSpLast"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormalCxSpFirst"><b><span style="FONT-FAMILY: 'Courier New'">View[aspx]</span></b></p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">IPAddress   
+            <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.TextBox(<span style="COLOR: #a31515">"IPAddress"</span>)<span style="BACKGROUND: yellow">%&gt;</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">             
+                 <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span>Html.Syncfusion().Validator(<span style="COLOR: #a31515">"IPAddress"</span>)<span style="BACKGROUND: yellow">%&gt;</span></span></p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedListCxSpFirst"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedListCxSpLast"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 36.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.75pt; WIDTH: 468pt; PADDING-RIGHT: 5.75pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+      <p class="MsoNormalCxSpFirst"><b><span style="FONT-FAMILY: 'Courier New'">View[cshtml]</span></b></p>
+      <p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpMiddle"><b><span style="FONT-FAMILY: 'Courier New'"></span></b> </p>
+      <p style="TEXT-INDENT: 36pt; TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">IPAddress   
+            <span style="BACKGROUND: yellow">@</span>Html.TextBox(<span style="COLOR: #a31515">"IPAddress"</span>)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'">             
+                 <span style="BACKGROUND: yellow">@{</span> Html.Syncfusion().Validator(<span style="COLOR: #a31515">"IPAddress"</span>).Render();<span style="BACKGROUND: yellow">}</span></span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span> </p></td></tr></tbody></table>
+<p style="TEXT-INDENT: 0pt; tab-stops: 36.0pt" class="NumberedList"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpFirst"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="MARGIN-LEFT: 36pt" class="MsoNormalCxSpLast"><b><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span></b> </p>
+<p style="tab-stops: 25.2pt" class="NumberedList">2.   Build and run the 
+application. </p>
+<p class="MsoNormal">The following is the output when the input field passes the 
+validation: </p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Work Place\Work Trunk\features\SF4718\ClientSideValidator\validation_success.png" src="ImagesExt/image56_113.png" /></p>
+<p class="MsoCaption">Figure 101: Input field</p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption"> </p>
+<p class="MsoNormal">The output when the input field passes the validation is 
+shown in the following screenshot. The validation message will be thrown when 
+the input field loses its focus.</p>
+<p class="MsoNormal"> </p>
+<p class="Figure"><img border="0" alt="Description: C:\Work Place\Work Trunk\features\SF4718\ClientSideValidator\validation_fail.png" src="ImagesExt/image56_114.png" /></p>
+<p class="MsoCaption">Figure 102: Input field with validation message</p>
+<p class="MsoCaption"> </p>
+<p class="MsoCaption"> </p>
+<p class="MsoNormal">A sample which demonstrates a basic Client Side Validator 
+control can be downloaded from the following link.</p>
+<p style="TEXT-AUTOSPACE: " class="MsoNormal"><a href="http://files.syncfusion.com/Support/Tools_MVC/v8.3.0.20/Test_ClientsideValidator.zip"><span class="UGHyperlink">Client Side Validator</span></a><span class="UGHyperlink"></span></p>
+<div style="BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 1pt; MARGIN-TOP: 9pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; MARGIN-BOTTOM: 9pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 1pt">
+<p style="MARGIN-TOP: 0pt" class="Note"> </p>
+<p class="Note"><img border="0" src="ImagesExt/image56_5.jpg" alt="" />Note: The version 
+number for the assemblies has been set to 8.3.0.20 in the Web.config file of the 
+attached sample. Change the version number to the appropriate version in the 
+Web-2008.config or Web-2010.config files (available in root directory) and those 
+will automatically be updated in the Web.config file.</p>
+<p class="Note"> </p>
+<p style="MARGIN-BOTTOM: 0pt" class="Note"> </p></div><span id="related-topics"></span></div></body></html>

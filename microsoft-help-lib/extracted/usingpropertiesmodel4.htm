@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Using Properties Model</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="Language" content="en-us" />
+<meta name="SelfBranded" content="true" />
+<meta name="Microsoft.Help.Locale" content="en-us" />
+<meta name="Microsoft.Help.TopicLocale" content="en-us" />
+<meta name="Microsoft.Help.TopicVersion" content="100" />
+<meta name="Microsoft.Help.Id" content="0b3ac7f7-f18e-42db-8107-4ef578211a64" />
+<meta name="Title" content="Using Properties Model" />
+<meta name="Microsoft.Help.TocParent" content="7afa1a57-371a-43cd-8653-082811602fe8" />
+<meta name="Microsoft.Help.TocOrder" content="1" /><link rel="stylesheet" type="text/css" href="Theme/lf.css" /><link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" /><link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" /><link rel="stylesheet" type="text/css" href="LinksExt/diagram1.css" />
+<script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+
+<meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+<meta name="D2HTheme" content="(Default) v.14" />
+</head>
+<body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+
+<div style="DISPLAY: none"><a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a><img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" /> </div>
+<div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+<h5 style="tab-stops: 0pt">Using Properties Model</h5>
+<p style="TEXT-ALIGN: left; tab-stops: 18.0pt" class="NumberedList" align="left">1.   In the controller, create an object for the 
+<b>Node</b> class and set the properties such as<b> BackgroundColor</b>,<b> 
+BorderColor</b>,<b> </b>etc.<b> </b></p>
+<p style="tab-stops: 18.0pt" class="NumberedList">2.   Create an object 
+for the <b>DiagramPropertiesModel</b> class and set the <b>Nodes</b> property. 
+Pass this model class to the <b>view data</b>.</p>
+<p class="MsoNormal"> </p>
+<table style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; WIDTH: 100%; MARGIN-LEFT: 2.25pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+  <tr>
+    <td style="BORDER-BOTTOM: white 1pt solid; BORDER-LEFT: white 1pt solid; PADDING-BOTTOM: 1.5pt; PADDING-LEFT: 1.5pt; WIDTH: 473pt; PADDING-RIGHT: 1.5pt; BACKGROUND: #f0f0f0; BORDER-TOP: white 1pt solid; BORDER-RIGHT: white 1pt solid; PADDING-TOP: 1.5pt" valign="top" width="631">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">Controller</span></b><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">  </span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">      
+           </span></b><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></b></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">           
+           <span style="COLOR: #2b91af">DiagramPropertiesModel</span> model = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">DiagramPropertiesModel</span>();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">ActionResult</span> FlatDiagram()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      <span style="COLOR: #2b91af">Node</span> node1 = AddNode(<span style="COLOR: #a31515">"Node1"</span>, <span style="COLOR: #a31515">" 
+      Circle"</span>, 500, 500, <span style="COLOR: #2b91af">Shapes</span>.Ellipse, 100.00, 100.00, <span style="COLOR: blue">null</span>, 5);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      model.Nodes = <span style="COLOR: blue">new 
+      NodesCollection()</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      node1 };</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      model.Width = <span style="COLOR: #2b91af">Unit</span>.Pixel(1100);</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      model.Height = <span style="COLOR: #2b91af">Unit</span>.Pixel(500);</span></p>
+      <p style="tab-stops: 81.2pt" class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      <span style="COLOR: black">model.DiagramMode = </span><span style="COLOR: #2b91af">DiagramMode</span><span style="COLOR: black">.SVG;</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      ViewData[<span style="COLOR: #a31515">"FlatDiagram"</span>] = 
+      model;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      <span style="COLOR: blue">return</span> View();</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      }</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      <span style="COLOR: blue">public</span> <span style="COLOR: #2b91af">Node</span> AddNode(<span style="COLOR: blue">string</span> name, <span style="COLOR: blue">string</span> label, <span style="COLOR: blue">double</span> offsetX, <span style="COLOR: blue">double</span> offsetY, <span style="COLOR: #2b91af">Shapes</span> shape, <span style="COLOR: blue">double</span> width, <span style="COLOR: blue">double</span> height, <span style="COLOR: blue">string</span> bgColor, <span style="COLOR: blue">double</span> bWidth)</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      <span style="COLOR: #2b91af">Node</span> node = <span style="COLOR: blue">new</span> <span style="COLOR: #2b91af">Node</span>()</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      {</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      Name = name,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      Label = label,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      OffsetX = offsetX,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      OffsetY = offsetY,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      Shape = shape,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      Height = height,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      Width = width,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      BackgroundColor =<span style="COLOR: #a31515">"gold"</span>, </span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      BorderColor = <span style="COLOR: #a31515">"red"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      BorderWidth = bWidth,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      LabelFontColor = <span style="COLOR: #a31515">"black"</span>,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      LabelFontSize = 19,</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                
+      LabelFontFamily = <span style="COLOR: #a31515">"Times New 
+      Roman"</span></span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      };</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">            
+      <span style="COLOR: blue">return</span> node;</span></p>
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">        
+      }</span></p></td></tr></tbody></table>
+<p class="MsoNormal"><b>Note:</b> If you want to create the diagram in the Canvas 
+mode, change the <b>DiagramMode</b> to <b>Canvas</b>. By default the diagram is 
+rendered in the SVG mode. </p>
+<p class="MsoNormal"> </p>
+<p style="TEXT-ALIGN: left; tab-stops: 18.0pt list 64.8pt" class="NumberedList" align="left">3.   In the <b>view</b>, invoke the <b>Diagram</b> helper 
+with the control ID, which is the same as the <b>view data</b> name.</p>
+<p style="TEXT-INDENT: 0pt; MARGIN: 0pt 0pt 0pt 7.2pt; tab-stops: 36.0pt" class="NumberedList"> </p>
+<div align="center">
+<table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+  <tr style="HEIGHT: 53.45pt">
+    <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 464.65pt; PADDING-RIGHT: 5.4pt; HEIGHT: 53.45pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="620">
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">View</span></b></p>
+      <p class="MsoNormal"><b><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt"></span></b> </p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">  <span style="BACKGROUND: yellow">&lt;%</span>{</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">              
+      Html.Syncfusion().Diagram(<span style="COLOR: #a31515">"</span></span><span style="FONT-FAMILY: 'Courier New'; COLOR: #a31515; FONT-SIZE: 11pt">FlatDiagram"</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">)</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">                  
+      .Render();</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">    
+      }</span></p>
+      <p style="TEXT-AUTOSPACE: " class="MsoNormal"><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 11pt">  <span style="BACKGROUND: yellow">%&gt;</span></span><span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow; FONT-SIZE: 11pt"> 
+      </span></p></td></tr></tbody></table></div>
+<p style="LINE-HEIGHT: normal; PAGE-BREAK-AFTER: avoid; TEXT-INDENT: 0pt; MARGIN: 2pt 0pt 0pt 25.2pt; tab-stops: list 25.2pt" class="NumberedList"> </p>
+<p style="TEXT-ALIGN: left; LINE-HEIGHT: normal; PAGE-BREAK-AFTER: avoid; MARGIN-BOTTOM: 0pt; tab-stops: 18.0pt" class="NumberedList" align="left">4.   Build and run the application.</p>
+<p class="MsoNormal"><span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+<p style="PAGE-BREAK-AFTER: avoid" class="Figure"><img border="0" alt="Description: C:\Users\maithiliyk\Desktop\Capture.PNG" src="ImagesExt/image70_45.png" /></p>
+<p class="MsoCaption">Figure 41: Customize the Predefined Shapes</p><span id="related-topics"></span></div></body></html>

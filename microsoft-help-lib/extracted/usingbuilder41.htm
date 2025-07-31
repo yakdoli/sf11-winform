@@ -1,0 +1,623 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Using Builder</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Language" content="en-us" />
+    <meta name="SelfBranded" content="true" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="100" />
+    <meta name="Microsoft.Help.Id" content="a40246bc-e0ee-417a-ba75-482622bee42a" />
+    <meta name="Title" content="Using Builder" />
+    <link rel="stylesheet" type="text/css" href="Theme/lf.css" />
+    <link id="d2h_popupmenu_css" rel="stylesheet" type="text/css" href="Theme/popupmenu.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/C1H_HTML.css" />
+    <link rel="stylesheet" type="text/css" href="LinksExt/chart%20MVC%20in%20HTML%205.css" />
+    <script id="d2h_main_script" language="JavaScript" src="DocToHelp.js" type="text/JavaScript"></script>
+    <meta name="Generator" content="ComponentOne Doc-To-Help v.2012.2.0.730" />
+    <meta name="D2HTheme" content="(Default) v.14" />
+  </head>
+  <body style="PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" relpart="">
+    <script language="javascript" type="text/javascript">
+//<![CDATA[
+
+if (typeof d2hInitSecThemeHandlers != "undefined")
+
+    d2hInitSecThemeHandlers();
+
+
+//]]></script>
+    <div style="DISPLAY: none">
+      <a id="d2h_url_template" href="ms-xhelp:///?Id=d2h_url_template"></a>
+      <img style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px" id="d2h_package_url" src="!package_url!" alt="" />
+    </div>
+    <div style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt" class="d2h_secondary_topic">
+      <h4 style="tab-stops: 0pt">Using Builder</h4>
+      <p class="MsoNormal"> </p>
+      <p class="BodyText1">The steps to customize a Symbol in chart through Builder are 
+as follows:</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">1.   In Controller, 
+return view to the corresponding View page.</p>
+      <p class="MsoNormalCxSpFirst">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 473.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 468pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="624">
+              <p class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[C#]</span>
+                </b>
+              </p>
+              <p class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas">   
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">public</span>
+                <span style="FONT-FAMILY: 'Courier New'">
+                  <span style="COLOR: #2b91af">ActionResult</span> SimpleChart()</span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">   { </span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; COLOR: blue">       
+      return</span>
+                <span style="FONT-FAMILY: 'Courier New'"> View();</span>
+              </p>
+              <p style="LINE-HEIGHT: 12pt" class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">   }</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-FAMILY: 'Calibri','sans-serif'"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">2.   In the View page, 
+invoke the ChartBuilder by using the control ID as the first argument.</p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">3.   Set the 
+<b>Visible</b> property of Symbol to <b>True </b>and set the style<b>.</b></p>
+      <p class="MsoNormal"> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 473.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 460.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="614">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[ASPX]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt">    
+      </span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">&lt;%</span>
+                <span style="FONT-FAMILY: 'Courier New'">ass.Start = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 1, 1).ToOADate(); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>ass.End = <span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 12, 1).ToOADate(); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span>ass.Interval = 31; <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">string</span> skyImage = <span style="COLOR: #2b91af">UrlHelper</span>.GenerateContentUrl(<span style="COLOR: #a31515">"~/Content/Images/sky.jpg"</span>, 
+      Html.ViewContext.HttpContext).ToString(); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">string</span> coolImage = <span style="COLOR: #2b91af">UrlHelper</span>.GenerateContentUrl(<span style="COLOR: #a31515">"~/Content/Images/cool.png"</span>, 
+      Html.ViewContext.HttpContext).ToString(); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">string</span> hotImage = <span style="COLOR: #2b91af">UrlHelper</span>.GenerateContentUrl(<span style="COLOR: #a31515">"~/Content/Images/hot.png"</span>, 
+      Html.ViewContext.HttpContext).ToString(); <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">&lt;%</span><span style="COLOR: blue">=</span> 
+      Html.Syncfusion.Chart(<span style="COLOR: #a31515">"Chart"</span>)</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Series(series =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      series.Add().Name(<span style="COLOR: #a31515">"London"</span>).Type(<span style="COLOR: #2b91af">SeriesType</span>.Line).Points(p =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010,1,1), 7);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 2, 1), 6.9);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 3, 1), 10);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 4, 1), 14.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 5, 1), 18.4);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 6, 1), 21.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 7, 1), 25.2);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 8, 1), 26.5).<b>Symbol(symbol 
+      =&gt; {</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      <b>symbol.ImageUrl(hotImage).Shape(<span style="COLOR: #2b91af">SymbolShape</span>.Image).Visible(<span style="COLOR: blue">true</span>).Size(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">Size</span>(62,62));</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                        
+      });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 9, 1), 23.6);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 10, 1), 17);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 11, 1), 13.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 12, 1), 12);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Style(style =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      style.Border(border =&gt; border.Width(3)).Opacity(0.8f);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).<b>Symbol(symbol =&gt;</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      symbol.Shape(<span style="COLOR: #2b91af">SymbolShape</span>.Circle).Style(style =&gt; 
+      style.Interior(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">GradientInfo</span>(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">ColorInfo</span>(<span style="COLOR: #2b91af">Color</span>.White)))).Visible(<span style="COLOR: blue">true</span>);</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                  
+      });</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      series.Add().Name(<span style="COLOR: #a31515">"Tokyo"</span>).Type(<span style="COLOR: #2b91af">SeriesType</span>.Line).Points(p =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 1, 1), 4<b>).Symbol(symbol 
+      =&gt;</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">              
+              {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                          
+      symbol.ImageUrl(coolImage).Shape(<span style="COLOR: #2b91af">SymbolShape</span>.Image).Visible(<span style="COLOR: blue">true</span>).Size(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">Size</span>(62,62));</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      }); </span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 2, 1), 4.2);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">DateTime</span>(2010, 3, 1), 5.7);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      . . .</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Style(style =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      style.Border(border =&gt; border.Width(3)).Opacity(0.8f);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      <b>}).Symbol( symbol =&gt; </b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                          
+      symbol.Shape(<span style="COLOR: #2b91af">SymbolShape</span>.Circle).Style(style =&gt; 
+      style.Interior(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">GradientInfo</span>(<span style="COLOR: blue">new</span><span style="COLOR: #2b91af">ColorInfo</span>(<span style="COLOR: #2b91af">Color</span>.White)))).Visible(<span style="COLOR: blue">true</span>);</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      });</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">               
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      })</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    <span style="BACKGROUND: yellow">%&gt;</span></span>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b>
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"></span> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+      <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 473.05pt; BORDER-COLLAPSE: collapse; BACKGROUND: #f0f0f0; MARGIN-LEFT: 18.9pt; BORDER-TOP: medium none; BORDER-RIGHT: medium none" class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="631">
+        <tbody>
+          <tr>
+            <td style="BORDER-BOTTOM: #c8c8c8 1pt solid; BORDER-LEFT: #c8c8c8 1pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 5.4pt; WIDTH: 478.8pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: #c8c8c8 1pt solid; BORDER-RIGHT: #c8c8c8 1pt solid; PADDING-TOP: 0pt" valign="top" width="638">
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">[Razor]</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">ass.Start = new DateTime(2010, 1, 
+      1).ToOADate(); <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">ass.End = new DateTime(2010, 12, 
+      1).ToOADate();<span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">string skyImage = 
+      UrlHelper.GenerateContentUrl("~/Content/Images/sky.jpg", 
+      Html.ViewContext.HttpContext).ToString();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">  string coolImage = 
+      UrlHelper.GenerateContentUrl("~/Content/Images/cool.png", 
+      Html.ViewContext.HttpContext).ToString();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">  string hotImage = 
+      UrlHelper.GenerateContentUrl("~/Content/Images/hot.png", 
+      Html.ViewContext.HttpContext).ToString();</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">}</span>
+                <span style="FONT-FAMILY: 'Courier New'"></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow">@{</span>
+                <span style="FONT-FAMILY: 'Courier New'">ass.Interval = 31; <span style="BACKGROUND: yellow">}</span></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">&lt;div style="float: 
+      left;"&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">    
+      @(Html.Syncfusion.Chart("Chart")</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      .Series(series =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      series.Add().Name("London").Type(SeriesType.Line).Points(p 
+=&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 1, 1), 7);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">            
+                p.Add(new 
+      DateTime(2010, 2, 1), 6.9);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 3, 1), 10);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 4, 1), 14.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 5, 1), 18.4);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 6, 1), 21.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 7, 1), 25.2);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 8, 1), 26.5).<b>Symbol(symbol 
+=&gt;</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                          
+      symbol.ImageUrl(hotImage).Shape(SymbolShape.Image).Visible(true).Size(new 
+      Size(62, 62));</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      });</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 9, 1), 23.6);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 10, 1), 17);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 11, 1), 13.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 12, 1), 12);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      }).Style(style =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      style.Border(border =&gt; border.Width(3)).Opacity(0.8f);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      <b>}).Symbol(symbol =&gt;</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      symbol.Shape(SymbolShape.Circle).Style(style =&gt; style.Interior(new 
+      GradientInfo(new ColorInfo(Color.White)))).Visible(true);</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                  
+      });</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      series.Add().Name("Tokyo").Type(SeriesType.Line).Points(p =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 1, 1), 4).Symbol(symbol =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                          
+      symbol.ImageUrl(coolImage).Shape(SymbolShape.Image).Visible(true).Size(new 
+      Size(62, 62));</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">         
+                   });</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 2, 1), 4.2);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 3, 1), 5.7);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      p.Add(new DateTime(2010, 4, 1), 8.5);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      . . 
+      .                      
+      </span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">         
+               }).Style(style 
+      =&gt;</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      {</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                      
+      style.Border(border =&gt; border.Width(3)).Opacity(0.8f);</span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">                  
+      })<b>.Symbol(symbol =&gt;</b></span>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      {</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                          
+      symbol.Shape(SymbolShape.Circle).Style(style =&gt; style.Interior(new 
+      GradientInfo(new ColorInfo(Color.White)))).Visible(true);</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'">                      
+      });</span>
+                </b>
+              </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'"></span> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: 'Courier New'">              
+      })</span>
+              </p>
+              <p style="TEXT-ALIGN: justify; MARGIN-TOP: 6pt" class="MsoNormal">
+                <b>
+                  <span style="FONT-FAMILY: 'Courier New'"></span>
+                </b> </p>
+              <p style="TEXT-AUTOSPACE: " class="MsoNormal">
+                <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; COLOR: blue; FONT-SIZE: 9.5pt">}</span>
+                <span style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"></span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="MsoNormal">
+        <span style="FONT-FAMILY: Consolas; BACKGROUND: yellow; FONT-SIZE: 9.5pt"></span> </p>
+      <p style="tab-stops: 25.2pt" class="NumberedList">4.   Build and run the 
+application, to get the following output:</p>
+      <p style="PAGE-BREAK-AFTER: avoid" class="Figure">
+        <img border="0" alt="Description: C:\Users\vijayabharathik\Desktop\Mobile MVC_Chart_ChartControl_Content_Modified\ScreenShot\Symbol.png" src="ImagesExt/image106_86.jpg" />
+      </p>
+      <p class="MsoCaption">Figure 26: Symbol Customization</p>
+      <p class="BodyText1"> </p>
+      <span id="related-topics"></span>
+    </div>
+  </body>
+</html>
