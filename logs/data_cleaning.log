@@ -24063,3 +24063,250 @@
 2025-07-31 09:36:50,182 - __main__ - INFO - 보고서 생성 완료: C:\workspace\sf11-winform\cleaned_data\reports\cleaning_report.txt
 2025-07-31 09:36:50,183 - __main__ - INFO - 데이터 정제 완료. 총 시간: 36.00초
 2025-07-31 09:36:50,183 - __main__ - INFO - 성공: 12024, 실패: 0
+2025-07-31 15:29:59,257 - data_cleaner - ERROR - 파일 처리 오류: test_sample.md, 'DataCleaner' object has no attribute 'clean_text_content'
+2025-07-31 15:29:59,259 - data_cleaner - ERROR - Traceback (most recent call last):
+  File "C:\workspace\sf11-winform\data_cleaner.py", line 763, in process_single_file
+    document_info.cleaned_content = self.clean_text_content(content)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataCleaner' object has no attribute 'clean_text_content'
+
+2025-07-31 17:42:36,457 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-07-31 17:42:36,645 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-07-31 17:42:36,646 - async_file_bridge - INFO - AsyncFileBridge 초기화 완료 - Async 사용: True
+2025-07-31 17:42:36,738 - async_file_bridge - INFO - AsyncFileBridge 초기화 완료 - Async 사용: False
+2025-07-31 17:42:36,738 - async_file_bridge - INFO - 병렬 파일 처리 시작: 3개 파일
+2025-07-31 17:42:36,738 - data_cleaner - INFO - 파일 병렬 처리 시작: 3개 파일
+2025-07-31 17:42:36,779 - data_cleaner - ERROR - 파일 청크 처리 오류: cannot pickle '_thread.RLock' object
+2025-07-31 17:42:36,801 - data_cleaner - ERROR - concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\workspace\sf11-winform\data_cleaner.py", line 787, in process_files_parallel
+    chunk_results = future.result()
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+
+2025-07-31 17:42:36,801 - data_cleaner - ERROR - 파일 청크 처리 오류: cannot pickle '_thread.RLock' object
+2025-07-31 17:42:36,802 - data_cleaner - ERROR - concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\workspace\sf11-winform\data_cleaner.py", line 787, in process_files_parallel
+    chunk_results = future.result()
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+
+2025-07-31 17:42:36,803 - data_cleaner - ERROR - 파일 청크 처리 오류: cannot pickle '_thread.RLock' object
+2025-07-31 17:42:36,804 - data_cleaner - ERROR - concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\workspace\sf11-winform\data_cleaner.py", line 787, in process_files_parallel
+    chunk_results = future.result()
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\queues.py", line 262, in _feed
+    obj = _ForkingPickler.dumps(obj)
+  File "C:\Users\ydjo\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+
+2025-07-31 17:42:38,615 - data_cleaner - INFO - 파일 병렬 처리 완료: 0개 파일, 1.88초
+2025-07-31 17:42:38,615 - data_cleaner - INFO - 평균 처리 속도: 0.00 파일/초
+2025-07-31 17:42:38,616 - async_file_bridge - INFO - 병렬 처리 완료: 0개 파일, 1.88초
+2025-07-31 17:42:38,663 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-07-31 17:42:38,664 - async_file_bridge - INFO - AsyncFileBridge 초기화 완료 - Async 사용: True
+2025-07-31 17:42:38,664 - async_file_bridge - INFO - 처리 모드 전환: True -> False
+2025-07-31 17:42:38,664 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-07-31 17:42:38,664 - async_file_bridge - INFO - 처리 모드 전환: False -> True
+2025-07-31 17:42:38,720 - async_performance_monitor - INFO - 성능 데이터베이스 초기화 완료: C:\Users\ydjo\AppData\Local\Temp\1\tmpqzuqyfts.db
+2025-07-31 17:42:38,720 - async_performance_monitor - INFO - AsyncPerformanceMonitor 초기화 완료
+2025-07-31 17:42:38,725 - async_performance_monitor - INFO - 실시간 모니터링 중지
+2025-07-31 17:42:38,734 - async_performance_monitor - INFO - 성능 데이터베이스 초기화 완료: C:\Users\ydjo\AppData\Local\Temp\1\tmpt5mhslhr.db
+2025-07-31 17:42:38,735 - async_performance_monitor - INFO - AsyncPerformanceMonitor 초기화 완료
+2025-07-31 17:42:38,742 - async_performance_monitor - INFO - 실시간 모니터링 중지
+2025-07-31 17:42:38,752 - async_performance_monitor - INFO - 성능 데이터베이스 초기화 완료: C:\Users\ydjo\AppData\Local\Temp\1\tmp2cowhw4b.db
+2025-07-31 17:42:38,752 - async_performance_monitor - INFO - AsyncPerformanceMonitor 초기화 완료
+2025-07-31 17:42:38,761 - async_performance_monitor - WARNING - 성능 알림: throughput 임계값 초과: 10.5 files/sec
+2025-07-31 17:42:38,762 - async_performance_monitor - INFO - 실시간 모니터링 중지
+2025-07-31 17:42:38,773 - async_performance_monitor - INFO - 성능 데이터베이스 초기화 완료: C:\Users\ydjo\AppData\Local\Temp\1\tmpv60eavk1.db
+2025-07-31 17:42:38,773 - async_performance_monitor - INFO - AsyncPerformanceMonitor 초기화 완료
+2025-07-31 17:42:38,774 - async_performance_monitor - INFO - 실시간 모니터링 중지
+2025-07-31 17:42:38,786 - async_performance_monitor - INFO - 성능 데이터베이스 초기화 완료: C:\Users\ydjo\AppData\Local\Temp\1\tmp0u_dy7a6.db
+2025-07-31 17:42:38,787 - async_performance_monitor - INFO - AsyncPerformanceMonitor 초기화 완료
+2025-07-31 17:42:38,835 - async_performance_monitor - INFO - 실시간 모니터링 중지
+2025-07-31 17:42:38,890 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-07-31 17:42:38,890 - async_file_bridge - INFO - AsyncFileBridge 초기화 완료 - Async 사용: True
+2025-07-31 17:42:38,890 - async_file_bridge - INFO - 병렬 파일 처리 시작: 5개 파일
+2025-07-31 17:42:38,892 - async_file_manager - INFO - 비동기 파일 처리 시작
+2025-07-31 17:42:38,941 - async_file_manager - INFO - 파일 워커 시작: worker-0
+2025-07-31 17:42:38,942 - async_file_manager - INFO - 파일 워커 시작: worker-1
+2025-07-31 17:42:38,942 - async_file_manager - INFO - 파일 워커 시작: worker-2
+2025-07-31 17:42:38,942 - async_file_manager - INFO - 파일 워커 시작: worker-3
+2025-08-01 02:23:44,993 - async_file_manager - WARNING - AsyncFileManager가 정상적으로 종료되지 않았습니다
+2025-08-01 02:40:18,739 - __main__ - INFO - WinForms_Docs pandas 통합 시스템 통합 테스트 시작
+2025-08-01 02:40:18,740 - __main__ - INFO - 테스트 데이터 생성 시작
+2025-08-01 02:40:18,764 - __main__ - INFO - 테스트 데이터 생성 완료: 1000개 문서
+2025-08-01 02:40:18,765 - __main__ - INFO - 모든 테스트 실행 시작
+2025-08-01 02:40:18,765 - __main__ - INFO - PandasDataProcessor 기능 테스트 시작
+2025-08-01 02:40:18,766 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,767 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,776 - __main__ - INFO - DataFrame 변환 완료: 1000행 3열
+2025-08-01 02:40:18,784 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 02:40:18,813 - pandas_data_processor - ERROR - 벡터화된 텍스트 처리 오류: incompatible index of inserted column with frame index
+2025-08-01 02:40:18,813 - __main__ - ERROR - PandasDataProcessor 테스트 실패: incompatible index of inserted column with frame index
+2025-08-01 02:40:18,813 - __main__ - INFO - VectorizedOperations 기능 테스트 시작
+2025-08-01 02:40:18,814 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 02:40:18,814 - vectorized_operations - ERROR - 정규식 패턴을 찾을 수 없음: \b\w+\b
+2025-08-01 02:40:18,820 - vectorized_operations - INFO - 배치 텍스트 정규화 완료: 0.005s
+2025-08-01 02:40:18,820 - __main__ - INFO - VectorizedOperations 테스트 완료: 0.006초
+2025-08-01 02:40:18,820 - __main__ - INFO - 시스템 통합 테스트 시작
+2025-08-01 02:40:18,820 - async_file_manager - ERROR - Pandas 통합 초기화 실패: 'NoneType' object is not callable
+2025-08-01 02:40:18,821 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-08-01 02:40:18,821 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,821 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,822 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 02:40:18,822 - data_cleaner - INFO - Pandas 통합 데이터 정제 시스템 초기화 완료
+2025-08-01 02:40:18,822 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,822 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,823 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 02:40:18,823 - data_normalizer - INFO - Pandas 통합 데이터 정규화 시스템 초기화 완료
+2025-08-01 02:40:18,828 - data_normalizer - INFO - DataNormalizer 초기화 완료 - CPU 코어: 16, 워커: 8
+2025-08-01 02:40:18,828 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,829 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,829 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 02:40:18,829 - deduplication - INFO - Pandas 통합 중복 제거 시스템 초기화 완료
+2025-08-01 02:40:18,837 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 02:40:18,838 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 02:40:18,839 - __main__ - ERROR - 시스템 통합 테스트 실패: 'DataCleaner' object has no attribute 'clean_document'
+2025-08-01 02:40:18,839 - __main__ - INFO - 메모리 관리 최적화 테스트 시작
+2025-08-01 02:40:18,839 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,840 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,845 - __main__ - ERROR - 메모리 관리 최적화 테스트 실패: 'PandasDataProcessor' object has no attribute 'get_memory_usage'
+2025-08-01 02:40:18,846 - __main__ - INFO - 성능 모니터링 테스트 시작
+2025-08-01 02:40:18,846 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 02:40:18,846 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 02:40:18,846 - __main__ - ERROR - 성능 모니터링 테스트 실패: 'PandasDataProcessor' object has no attribute 'integrate_performance_monitor'
+2025-08-01 02:40:18,847 - __main__ - INFO - 모든 테스트 완료: 1/5 성공 (20.0%)
+2025-08-01 02:40:18,848 - __main__ - INFO - 전체 테스트 시간: 0.082초
+2025-08-01 02:40:18,848 - __main__ - INFO - 테스트 결과 저장: test_results\pandas_integration_test_20250801_024018.json
+2025-08-01 02:40:18,848 - __main__ - INFO - === 테스트 결과 요약 ===
+2025-08-01 02:40:18,848 - __main__ - ERROR - ✗ pandas_data_processor: 실패 - incompatible index of inserted column with frame index
+2025-08-01 02:40:18,848 - __main__ - INFO - ✓ vectorized_operations: 성공 (0.006초)
+2025-08-01 02:40:18,849 - __main__ - ERROR - ✗ system_integration: 실패 - 'DataCleaner' object has no attribute 'clean_document'
+2025-08-01 02:40:18,849 - __main__ - ERROR - ✗ memory_management: 실패 - 'PandasDataProcessor' object has no attribute 'get_memory_usage'
+2025-08-01 02:40:18,849 - __main__ - ERROR - ✗ performance_monitoring: 실패 - 'PandasDataProcessor' object has no attribute 'integrate_performance_monitor'
+2025-08-01 02:40:18,894 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,894 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,894 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,895 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,895 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 02:40:18,895 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,895 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 02:40:18,895 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 02:40:18,896 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 06:36:47,202 - __main__ - INFO - MemoryManagementSystem 초기화 시작
+2025-08-01 06:36:47,257 - memory_integration - WARNING - MemoryManager를 사용할 수 없습니다
+2025-08-01 06:36:47,258 - memory_integration - INFO - MemoryIntegrationManager 초기화 완료
+2025-08-01 06:36:47,258 - __main__ - INFO - 메모리 통합 관리자 초기화 완료
+2025-08-01 06:36:47,258 - gc_optimizer - INFO - GCOptimizer 초기화 완료
+2025-08-01 06:36:47,259 - __main__ - INFO - GC 최적화기 초기화 완료
+2025-08-01 06:36:47,259 - windows_memory_optimizer - ERROR - Windows API 로드 오류: function 'GetProcessMemoryInfo' not found
+2025-08-01 06:36:47,260 - windows_memory_optimizer - INFO - WindowsMemoryOptimizer 초기화 완료
+2025-08-01 06:36:47,260 - __main__ - INFO - Windows 메모리 최적화기 초기화 완료
+2025-08-01 06:36:47,260 - pandas_data_processor - WARNING - Apache Arrow 통합 초기화 실패: Apache Arrow(pyarrow)가 설치되지 않았습니다. pip install pyarrow로 설치하세요.
+2025-08-01 06:36:47,261 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 06:36:47,290 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 06:36:47,506 - vectorized_operations - INFO - 벡터화된 연산 시스템 초기화 완료
+2025-08-01 06:36:47,506 - async_file_manager - INFO - Pandas 통합 파일 관리자 초기화 완료
+2025-08-01 06:36:47,507 - async_file_manager - ERROR - Apache Arrow 통합 초기화 실패: Apache Arrow(pyarrow)가 설치되지 않았습니다. pip install pyarrow로 설치하세요.
+2025-08-01 06:36:47,507 - async_file_manager - INFO - Windows 11 파일 시스템 최적화 적용
+2025-08-01 06:36:47,507 - pandas_data_processor - WARNING - Apache Arrow 통합 초기화 실패: Apache Arrow(pyarrow)가 설치되지 않았습니다. pip install pyarrow로 설치하세요.
+2025-08-01 06:36:47,508 - pandas_data_processor - INFO - Windows 11 메모리 관리 최적화 적용
+2025-08-01 06:36:47,508 - pandas_data_processor - INFO - 벡터화된 연산 초기화 완료
+2025-08-01 06:36:47,508 - __main__ - ERROR - 시스템 초기화 오류: Apache Arrow(pyarrow)가 설치되지 않았습니다. pip install pyarrow로 설치하세요.
+2025-08-01 06:36:47,509 - __main__ - INFO - MemoryManagementSystem 초기화 완료
+2025-08-01 06:36:47,509 - __main__ - INFO - 메모리 관리 시스템 시작
+2025-08-01 06:36:47,520 - gc_optimizer - INFO - GC 모니터링 시작 (간격: 1.0초)
+2025-08-01 06:36:47,521 - __main__ - INFO - GC 최적화기 모니터링 시작
+2025-08-01 06:36:47,522 - windows_memory_optimizer - INFO - Windows 메모리 모니터링 시작 (간격: 5.0초)
+2025-08-01 06:36:47,522 - __main__ - INFO - Windows 메모리 최적화기 모니터링 시작
+2025-08-01 06:36:47,523 - memory_integration - INFO - 자동 최적화 시작
+2025-08-01 06:36:47,523 - __main__ - INFO - 메모리 통합 관리자 자동 최적화 시작
+2025-08-01 06:36:47,524 - __main__ - ERROR - 시스템 상태 모니터링 오류: 'NoneType' object is not callable
+2025-08-01 06:36:47,524 - __main__ - INFO - 시스템 모니터링 시작 (간격: 5.0초)
+2025-08-01 06:36:47,524 - __main__ - INFO - 시스템 모니터링 시작
+2025-08-01 06:36:47,525 - __main__ - INFO - 메모리 관리 시스템 시작 완료
+2025-08-01 06:36:52,525 - __main__ - ERROR - 시스템 상태 모니터링 오류: 'NoneType' object is not callable
+2025-08-01 06:36:57,525 - __main__ - ERROR - 시스템 상태 모니터링 오류: 'NoneType' object is not callable
+2025-08-01 06:36:57,527 - __main__ - INFO - 메모리 관리 시스템 중지
+2025-08-01 06:37:02,527 - __main__ - INFO - 시스템 모니터링 중지
+2025-08-01 06:37:02,670 - gc_optimizer - INFO - GC 모니터링 중지
+2025-08-01 06:37:07,523 - windows_memory_optimizer - INFO - Windows 메모리 모니터링 중지
+2025-08-01 06:37:07,524 - memory_integration - INFO - 자동 최적화 중지
+2025-08-01 06:37:07,524 - __main__ - INFO - 메모리 관리 시스템 중지 완료
+2025-08-01 06:37:07,526 - __main__ - ERROR - 시스템 보고서 내보내기 오류: Object of type MemorySystemStatus is not JSON serializable
+2025-08-01 06:37:07,526 - __main__ - WARNING - 시스템이 실행 중이 아닙니다
+2025-08-01 06:37:07,526 - __main__ - INFO - 시스템 모니터링 중지
+2025-08-01 06:37:07,527 - gc_optimizer - INFO - GC 모니터링 중지
+2025-08-01 06:37:07,527 - gc_optimizer - INFO - GCOptimizer 정리 완료 - 현재: 0.1MB, 최대: 0.2MB
+2025-08-01 06:37:07,528 - windows_memory_optimizer - INFO - Windows 메모리 모니터링 중지
+2025-08-01 06:37:07,528 - windows_memory_optimizer - INFO - WindowsMemoryOptimizer 정리 완료
+2025-08-01 06:37:07,528 - __main__ - ERROR - 정리 중 오류: 'MemoryIntegrationManager' object has no attribute 'cleanup'
+2025-08-01 06:37:07,528 - memory_integration - INFO - 자동 최적화 중지
+2025-08-01 06:37:07,528 - memory_integration - INFO - 모든 메모리 정리 완료
+2025-08-01 06:37:07,568 - pandas_data_processor - INFO - 캐시 정리 완료
+2025-08-01 06:37:07,568 - vectorized_operations - INFO - 벡터화 연산 캐시 정리 완료
+2025-08-01 06:37:07,568 - pandas_data_processor - INFO - 캐시 정리 완료
