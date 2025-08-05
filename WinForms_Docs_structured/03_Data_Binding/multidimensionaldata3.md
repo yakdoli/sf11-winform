@@ -1,0 +1,35 @@
+---
+title: multidimensionaldata3.md
+original_path: WinForms_Docs/03_Data_Binding/multidimensionaldata3.md
+created_at: 2025-08-05
+---
+
+
+{#d2h_url_template} {#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+
+
+
+
+
+  
+
+
+
+
+
+
+    
+
+
+### Multi-dimensional Data {#multi-dimensional-data style="tab-stops: 0pt"}
+
+[] 
+
+Multi-dimensional structure is defined as \"a variation of the relational model that uses multidimensional structures to organize data and express the relationships between data\". The structure is broken into cubes and the cubes are able to store and access data within the confines of each cube. Each cell within a multidimensional structure contains aggregated data related to elements along each of its dimensions. Even when data is manipulated it is still easy to access as well as be a compact type of database. The data still remains interrelated. Multidimensional structure is quite popular for analytical databases that use Online Analytical Processing (OLAP) applications. Analytical databases use these databases because of their ability to deliver answers quickly to complex business queries. Data can be viewed from different angles, which gives a broader picture of a problem unlike other models.
+
+ 
+
+Multi-dimensional database products were commercially popularized as **Online Analytical Processing** (OLAP) systems for helping analysts do decision support on large historical data. They expose a multidimensional view of the data with categorical attributes like Products and Stores forming the dimensions and numeric attributes like Sales and Revenue forming the measures or cells of the multidimensional cube. Dimensions are usually associated with the hierarchies that specify aggregation levels. For instance, store-name -\>city -\>state is a hierarchy on the Store dimension. The measure attributes are aggregated to various levels of detail of the combination of dimension attributes using functions like sum, average, count and variance. OLAP products provide convenient tools for exploring the data cubes through navigational operators like select, drill-down, roll-up and pivot conforming to the multidimensional view of data. An analyst can interactively invoke sequences of these simple operations to visualize the measures along various combinations of dimensions and at various levels of aggregation. Our OLAP architecture provides you the easiest way to the extreme analysis of data.
+
+[]{#related-topics}
+

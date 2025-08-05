@@ -1,0 +1,449 @@
+---
+title: usingviewcustomization2.md
+original_path: WinForms_Docs/99_Uncategorized/usingviewcustomization2.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+##### Using View customization {#using-view-customization style="tab-stops: 0pt"}
+
+ 
+
+The steps to customize adding appointments using View Customization are as follows:
+
+1.   [Create a model in the application]{.UGHyperlink}[.][ ]
+
+2.   [Create a strongly typed view]{.UGHyperlink}[.][ ]
+
+3.   In **View**, you can use its **Model** property in **DataSource** in order to bind the data source and bind your database fields into the corresponding Schedule fields.
+
+[] 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[aspx\]]**                                                                                                                        |
+|                                                                                                                                                                                        |
+| [    [\<%][=]Html.Syncfusion().Schedule()([\"AddAppointment\"])] |
+|                                                                                                                                                                                        |
+| [        .DataSource(Model)]                                                                                                              |
+|                                                                                                                                                                                        |
+| [        .Skins([ScheduleSkins].Sandune)]                                                                         |
+|                                                                                                                                                                                        |
+| [        .BindList(columns =\>]                                                                                                           |
+|                                                                                                                                                                                        |
+| [        {]                                                                                                                               |
+|                                                                                                                                                                                        |
+| [           columns.IdField([\"AppId\"]);]                                                                        |
+|                                                                                                                                                                                        |
+| [           columns.SubjectField([\"Subject\"]);]                                                                 |
+|                                                                                                                                                                                        |
+| [           columns.LocationField([\"Location\"]);]                                                               |
+|                                                                                                                                                                                        |
+| [           columns.StartTimeField([\"StartTime\"]);]                                                             |
+|                                                                                                                                                                                        |
+| [           columns.EndTimeField([\"EndTime\"]);]                                                                 |
+|                                                                                                                                                                                        |
+| [           columns.DescriptionField([\"Descrip\"]);]                                                             |
+|                                                                                                                                                                                        |
+| [           columns.OwnerField([\"Resource\"]);]                                                                  |
+|                                                                                                                                                                                        |
+| [        })]                                                                                                                              |
+|                                                                                                                                                                                        |
+| [    [%\>]]                                                                                                   |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+[] 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[cshtml\]]**                                                                                                |
+|                                                                                                                                                                  |
+| [  ][    ]                                                         |
+|                                                                                                                                                                  |
+| [  [@(] Html.Syncfusion().Schedule()([\"AddAppointment\"])] |
+|                                                                                                                                                                  |
+| [        .DataSource(Model)]                                                                                    |
+|                                                                                                                                                                  |
+| [        .Skins([ScheduleSkins].Sandune)]                                               |
+|                                                                                                                                                                  |
+| [        .BindList(columns =\>]                                                                                 |
+|                                                                                                                                                                  |
+| [        {]                                                                                                     |
+|                                                                                                                                                                  |
+| [           columns.IdField([\"AppId\"]);]                                              |
+|                                                                                                                                                                  |
+| [           columns.SubjectField([\"Subject\"]);]                                       |
+|                                                                                                                                                                  |
+| [           columns.LocationField([\"Location\"]);]                                     |
+|                                                                                                                                                                  |
+| [           columns.StartTimeField([\"StartTime\"]);]                                   |
+|                                                                                                                                                                  |
+| [           columns.EndTimeField([\"EndTime\"]);]                                       |
+|                                                                                                                                                                  |
+| [           columns.DescriptionField([\"Descrip\"]);]                                   |
+|                                                                                                                                                                  |
+| [           columns.OwnerField([\"Resource\"]);]                                        |
+|                                                                                                                                                                  |
+| [        })[)]]                                                                     |
+|                                                                                                                                                                  |
+| []                                                                                                              |
+|                                                                                                                                                                  |
+| []                                                                                              |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+4.   Set the **AllowAddNew()** method to perform adding appointments using **CellDoubleClick** event.
+
+[] 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[aspx\]]**                                                                                                                        |
+|                                                                                                                                                                                        |
+| [    [\<%][=]Html.Syncfusion().Schedule()([\"AddAppointment\"])] |
+|                                                                                                                                                                                        |
+| [        .DataSource(Model)]                                                                                                              |
+|                                                                                                                                                                                        |
+| [        .Skins([ScheduleSkins].Sandune)]                                                                         |
+|                                                                                                                                                                                        |
+| **[        .AllowAddNew([true])]**                                                                                   |
+|                                                                                                                                                                                        |
+| [        .BindList(columns =\>]                                                                                                           |
+|                                                                                                                                                                                        |
+| [        {]                                                                                                                               |
+|                                                                                                                                                                                        |
+| [           columns.IdField([\"AppId\"]);]                                                                        |
+|                                                                                                                                                                                        |
+| [           columns.SubjectField([\"Subject\"]);]                                                                 |
+|                                                                                                                                                                                        |
+| [           columns.LocationField([\"Location\"]);]                                                               |
+|                                                                                                                                                                                        |
+| [           columns.StartTimeField([\"StartTime\"]);]                                                             |
+|                                                                                                                                                                                        |
+| [           columns.EndTimeField([\"EndTime\"]);]                                                                 |
+|                                                                                                                                                                                        |
+| [           columns.DescriptionField([\"Descrip\"]);]                                                             |
+|                                                                                                                                                                                        |
+| [           columns.OwnerField([\"Resource\"]);]                                                                  |
+|                                                                                                                                                                                        |
+| [        })]                                                                                                                              |
+|                                                                                                                                                                                        |
+| [    [%\>]]                                                                                                   |
+|                                                                                                                                                                                        |
+| []                                                                                                                                        |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+[] 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[cshtml\]]**                                                                                                    |
+|                                                                                                                                                                      |
+| []                                                                                                                  |
+|                                                                                                                                                                      |
+| []                                                                                                                  |
+|                                                                                                                                                                      |
+| []                                                                                                                  |
+|                                                                                                                                                                      |
+| [      [@(] Html.Syncfusion().Schedule()([\"AddAppointment\"])] |
+|                                                                                                                                                                      |
+| [        .DataSource(Model)]                                                                                        |
+|                                                                                                                                                                      |
+| [        .Skins([ScheduleSkins].Sandune)]                                                   |
+|                                                                                                                                                                      |
+| [        .AllowAddNew([true])]                                                                 |
+|                                                                                                                                                                      |
+| [        .BindList(columns =\>]                                                                                     |
+|                                                                                                                                                                      |
+| [        {]                                                                                                         |
+|                                                                                                                                                                      |
+| [           columns.IdField([\"AppId\"]);]                                                  |
+|                                                                                                                                                                      |
+| [           columns.SubjectField([\"Subject\"]);]                                           |
+|                                                                                                                                                                      |
+| [           columns.LocationField([\"Location\"]);]                                         |
+|                                                                                                                                                                      |
+| [           columns.StartTimeField([\"StartTime\"]);]                                       |
+|                                                                                                                                                                      |
+| [           columns.EndTimeField([\"EndTime\"]);]                                           |
+|                                                                                                                                                                      |
+| [           columns.DescriptionField([\"Descrip\"]);]                                       |
+|                                                                                                                                                                      |
+| [           columns.OwnerField([\"Resource\"]);]                                            |
+|                                                                                                                                                                      |
+| [        })[)]]                                                                         |
+|                                                                                                                                                                      |
+| []                                                                                                                      |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+5.   Add a **ContextMenuItem** (NewAppointment) in the **ContextMenuItems** **()** method to perform adding an appointment through context-menu.
+
+[] 
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[aspx\]]**                                                                                                                                                   |
+|                                                                                                                                                                                                                   |
+| [    [\<%][=]Html.Syncfusion().Schedule()([\"AddAppointment\"])]                            |
+|                                                                                                                                                                                                                   |
+| [        .DataSource(Model)]                                                                                                                                         |
+|                                                                                                                                                                                                                   |
+| [        .Skins([ScheduleSkins].Sandune)]                                                                                                    |
+|                                                                                                                                                                                                                   |
+| **[        .AllowAddNew([true])]**                                                                                                              |
+|                                                                                                                                                                                                                   |
+| **[        .ContextMenuItems(([List]\<[ContextMenuItem]\>)ViewData\[[\"ContextMenus\"]\])]** |
+|                                                                                                                                                                                                                   |
+| [        .BindList(columns =\>]                                                                                                                                      |
+|                                                                                                                                                                                                                   |
+| [        {]                                                                                                                                                          |
+|                                                                                                                                                                                                                   |
+| [           columns.IdField([\"AppId\"]);]                                                                                                   |
+|                                                                                                                                                                                                                   |
+| [           columns.SubjectField([\"Subject\"]);]                                                                                            |
+|                                                                                                                                                                                                                   |
+| [           columns.LocationField([\"Location\"]);]                                                                                          |
+|                                                                                                                                                                                                                   |
+| [           columns.StartTimeField([\"StartTime\"]);]                                                                                        |
+|                                                                                                                                                                                                                   |
+| [           columns.EndTimeField([\"EndTime\"]);]                                                                                            |
+|                                                                                                                                                                                                                   |
+| [           columns.DescriptionField([\"Descrip\"]);]                                                                                        |
+|                                                                                                                                                                                                                   |
+| [           columns.OwnerField([\"Resource\"]);]                                                                                             |
+|                                                                                                                                                                                                                   |
+| [        })]                                                                                                                                                         |
+|                                                                                                                                                                                                                   |
+| [    [%\>]]                                                                                                                              |
+|                                                                                                                                                                                                                   |
+| []                                                                                                                                                                   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View\[cshtml\]]**                                                                                                                                                     |
+|                                                                                                                                                                                                                       |
+| [   ][     [@(] Html.Syncfusion().Schedule()([\"AddAppointment\"])] |
+|                                                                                                                                                                                                                       |
+| [        .DataSource(Model)]                                                                                                                                         |
+|                                                                                                                                                                                                                       |
+| [        .Skins([ScheduleSkins].Sandune)]                                                                                                    |
+|                                                                                                                                                                                                                       |
+| [        .AllowAddNew([true])]                                                                                                                  |
+|                                                                                                                                                                                                                       |
+| [        .ContextMenuItems(([List]\<[ContextMenuItem]\>)ViewData\[[\"ContextMenus\"]\])]     |
+|                                                                                                                                                                                                                       |
+| [        .BindList(columns =\>]                                                                                                                                      |
+|                                                                                                                                                                                                                       |
+| [        {]                                                                                                                                                          |
+|                                                                                                                                                                                                                       |
+| [           columns.IdField([\"AppId\"]);]                                                                                                   |
+|                                                                                                                                                                                                                       |
+| [           columns.SubjectField([\"Subject\"]);]                                                                                            |
+|                                                                                                                                                                                                                       |
+| [           columns.LocationField([\"Location\"]);]                                                                                          |
+|                                                                                                                                                                                                                       |
+| [           columns.StartTimeField([\"StartTime\"]);]                                                                                        |
+|                                                                                                                                                                                                                       |
+| [           columns.EndTimeField([\"EndTime\"]);]                                                                                            |
+|                                                                                                                                                                                                                       |
+| [           columns.DescriptionField([\"Descrip\"]);]                                                                                        |
+|                                                                                                                                                                                                                       |
+| [           columns.OwnerField([\"Resource\"]);]                                                                                             |
+|                                                                                                                                                                                                                       |
+| [        })[)]]                                                                                                                          |
+|                                                                                                                                                                                                                       |
+| []                                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+6.   In **Controller**, add the Syncfusion.Mvc.Schedule, Syncfusion.Mvc.Shared namespaces.
+
+[] 
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Controller\]]**[[]]{.MsoIntenseEmphasis} |
+|                                                                                                                                                              |
+| [using][ Syncfusion.Mvc.Schedule;]                    |
+|                                                                                                                                                              |
+| [using][ Syncfusion.Mvc.Shared;]                      |
+|                                                                                                                                                              |
+| []                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+7.   Create **context-menu** item for add new appointment and store it in **Viewdata** for access from view page. Set its data source and render the view.
+
+[] 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Controller\]]**[[]]{.MsoIntenseEmphasis}                                                                                 |
+|                                                                                                                                                                                                                                              |
+| [        [///][ ][\<summary\>]]                                                                                                 |
+|                                                                                                                                                                                                                                              |
+| [        [///][ It is used to bind the Schedule]]                                                                                                    |
+|                                                                                                                                                                                                                                              |
+| [        [///][ ][\</summary\>]]                                                                                                |
+|                                                                                                                                                                                                                                              |
+| [        [///][ ][\<returns\>][View page, it displays the Schedule][\</returns\>]]   |
+|                                                                                                                                                                                                                                              |
+| [        [public] [ActionResult] Index()]                                                                                                          |
+|                                                                                                                                                                                                                                              |
+| [        {]                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                              |
+| [                [ContextMenuItem] newapp = [new] [ContextMenuItem]() ]                                                    |
+|                                                                                                                                                                                                                                              |
+| [{ ]                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                              |
+| [MenuID = [\"NewAppointment\"], ]                                                                                                                                       |
+|                                                                                                                                                                                                                                              |
+| [MenuName = [\"New Appointment\"], ]                                                                                                                                    |
+|                                                                                                                                                                                                                                              |
+| [CommandName = [ContextCommandNames].NewAppointment ]                                                                                                                   |
+|                                                                                                                                                                                                                                              |
+| [};]                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                              |
+| [                ViewData\[[\"ContextMenus\"]\] = [new] [List]\<[ContextMenuItem]\>() { newapp };] |
+|                                                                                                                                                                                                                                              |
+| []                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                              |
+| [                [var] data = [new] [NorthwindDataClassesDataContext]().AppointmentTables.Take(200);]                         |
+|                                                                                                                                                                                                                                              |
+| [                [return] View(data);]                                                                                                                                     |
+|                                                                                                                                                                                                                                              |
+| [        }]                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                              |
+| []                                                                                                                                                                                              |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+8.   Create a post method for **Index** action and bind the data source to **Schedule**, as shown in the code displayed below:
+
+[] 
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Controller\]]**[[]]{.MsoIntenseEmphasis}                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [  ][      [///][ ][\<summary\>]]                                          |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ Post Requests are mapped to this method. This method invokes the HtmlActionResult]]                                                       |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ from the Schedule. Required response is generated.]]                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ ][\</summary\>]]                                                                                                     |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ ][\<param name=\"args\"\>][Contains post action properties ][\</param\>]] |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ ][\<returns\>]]                                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ HtmlActionResult which returns data displayed on the Schedule]]                                                                           |
+|                                                                                                                                                                                                                                                   |
+| [        [///][ ][\</returns\>]]                                                                                                     |
+|                                                                                                                                                                                                                                                   |
+| [        \[[AcceptVerbs]([HttpVerbs].Post)\]]                                                                                                        |
+|                                                                                                                                                                                                                                                   |
+| [        [public] [ActionResult] Index([Params] args, [SchedulePropertiesModel] model)]                 |
+|                                                                                                                                                                                                                                                   |
+| [        {]                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                   |
+| [NorthwindDataClassesDataContext][ db = [new] [NorthwindDataClassesDataContext]();]        |
+|                                                                                                                                                                                                                                                   |
+| [int][ intMax = db.AppointmentTables.ToList().Count \> 0 ? db.AppointmentTables.ToList().Max(p =\> p.AppId) : 1;]                          |
+|                                                                                                                                                                                                                                                   |
+| [                model.SetCurrentCultureInfo();]                                                                                                                                                     |
+|                                                                                                                                                                                                                                                   |
+| []                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                   |
+| [            [// Create New appointment and insert into database]]                                                                                                             |
+|                                                                                                                                                                                                                                                   |
+| [            [if] (args.CurrentAction == [\"Save\"])]                                                                                                   |
+|                                                                                                                                                                                                                                                   |
+| [            {]                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [                [DateTime] startTime = [Convert].ToDateTime(args.StartTime);]                                                                       |
+|                                                                                                                                                                                                                                                   |
+| [                [DateTime] endTime = [Convert].ToDateTime(args.EndTime);]                                                                           |
+|                                                                                                                                                                                                                                                   |
+| [                [AppointmentTable] appoint = [new] [AppointmentTable]()]                                                       |
+|                                                                                                                                                                                                                                                   |
+| [                {]                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                   |
+| [                    AppId = intMax + 1,]                                                                                                                                                            |
+|                                                                                                                                                                                                                                                   |
+| [                    StartTime = startTime,]                                                                                                                                                         |
+|                                                                                                                                                                                                                                                   |
+| [                    EndTime = endTime,]                                                                                                                                                             |
+|                                                                                                                                                                                                                                                   |
+| [                    Subject = args.Subject,]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                   |
+| [                    Location = args.Location,]                                                                                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [                    Descrip = args.Description,]                                                                                                                                                    |
+|                                                                                                                                                                                                                                                   |
+| [                    Resource = args.Owner,]                                                                                                                                                         |
+|                                                                                                                                                                                                                                                   |
+| [                };]                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                   |
+| []                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                   |
+| [                db.AppointmentTables.InsertOnSubmit(appoint);]                                                                                                                                      |
+|                                                                                                                                                                                                                                                   |
+| [                }]                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                   |
+| [                [//to reflect in database]]                                                                                                                                   |
+|                                                                                                                                                                                                                                                   |
+| [                db.SubmitChanges();]                                                                                                                                                                |
+|                                                                                                                                                                                                                                                   |
+| [ActionResult][ result = db.AppointmentTables.ScheduleActions\<[ScheduleHtmlActionResult]\>();]                 |
+|                                                                                                                                                                                                                                                   |
+| [                [return] result;]                                                                                                                                              |
+|                                                                                                                                                                                                                                                   |
+| [        }]                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                   |
+| []                                                                                                                                                                                                   |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+9.   Run the application. The Schedule's appointment window will appear as shown below when the following actions happen in order to create a new appointment:
+
+[] 
+
+a.  Double-click any **Schedule** cell**.**
+
+b.  Right-click a Schedule cell and click New Appointment.
+
+[] 
+
+{border="0"}
+
+[] 
+
+Figure 104: Add Appointment dialog
+
+[] 
+
+10.  In the **Subject** box, type an appointment's subject.
+
+11.  In the **Location** box, type the location.
+
+12.  Select the appointment timings - start date, start time, end date and end time.
+
+13.  In the **Description** box, type a description.
+
+14.  On the **Appointment dialog** toolbar, click **Save & Close**.
+
+[] 
+
+[]{#related-topics}
+

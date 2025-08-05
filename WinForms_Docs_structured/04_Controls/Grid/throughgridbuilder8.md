@@ -1,0 +1,139 @@
+---
+title: throughgridbuilder8.md
+original_path: WinForms_Docs/04_Controls/Grid/throughgridbuilder8.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+#### Through GridBuilder {#through-gridbuilder style="tab-stops: 0pt"}
+
+ 
+
+1.   Create a model in the application (Refer to [[Getting Started\>Adding a Model to the Application]]{.underline}).
+
+2.   Create a strongly typed view (Refer to [[How to\>Strongly Typed View]]{.underline}).
+
+3.   Create the Grid control in the view and configure its properties.
+
+4.   Set the JSON action mode using the **ActionMode** method.
+
+5.   Enable paging using the **EnablePaging** method.
+
+[] 
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View \[ASPX\]]**                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                     |
+| **[]**                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                     |
+| [ ][\<%][=][Html.Syncfusion().Grid\<[Order]\>([\"Grid1\"])\ |
+|        .Caption([\"Orders\"])\                                                                                                                                                                                              |
+|        .AutoFormat([Skins].Sandune)]                                                                                                                                                    |
+|                                                                                                                                                                                                                                                     |
+| **[       .ActionMode(ActionMode.JSON)]**                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                     |
+| **[       .EnablePaging()]**[\                                                                                                                                                                                  |
+|        .Column( columns =\> {\                                                                                                                                                                                                                      |
+|            columns.Add(p =\> p.OrderID);\                                                                                                                                                                                                           |
+|            columns.Add(p =\> p.CustomerID);\                                                                                                                                                                                                        |
+|            columns.Add(p =\> p.EmployeeID);  \                                                                                                                                                                                                      |
+|            columns.Add(P =\> P.ShipCountry);[]]                                                                                                                                           |
+|                                                                                                                                                                                                                                                     |
+| [           columns.Add(p =\> p.OrderDate).Format([\"{0:dd-MM-yyyy}\"]);\                                                                                                                                                   |
+|            })\                                                                                                                                                                                                                                      |
+|        [%\>]]                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                     |
+| [   ]                                                                                                                                                                                                           |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+[] 
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[View \[][cshtml][\]]**                                                                                                               |
+|                                                                                                                                                                                                                                                     |
+| **[]**                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                     |
+| [ ][\@{][ ][Html.Syncfusion().Grid\<[Order]\>([\"Grid1\"])\ |
+|        .Caption([\"Orders\"])\                                                                                                                                                                                              |
+|        .AutoFormat([Skins].Sandune)]                                                                                                                                                    |
+|                                                                                                                                                                                                                                                     |
+| **[       .ActionMode(ActionMode.JSON)]**                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                     |
+| **[       .EnablePaging()]**[\                                                                                                                                                                                  |
+|        .Column( columns =\> {\                                                                                                                                                                                                                      |
+|            columns.Add(p =\> p.OrderID);\                                                                                                                                                                                                           |
+|            columns.Add(p =\> p.CustomerID);\                                                                                                                                                                                                        |
+|            columns.Add(p =\> p.EmployeeID);  \                                                                                                                                                                                                      |
+|            columns.Add(P =\> P.ShipCountry);[]]                                                                                                                                           |
+|                                                                                                                                                                                                                                                     |
+| [           columns.Add(p =\> p.OrderDate).Format([\"{0:dd-MM-yyyy}\"]);\                                                                                                                                                   |
+|            }).Render();\                                                                                                                                                                                                                            |
+|      [}]][ ]                                                                                                                                    |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+[] 
+
+6.   Render the view.
+
+ 
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[Controller]**[]                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                |
+| [ ][        [public] [ActionResult] Index()][] |
+|                                                                                                                                                                                                                                                                                |
+| [        {][]                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                |
+| [            [return] View();][]                                                                                                        |
+|                                                                                                                                                                                                                                                                                |
+| [        }][]                                                                                                                                                |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+7.   In order to work with paging actions, create a **Post** method for **Index** actions and bind the data source to the grid as given in the following code sample.[]
+
+[] 
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[Controller]**[]                                                                                                                                                              |
+|                                                                                                                                                                                                                                                         |
+| [ ][  ][     \[[AcceptVerbs]([HttpVerbs].Post)\]] |
+|                                                                                                                                                                                                                                                         |
+| [        [public] [ActionResult] Index([PagingParams] args)]                                                                                   |
+|                                                                                                                                                                                                                                                         |
+| [        {]                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                         |
+| [            [IEnumerable] data = [new] [NorthwindDataContext]().Orders.ToList();]                                                             |
+|                                                                                                                                                                                                                                                         |
+| **[            [return] data.GridJSONActions\<[Order]\>();]**                                                                                                          |
+|                                                                                                                                                                                                                                                         |
+| [        }][]                                                                                                                                      |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+8.   Run the application. The grid will appear as shown below.
+
+ 
+
+{border="0"}
+
+Figure 107: Paging Enabled Grid
+
+*[]* 
+
+More:
+
+
+
+
+

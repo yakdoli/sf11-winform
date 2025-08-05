@@ -1,0 +1,67 @@
+---
+title: appointmentwithoutresources.md
+original_path: WinForms_Docs/03_Data_Binding/appointmentwithoutresources.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+### Appointment without Resources {#appointment-without-resources style="tab-stops: 0pt"}
+
+[] 
+
+In some applications, you will not be able to view the other resources, i.e., you will be able to view only your resource. In such a case, you will be the resource, by default, and hence you will not be required to mention your name.
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[ASPX\]]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\<][Syncfusion][:][schedule][ [appointmentsexchangetriggers][=\"GridView1\"] [viewstrip][=\"true\"] [enableviewstate][=\"true\" ][id][=\"Schedule1\"] [height][=\"600px\"]] |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [width][=\"700px\"][ [runat][=\"server\"] [scheduletype][=\"day\"] [startdate][=\"04/21/2007\"\>]]                                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\<][Appointments][\>]                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\<][Syncfusion][:][ScheduleWebAppointment][ [UniqueID][=\"2\"] [StartTime][=\"04/21/2007 03:15:00\"] [EndTime][=\"04/21/2007 06:30:00\" ][Owner][=\"0\"]]                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [Subject][=\"Dragging of this Appointment is not allowed!\"][ [BackColor][=\"#e9f3ff\" ][TimeSpanColor][=\"#adadad\"\>]]                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\</][Syncfusion][:][ScheduleWebAppointment][\>]                                                                                                                                                                                                                                                                                                                             |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\<][Syncfusion][:][ScheduleWebAppointment][ [UniqueID][=\"3\"] [StartTime][=\"04/21/2007 06:30:00\"] [EndTime][=\"04/21/2007 10:45:00\" ][Owner][=\"0\"]]                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [Subject][=\"Dragging of empty slots is not allowed\"]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\</][Appointments][\>]                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\</][Syncfusion][:][schedule][\>]                                                                                                                                                                                                                                                                                                                                           |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+{border="0"}[]
+
+Figure 89: Appointment Without Resource
+
+ 
+
+[]{#related-topics}
+

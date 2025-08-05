@@ -1,0 +1,25 @@
+---
+title: toolstriptabitem1.md
+original_path: WinForms_Docs/99_Uncategorized/toolstriptabitem1.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+#### ToolStripTabItem {#toolstriptabitem style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt"}
+
+[] 
+
+The following topic is discussed in this section:
+
+ 
+
+More:
+
+
+
+
+

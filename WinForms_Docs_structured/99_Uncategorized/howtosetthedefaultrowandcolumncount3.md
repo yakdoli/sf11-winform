@@ -1,0 +1,57 @@
+---
+title: howtosetthedefaultrowandcolumncount3.md
+original_path: WinForms_Docs/99_Uncategorized/howtosetthedefaultrowandcolumncount3.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+## How to set the Default Row and Column Count {#how-to-set-the-default-row-and-column-count style="tab-stops: 0pt"}
+
+You can specify the default row and column count for a new worksheet using *DefaultRowCount* and *DefaultColumnCount* properties.
+
+ 
+
++------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                           |
+|                                                                                                            |
+| []                                           |
+|                                                                                                            |
+| [spreadControl.ExcelProperties.DefaultRowCount = 150;]    |
+|                                                                                                            |
+| [spreadControl.ExcelProperties.DefaultColumnCount = 150;] |
+|                                                                                                            |
+| []                                                        |
++------------------------------------------------------------------------------------------------------------+
+
+ 
+
++-----------------------------------------------------------------------------------------------------------+
+| **[\[VB\]]**                                                          |
+|                                                                                                           |
+| []                                                       |
+|                                                                                                           |
+| [spreadControl.ExcelProperties.DefaultRowCount = 150]    |
+|                                                                                                           |
+| [spreadControl.ExcelProperties.DefaultColumnCount = 150] |
++-----------------------------------------------------------------------------------------------------------+
+
+ 
+
+[]{#related-topics}
+

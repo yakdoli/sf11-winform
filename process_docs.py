@@ -46,7 +46,7 @@ created_at: {created_at}
         new_content = yaml_metadata + content
 
         # Create new file path
-        relative_path = os.path.relpath(file_path, 'c:/workspace/sf11-winform/WinForms_Docs')
+        relative_path = os.path.relpath(file_path, 'WinForms_Docs')
         new_file_path = os.path.join(output_dir, relative_path)
         
         os.makedirs(os.path.dirname(new_file_path), exist_ok=True)
@@ -59,8 +59,8 @@ created_at: {created_at}
     except Exception as e:
         print(f"Error processing file {file_path}: {e}")
 
-all_files = glob.glob("c:/workspace/sf11-winform/WinForms_Docs/**/*.md", recursive=True)
-output_directory = 'c:/workspace/sf11-winform/WinForms_Docs_structured'
+all_files = glob.glob("WinForms_Docs/**/*.md", recursive=True)
+output_directory = 'WinForms_Docs_structured'
 
 for file in all_files:
     process_markdown_file(file, output_directory)

@@ -1,0 +1,41 @@
+---
+title: interactivefeatures8.md
+original_path: WinForms_Docs/02_Concepts/interactivefeatures8.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+#### Interactive Features {#interactive-features style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt"}
+
+[] 
+
+This section discusses the Interactive Features of TabControlAdv.
+
+ 
+
+It includes the below topics.
+
+[] 
+
+[] 
+
+ 
+
+ 
+
+ 
+
+[]{#p920} 
+
+More:
+
+
+
+
+
+
+

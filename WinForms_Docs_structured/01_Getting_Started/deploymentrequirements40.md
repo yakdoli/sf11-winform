@@ -1,0 +1,55 @@
+---
+title: deploymentrequirements40.md
+original_path: WinForms_Docs/01_Getting_Started/deploymentrequirements40.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+### Deployment Requirements {#deployment-requirements style="tab-stops: 0pt"}
+
+Assemblies
+
+The following assemblies need to be referenced in your application for using Essential Spreadsheet for Silverlight:
+
+ 
+
+[·      ]Syncfusion.Spreadsheet.Silverlight.dll
+
+[·      ]Syncfusion.Grid.Silverlight.dll
+
+[·      ]Syncfusion.GridCommon.Silverlight.dll
+
+[·      ]Syncfusion.Linq.Silverlight.dll
+
+[·      ]Syncfusion.Shared.Silverlight.dll
+
+[·      ]Syncfusion.Tools.Silverlight.dll
+
+[·      ]Syncfusion.Ribbon.Silverlight.dll
+
+[·      ]Syncfusion.Compression.Silverlight.dll
+
+[·      ]Syncfusion.XlsIO.Silverlight.dll
+
+[·      ]Syncfusion.Theming.Office2010Blue.dll
+
+ 
+
+[]{#related-topics}
+

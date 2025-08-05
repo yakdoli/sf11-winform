@@ -1,0 +1,147 @@
+---
+title: xptaskbarimagesettings.md
+original_path: WinForms_Docs/99_Uncategorized/xptaskbarimagesettings.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+##### XPTaskBar- Image Settings {#xptaskbar--image-settings style="MARGIN-LEFT: 18pt; tab-stops: 18.0pt"}
+
+[] 
+
+This section discusses the image settings available in XPTaskBar.
+
+[] 
+
+Adding Images to the XPTaskBar Box Header
+
+[] 
+
+We can add images to the header of the XPTaskBar Box using the **ImageList** control and some properties that are discussed below.
+
+[] 
+
+
+  ------------------------ -----------------------------------------------------------------------
+  XPTaskBar Box Property   Description
+  HeaderImageList          Gets / sets the ImageList that will be used to draw the header image.
+  HeaderImageIndex         Gets / sets the index into the HeaderImageList.
+  ------------------------ -----------------------------------------------------------------------
+
+
+[] 
+
+Drag and drop the ImageList control onto the form and add images to it using the **Image Collection Editor**. To include an image in the header, set the **HeaderImageList** property to an ImageList containing the image and also set the **HeaderImageIndex** property to refer to a specific image within the above list.
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                                                                        |
+|                                                                                                                                                                       |
+| []                                                                                                                  |
+|                                                                                                                                                                       |
+| [this][.xpTaskBarBox1.ImageList = [this].imageList1;]       |
+|                                                                                                                                                                       |
+| [this][.xpTaskBarBox1.HeaderImageList = [this].imageList2;] |
+|                                                                                                                                                                       |
+| [this][.xpTaskBarBox1.HeaderImageIndex = 0;]                                     |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+**[]** 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB.NET\]]**                                                                                               |
+|                                                                                                                                                                  |
+| []                                                                                                             |
+|                                                                                                                                                                  |
+| [Me][.xpTaskBarBox1.ImageList = [Me].imageList1]       |
+|                                                                                                                                                                  |
+| [Me][.xpTaskBarBox1.HeaderImageList = [Me].imageList2] |
+|                                                                                                                                                                  |
+| [Me][.xpTaskBarBox1.HeaderImageIndex = 0]                                   |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+{border="0"}
+
+[] 
+
+Figure 950: Image added to the TaskBar Box Header
+
+**[]** 
+
+Adding Images to XPTaskBar Items
+
+[] 
+
+Images can be easily associated with the **ImageIndex** property of the XPTaskBar Items.
+
+[] 
+
+
+  ------------------------- -------------------------------------------------------------------------------------------------
+  XPTaskBar Item Property   Description
+  ImageList                 Sets the ImageList that contains the images with which images of XPTaskBar Items will be drawn.
+  ImageIndex                It sets the image index into the ImageList that contains images for the TaskBar Items.
+  ------------------------- -------------------------------------------------------------------------------------------------
+
+
+[] 
+
+The **ImageIndex** of the XPTaskBar Items can be specified in the **XPTaskBarItem Collection Editor**.
+
+[] 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                                                                  |
+|                                                                                                                                                                 |
+| []                                                                                                            |
+|                                                                                                                                                                 |
+| [this][.xpTaskBarBox1.ImageList = [this].imageList1;] |
+|                                                                                                                                                                 |
+| [this][.xpTaskBarBox1.[Items\[0\].]ImageIndex = 0;]  |
+|                                                                                                                                                                 |
+| [this][.xpTaskBarBox1.[Items\[1\].]ImageIndex = 1;]  |
+|                                                                                                                                                                 |
+| [this][.xpTaskBarBox1.[Items\[2\].]ImageIndex = 2;]  |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB.NET\]]**                                                                                         |
+|                                                                                                                                                            |
+| []                                                                                                       |
+|                                                                                                                                                            |
+| [Me][.xpTaskBarBox1.ImageList = [Me].imageList1] |
+|                                                                                                                                                            |
+| [Me][.xpTaskBarBox1[.Items(0)]ImageIndex = 0]   |
+|                                                                                                                                                            |
+| [Me][.xpTaskBarBox1[.Items(1)]ImageIndex = 1]   |
+|                                                                                                                                                            |
+| [Me][.xpTaskBarBox1[.Items(2)]ImageIndex = 2]   |
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[] 
+
+{border="0"}
+
+[] 
+
+Figure 951: Images added to the TaskBar Items
+
+ 
+
+ 
+
+[]{#p684} 
+
+ 
+
+[]{#related-topics}
+

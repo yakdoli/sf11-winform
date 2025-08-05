@@ -1,0 +1,85 @@
+---
+title: usingthefullscreenmode.md
+original_path: WinForms_Docs/99_Uncategorized/usingthefullscreenmode.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+#### Using the FullScreen mode {#using-the-fullscreen-mode style="tab-stops: 0pt"}
+
+ 
+
+The **FullScreen Mode** is used to display the control in full screen. This will be effective while you use TDI **Modes**. The **TabPanel** will be hidden and visible on mouse roll-over. For this, you have **TDIFullScreenMode** property. This property is of type **FullScreen** mode which has following values.
+
+ 
+
+None:
+
+This is the default value and does nothing.
+
+ 
+
+WindowMode:
+
+This Mode window will be in full screen and the TabPanel will be hidden, and it will be visible only when the mouse roll-over is on top.
+
+ 
+
+ControlMode:
+
+In this mode, fullscreen will be disabled and only the Tab panel will be hidden and visible only on mouse roll-over.
+
+ 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[XAML\]]**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<!\-- To use Control Mode\--\>]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<][syncfusion][:]**[DockingManager]**[ UseDocumentContainer][=\"True\"][ TDIFullScreenMode][=\"ControlMode\"/\>]                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<!\-- None disables this feature\--\>]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<][syncfusion][:]**[DockingManager]**[ UseDocumentContainer][=\"True\"][ TDIFullScreenMode][=\"None\"/\>][]       |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<!\-- To use Window Mode\--\>]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [\<][syncfusion][:]**[DockingManager]**[ UseDocumentContainer][=\"True\"][ TDIFullScreenMode][=\"WindowMode\"/\>][] |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]**                                                                                                                                                |
+|                                                                                                                                                                                                 |
+| [//Disables this feature.]                                                                                                                    |
+|                                                                                                                                                                                                 |
+| **[DockingManager]**[.TDIFullScreenMode = [FullScreenMode].None;]                               |
+|                                                                                                                                                                                                 |
+| []                                                                                                                                                          |
+|                                                                                                                                                                                                 |
+| [//To use controlMode.]                                                                                                                       |
+|                                                                                                                                                                                                 |
+| **[DockingManager]**[.TDIFullScreenMode = [FullScreenMode].ControlMode;]                        |
+|                                                                                                                                                                                                 |
+| []                                                                                                                                                          |
+|                                                                                                                                                                                                 |
+| [//To use Window Mode.]                                                                                                                       |
+|                                                                                                                                                                                                 |
+| **[DockingManager]**[.TDIFullScreenMode = [FullScreenMode].WindowMode;[]] |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
+ 
+
+[]{#related-topics}
+

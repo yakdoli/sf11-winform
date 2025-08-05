@@ -1,0 +1,39 @@
+---
+title: installation66.md
+original_path: WinForms_Docs/01_Getting_Started/installation66.md
+created_at: 2025-08-05
+---
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+## Installation {#installation style="TEXT-ALIGN: justify; tab-stops: 0pt"}
+
+To install the Essential Studio, refer to the **Installation** topic under **Installation and Deployment** in the **Common UG**.
+
+**[See Also ]**
+
+For licensing, patches and information on adding or removing selective components refer to the following topics in the Installation and Deployment section of the Common UG:.
+
+[·      ]Licensing
+
+[·      ]Patches
+
+[·      ]Add / Remove Components
+
+[]{#related-topics}
+
